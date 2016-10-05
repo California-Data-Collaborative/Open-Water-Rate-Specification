@@ -2,12 +2,10 @@
 # Open Water Rate Specification v0.0.1
 
 This repository documents the Open Water Rate Specification (OWRS), a machine-readable format 
-for specifying and sharing water rate information. 
+for specifying and sharing water rate information. The specification is currently **a draft** and we are openly soliciting ideas and suggestions.
 
 OWRS is designed to fully encode a water utility's rate structure and pricing schedules in a form
-that is easy to store, share, modify and apply programmatically.
-
-Ultimately this standard will form the foundation for a comprehensive database of water price information. When combined with customer billing data (like that gathered by the [CaDC](http://californiadatacollaborative.com/)), this enables the analysis of water bill equity and utility revenue stability. 
+that is easy to store, share, modify and apply programmatically. Ultimately this standard will form the foundation for a comprehensive database of water price information. When combined with customer billing data (like that gathered by the [CaDC](http://californiadatacollaborative.com/)), this enables the analysis of water bill equity and utility revenue stability. 
 
 ### How to Contribute
 
