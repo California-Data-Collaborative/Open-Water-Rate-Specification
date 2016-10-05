@@ -7,7 +7,9 @@ for specifying and sharing water rate information.
 OWRS is designed to fully encode a water utility's rate structure and pricing schedules in a form
 that is easy to store, share, modify and apply programmatically.
 
-## Full Example: Moulton Niguel Water District
+Ultimately this standard will form the foundation for a comprehensive database of water price information. When combined with customer billing data (like that gathered by the [CaDC](http://californiadatacollaborative.com/)), this enables the analysis of water bill equity and utility revenue stability. 
+
+## Example: Moulton Niguel Water District
 
 ```yaml
 --- 
