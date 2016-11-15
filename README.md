@@ -18,7 +18,7 @@ Please reach out with ideas or suggestions using the [issues page](https://githu
 metadata:
   effective_date: 2016-01-01
   utility_name: "Moulton Niguel Water District"
-  bill_frequency: 1
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     - gpcd: 60
@@ -51,6 +51,8 @@ rate_structure:
       - 2.62
       - 4.38
       - 9.17
-    - bill: "variable+service_charge"
+    - commodity_charge: Budget
+    - bill: "commodity_charge+service_charge"
+
 
 ```
