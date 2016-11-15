@@ -5,7 +5,7 @@ This repository documents the **Open Water Rate Specification** (OWRS), a machin
 
 OWRS is designed for analysts, economists, and software developers interested in analyzing water rates. OWRS attempts to fully encode a water utility's rate structure and pricing schedules in a form that is easy to store, share, modify and apply programmatically. 
 
-## Why a Standard for Sharing Water Rates?
+### Why a Standard for Sharing Water Rates?
 
 Anyone familiar with water rates is likely familiar with the PDF documents, HTML tables and images generally used to present water pricing information to the public. These formats are useful because they provide a consise representation that is easy for people to understand. However, these formats are often not ideal for analysts, consultants, economists or others interested in analyzing water prices for several reasons:
 
@@ -15,19 +15,21 @@ Anyone familiar with water rates is likely familiar with the PDF documents, HTML
 
 3. PDF and HTML formats are more difficult to store, transmit and interpret than plain text.
 
-## Benefits of OWRS
+### Benefits of OWRS
 
 OWRS attempts to overcome these downsides by specifying a plain text format to fully specify a water rate structure. Specifically: 
 
-1. OWRS is based on [YAML](http://yaml.org/), and as such it is designed to be easy to store, transmit, and parse in any programming language.
+1. OWRS is based on [YAML](http://yaml.org/), and as such it is designed to be easy to store, transmit, and parse in any programming language while also being easy for humans to read.
 
-2. a
+2. All the details stating how to calculate a customer bill, including formulas and conditional charges are specified in a single flat file.
 
-3. a
+These features sound nice on paper, but the real benefit of this standard is in all of the tools that it enables.
 
-## Vision for the Future
+* RateParser is an [R package](https://www.r-project.org/about.html) that has the ability to interpret OWRS files and calculate water bills. The package is designed to simplify the work of analysts and economists interested in calculating water bills under a variety of rate structures.
 
-Ultimately this standard will form the foundation for a comprehensive database of water price information. When combined with customer billing data (like that gathered by the [CaDC](http://californiadatacollaborative.com/)), this enables the analysis of utility revenue stability and water bill equity. 
+* [RateComparison](https://github.com/California-Data-Collaborative/RateComparison) is a software program (written in [R Shiny](http://shiny.rstudio.com/)) that compares the revenue, equity, and demand implications of different water rate structures.
+
+* In the future, this standard will form the foundation for a comprehensive database of water price information, similar in nature to the [Utility Rate Database](http://en.openei.org/wiki/Utility_Rate_Database) in the energy sector. When combined with customer billing data (like that centralized through the [CaDC](http://californiadatacollaborative.com/)), this will enable a detailed, inter-utility analysis of revenue stability and water price equity.
 
 ### How to Contribute
 
