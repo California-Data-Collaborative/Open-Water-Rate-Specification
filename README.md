@@ -15,15 +15,15 @@ Anyone familiar with water rates is likely familiar with the PDF documents, HTML
 
 3. PDF and HTML formats are more difficult to store, transmit and interpret than plain text.
 
-### Benefits of OWRS
-
 OWRS attempts to overcome these downsides by specifying a plain text format to fully specify a water rate structure. Specifically: 
 
 1. OWRS is based on [YAML](http://yaml.org/), and as such it is designed to be easy to store, transmit, and parse in any programming language while also being easy for humans to read.
 
 2. All the details stating how to calculate a customer bill, including formulas and conditional charges are specified in a single flat file.
 
-These features sound nice on paper, but the real benefit of this standard is in all of the tools that it enables.
+### Benefits of OWRS
+
+Machine-readability sounds nice on paper, but the real benefit of this standard is in all of the tools that it enables.
 
 * RateParser is an [R package](https://www.r-project.org/about.html) that has the ability to interpret OWRS files and calculate water bills. The package is designed to simplify the work of analysts and economists interested in calculating water bills under a variety of rate structures.
 
