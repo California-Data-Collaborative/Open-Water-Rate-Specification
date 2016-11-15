@@ -1,11 +1,33 @@
 
-# Open Water Rate Specification v0.0.1
+# Open Water Rate Specification
 
-This repository documents the Open Water Rate Specification (OWRS), a machine-readable format 
-for specifying and sharing water rate information. The specification is currently **a draft** and we are openly soliciting ideas and suggestions.
+This repository documents the **Open Water Rate Specification** (OWRS), a machine-readable format for specifying and sharing water rate information. 
 
-OWRS is designed to fully encode a water utility's rate structure and pricing schedules in a form
-that is easy to store, share, modify and apply programmatically. Ultimately this standard will form the foundation for a comprehensive database of water price information. When combined with customer billing data (like that gathered by the [CaDC](http://californiadatacollaborative.com/)), this enables the analysis of water bill equity and utility revenue stability. 
+OWRS is designed for analysts, economists, and software developers interested in analyzing water rates. OWRS attempts to fully encode a water utility's rate structure and pricing schedules in a form that is easy to store, share, modify and apply programmatically. 
+
+## Why a Standard for Sharing Water Rates?
+
+Anyone familiar with water rates is likely familiar with the PDF documents, HTML tables and images generally used to present water pricing information to the public. These formats are useful because they provide a consise representation that is easy for people to understand. However, these formats are often not ideal for analysts, consultants, economists or others interested in analyzing water prices for several reasons:
+
+1. HTML tables may be easy for customers to understand but they are difficult for computer code to understand and usually must be manually translated into code before a rate analysis can be performed.
+
+2. Sometimes the exact formulas used to calculate a water bill are not explicitly defined.
+
+3. PDF and HTML formats are more difficult to store, transmit and interpret than plain text.
+
+## Benefits of OWRS
+
+OWRS attempts to overcome these downsides by specifying a plain text format to fully specify a water rate structure. Specifically: 
+
+1. OWRS is based on [YAML](http://yaml.org/), and as such it is designed to be easy to store, transmit, and parse in any programming language.
+
+2. a
+
+3. a
+
+## Vision for the Future
+
+Ultimately this standard will form the foundation for a comprehensive database of water price information. When combined with customer billing data (like that gathered by the [CaDC](http://californiadatacollaborative.com/)), this enables the analysis of utility revenue stability and water bill equity. 
 
 ### How to Contribute
 
