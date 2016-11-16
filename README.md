@@ -25,7 +25,7 @@ OWRS attempts to overcome these downsides by specifying a plain text format to f
 
 Machine-readability sounds nice on paper, but the real benefit of this standard is in all of the tools that it enables.
 
-* RateParser is an [R package](https://www.r-project.org/about.html) that has the ability to interpret OWRS files and calculate water bills. The package is designed to simplify the work of analysts and economists interested in calculating water bills under a variety of rate structures.
+* [RateParser](https://github.com/California-Data-Collaborative/RateParser) is an [R package](https://www.r-project.org/about.html) that has the ability to interpret OWRS files and calculate water bills. The package is designed to simplify the work of analysts and economists interested in calculating water bills under a variety of rate structures.
 
 * [RateComparison](https://github.com/California-Data-Collaborative/RateComparison) is a software program (written in [R Shiny](http://shiny.rstudio.com/)) that compares the revenue, equity, and demand implications of different water rate structures.
 
