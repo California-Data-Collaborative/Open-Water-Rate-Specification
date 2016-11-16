@@ -65,13 +65,148 @@ rate_structure:
             - 0
             - 5281
     - tier_prices:
-      depends_on: water_type
-      values:
-        POTABLE:
-          - 4.07
-          - 10.03
-        RECYCLED:
-          - 3.66
-          - 3.66
+        depends_on: water_type
+        values:
+          POTABLE:
+            - 4.07
+            - 10.03
+          RECYCLED:
+            - 3.66
+            - 3.66
+    - commodity_charge: Tiered
+    - bill: commodity_charge
+  COMMERCIAL:
+    - tier_starts:
+        depends_on: meter_size
+        values:
+          5/8":
+            - 0
+            - 211
+          3/4":
+            - 0
+            - 211
+          1":
+            - 0
+            - 211
+          1_1/2":
+            - 0
+            - 466
+          2":
+            - 0
+            - 871
+          3":
+            - 0
+            - 1701
+          4":
+            - 0
+            - 2551
+          6":
+            - 0
+            - 5281
+          8":
+            - 0
+            - 5281
+          10":
+            - 0
+            - 5281
+    - tier_prices:
+        depends_on: water_type
+        values:
+          POTABLE:
+            - 4.07
+            - 10.03
+          RECYCLED:
+            - 3.66
+            - 3.66
+    - commodity_charge: Tiered
+    - bill: commodity_charge
+  INDUSTRIAL:
+    - tier_starts:
+        depends_on: meter_size
+        values:
+          5/8":
+            - 0
+            - 211
+          3/4":
+            - 0
+            - 211
+          1":
+            - 0
+            - 211
+          1_1/2":
+            - 0
+            - 466
+          2":
+            - 0
+            - 871
+          3":
+            - 0
+            - 1701
+          4":
+            - 0
+            - 2551
+          6":
+            - 0
+            - 5281
+          8":
+            - 0
+            - 5281
+          10":
+            - 0
+            - 5281
+    - tier_prices:
+        depends_on: water_type
+        values:
+          POTABLE:
+            - 4.07
+            - 10.03
+          RECYCLED:
+            - 3.66
+            - 3.66
+    - commodity_charge: Tiered
+    - bill: commodity_charge
+  INSTITUTIONAL:
+    - tier_starts:
+        depends_on: meter_size
+        values:
+          5/8":
+            - 0
+            - 211
+          3/4":
+            - 0
+            - 211
+          1":
+            - 0
+            - 211
+          1_1/2":
+            - 0
+            - 466
+          2":
+            - 0
+            - 871
+          3":
+            - 0
+            - 1701
+          4":
+            - 0
+            - 2551
+          6":
+            - 0
+            - 5281
+          8":
+            - 0
+            - 5281
+          10":
+            - 0
+            - 5281
+    - tier_prices:
+        depends_on: water_type
+        values:
+          POTABLE:
+            - 4.07
+            - 10.03
+          RECYCLED:
+            - 3.66
+            - 3.66
     - commodity_charge: Tiered
     - bill: commodity_charge
