@@ -35,6 +35,33 @@ Machine-readability sounds nice on paper, but the real benefit of this standard 
 
 Please reach out with ideas or suggestions using the [issues page](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/issues), or contact the CaDC directly.
 
+## Getting Started
+
+Perhaps the best way to demonstrate how OWRS specifies a water rate is through an example. Let's consider the simplest possible OWRS file, representing a simple flat rate structure.
+
+#### Example 1
+```yaml
+---
+metadata:
+  effective_date: 2016-01-01
+  utility_name: "Example Water District"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    - commodity_charge: 2.1*usage_ccf
+    - bill: commodity_charge
+```
+
+The `yaml` file format works by specifying a series of keys and values. In the example above, `bill_frequency` is a key and `monthly` is the value corresponding to that key. This key-value pair is itself a value of the `metadata` key.
+
+`metadata` is used to specify information about the rate structure that is not actualy used to calculate bills, such as the name of the utility and the date the rate structure went into effect.
+
+`rate_structure` specifies information that is actually used for calculating water bills. The values of the `rate_structure` key are the customer classes used to define rates. In our examples we use the standard classes defined by the CaDC: `RESIDENTIAL_SINGLE`, `RESIDENTIAL_MULTI`, `IRRIGATION`, `COMMERCIAL`, `INDUSTRIAL`, and `INSTITUTIONAL`.
+
+In Example 1 above, we see a rate structure defined only for single-family residential customers, where the commodity charge is calculated as `2.1*usage_ccf`, or $2.1 per CCF of water used. In this case `usage_ccf` is the data column name used to represent water usage. The total bill (`bill`) for each customer is then equal to just the commodity charge.
+
+
+
 ## Example: Moulton Niguel Water District
 
 ```yaml
