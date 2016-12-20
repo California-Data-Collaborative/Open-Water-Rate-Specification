@@ -104,6 +104,81 @@ rate_structure:
       - 9.17
     - commodity_charge: Budget
     - bill: "commodity_charge+service_charge"
+  RESIDENTIAL_MULTI:
+    - gpcd: 60
+    - landscape_factor: 0.7
+    - indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    - outdoor: "landscape_factor*ET*irr_area*0.62*(1/748)"
+    - budget: "indoor+outdoor"
+    - service_charge:
+        depends_on: meter_size
+        values:
+          5/8"   : 11.39
+          3/4"   : 11.39
+          1"     : 11.39
+          1_1/2" : 37.98
+          2"     : 60.77
+          3"     : 132.94
+          4"     : 227.88
+          6"     : 475.14
+          8"     : 683.65
+          10"    : 1101.82
+    - tier_starts:
+      - 0
+      - indoor
+      - 100%
+      - 125%
+      - 150%
+    - tier_prices:
+      - 1.49
+      - 1.70
+      - 2.62
+      - 4.38
+      - 9.17
+    - commodity_charge: Budget
+    - bill: "commodity_charge+service_charge"
+  IRRIGATION:
+    - landscape_factor:
+        depends_on: water_type
+        values:
+          POTABLE: 0.7
+          RECYCLED: 0.8
+    - outdoor: "landscape_factor*ET*irr_area*0.62*(1/748)"
+    - budget: "outdoor"
+    - service_charge:
+        depends_on: meter_size
+        values:
+          5/8"   : 17.83
+          3/4"   : 17.83
+          1"     : 17.83
+          1_1/2" : 59.42
+          2"     : 95.07
+          3"     : 207.97
+          4"     : 356.51
+          6"     : 743.32
+          8"     : 1069.52
+          10"    : 1723.71
+    - tier_starts:
+      - 0
+      - 100%
+      - 125%
+      - 150%
+    - tier_prices:
+        depends_on: water_type
+        values:
+          POTABLE:
+            - 1.70
+            - 2.62
+            - 4.38
+            - 9.17
+          RECYCLED:
+            - 1.24
+            - 1.74
+            - 3.50
+            - 8.29
+    - commodity_charge: Budget
+    - bill: "commodity_charge+service_charge"
+
 
 
 ```
