@@ -5,7 +5,14 @@ This repository documents the **Open Water Rate Specification** (OWRS), a machin
 
 OWRS is designed for analysts, economists, and software developers interested in analyzing water rates. OWRS attempts to fully encode a water utility's rate structure and pricing schedules in a form that is easy to store, share, modify and apply programmatically. 
 
-### Why a Standard for Sharing Water Rates?
+#### Table of Contents
+
+* [Why a Standard for Sharing Water Rates?](#why)
+   - [Benefits of OWRS](#benefits)
+* [How to Contribute](#how)
+* [Getting Started](#getting-started)
+
+## <a name="why"></a>Why a Standard for Sharing Water Rates?
 
 Anyone familiar with water rates is likely familiar with the PDF documents, [HTML tables](https://www.smgov.net/Departments/PublicWorks/ContentWater.aspx?id=7743) and [images](https://www.mnwd.com/waterandwastewaterrates/) generally used to present water pricing information to the public. These formats are useful because they provide a consise representation that is easy for people to understand. However, these formats are often not ideal for analysts, consultants, economists or others interested in analyzing water prices for several reasons:
 
@@ -21,7 +28,7 @@ OWRS attempts to overcome these downsides by specifying a plain text format to f
 
 2. All the details stating how to calculate a customer bill, including formulas and conditional charges are specified in a single flat file.
 
-### Benefits of OWRS
+### <a name="benefits"></a>Benefits of OWRS
 
 Machine-readability sounds nice on paper, but the real benefit of this standard is in all of the tools that it enables.
 
@@ -31,11 +38,11 @@ Machine-readability sounds nice on paper, but the real benefit of this standard 
 
 * In the future, this standard will form the foundation for a comprehensive database of water price information, similar in nature to the [Utility Rate Database](http://en.openei.org/wiki/Utility_Rate_Database) in the energy sector. When combined with customer billing data (like that centralized through the [CaDC](http://californiadatacollaborative.com/)), this will enable a detailed, inter-utility analysis of revenue stability and water price equity.
 
-### How to Contribute
+## <a name="how"></a>How to Contribute
 
 Please reach out with ideas or suggestions using the [issues page](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/issues), or contact the CaDC directly.
 
-## Getting Started
+## <a name="getting-started"></a>Getting Started
 
 Perhaps the best way to demonstrate how OWRS specifies a water rate is through an example. Let's consider the simplest possible OWRS file, representing a simple flat rate structure.
 
