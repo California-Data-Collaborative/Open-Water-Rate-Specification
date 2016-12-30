@@ -5,12 +5,16 @@ This repository documents the **Open Water Rate Specification** (OWRS), a machin
 
 OWRS is designed for analysts, economists, and software developers interested in analyzing water rates. OWRS attempts to fully encode a water utility's rate structure and pricing schedules in a form that is easy to store, share, modify and apply programmatically. 
 
-#### Table of Contents
+### Table of Contents
 
 * [Why a Standard for Sharing Water Rates?](#why)
    - [Benefits of OWRS](#benefits)
-* [How to Contribute](#how)
 * [Getting Started](#getting-started)
+* [Full Utility Example](#mnwd-example)
+
+### Contact
+
+Please reach out with comments, ideas or suggestions using the [issues page](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/issues), or [contact the CaDC](http://californiadatacollaborative.com/join-us/) directly.
 
 ## <a name="why"></a>Why a Standard for Sharing Water Rates?
 
@@ -37,10 +41,6 @@ Machine-readability sounds nice on paper, but the real benefit of this standard 
 * [RateComparison](https://github.com/California-Data-Collaborative/RateComparison) is a software program (written in [R Shiny](http://shiny.rstudio.com/)) that compares the revenue, equity, and demand implications of different water rate structures.
 
 * In the future, this standard will form the foundation for a comprehensive database of water price information, similar in nature to the [Utility Rate Database](http://en.openei.org/wiki/Utility_Rate_Database) in the energy sector. When combined with customer billing data (like that centralized through the [CaDC](http://californiadatacollaborative.com/)), this will enable a detailed, inter-utility analysis of revenue stability and water price equity.
-
-## <a name="how"></a>How to Contribute
-
-Please reach out with ideas or suggestions using the [issues page](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/issues), or contact the CaDC directly.
 
 ## <a name="getting-started"></a>Getting Started
 
@@ -69,7 +69,7 @@ In Example 1 above, we see a rate structure defined only for single-family resid
 
 
 
-## Example: Moulton Niguel Water District
+## <a name="mnwd-example"></a>Example: Moulton Niguel Water District
 
 ```yaml
 ---
