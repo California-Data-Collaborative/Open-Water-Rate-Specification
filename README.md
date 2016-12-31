@@ -46,7 +46,7 @@ Machine-readability sounds nice on paper, but the real benefit of this standard 
 
 Perhaps the best way to demonstrate how OWRS specifies a water rate is through an example. Let's consider the simplest possible OWRS file, representing a simple flat rate structure.
 
-#### Example 1
+#### Example 1 - Simple Flat Rate
 ```yaml
 ---
 metadata:
@@ -67,7 +67,46 @@ The `yaml` file format works by specifying a series of keys and values. In the e
 
 In Example 1 above, we see a rate structure defined only for single-family residential customers, where the commodity charge is calculated as `2.1*usage_ccf`, or $2.1 per CCF of water used. In this case `usage_ccf` is the data column name used to represent water usage. The total bill (`bill`) for each customer is then equal to just the commodity charge.
 
+#### Example 2 - Flat Rate with Fixed Service Charge
+```yaml
+---
+metadata:
+  ...
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 14.65
+    flat_rate: 2.1
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+```
 
+This second example extends Example 1 by adding a fixed service charge. Note that `bill` is now calculated as the sum of `service_charge` and `commodity_charge`. 
+
+The flat rate or $2.1 per CCF has also been pulled into it's own field and this field is multiplied by `usage_ccf`. This formulation is just as valid as the formulation in Example 1.
+
+### Fields, Formulas, Maps and Tiers
+
+The two examples above are composed entirely of simple parts, referred to in this context as **Fields** (e.g. `flat_rate: 2.1`) or **Formulas** (e.g. `bill: commodity_charge+service_charge`). However, often in real settings is it useful to have rate components that change for each customer. The canonical example is of a fixed service charge that depends on the size of the water meter used by each account.
+
+#### Example 3 - Flat Rate with Fixed Service Charge that Depends on Meter Size 
+```yaml
+---
+metadata:
+  ...
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4": 14.65
+         1"  : 16.77
+         2"  : 25.83
+    flat_rate: 2.1
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+```
+
+Example 3 is almost the same as Example 2, but the fixed service charge now changes depending on the size of the meter. It is important to ensure that when the OWRS file is used to calculate water bills (e.g. with the [RateParser](https://github.com/California-Data-Collaborative/RateParser) package), that the values specified in `values` ('3/4"', '1"', etc) are exactly the same as those that appear in the billing data set under the `meter_size` column.
 
 ## <a name="mnwd-example"></a>Example: Moulton Niguel Water District
 
