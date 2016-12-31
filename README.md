@@ -10,7 +10,10 @@ OWRS is designed for analysts, economists, and software developers interested in
 * [Why a Standard for Sharing Water Rates?](#why)
    - [Benefits of OWRS](#benefits)
 * [Getting Started](#getting-started)
-* [Full Utility Example](#mnwd-example)
+   - [Example 1 - Simple Flat Rate](#example1)
+   - [Example 2 - Flat Rate with Fixed Service Charge](#example2)
+   - [Example 3 - Flat Rate with Fixed Service Charge that Depends on Meter Size ](#example3)
+* [Full Utility Examples](#utility-examples)
 
 ### Contact
 
@@ -46,7 +49,7 @@ Machine-readability sounds nice on paper, but the real benefit of this standard 
 
 Perhaps the best way to demonstrate how OWRS specifies a water rate is through an example. Let's consider the simplest possible OWRS file, representing a simple flat rate structure.
 
-#### Example 1 - Simple Flat Rate
+#### <a name="example1"></a>Example 1 - Simple Flat Rate
 ```yaml
 ---
 metadata:
@@ -67,7 +70,7 @@ The `yaml` file format works by specifying a series of keys and values. In the e
 
 In Example 1 above, we see a rate structure defined only for single-family residential customers, where the commodity charge is calculated as `2.1*usage_ccf`, or $2.1 per CCF of water used. In this case `usage_ccf` is the data column name used to represent water usage. The total bill (`bill`) for each customer is then equal to just the commodity charge.
 
-#### Example 2 - Flat Rate with Fixed Service Charge
+#### <a name="example2"></a>Example 2 - Flat Rate with Fixed Service Charge
 ```yaml
 ---
 metadata:
@@ -88,7 +91,7 @@ The flat rate or $2.1 per CCF has also been pulled into it's own field and this 
 
 The two examples above are composed entirely of simple parts, referred to in this context as **Fields** (e.g. `flat_rate: 2.1`) or **Formulas** (e.g. `bill: commodity_charge+service_charge`). However, often in real settings is it useful to have rate components that change for each customer. The canonical example is of a fixed service charge that depends on the size of the water meter used by each account.
 
-#### Example 3 - Flat Rate with Fixed Service Charge that Depends on Meter Size 
+#### <a name="example3"></a>Example 3 - Flat Rate with Fixed Service Charge that Depends on Meter Size 
 ```yaml
 ---
 metadata:
@@ -108,199 +111,6 @@ rate_structure:
 
 Example 3 is almost the same as Example 2, but the fixed service charge now changes depending on the size of the meter. It is important to ensure that when the OWRS file is used to calculate water bills (e.g. with the [RateParser](https://github.com/California-Data-Collaborative/RateParser) package), that the values specified in `values` ('3/4"', '1"', etc) are exactly the same as those that appear in the billing data set under the `meter_size` column.
 
-## <a name="mnwd-example"></a>Example: Moulton Niguel Water District
+## <a name="utility-examples"></a>Full Utility Rate Files
 
-```yaml
----
-metadata:
-  effective_date: 2016-01-01
-  utility_name: "Moulton Niguel Water District"
-  bill_frequency: monthly
-rate_structure:
-  RESIDENTIAL_SINGLE:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 11.39
-        3/4"   : 11.39
-        1"     : 11.39
-        1 1/2" : 37.98
-        2"     : 60.77
-        3"     : 132.94
-        4"     : 227.88
-        6"     : 475.14
-        8"     : 683.65
-        10"    : 1101.82
-    gpcd: 60
-    landscape_factor: 0.7
-    days_in_period: 30.4
-    indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
-    budget: "indoor+outdoor"
-    tier_starts:
-      - 0
-      - indoor
-      - 100%
-      - 125%
-      - 150%
-    tier_prices:
-      - 1.49
-      - 1.70
-      - 2.62
-      - 4.38
-      - 9.17
-    commodity_charge: Budget
-    bill: "commodity_charge+service_charge"
-  RESIDENTIAL_MULTI:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 11.39
-        3/4"   : 11.39
-        1"     : 11.39
-        1 1/2" : 37.98
-        2"     : 60.77
-        3"     : 132.94
-        4"     : 227.88
-        6"     : 475.14
-        8"     : 683.65
-        10"    : 1101.82
-    gpcd: 60
-    landscape_factor: 0.7
-    days_in_period: 30.4
-    indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
-    budget: "indoor+outdoor"
-    tier_starts:
-      - 0
-      - indoor
-      - 100%
-      - 125%
-      - 150%
-    tier_prices:
-      - 1.49
-      - 1.70
-      - 2.62
-      - 4.38
-      - 9.17
-    commodity_charge: Budget
-    bill: "commodity_charge+service_charge"
-  IRRIGATION:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 17.83
-        3/4"   : 17.83
-        1"     : 17.83
-        1 1/2" : 59.42
-        2"     : 95.07
-        3"     : 207.97
-        4"     : 356.51
-        6"     : 743.32
-        8"     : 1069.52
-        10"    : 1723.71
-    landscape_factor:
-      depends_on: water_type
-      values:
-        POTABLE: 0.7
-        RECYCLED: 0.8
-    outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
-    budget: "outdoor"
-    tier_starts:
-      - 0
-      - 100%
-      - 125%
-      - 150%
-    tier_prices:
-      depends_on: water_type
-      values:
-        POTABLE:
-          - 1.70
-          - 2.62
-          - 4.38
-          - 9.17
-        RECYCLED:
-          - 1.24
-          - 1.74
-          - 3.50
-          - 8.29
-    commodity_charge: Budget
-    bill: "commodity_charge+service_charge"
-  COMMERCIAL:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 17.83
-        3/4"   : 17.83
-        1"     : 17.83
-        1 1/2" : 59.42
-        2"     : 95.07
-        3"     : 207.97
-        4"     : 356.51
-        6"     : 743.32
-        8"     : 1069.52
-        10"    : 1723.71
-    budget: 0
-    tier_starts:
-      - 0
-      - 100%
-      - 125%
-      - 150%
-    tier_prices:
-      - 1.49
-      - 2.62
-      - 4.38
-      - 9.17
-    commodity_charge: 0
-    bill: commodity_charge+service_charge
-  INSTITUTIONAL:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 17.83
-        3/4"   : 17.83
-        1"     : 17.83
-        1 1/2" : 59.42
-        2"     : 95.07
-        3"     : 207.97
-        4"     : 356.51
-        6"     : 743.32
-        8"     : 1069.52
-        10"    : 1723.71
-    commodity_charge: 0
-    bill: commodity_charge
-  INDUSTRIAL:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 17.83
-        3/4"   : 17.83
-        1"     : 17.83
-        1 1/2" : 59.42
-        2"     : 95.07
-        3"     : 207.97
-        4"     : 356.51
-        6"     : 743.32
-        8"     : 1069.52
-        10"    : 1723.71
-    commodity_charge: 0
-    bill: commodity_charge
-  OTHER:
-    service_charge:
-      depends_on: meter_size
-      values:
-        5/8"   : 17.83
-        3/4"   : 17.83
-        1"     : 17.83
-        1 1/2" : 59.42
-        2"     : 95.07
-        3"     : 207.97
-        4"     : 356.51
-        6"     : 743.32
-        8"     : 1069.52
-        10"    : 1723.71
-    commodity_charge: 0
-    bill: commodity_charge
-
-
-```
+See the [examples folder]() in this repository for examples of full utility rate structures in OWRS format.
