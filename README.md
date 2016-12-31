@@ -113,4 +113,4 @@ Example 3 is almost the same as Example 2, but the fixed service charge now chan
 
 ## <a name="utility-examples"></a>Full Utility Rate Files
 
-See the [examples folder]() in this repository for examples of full utility rate structures in OWRS format.
+See the [examples folder](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/tree/master/examples) in this repository for examples of full utility rate structures in OWRS format.
