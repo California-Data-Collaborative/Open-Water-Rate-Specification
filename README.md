@@ -22,7 +22,7 @@ Please reach out with comments, ideas or suggestions using the [issues page](htt
 
 ## <a name="why"></a>Why a Standard for Sharing Water Rates?
 
-Anyone familiar with water rates is likely familiar with the PDF documents, [HTML tables](https://www.smgov.net/Departments/PublicWorks/ContentWater.aspx?id=7743) and [images](https://www.mnwd.com/waterandwastewaterrates/) generally used to present water pricing information to the public. These formats are useful because they provide a consise representation that is easy for people to understand. However, these formats are often not ideal for analysts, consultants, economists or others interested in analyzing water prices for several reasons:
+Anyone familiar with water rates is likely familiar with the PDF documents, [HTML tables](https://www.smgov.net/Departments/PublicWorks/ContentWater.aspx?id=7743) and [images](https://www.mnwd.com/waterandwastewaterrates/) generally used to present water pricing information to the public. These formats are useful because they provide a concise representation that is easy for people to understand. However, these formats are often not ideal for analysts, consultants, economists or others interested in analyzing water prices for several reasons:
 
 1. HTML tables may be easy for customers to understand but they are difficult for computer code to understand and usually must be manually translated into code before a rate analysis can be performed.
 
