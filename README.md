@@ -13,8 +13,9 @@ OWRS is designed for analysts, economists, and software developers interested in
 * [Getting Started](#getting-started)
    - [Example 1 - Simple Flat Rate](#example1)
    - [Example 2 - Fixed Service Charge](#example2)
-   - [Example 3 - Fixed Service Charge that Depends on Meter Size ](#example3)
+   - [Example 3 - Fixed Service Charge that Depends on Meter Size](#example3)
    - [Example 4 - Tiered Rates](#example4)
+   - [Example 5 - Budget Based Rates](#example5)
 * [Full Utility Examples](#utility-examples)
 
 ### Contact
