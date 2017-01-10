@@ -138,11 +138,57 @@ rate_structure:
     bill: commodity_charge+service_charge
 ```
 
-Example 4 replace the flat rate structure of earlier examples with an [Increasing Block Rate](http://www.allianceforwaterefficiency.org/1Column.aspx?id=712), or "Tiered" rate structure. This pricing scheme is encoded using two new fields.
+Example 4 replaces the flat rate structure of earlier examples with an [Increasing Block Rate](http://www.allianceforwaterefficiency.org/1Column.aspx?id=712), or "Tiered" rate structure. This pricing scheme is encoded using two new fields.
 * `tier_starts` represents the lower end of each block. It is the first unit of water billed at a specified price.
 * `tier_prices` specifies the price of water within each tier, in dollars per billing unit.
 
 In Exampe 4, we can see that the first through the 14th units of water are billed at $2.87 per unit. The 15th through the 40th unit are billed at $4.29. The 41st through the 148th at $6.44. Finally all water use from the 149th unit and up is billed at $10.07 per unit.
+
+In this case, the `commodity_charge` field **must** be set as "Tiered" in order to specify how the tier starts are interpreted.
+
+#### <a name="example5"></a>Example 5 - Budget Based Rates 
+
+OWRS also accomodates budget/allocation based rates, although the complexity of the file must rise to match the complexity of the rate structure.
+
+```yaml
+---
+metadata:
+  ...
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4": 14.65
+         1"  : 16.77
+         2"  : 25.83
+    gpcd: 60
+    landscape_factor: 0.7
+    days_in_period: 30.4
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 100%
+      - 133%
+    tier_prices:
+      - 2.87
+      - 4.29
+      - 6.44
+      - 10.07
+    commodity_charge: Budget
+    bill: commodity_charge+service_charge
+```
+
+Example 5 shows how to specify single-family rates under a budget based rate structure. There a several new fields and formulas in this example:
+* `gpcd`, `landscape_factor`, `days_in_period` are all simple fields that are the same across all SFR customers. 
+      - Note that if `days_in_period` were not defined here as 30.4 (average number of days in a month) then it would be expected that the user defines this as a data column and this value could change to reflect the actual number of days in each customer's billing period.
+* `hhsize`, `irr_area`, and `et_amount` are expected to be provided as data columns.
+* `indoor`, `outdoor`, and `budget` represent the calculated indoor allocation, outdoor allocation, and total water budget, respectively. 
+
+When the `commodity_charge` is specified as "Budget", OWRS parsers interpret `tier_starts` differently. As is visible in this example, tier starts may be specified either as flat values in terms of billing units (as in Example 4) or they can be specified as a percentage of the `budget` field. This allows OWRS to accomodate different tier widths for each account based on data specific to that account.  
 
 ## <a name="utility-examples"></a>Full Utility Rate Files
 
