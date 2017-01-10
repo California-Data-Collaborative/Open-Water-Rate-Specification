@@ -12,8 +12,9 @@ OWRS is designed for analysts, economists, and software developers interested in
    - [Alliance for Water Efficiency - Building a better (efficiency-oriented) rate structure] (https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/AWE-Building-a-better-RateStructure.pdf)
 * [Getting Started](#getting-started)
    - [Example 1 - Simple Flat Rate](#example1)
-   - [Example 2 - Flat Rate with Fixed Service Charge](#example2)
-   - [Example 3 - Flat Rate with Fixed Service Charge that Depends on Meter Size ](#example3)
+   - [Example 2 - Fixed Service Charge](#example2)
+   - [Example 3 - Fixed Service Charge that Depends on Meter Size ](#example3)
+   - [Example 4 - Tiered Rates](#example4)
 * [Full Utility Examples](#utility-examples)
 
 ### Contact
@@ -71,7 +72,7 @@ The `yaml` file format works by specifying a series of keys and values. In the e
 
 In Example 1 above, we see a rate structure defined only for single-family residential customers, where the commodity charge is calculated as `2.1*usage_ccf`, or $2.1 per CCF of water used. In this case `usage_ccf` is the data column name used to represent water usage. The total bill (`bill`) for each customer is then equal to just the commodity charge.
 
-#### <a name="example2"></a>Example 2 - Flat Rate with Fixed Service Charge
+#### <a name="example2"></a>Example 2 - Fixed Service Charge
 ```yaml
 ---
 metadata:
@@ -88,11 +89,7 @@ This second example extends Example 1 by adding a fixed service charge. Note tha
 
 The flat rate or $2.1 per CCF has also been pulled into it's own field and this field is multiplied by `usage_ccf`. This formulation is just as valid as the formulation in Example 1.
 
-### Fields, Formulas, Maps and Tiers
-
-The two examples above are composed entirely of simple parts, referred to in this context as **Fields** (e.g. `flat_rate: 2.1`) or **Formulas** (e.g. `bill: commodity_charge+service_charge`). However, often in real settings is it useful to have rate components that change for each customer. The canonical example is of a fixed service charge that depends on the size of the water meter used by each account.
-
-#### <a name="example3"></a>Example 3 - Flat Rate with Fixed Service Charge that Depends on Meter Size 
+#### <a name="example3"></a>Example 3 - Fixed Service Charge that Depends on Meter Size 
 ```yaml
 ---
 metadata:
@@ -110,7 +107,42 @@ rate_structure:
     bill: commodity_charge+service_charge
 ```
 
+Examples 1 & 2 above are composed entirely of simple parts, referred to in this context as **Fields** (e.g. `flat_rate: 2.1`) or **Formulas** (e.g. `bill: commodity_charge+service_charge`). However, often in real settings is it useful to have rate components that change for each customer. The canonical example is of a fixed service charge that depends on the size of the water meter used by each account (often referred to as a "meter charge").
+
 Example 3 is almost the same as Example 2, but the fixed service charge now changes depending on the size of the meter. It is important to ensure that when the OWRS file is used to calculate water bills (e.g. with the [RateParser](https://github.com/California-Data-Collaborative/RateParser) package), that the values specified in `values` ('3/4"', '1"', etc) are exactly the same as those that appear in the billing data set under the `meter_size` column.
+
+#### <a name="example4"></a>Example 4 - Tiered Rates 
+```yaml
+---
+metadata:
+  ...
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4": 14.65
+         1"  : 16.77
+         2"  : 25.83
+    tier_starts:
+      - 0
+      - 15
+      - 41
+      - 149
+    tier_prices:
+      - 2.87
+      - 4.29
+      - 6.44
+      - 10.07
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
+```
+
+Example 4 replace the flat rate structure of earlier examples with an [Increasing Block Rate](http://www.allianceforwaterefficiency.org/1Column.aspx?id=712), or "Tiered" rate structure. This pricing scheme is encoded using two new fields.
+* `tier_starts` represents the lower end of each block. It is the first unit of water billed at a specified price.
+* `tier_prices` specifies the price of water within each tier, in dollars per billing unit.
+
+In Exampe 4, we can see that the first through the 14th units of water are billed at $2.87 per unit. The 15th through the 40th unit are billed at $4.29. The 41st through the 148th at $6.44. Finally all water use from the 149th unit and up is billed at $10.07 per unit.
 
 ## <a name="utility-examples"></a>Full Utility Rate Files
 
