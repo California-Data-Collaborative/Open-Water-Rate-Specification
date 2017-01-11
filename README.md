@@ -1,9 +1,9 @@
 
 # Open Water Rate Specification
 
-This repository documents the **Open Water Rate Specification** (OWRS), a machine-readable format for specifying and sharing water rate information. 
+This repository documents the **Open Water Rate Specification** (OWRS), a machine-readable format for specifying and sharing water rate information.
 
-OWRS is designed for analysts, economists, and software developers interested in analyzing water rates. OWRS attempts to fully encode a water utility's rate structure and pricing schedules in a form that is easy to store, share, modify and apply programmatically. 
+OWRS is designed for analysts, economists, and software developers interested in analyzing water rates. OWRS attempts to fully encode a water utility's rate structure and pricing schedules in a form that is easy to store, share, modify and apply programmatically.
 
 ### Table of Contents
 
@@ -33,7 +33,7 @@ Anyone familiar with water rates is likely familiar with the PDF documents, [HTM
 
 3. PDF and HTML formats are more difficult to store, transmit and interpret than plain text.
 
-OWRS attempts to overcome these downsides by specifying a plain text format to fully specify a water rate structure. Specifically: 
+OWRS attempts to overcome these downsides by specifying a plain text format to fully specify a water rate structure. Specifically:
 
 1. OWRS is based on [YAML](http://yaml.org/), and as such it is designed to be easy to store, transmit, and parse in any programming language while also being easy for humans to read.
 
@@ -87,11 +87,11 @@ rate_structure:
     bill: commodity_charge+service_charge
 ```
 
-This second example extends Example 1 by adding a fixed service charge. Note that `bill` is now calculated as the sum of `service_charge` and `commodity_charge`. 
+This second example extends Example 1 by adding a fixed service charge. Note that `bill` is now calculated as the sum of `service_charge` and `commodity_charge`.
 
 The flat rate or $2.1 per CCF has also been pulled into it's own field and this field is multiplied by `usage_ccf`. This formulation is just as valid as the formulation in Example 1.
 
-#### <a name="example3"></a>Example 3 - Fixed Service Charge that Depends on Meter Size 
+#### <a name="example3"></a>Example 3 - Fixed Service Charge that Depends on Meter Size
 ```yaml
 ---
 metadata:
@@ -113,7 +113,7 @@ Examples 1 & 2 above are composed entirely of simple parts, referred to in this 
 
 Example 3 is almost the same as Example 2, but the fixed service charge now changes depending on the size of the meter. It is important to ensure that when the OWRS file is used to calculate water bills (e.g. with the [RateParser](https://github.com/California-Data-Collaborative/RateParser) package), that the values specified in `values` ('3/4"', '1"', etc) are exactly the same as those that appear in the billing data set under the `meter_size` column.
 
-#### <a name="example4"></a>Example 4 - Tiered Rates 
+#### <a name="example4"></a>Example 4 - Tiered Rates
 ```yaml
 ---
 metadata:
@@ -148,7 +148,7 @@ In Exampe 4, we can see that the first through the 14th units of water are bille
 
 In this case, the `commodity_charge` field **must** be set as "Tiered" in order to specify how the tier starts are interpreted.
 
-#### <a name="example5"></a>Example 5 - Budget Based Rates 
+#### <a name="example5"></a>Example 5 - Budget Based Rates
 
 OWRS also accomodates budget/allocation based rates, although the complexity of the file must rise to match the complexity of the rate structure.
 
@@ -185,10 +185,10 @@ rate_structure:
 ```
 
 Example 5 shows how to specify single-family rates under a budget based rate structure. There a several new fields and formulas in this example:
-* `gpcd`, `landscape_factor`, `days_in_period` are all simple fields that are the same across all SFR customers. 
+* `gpcd`, `landscape_factor`, `days_in_period` are all simple fields that are the same across all SFR customers.
       - Note that if `days_in_period` were not defined here as 30.4 (average number of days in a month) then it would be expected that the user defines this as a data column and this value could change to reflect the actual number of days in each customer's billing period.
 * `hhsize`, `irr_area`, and `et_amount` are expected to be provided as data columns.
-* `indoor`, `outdoor`, and `budget` represent the calculated indoor allocation, outdoor allocation, and total water budget, respectively. 
+* `indoor`, `outdoor`, and `budget` represent the calculated indoor allocation, outdoor allocation, and total water budget, respectively.
 
 When the `commodity_charge` is specified as "Budget", OWRS parsers interpret `tier_starts` differently. As is visible in this example, tier starts may be specified either as flat values in terms of billing units (as in Example 4) or they can be specified as a percentage of the `budget` field. This allows OWRS to accomodate different tier widths for each account based on data specific to that account.  
 
@@ -220,7 +220,7 @@ For example, [LADWP's tiers](https://www.ladwp.com/cs/idcplg?IdcService=GET_FILE
 ```yaml
 ---
 tier_starts:
-   depends_on: 
+   depends_on:
      - season
      - lot_size_group
      - temperature_zone
@@ -262,4 +262,4 @@ commmodity_charge: Budget
 
 ## <a name="utility-examples"></a>Full Utility Rate Files
 
-See the [examples folder](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/tree/master/examples) in this repository for examples of full utility rate structures in OWRS format.
+See the [examples from California](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/tree/master/full_utility_rates/California) in this repository for examples of full utility rate structures in OWRS format.
