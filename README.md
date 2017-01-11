@@ -16,6 +16,7 @@ OWRS is designed for analysts, economists, and software developers interested in
    - [Example 3 - Fixed Service Charge that Depends on Meter Size](#example3)
    - [Example 4 - Tiered Rates](#example4)
    - [Example 5 - Budget Based Rates](#example5)
+   - [Example 6 - Other Cases](#example6)
 * [Full Utility Examples](#utility-examples)
 
 ### Contact
@@ -190,6 +191,74 @@ Example 5 shows how to specify single-family rates under a budget based rate str
 * `indoor`, `outdoor`, and `budget` represent the calculated indoor allocation, outdoor allocation, and total water budget, respectively. 
 
 When the `commodity_charge` is specified as "Budget", OWRS parsers interpret `tier_starts` differently. As is visible in this example, tier starts may be specified either as flat values in terms of billing units (as in Example 4) or they can be specified as a percentage of the `budget` field. This allows OWRS to accomodate different tier widths for each account based on data specific to that account.  
+
+#### <a name="example6"></a>Example 6 - Other Cases
+
+The examples above cover the vast majority of use cases, but there are still a few that have not yet been discussed. Fortunately the OWRS framework is extremely flexible. For example:
+
+##### Tiers that depend on other values
+```yaml
+---
+tier_starts:
+   depends_on: meter_size
+   values:
+     5/8":
+       - 0
+       - 211
+     1_1/2":
+       - 0
+       - 466
+     2":
+       - 0
+       - 871
+```
+
+##### Tiers that depend on multiple other values
+
+For example, [LADWP's tiers](https://www.ladwp.com/cs/idcplg?IdcService=GET_FILE&dDocName=AD17DWPWEB9173008669&RevisionSelectionMethod=LatestReleased) depend on season, lot size, and temperature zone
+
+```yaml
+---
+tier_starts:
+   depends_on: 
+     - season
+     - lot_size_group
+     - temperature_zone
+   values:
+     Winter|1|Low:
+       - 0
+       - 17
+       - 23
+       - 35
+     Summer|1|Low:
+       - 0
+       - 17
+       - 29
+       - 53
+     Summer|1|Medium:
+       - 0
+       - 17
+       - 31
+       - 59
+     Summer|1|High:
+     ...
+```
+In this case each combination is enumerated as "value1|value2|...|valueN", where the values appear in the order they are given in the `depends_on` field. This format is not quite as visually appealing as a table, but it provides easy processing for OWRS parsers.
+
+##### Rolling averages
+
+One somewhat common use case is for utilities with budget based rates to set their CII allocations as a rolling average of historical water use for a given month. Unfortunatley this functionality is not supported by current OWRS parsers, but there is a work-around. Instead of being computed in the parser, allocations for CII customers can be precomputed and saved as a data column (e.g. `cii_allocation)`. This column could then be referenced in the OWRS file as
+
+```yaml
+---
+budget: cii_allocation
+tier_starts:
+  ...
+tier_prices:
+  ...
+commmodity_charge: Budget
+...
+```
 
 ## <a name="utility-examples"></a>Full Utility Rate Files
 
