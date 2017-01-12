@@ -1,0 +1,145 @@
+---
+metadata:
+  effective_date: 2016-01-01
+  utility_name: "Santa Margarita Water District"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 14.89
+        1"     : 20.59
+        1-1/2": 29.01
+        2"     : 42.03
+        2-1/2": 72.94
+        3"    : 103.84
+        4"    : 150.96
+        6"    : 274.90
+        8"    : 428.94
+        10"  : 642.46
+    fixed_sewer_charge: 20.30
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 101%
+      - 151%
+      - 201%
+    tier_prices:
+      - 1.86
+      - 2.11
+      - 2.61
+      - 3.12
+      - 4.67
+    commodity_charge: Budget
+    sewer_charge: 1.03*usage_ccf
+    bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
+      
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 14.89
+        1"     : 20.59
+        1-1/2": 29.01
+        2"     : 42.03
+        2-1/2": 72.94
+        3"    : 103.84
+        4"    : 150.96
+        6"    : 274.90
+        8"    : 428.94
+        10"  : 642.46
+    fixed_sewer_charge: 20.30
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 101%
+      - 151%
+      - 201%
+    tier_prices:
+      - 1.86
+      - 2.11
+      - 2.61
+      - 3.12
+      - 4.67
+    commodity_charge: Budget
+    sewer_charge: 1.03*usage_ccf
+    bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
+      
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 14.89
+        1"     : 20.59
+        1-1/2": 29.01
+        2"     : 42.03
+        2-1/2": 72.94
+        3"    : 103.84
+        4"    : 150.96
+        6"    : 274.90
+        8"    : 428.94
+        10"  : 642.46
+    fixed_sewer_charge: 20.30
+    commodity_charge: 2.00*usage_ccf
+    sewer_charge:
+      depends_on: rate_class
+      values:
+        C1 : 0.87*usage_ccf
+        C2 : 1.03*usage_ccf
+        C3 : 1.49*usage_ccf
+        C4 : 2.19*usage_ccf
+    bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
+    
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 14.89
+        1"     : 20.59
+        1-1/2": 29.01
+        2"     : 42.03
+        2-1/2": 72.94
+        3"    : 103.84
+        4"    : 150.96
+        6"    : 274.90
+        8"    : 428.94
+        10"  : 642.46
+    landscape_factor: 0.8
+    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
+    budget: "outdoor"
+    tier_starts:
+      - 0
+      - 51%
+      - 101%
+      - 151%
+      - 201%
+    tier_prices:
+      depends_on: domestic_type
+      values:
+        domestic:
+          - 2.23
+          - 2.32
+          - 2.49
+          - 2.66
+          - 3.29
+        non_domestic:
+          - 1.83
+          - 2.01
+          - 2.03
+          - 2.10
+          - 2.97
+    commodity_charge: Budget
+    bill: commodity_charge+service_charge
