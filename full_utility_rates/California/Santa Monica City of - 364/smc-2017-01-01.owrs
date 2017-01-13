@@ -1,0 +1,212 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "City of Santa Monica"
+  bill_frequency: bimonthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    tier_starts:
+      - 0
+      - 15
+      - 41
+      - 149
+    tier_prices:
+      - 3.01
+      - 4.50
+      - 6.76
+      - 10.57
+    commodity_charge: Tiered
+    bill: commodity_charge
+  RESIDENTIAL_MULTI:
+    tier_starts:
+      - 0
+      - 5
+      - 10
+      - 21
+    tier_prices:
+      - 3.01
+      - 4.50
+      - 6.76
+      - 10.57
+    commodity_charge: Tiered
+    bill: commodity_charge
+  IRRIGATION:
+    tier_starts:
+      depends_on: meter_size
+      values:
+        5/8":
+          - 0
+          - 211
+        3/4":
+          - 0
+          - 211
+        1":
+          - 0
+          - 211
+        1_1/2":
+          - 0
+          - 466
+        2":
+          - 0
+          - 871
+        3":
+          - 0
+          - 1701
+        4":
+          - 0
+          - 2551
+        6":
+          - 0
+          - 5281
+        8":
+          - 0
+          - 5281
+        10":
+          - 0
+          - 5281
+    tier_prices:
+      depends_on: water_type
+      values:
+        POTABLE:
+          - 4.27
+          - 10.53
+        RECYCLED:
+          - 3.84
+          - 3.84
+    commodity_charge: Tiered
+    bill: commodity_charge
+  COMMERCIAL:
+    tier_starts:
+      depends_on: meter_size
+      values:
+        5/8":
+          - 0
+          - 211
+        3/4":
+          - 0
+          - 211
+        1":
+          - 0
+          - 211
+        1_1/2":
+          - 0
+          - 466
+        2":
+          - 0
+          - 871
+        3":
+          - 0
+          - 1701
+        4":
+          - 0
+          - 2551
+        6":
+          - 0
+          - 5281
+        8":
+          - 0
+          - 5281
+        10":
+          - 0
+          - 5281
+    tier_prices:
+      depends_on: water_type
+      values:
+        POTABLE:
+          - 4.27
+          - 10.53
+        RECYCLED:
+          - 3.84
+          - 3.84
+    commodity_charge: Tiered
+    bill: commodity_charge
+  INDUSTRIAL:
+    tier_starts:
+      depends_on: meter_size
+      values:
+        5/8":
+          - 0
+          - 211
+        3/4":
+          - 0
+          - 211
+        1":
+          - 0
+          - 211
+        1_1/2":
+          - 0
+          - 466
+        2":
+          - 0
+          - 871
+        3":
+          - 0
+          - 1701
+        4":
+          - 0
+          - 2551
+        6":
+          - 0
+          - 5281
+        8":
+          - 0
+          - 5281
+        10":
+          - 0
+          - 5281
+    tier_prices:
+      depends_on: water_type
+      values:
+        POTABLE:
+          - 4.27
+          - 10.53
+        RECYCLED:
+          - 3.84
+          - 3.84
+    commodity_charge: Tiered
+    bill: commodity_charge
+  INSTITUTIONAL:
+    tier_starts:
+      depends_on: meter_size
+      values:
+        5/8":
+          - 0
+          - 211
+        3/4":
+          - 0
+          - 211
+        1":
+          - 0
+          - 211
+        1_1/2":
+          - 0
+          - 466
+        2":
+          - 0
+          - 871
+        3":
+          - 0
+          - 1701
+        4":
+          - 0
+          - 2551
+        6":
+          - 0
+          - 5281
+        8":
+          - 0
+          - 5281
+        10":
+          - 0
+          - 5281
+    tier_prices:
+      depends_on: water_type
+      values:
+        POTABLE:
+          - 4.27
+          - 10.53
+        RECYCLED:
+          - 3.84
+          - 3.84
+    commodity_charge: Tiered
+    bill: commodity_charge
