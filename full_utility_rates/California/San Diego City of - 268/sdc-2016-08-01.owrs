@@ -31,9 +31,7 @@ rate_structure:
       - 7.206
       - 10.134
     commodity_charge: Tiered
-    recycled_rate: 1.734
-    recycled_water_charge: recycled_rate*usage_recycled
-    bill: service_charge+commodity_charge+recycled_water_charge
+    bill: service_charge+commodity_charge
   
   RESIDENTIAL_MULTI:
     service_charge:
