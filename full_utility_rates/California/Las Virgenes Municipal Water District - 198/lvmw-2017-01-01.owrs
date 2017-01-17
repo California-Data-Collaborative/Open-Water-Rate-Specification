@@ -1,0 +1,245 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Las Virgenes Municipal Water District"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 21.73
+        1"    : 35.14
+        1.5"  : 68.65
+        2"    : 108.86
+        3"    : 236.20
+        4"    : 423.85
+        6"    : 1073.94
+        8"    : 1878.17
+        10"   : 2816.44
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30.4
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.632*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 101%
+      - 150%
+    tier_prices:
+      - 2.46
+      - 3.24
+      - 4.00
+      - 5.02
+    commodity_charge: Budget
+    elevation_rate:
+      depends_on: zones
+      values:
+	  1: 0.00
+	  2: 0.44
+	  3: 1.03
+	  4: 1.64
+    elevation_charge: elevation_rate*usage_ccf
+    sanitation_charge:21.82
+    bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
+      
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 21.73
+        1"    : 35.14
+        1.5"  : 68.65
+        2"    : 108.86
+        3"    : 236.20
+        4"    : 423.85
+        6"    : 1073.94
+        8"    : 1878.17
+        10"   : 2816.44
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30.4
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.632*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 101%
+      - 150%
+    tier_prices:
+      - 2.46
+      - 3.24
+      - 4.00
+      - 5.02
+    commodity_charge: Budget
+    elevation_rate:
+      depends_on: zones
+      values:
+        1: 0.00
+        2: 0.44
+        3: 1.03
+        4: 1.64
+    elevation_charge: elevation_rate*usage_ccf
+    sanitation_charge:
+      depends_on: hhsize
+      values:
+        1: 21.82
+        2: 36.51
+        3: 51.20
+        4: 65.89
+        5: 80.58
+        6: 95.27
+    bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
+  
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 21.73
+        1"    : 35.14
+        1.5"  : 68.65
+        2"    : 108.86
+        3"    : 236.20
+        4"    : 423.85
+        6"    : 1073.94
+        8"    : 1878.17
+        10"   : 2816.44
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30.4
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.632*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - 33%
+      - 101%
+      - 150%
+    tier_prices:
+      - 2.46
+      - 3.24
+      - 4.00
+      - 5.02
+    commodity_charge: Budget
+    elevation_rate:
+      depends_on: zones
+      values:
+        1: 0.00
+        2: 0.44
+        3: 1.03
+        4: 1.64
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+
+    
+  IRRIGATION:
+    service_charge:
+      depends_on: 
+        - meter_size
+        - water_type
+      values:
+        3/4"|potable  
+          - 21.73
+        3/4"|recycled  
+          - 13.04
+        1"|potable 
+          - 35.14
+        1"|recycled
+          - 21.09 
+        1.5"|potable 
+          - 68.65
+        1.5"|recycled 
+          - 41.19
+        2"|potable 
+          - 108.86
+        2"|recycled 
+          - 65.32
+        3"|potable 
+          - 236.20
+        3"|recycled 
+          - 141.72
+        4"|potable 
+          - 423.85
+        4"|recycled 
+          - 254.31
+        6"|potable 
+          - 1073.94
+        6"|recycled 
+          - 644.37
+        8"|potable 
+          - 1878.17
+        8"|recycled 
+          - 1126.91
+        10"|potable 
+          - 2816.44
+        10"|recycled 
+          - 1689.87
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30.4
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.632*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - 101%
+      - 150%
+    tier_prices:
+	depends_on: water_type
+	values:
+	  potable:
+          - 3.24
+          - 4.00
+          - 5.02
+	  recycled:
+          - 1.19
+          - 2.83
+          - 3.67
+    commodity_charge: Budget
+    elevation_rate:
+      depends_on: 
+        - water_type
+        - zones
+      values:
+        potable:
+          1: 0.00
+          2: 0.44
+          3: 1.03
+          4: 1.64
+        recycled:
+          Las Virgenes Valley: 0.00
+          East/West : 0.34    
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+
+  OTHER
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"  : 21.73
+        1"    : 35.14
+        1.5"  : 68.65
+        2"    : 108.86
+        3"    : 236.20
+        4"    : 423.85
+        6"    : 1073.94
+        8"    : 1878.17
+        10"   : 2816.44
+    rate:
+      depends_on: water_type
+      values:
+        domestic: 2.39
+        recycled: 1.96
+    commodity_charge: rate*usage_ccf
+    elevation_rate:
+      depends_on: zones
+      values:
+        1: 0.00
+        2: 0.44
+        3: 1.03
+        4: 1.64
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
