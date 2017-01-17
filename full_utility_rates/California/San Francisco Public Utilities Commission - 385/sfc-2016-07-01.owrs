@@ -1,0 +1,190 @@
+---
+metadata:
+  effective_date: 2016-07-01
+  utility_name: "San Francisco Public Utilities Commission"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    tier_starts:
+      - 0
+      - 5
+    tier_prices:
+      - 6.00
+      - 8.05
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+  
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    tier_starts:
+      - 0
+      - 4
+    tier_prices:
+      - 6.14
+      - 8.23
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+  
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    flat_rate: 7.14 
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    flat_rate: 7.14 
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+    
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    flat_rate: 7.14 
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+    
+  NON_POTABLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    flat_rate: 2.76 
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+    
+  INTERRUPTIBLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.86
+         3/4"  : 13.68
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+         6"    : 286.69
+         8"    : 455.56
+         10"   : 652.57
+         12"   : 1215.46
+         16"   : 2116.11
+    flat_rate: 6.47 
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+    
+  BUILDERS_CONTRACTORS:
+    connection_fee: 120.00
+    service_charge:
+      depends_on: meter_size
+      values:
+         1"    : 19.30
+         1_1/2": 33.37
+         2"    : 50.26
+         3"    : 89.67
+         4"    : 145.95
+    flat_rate: 8.57 
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge+connection_fee
+    
+  DOCKS_SHIPPING:
+    connection_fee: 245.00
+    flat_rate: 9.43
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+connection_fee
+  
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1"    : 9.59
+         1_1/2": 13.93
+         2"    : 19.16
+         3"    : 31.35
+         4"    : 48.76
+         6"    : 92.28
+         8"    : 144.52
+         10"   : 205.46
+         12"   : 379.58
+    bill: service_charge
