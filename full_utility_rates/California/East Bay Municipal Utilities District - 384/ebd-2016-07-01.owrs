@@ -34,8 +34,6 @@ rate_structure:
       - 4.34
       - 5.74
     commodity_charge: Tiered
-    non_potable_rate: 3.46
-    non_potable_charge: non_potable_rate*usage_non_potable
     elevation_rate:
       depends_on: zones
       values:
@@ -43,7 +41,7 @@ rate_structure:
 	      2: 0.64
 	      3: 1.33
     elevation_charge: elevation_rate*usage_ccf
-    bill: service_charge+commodity_charge+elevation_charge+non_potable_charge
+    bill: service_charge+commodity_charge+elevation_charge
   
   RESIDENTIAL_MULTI:
     service_charge:
@@ -65,8 +63,6 @@ rate_structure:
          18"   : 6661.52
     flat_rate: 4.46 
     commodity_charge: flat_rate*usage_ccf
-    non_potable_rate: 3.46
-    non_potable_charge: non_potable_rate*usage_non_potable
     elevation_rate:
       depends_on: zones
       values:
@@ -74,7 +70,7 @@ rate_structure:
 	      2: 0.64
 	      3: 1.33
     elevation_charge: elevation_rate*usage_ccf
-    bill: service_charge+commodity_charge+elevation_charge+non_potable_charge
+    bill: service_charge+commodity_charge+elevation_charge
   
   NON_RESIDENTIAL:
     service_charge:
@@ -96,7 +92,34 @@ rate_structure:
          18"   : 6661.52
     flat_rate: 4.44 
     commodity_charge: flat_rate*usage_ccf
-    non_potable_rate: 3.46
+    elevation_rate:
+      depends_on: zones
+      values:
+	      1: 0.00
+	      2: 0.64
+	      3: 1.33
+    elevation_charge: elevation_rate*usage_ccf
+    bill: service_charge+commodity_charge+elevation_charge
+    
+  NON_POTABLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 41.38
+         3/4"  : 41.38
+         1"    : 62.48
+         1_1/2": 115.30
+         2"    : 178.64
+         3"    : 347.58
+         4"    : 537.66
+         6"    : 1065.54
+         8"    : 1699.06
+         10"   : 2438.14
+         12"   : 3388.44
+         14"   : 4338.68
+         16"   : 5500.12
+         18"   : 6661.52
+    non_potable_rate: 3.46 
     non_potable_charge: non_potable_rate*usage_non_potable
     elevation_rate:
       depends_on: zones
@@ -105,7 +128,7 @@ rate_structure:
 	      2: 0.64
 	      3: 1.33
     elevation_charge: elevation_rate*usage_ccf
-    bill: service_charge+commodity_charge+elevation_charge+non_potable_charge
+    bill: service_charge+elevation_charge+non_potable_charge
     
   PRIVATE_FIRE:
     service_charge:
