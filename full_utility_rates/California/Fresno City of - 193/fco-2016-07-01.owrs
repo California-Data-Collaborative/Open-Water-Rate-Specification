@@ -1,0 +1,91 @@
+---
+metadata:
+  effective_date: 2016-07-01
+  utility_name: "City of Fresno"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.50
+         3/4"  : 10.50
+         1"    : 13.80
+         1_1/2": 16.10
+         2"    : 27.30
+         3"    : 40.80
+         4"    : 62.00
+         6"    : 118.00
+         8"    : 545.00
+         10"   : 860.00
+         12"   : 1131.00
+    flat_rate: 
+      depends_on: water_font
+      values:
+        city_delivered: 1.28
+        private_wells: 0.218
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 10.50
+         3/4"  : 10.50
+         1"    : 13.80
+         1_1/2": 16.10
+         2"    : 27.30
+         3"    : 40.80
+         4"    : 62.00
+         6"    : 118.00
+         8"    : 545.00
+         10"   : 860.00
+         12"   : 1131.00
+    flat_rate: 
+      depends_on: water_font
+      values:
+        city_delivered: 1.28
+        private_wells: 0.218
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         private_hydrant: 35.40
+         5/8"  : 8.30
+         3/4"  : 8.30
+         1"    : 10.40
+         1_1/2": 11.70
+         2"    : 18.70
+         3"    : 27.00
+         4"    : 40.00
+         6"    : 74.00
+         8"    : 337.00
+         10"   : 531.00
+         12"   : 697.00
+    flat_rate: 
+      depends_on: water_font
+      values:
+        city_delivered: 1.28
+        private_wells: 0.218
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        private_hydrant : 35.40
+        1"              : 12.20
+        1_1/2"          : 12.20
+        2"              : 12.20
+        3"              : 12.20
+        4"              : 12.20
+        6"              : 35.40
+        8"              : 76.00
+        10"             : 136.00
+        12"             : 219.00
+    bill: service_charge
