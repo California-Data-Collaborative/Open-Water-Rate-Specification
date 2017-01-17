@@ -53,9 +53,27 @@ rate_structure:
          16"   : 2727.07
     flat_rate: 5.449 
     commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  
+  RECYCLED:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.92
+         3/4"  : 23.92
+         1"    : 31.52
+         1_1/2": 48.89
+         2"    : 70.60
+         3"    : 121.62
+         4"    : 194.36
+         6"    : 374.57
+         8"    : 591.69
+         10"   : 845.72
+         12"   : 1568.73
+         16"   : 2727.07
     recycled_rate: 1.734
-    recycled_water_charge: recycled_rate*usage_recycled
-    bill: service_charge+commodity_charge+recycled_water_charge
+    recycled_charge: recycled_rate*usage_recycled
+    bill: service_charge+recycled_charge
   
   IRRIGATION:
     service_charge:
@@ -75,9 +93,7 @@ rate_structure:
          16"   : 2727.07
     flat_rate: 6.032 
     commodity_charge: flat_rate*usage_ccf
-    recycled_rate: 1.734
-    recycled_water_charge: recycled_rate*usage_recycled
-    bill: service_charge+commodity_charge+recycled_water_charge
+    bill: service_charge+commodity_charge
   
   COMMERCIAL:
     service_charge:
@@ -97,9 +113,7 @@ rate_structure:
          16"   : 2727.07
     flat_rate: 5.327 
     commodity_charge: flat_rate*usage_ccf
-    recycled_rate: 1.734
-    recycled_water_charge: recycled_rate*usage_recycled
-    bill: service_charge+commodity_charge+recycled_water_charge
+    bill: service_charge+commodity_charge
     
   INDUSTRIAL:
     service_charge:
@@ -119,9 +133,7 @@ rate_structure:
          16"   : 2727.07
     flat_rate: 5.327 
     commodity_charge: flat_rate*usage_ccf
-    recycled_rate: 1.734
-    recycled_water_charge: recycled_rate*usage_recycled
-    bill: service_charge+commodity_charge+recycled_water_charge
+    bill: service_charge+commodity_charge
     
   TEMPORARY_CONSTRUCTION:
     service_charge:
@@ -141,6 +153,4 @@ rate_structure:
          16"   : 2727.07
     flat_rate: 6.133 
     commodity_charge: flat_rate*usage_ccf
-    recycled_rate: 1.734
-    recycled_water_charge: recycled_rate*usage_recycled
-    bill: service_charge+commodity_charge+recycled_water_charge 
+    bill: service_charge+commodity_charge
