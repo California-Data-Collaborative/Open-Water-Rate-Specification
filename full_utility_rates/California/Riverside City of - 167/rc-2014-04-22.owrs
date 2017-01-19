@@ -1,0 +1,201 @@
+#Surcharge Area Outside City:
+# Charges shall be the amount computed at the Quantity Rates
+# and the minimum charge set forth in the Basic Area of this 
+# schedule multiplied by 1.5. 
+#Need to add Greenbelt Irrigation Service
+---
+metadata:
+  effective_date: 2014-04-22
+  utility_name: "City of Riverside"
+  bill_frequency: monthly
+rate_structure:
+
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+        values:
+          5/8"   : 13.99
+          3/4"   : 13.99
+          1"     : 23.29
+          1 1/2" : 46.60
+          2"     : 74.49
+    tier_starts:
+      - 0
+      - 16
+      - 36
+      - 61
+    tier_prices:
+      depends_on: season
+      values:
+        Summer:
+          - 1.14
+          - 1.83
+          - 2.85
+          - 4.10
+        Winter:
+          - 1.13
+          - 1.64
+          - 2.26
+          - 2.75
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge"
+	
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 13.99
+        3/4"   : 13.99
+        1"     : 23.29
+        1 1/2" : 46.60
+        2"     : 74.49
+    tier_starts:
+      - 0
+      - 16
+      - 36
+      - 61
+    tier_prices:
+      depends_on: season
+		values:
+          Summer:
+            - 1.14
+            - 1.83
+            - 2.85
+            - 4.10
+          Winter:
+            - 1.13
+            - 1.64
+            - 2.26
+            - 2.75
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge"
+	
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+        values:
+          3"  : 97.75
+          4"  : 136.18
+          6"  : 292.37
+          8"  : 490.85
+    tier_starts:
+      depends_on: with_residence
+        values:
+          With_Residence:
+            - 0
+            - 101
+          Without_Residence:
+            - 0
+    tier_prices:
+      depends_on: with_residence
+        values:
+          With_Residence:
+            - 0.81
+            - 1.26
+          Without_Residence:
+            - 1.26
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge"
+	
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+        values:
+          5/8"   : 11.57
+          3/4"   : 11.57
+          1"     : 19.22
+          1 1/2" : 38.46
+          2"     : 61.51
+    tier_starts:
+      - 0
+      - 551
+    tier_prices:
+      depends_on: season
+        values:
+          Summer
+            - 1.77
+            - 2.32
+          Winter
+            - 1.42
+            - 1.99
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge"
+	
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+        values:
+          3"   : 142.52
+          4"   : 237.57
+          6"   : 457.19
+          8"   : 760.29
+          10"  : 1092.85
+          12"  : 1330.40
+    tier_starts:
+      - 0
+      - 551
+      - 5501
+    tier_prices:
+      depends_on: season
+        values:
+          Summer	
+            - 1.77
+            - 1.89
+            - 2.32
+          Winter
+            - 1.42
+            - 1.54
+            - 1.99
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge"
+	
+  #Need to add future customers
+  RECYCLED:
+    service_charge:
+      depends_on: meter_size
+        values:
+          4"   : 483.08
+          6"   : 966.16
+          8"   : 1545.86
+          10"  : 2227.97
+    recycled_rate: 0.80
+    recycled_charge: recycled_rate*usage_ccf
+    bill: "service_charge+recycled_charge"
+	
+  CITY:
+    service_charge:
+      depends_on: meter_size
+        values:
+          5/8"   : 14.27
+          3/4"   : 14.27
+          1"     : 23.74
+          1 1/2" : 47.56
+          2      : 71.73
+          3      : 143.45
+          4      : 286.90
+          6      : 569.26
+    flat_rate: 1.14
+    commodity_charge: "flat_rate*usage_ccf"
+    bill: "service_charge+commodity_charge"
+	
+  TEMPORARY_CONSTRUCTION:
+    service_charge:
+      depends_on: meter_size
+        values:
+          3/4"   : 101.48
+          1"     : 101.48
+    flat_rate: 2.71
+    commodity_charge: "flat_rate*usage_ccf"
+    bill: "service_charge+commodity_charge"
+
+  FIRE_SERVICES:
+    service_charge:
+      depends_on: meter_size
+        values: 
+          4"   : 49.36
+          6"   : 73.94
+          8"   : 98.66
+          10"  : 123.21
+          12"  : 147.94
+    bill: service_charge
+			
