@@ -1,0 +1,235 @@
+---
+metadata:
+  effective_date: 2016-01-01
+  utility_name: "Los Angeles Department of Water and Power"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      depends_on:
+        - season
+        - lot_size_group
+        - temperature_zone
+      values:
+        Winter|1|Low:
+          - 0
+          - 17
+          - 23
+          - 35
+        Winter|1|Medium:
+          - 0
+          - 17
+          - 23
+          - 35
+          Winter|1|High:
+          - 0
+          - 17
+          - 23
+          - 35
+        Summer|1|Low:
+          - 0
+          - 17
+          - 29
+          - 53
+        Summer|1|Medium:
+          - 0
+          - 17
+          - 31
+          - 59
+        Summer|1|High:
+          - 0
+          - 17
+          - 35
+          - 71
+        Winter|2|Low:
+          - 0
+          - 17
+          - 25
+          - 41
+        Winter|2|Medium:
+          - 0
+          - 17
+          - 25
+          - 41
+          Winter|2|High:
+          - 0
+          - 17
+          - 25
+          - 41
+        Summer|2|Low:
+          - 0
+          - 17
+          - 35
+          - 71
+        Summer|2|Medium:
+          - 0
+          - 17
+          - 37
+          - 77
+        Summer|2|High:
+          - 0
+          - 17
+          - 41
+          - 89
+        Winter|3|Low:
+          - 0
+          - 17
+          - 33
+          - 65
+        Winter|3|Medium:
+          - 0
+          - 17
+          - 33
+          - 65
+          Winter|3|High:
+          - 0
+          - 17
+          - 33
+          - 65
+        Summer|3|Low:
+          - 0
+          - 17
+          - 51
+          - 119
+        Summer|3|Medium:
+          - 0
+          - 17
+          - 55
+          - 131
+        Summer|3|High:
+          - 0
+          - 17
+          - 67
+          - 167
+        Winter|4|Low:
+          - 0
+          - 17
+          - 37
+          - 77
+        Winter|4|Medium:
+          - 0
+          - 17
+          - 37
+          - 77
+        Winter|4|High:
+          - 0
+          - 17
+          - 37
+          - 77
+        Summer|4|Low:
+          - 0
+          - 17
+          - 59
+          - 143
+        Summer|4|Medium:
+          - 0
+          - 17
+          - 65
+          - 161
+        Summer|4|High:
+          - 0
+          - 17
+          - 79
+          - 203
+        Winter|5|Low:
+          - 0
+          - 17
+          - 37
+          - 77
+        Winter|5|Medium:
+          - 0
+          - 17
+          - 37
+          - 77
+        Winter|5|High:
+          - 0
+          - 17
+          - 37
+          - 77
+        Summer|5|Low:
+          - 0
+          - 17
+          - 59
+          - 143
+        Summer|5|Medium:
+          - 0
+          - 17
+          - 65
+          - 161
+        Summer|5|High:
+          - 0
+          - 17
+          - 79
+          - 203
+    tier_prices:
+      depends_on: service_area
+        - 5.892
+        - 7.341
+        - 8.206
+        - 8.206
+    commodity_charge: Budget
+    outside_city_service_rate: 0.441
+    outside_city_service_charge: 
+      depends_on: area
+      values:
+        outside_city: outside_city_service_rate * usage_ccf
+        inside_city: 0
+    bill: commodity_charge + outside_city_service_charge
+
+  RESIDENTIAL_MULTI:
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - 93% * shortage_year_winter_water_use
+      - 93% * average_daily_winter_water_use_201412_201503
+      - 24 HCF
+    tier_prices:
+      - 4.664
+      - 6.415
+      - 
+      - 
+    outside_city_service_rate: 0.441
+    outside_city_service_charge: 
+      depends_on: area
+      values:
+        outside_city: outside_city_service_rate * usage_ccf
+        inside_city: 0
+    bill: commodity_charge + outside_city_service_charge
+      
+  COMMERCIAL:
+    gpcd: 55
+    landscape_factor: 0.8
+    days_in_period: 30
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      depends_on: seson
+        Winter:
+          - 0
+          - adjusted_tier_allotment
+        Summer:
+          - 0
+          - 105% * adjusted_tier_allotment
+    tier_prices:
+      - 5.762
+      - 8.711
+    outside_city_service_rate: 0.441
+    outside_city_service_charge: 
+      depends_on: area
+      values:
+        outside_city: outside_city_service_rate * usage_ccf
+        inside_city: 0
+    bill: commodity_charge + outside_city_service_charg
+  
