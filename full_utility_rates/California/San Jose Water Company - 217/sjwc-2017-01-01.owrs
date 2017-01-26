@@ -1,0 +1,95 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Santa Jose Water Company"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8 * 3/4"  : 25.02
+        3/4"  : 25.02
+        1"     : 41.66
+        1-1/2": 83.36
+        2"     : 133.41
+        3"    : 250.12
+        4"    : 416.87
+        6"    : 833.73
+        8"    : 1333.98
+        10"  : 1917.62
+    rate:
+      depends_on:
+         - meter_size
+         - usage_ccf
+      values:
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 0 :
+          - 4.2210        
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 4 :
+          - 4.6900
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 19 :
+          - 5.1590
+        3", 4", 6", 8",10" | 0:
+          - 4.6900
+    commodity_charge: rate * usage_ccf
+    bill: commodity_charge+service_charge
+      
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8 * 3/4"  : 25.02
+        3/4"  : 25.02
+        1"     : 41.66
+        1-1/2": 83.36
+        2"     : 133.41
+        3"    : 250.12
+        4"    : 416.87
+        6"    : 833.73
+        8"    : 1333.98
+        10"  : 1917.62
+    rate:
+      depends_on:
+         - meter_size
+         - usage_ccf
+      values:
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 0 :
+          - 4.2210        
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 4 :
+          - 4.6900
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 19 :
+          - 5.1590
+        3", 4", 6", 8",10" | 0:
+          - 4.6900
+    commodity_charge: rate * usage_ccf
+    bill: commodity_charge+service_charge
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8 * 3/4"  : 25.02
+        3/4"  : 25.02
+        1"     : 41.66
+        1-1/2": 83.36
+        2"     : 133.41
+        3"    : 250.12
+        4"    : 416.87
+        6"    : 833.73
+        8"    : 1333.98
+        10"  : 1917.62
+    rate:
+      depends_on:
+         - meter_size
+         - usage_ccf
+      values:
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 0 :
+          - 4.2210        
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 4 :
+          - 4.6900
+        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 19 :
+          - 5.1590
+        3", 4", 6", 8",10" | 0:
+          - 4.6900
+    commodity_charge: rate * usage_ccf
+    bill: commodity_charge+service_charge
