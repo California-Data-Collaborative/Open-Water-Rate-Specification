@@ -197,7 +197,7 @@ rate_structure:
     service_charge: "flat_rate * diameter_of_connection"
     bill: "service_charge"
 
-RECYCLED_WATER:
+  RECYCLED:
     service_charge:
       depends_on:
       values:
