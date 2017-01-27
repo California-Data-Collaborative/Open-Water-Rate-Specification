@@ -68,20 +68,20 @@ rate_structure:
         3"     : 79.09
         4"     : 131.79
     monthly_plant_factor:
-    depends_on: usage_month
-    values:
-      1  : 0.65
-      2  : 0.65
-      3  : 0.65
-      4  : 0.6
-      5  : 0.55
-      6  : 0.55
-      7  : 0.55
-      8  : 0.55
-      9  : 0.55
-      10 : 0.6
-      11 : 0.65
-      12 : 0.65
+      depends_on: usage_month
+      values:
+        1  : 0.65
+        2  : 0.65
+        3  : 0.65
+        4  : 0.6
+        5  : 0.55
+        6  : 0.55
+        7  : 0.55
+        8  : 0.55
+        9  : 0.55
+        10 : 0.6
+        11 : 0.65
+        12 : 0.65
     weather_adjustment_factor:
       depends_on: usage_zone
       values:
