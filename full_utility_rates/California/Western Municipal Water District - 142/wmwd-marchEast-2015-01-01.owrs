@@ -19,5 +19,7 @@ metadata:
           8”  : 22.60
           10” : 28.30
           12” : 31.30
-      flat_rate: 4.718
+      flat_rate : 4.718
+      system_charge : 26.38
       commodity_charge: flat_rate*usage_ccf
+      bill: commodity_charge+service_charge
