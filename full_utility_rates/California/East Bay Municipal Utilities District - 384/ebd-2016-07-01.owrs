@@ -101,7 +101,7 @@ rate_structure:
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
     
-  NON_POTABLE:
+  NONPOTABLE:
     service_charge:
       depends_on: meter_size
       values:
