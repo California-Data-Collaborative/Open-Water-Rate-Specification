@@ -73,7 +73,7 @@ The `yaml` file format works by specifying a series of keys and values. In the e
 
 `rate_structure` specifies information that is actually used for calculating water bills. The values of the `rate_structure` key are the customer classes used to define rates. In our examples we use the standard classes defined by the CaDC: `RESIDENTIAL_SINGLE`, `RESIDENTIAL_MULTI`, `IRRIGATION`, `COMMERCIAL`, `INDUSTRIAL`, and `INSTITUTIONAL`.
 
-In Example 1 above, we see a rate structure defined only for single-family residential customers, where the commodity charge is calculated as `2.1*usage_ccf`, or $2.1 per CCF of water used. In this case `usage_ccf` is the data column name used to represent water usage. The total bill (`bill`) for each customer is then equal to just the commodity charge.
+In Example 1 above, we see a rate structure defined only for single-family residential customers, where the commodity charge is calculated as `flat_rate*usage_ccf` where `flat_rate` is 2.1, so the whole expression represents $2.1 per CCF of water used. In this case `usage_ccf` is the data column name used to represent water usage. The total bill (`bill`) for each customer is then equal to just the commodity charge.
 
 #### <a name="example2"></a>Example 2 - Fixed Service Charge
 ```yaml
@@ -89,8 +89,6 @@ rate_structure:
 ```
 
 This second example extends Example 1 by adding a fixed service charge. Note that `bill` is now calculated as the sum of `service_charge` and `commodity_charge`.
-
-The flat rate or $2.1 per CCF has also been pulled into it's own field and this field is multiplied by `usage_ccf`. This formulation is just as valid as the formulation in Example 1.
 
 #### <a name="example3"></a>Example 3 - Fixed Service Charge that Depends on Meter Size
 ```yaml
