@@ -69,9 +69,9 @@ rate_structure:
          10"   : 845.72
          12"   : 1568.73
          16"   : 2727.07
-    recycled_rate: 1.734
-    recycled_charge: recycled_rate*usage_recycled
-    bill: service_charge+recycled_charge
+    flat_rate: 1.734
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
   
   IRRIGATION:
     service_charge:
