@@ -62,7 +62,8 @@ metadata:
   bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
-    commodity_charge: 2.1*usage_ccf
+    flat_rate: 2.1
+    commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge
 ```
 
