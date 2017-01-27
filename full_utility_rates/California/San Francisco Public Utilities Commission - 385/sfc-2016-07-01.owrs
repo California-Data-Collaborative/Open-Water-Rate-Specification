@@ -114,7 +114,7 @@ rate_structure:
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
     
-  NON_POTABLE:
+  NONPOTABLE:
     service_charge:
       depends_on: meter_size
       values:
