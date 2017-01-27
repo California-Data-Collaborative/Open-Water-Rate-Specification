@@ -35,11 +35,11 @@ rate_structure:
       - 5.74
     commodity_charge: Tiered
     elevation_rate:
-      depends_on: zones
+      depends_on: pressure_zone
       values:
-	      1: 0.00
-	      2: 0.64
-	      3: 1.33
+        1: 0.00
+        2: 0.64
+        3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
   
@@ -64,11 +64,11 @@ rate_structure:
     flat_rate: 4.46 
     commodity_charge: flat_rate*usage_ccf
     elevation_rate:
-      depends_on: zones
+      depends_on: pressure_zone
       values:
-	      1: 0.00
-	      2: 0.64
-	      3: 1.33
+        1: 0.00
+        2: 0.64
+        3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
   
@@ -93,11 +93,11 @@ rate_structure:
     flat_rate: 4.44 
     commodity_charge: flat_rate*usage_ccf
     elevation_rate:
-      depends_on: zones
+      depends_on: pressure_zone
       values:
-	      1: 0.00
-	      2: 0.64
-	      3: 1.33
+        1: 0.00
+        2: 0.64
+        3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
     
@@ -119,16 +119,16 @@ rate_structure:
          14"   : 4338.68
          16"   : 5500.12
          18"   : 6661.52
-    non_potable_rate: 3.46 
-    non_potable_charge: non_potable_rate*usage_non_potable
+    flat_rate: 3.46 
+    commodity_charge: flat_rate*usage_ccf
     elevation_rate:
-      depends_on: zones
+      depends_on: pressure_zone
       values:
-	      1: 0.00
-	      2: 0.64
-	      3: 1.33
+        1: 0.00
+        2: 0.64
+        3: 1.33
     elevation_charge: elevation_rate*usage_ccf
-    bill: service_charge+elevation_charge+non_potable_charge
+    bill: service_charge+commodity_charge+elevation_charge
     
   PRIVATE_FIRE:
     service_charge:
