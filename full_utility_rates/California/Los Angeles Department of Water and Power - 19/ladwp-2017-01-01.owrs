@@ -2,15 +2,9 @@
 metadata:
   effective_date: 2017-01-01
   utility_name: "Los Angeles Department of Water and Power"
-  bill_frequency: monthly
+  bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
-    gpcd: 55
-    landscape_factor: 0.8
-    days_in_period: 30
-    indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
-    budget: "indoor+outdoor"
     tier_starts:
       depends_on:
         - season
@@ -168,60 +162,52 @@ rate_structure:
           - 79
           - 203
     tier_prices:
-      depends_on: service_area
         - 5.892
         - 7.341
         - 8.206
         - 8.206
-    commodity_charge: Budget
+    commodity_charge: Tiered
     outside_city_service_rate: 0.441
     outside_city_service_charge: 
       depends_on: area
       values:
-        outside_city: outside_city_service_rate * usage_ccf
+        outside_city: "outside_city_service_rate * usage_ccf"
         inside_city: 0
-    bill: commodity_charge + outside_city_service_charge
+    bill: "commodity_charge + outside_city_service_charge"
 
   RESIDENTIAL_MULTI:
-    gpcd: 55
-    landscape_factor: 0.8
-    days_in_period: 30
-    indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
-    budget: "indoor+outdoor"
+    days_in_period: 60.8
+    indoor: 
+      depends_on: greater_than
+      values:
+        - ".93*usage_indoor_budget_ccf*days_in_period"
+        - 24
     tier_starts:
       - 0
-      - 88% * shortage_year_winter_water_use
-      - 88% * average_daily_winter_water_use_201412_201503
-      - 24 HCF
+      - indoor
     tier_prices:
       - 5.996
       - 9.205
-      - 
-      - 
-    outside_city_service_rate: 0.441
+    outside_city_service_rate: 0
     outside_city_service_charge: 
       depends_on: area
       values:
-        outside_city: outside_city_service_rate * usage_ccf
+        outside_city: "outside_city_service_rate * usage_ccf"
         inside_city: 0
-    bill: commodity_charge + outside_city_service_charge
+    bill: "commodity_charge + outside_city_service_charge"
       
   COMMERCIAL:
-    gpcd: 55
-    landscape_factor: 0.8
-    days_in_period: 30
-    indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
-    budget: "indoor+outdoor"
-    tier_starts:
-      depends_on: seson
+    days_in_period: 60.8
+    indoor:
+      depends_on: season
+      values:
         Winter:
-          - 0
-          - adjusted_tier_allotment
+          "usage_indoor_budget_ccf * days_in_period"
         Summer:
-          - 0
-          - 105% * adjusted_tier_allotment
+          "1.05 * usage_indoor_budget_ccf * days_in_period"
+    tier_starts:
+      - 0
+      - indoor
     tier_prices:
       - 5.762
       - 8.711
@@ -229,7 +215,73 @@ rate_structure:
     outside_city_service_charge: 
       depends_on: area
       values:
-        outside_city: outside_city_service_rate * usage_ccf
+        outside_city: "outside_city_service_rate * usage_ccf"
         inside_city: 0
-    bill: commodity_charge + outside_city_service_charg
+    bill: "commodity_charge + outside_city_service_charge"
   
+  INDUSTRIAL:
+    days_in_period: 60.8
+    indoor:
+      depends_on: season
+      values:
+        Winter:
+          "usage_indoor_budget_ccf * days_in_period"
+        Summer:
+          "1.05 * usage_indoor_budget_ccf * days_in_period"
+    tier_starts:
+      - 0
+      - indoor
+    tier_prices:
+      - 5.762
+      - 8.711
+    outside_city_service_rate: 0.441
+    outside_city_service_charge: 
+      depends_on: area
+      values:
+        outside_city: "outside_city_service_rate * usage_ccf"
+        inside_city: 0
+    bill: "commodity_charge + outside_city_service_charge"
+    
+  GOVERNMENTAL:
+    days_in_period: 60.8
+    indoor:
+      depends_on: season
+      values:
+        Winter:
+          "usage_indoor_budget_ccf * days_in_period"
+        Summer:
+          "1.05 * usage_indoor_budget_ccf * days_in_period"
+    tier_starts:
+      - 0
+      - indoor
+    tier_prices:
+      - 5.762
+      - 8.711
+    outside_city_service_rate: 0.441
+    outside_city_service_charge: 
+      depends_on: area
+      values:
+        outside_city: "outside_city_service_rate * usage_ccf"
+        inside_city: 0
+    bill: "commodity_charge + outside_city_service_charge"
+    
+  FIRE_SERVICE:
+    FIRE_SERVICE:
+    service_charge:
+      depends_on: service_connection_size
+      values:
+        1"     : 3.20
+        1 1/2" : 11.35
+        2"     : 16.13
+        3"     : 39.73
+        4"     : 63.33
+        6"     : 111.98
+        8"     : 219.24
+        10"    : 264.04
+        12"    : 339.48
+        14"    : 528.08
+        16"    : 631.81
+        20"    : 847.51
+    flat_rate: 1.331
+    commodity_charge: "flat_rate*usage_ccf"
+    bill: "service_charge+commodity_charge"

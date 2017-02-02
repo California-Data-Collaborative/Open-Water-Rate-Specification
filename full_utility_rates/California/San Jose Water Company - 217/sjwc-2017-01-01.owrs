@@ -476,7 +476,7 @@ rate_structure:
         
   FIRE_SERVICE:
     service_charge:
-      depends_on: service_size
+      depends_on: service_connection_size
       values:
         2"  : 25.37
         3"  : 38.03
