@@ -1,95 +1,479 @@
 ---
 metadata:
   effective_date: 2017-01-01
-  utility_name: "Santa Jose Water Company"
+  utility_name: "San Jose Water Company"
   bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
       values:
-        5/8 * 3/4"  : 25.02
-        3/4"  : 25.02
+        #Actually 5/8" x 3/4"
+        5/8"   : 25.02
+        3/4"   : 25.02
         1"     : 41.66
-        1-1/2": 83.36
+        1 1/2" : 83.36
         2"     : 133.41
-        3"    : 250.12
-        4"    : 416.87
-        6"    : 833.73
-        8"    : 1333.98
-        10"  : 1917.62
-    rate:
-      depends_on:
-         - meter_size
-         - usage_ccf
+        3"     : 250.12
+        4"     : 416.87
+        6"     : 833.73
+        8"     : 1333.98
+        10"    : 1917.62       
+    tier_starts:
+      depends_on: meter_size
       values:
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 0 :
-          - 4.2210        
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 4 :
+        5/8": 
+          - 0
+          - 4
+          - 19
+        3/4": 
+          - 0
+          - 4
+          - 19
+        1":
+          - 0
+          - 4
+          - 19
+        1 1/2":
+          - 0
+          - 4
+          - 19
+        2": 
+          - 0
+          - 4
+          - 19
+        3"  : 0
+        4"  : 0
+        6"  : 0
+        8"  : 0
+        10" : 0
+    tier_prices:
+      depends_on: meter_size
+      values:
+        5/8": 
+          - 4.2210
           - 4.6900
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 19 :
           - 5.1590
-        3", 4", 6", 8",10" | 0:
+        3/4": 
+          - 4.2210
           - 4.6900
-    commodity_charge: rate * usage_ccf
-    bill: commodity_charge+service_charge
+          - 5.1590
+        1":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        1 1/2":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        2": 
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        3"  : 4.6900
+        4"  : 4.6900
+        6"  : 4.6900
+        8"  : 4.6900
+        10" : 4.6900
+        
+    commodity_charge: Tiered
+    safe_drinking_water_surcharge:
+      depends_on: meter_size
+      values:
+        #Actually 5/8" x 3/4"
+        5/8"   : 0.06
+        3/4"   : 0.06
+        1"     : 0.07
+        1 1/2" : 0.16
+        2"     : 0.23
+        3"     : 0.46
+        4"     : 0.71
+        6"     : 1.65
+        8"     : 2.67
+        10"    : 3.87
+    wrap_surcharge: 1.45
+    utility_surcharge: 1.0117
+    wrap_discount: .85
+    bill:
+      depends_on: wrap_customer
+      values:
+        - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
+        - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
       
+  RESIDENTIAL_SINGLE_MOUNTAIN:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"   : 25.02
+        1"     : 41.66
+        1 1/2" : 83.36
+        2"     : 133.41
+        3"     : 250.12
+        4"     : 416.87
+        6"     : 833.73
+        8"     : 1333.98
+        10"    : 1917.62       
+    tier_starts:
+      depends_on: meter_size
+      values:
+        3/4": 
+          - 0
+          - 4
+          - 19
+          - 21
+        1":
+          - 0
+          - 4
+          - 19
+          - 21
+        1 1/2":
+          - 0
+          - 4
+          - 19
+          - 21
+        2": 
+          - 0
+          - 4
+          - 19
+          - 21
+        3": 
+          - 0
+          - 21
+        4": 
+          - 0
+          - 21
+        6": 
+          - 0
+          - 21
+        8": 
+          - 0
+          - 21
+        10": 
+          - 0
+          - 21
+    tier_prices:
+      depends_on: meter_size
+      values:
+        3/4": 
+          - 4.2210
+          - 4.6900
+          - 5.1590
+          - 7.0000
+        1":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+          - 7.0000
+        1 1/2":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+          - 7.0000
+        2": 
+          - 4.2210
+          - 4.6900
+          - 5.1590
+          - 7.0000
+        3": 
+          - 4.6900
+          - 7.0000
+        4": 
+          - 4.6900
+          - 7.0000
+        6": 
+          - 4.6900
+          - 7.0000
+        8": 
+          - 4.6900
+          - 7.0000
+        10": 
+          - 4.6900
+          - 7.0000  
+    commodity_charge: Tiered
+    safe_drinking_water_surcharge:
+      depends_on: meter_size
+      values:
+        3/4"   : 0.06
+        1"     : 0.07
+        1 1/2" : 0.16
+        2"     : 0.23
+        3"     : 0.46
+        4"     : 0.71
+        6"     : 1.65
+        8"     : 2.67
+        10"    : 3.87
+    wrap_surcharge: 1.45
+    utility_surcharge: 1.0117
+    wrap_discount: .85
+    bill:
+      depends_on: wrap_customer
+      values:
+        - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
+        - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+    
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
       values:
-        5/8 * 3/4"  : 25.02
-        3/4"  : 25.02
+        #Actually 5/8" x 3/4"
+        5/8"   : 25.02
+        3/4"   : 25.02
         1"     : 41.66
-        1-1/2": 83.36
+        1 1/2" : 83.36
         2"     : 133.41
-        3"    : 250.12
-        4"    : 416.87
-        6"    : 833.73
-        8"    : 1333.98
-        10"  : 1917.62
-    rate:
-      depends_on:
-         - meter_size
-         - usage_ccf
+        3"     : 250.12
+        4"     : 416.87
+        6"     : 833.73
+        8"     : 1333.98
+        10"    : 1917.62 
+    tier_starts:
+      depends_on: meter_size
       values:
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 0 :
-          - 4.2210        
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 4 :
+        5/8": 
+          - 0
+          - 4
+          - 19
+        3/4": 
+          - 0
+          - 4
+          - 19
+        1":
+          - 0
+          - 4
+          - 19
+        1 1/2":
+          - 0
+          - 4
+          - 19
+        2": 
+          - 0
+          - 4
+          - 19
+        3"  : 0
+        4"  : 0
+        6"  : 0
+        8"  : 0
+        10" : 0
+    tier_prices:
+      depends_on: meter_size
+      values:
+        5/8": 
+          - 4.2210
           - 4.6900
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 19 :
           - 5.1590
-        3", 4", 6", 8",10" | 0:
+        3/4": 
+          - 4.2210
           - 4.6900
-    commodity_charge: rate * usage_ccf
-    bill: commodity_charge+service_charge
+          - 5.1590
+        1":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        1 1/2":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        2": 
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        3"  : 4.6900
+        4"  : 4.6900
+        6"  : 4.6900
+        8"  : 4.6900
+        10" : 4.6900
+        
+    commodity_charge: Tiered
+    safe_drinking_water_surcharge:
+      depends_on: meter_size
+      values:
+        #Actually 5/8" x 3/4"
+        5/8"   : 0.06
+        3/4"   : 0.06
+        1"     : 0.07
+        1 1/2" : 0.16
+        2"     : 0.23
+        3"     : 0.46
+        4"     : 0.71
+        6"     : 1.65
+        8"     : 2.67
+        10"    : 3.87
+    wrap_surcharge: 1.45
+    utility_surcharge: 1.0117
+    wrap_discount: .85
+    bill:
+      depends_on: wrap_customer
+      values:
+        - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
+        - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
 
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
       values:
-        5/8 * 3/4"  : 25.02
-        3/4"  : 25.02
+        #Actually 5/8" x 3/4"
+        5/8"   : 25.02
+        3/4"   : 25.02
         1"     : 41.66
-        1-1/2": 83.36
+        1 1/2" : 83.36
         2"     : 133.41
-        3"    : 250.12
-        4"    : 416.87
-        6"    : 833.73
-        8"    : 1333.98
-        10"  : 1917.62
-    rate:
-      depends_on:
-         - meter_size
-         - usage_ccf
+        3"     : 250.12
+        4"     : 416.87
+        6"     : 833.73
+        8"     : 1333.98
+        10"    : 1917.62 
+    tier_starts:
+      depends_on: meter_size
       values:
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 0 :
-          - 4.2210        
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 4 :
+        5/8": 
+          - 0
+          - 4
+          - 19
+        3/4": 
+          - 0
+          - 4
+          - 19
+        1":
+          - 0
+          - 4
+          - 19
+        1 1/2":
+          - 0
+          - 4
+          - 19
+        2": 
+          - 0
+          - 4
+          - 19
+        3"  : 0
+        4"  : 0
+        6"  : 0
+        8"  : 0
+        10" : 0
+    tier_prices:
+      depends_on: meter_size
+      values:
+        5/8": 
+          - 4.2210
           - 4.6900
-        5/8 * 3/4", 3/4", 1", 1-1/2", 2" | 19 :
           - 5.1590
-        3", 4", 6", 8",10" | 0:
+        3/4": 
+          - 4.2210
           - 4.6900
-    commodity_charge: rate * usage_ccf
-    bill: commodity_charge+service_charge
+          - 5.1590
+        1":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        1 1/2":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        2": 
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        3"  : 4.6900
+        4"  : 4.6900
+        6"  : 4.6900
+        8"  : 4.6900
+        10" : 4.6900
+    commodity_charge: Tiered
+    safe_drinking_water_surcharge:
+      depends_on: meter_size
+      values:
+        #Actually 5/8" x 3/4"
+        5/8"   : 0.06
+        3/4"   : 0.06
+        1"     : 0.07
+        1 1/2" : 0.16
+        2"     : 0.23
+        3"     : 0.46
+        4"     : 0.71
+        6"     : 1.65
+        8"     : 2.67
+        10"    : 3.87
+    wrap_surcharge: 1.45
+    utility_surcharge: 1.0117
+    bill: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+    
+  Recycled:
+    service_charge:
+      depends_on:
+        - water_supply
+        - meter_size
+      values:
+        Piped|3/4"    : 25.02
+        Piped|1"      : 41.66
+        Piped|1 1/2"  : 83.36
+        Piped|2"      : 133.41
+        Well|2"       : 31.15
+        Piped|3"      : 250.12
+        Well|3"       : 41.53
+        Piped|4"      : 416.87
+        Well|4"       : 46.72
+        Piped|6"      : 833.73
+        Well|6"       : 77.87
+        Piped|8"      : 1333.98
+        Well|8"       : 93.45
+        Piped|10"     : 1917.62
+        Well|10"      : 145.36
+    flat_rate:
+      depends_on: 
+        - water_supply
+        - use_of_water
+      values:
+        Piped|Irrigation   : 4.2194
+        Piped|Industrial   : 4.2194
+        Piped|Agricultural : 4.2194
+        Well|Irrigation    : 2.2199
+        Well|Industrial    : 2.2199
+        Well|Agricultural  : 2.2199
+    commodity_charge: "flat_rate*usage_ccf"
+    bill: "service_charge+commodity_charge"
+    
+  TEMPORARY_CONSTRUCTION:
+    service_charge:
+      depends_on: meter_size
+      values:
+        1"     : 41.66
+        3"     : 250.12
+    tier_starts:
+      depends_on: meter_size
+      values:
+        1":
+          - 0
+          - 4
+          - 19
+        3"  : 0
+    tier_prices:
+      depends_on: meter_size
+      values:
+        1":
+          - 4.2210
+          - 4.6900
+          - 5.1590
+        3"  : 4.6900
+    commodity_charge: Tiered
+    safe_drinking_water_surcharge:
+      depends_on: meter_size
+      values:
+        1"     : 0.07
+        3"     : 0.46
+    wrap_surcharge: 1.45
+    utility_surcharge: 1.0117
+    bill: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+        
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: service_connection_size
+      values:
+        2"  : 25.37
+        3"  : 38.03
+        4"  : 50.71
+        6"  : 76.09
+        8"  : 101.43
+        10" : 126.80
+        12" : 152.15
+    bill: service_charge
+      
