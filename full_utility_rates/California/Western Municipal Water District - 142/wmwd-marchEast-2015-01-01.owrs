@@ -3,23 +3,23 @@ metadata:
   effective_date: 2015-01-01
   utility_name: "Western Municipal Water District"
   bill_frequency: monthly
-  rate_structure:
-    COMMERCIAL:
-      service_charge:
-        depends_on: meter_size
-        values:
-          5/8”  : 3.55
-          3/4”  : 3.55
-          1”  : 5.75
-          1½” : 11.45
-          2”  : 14.15
-          3”  : 17.15
-          4”  : 17.15
-          6”  : 22.60
-          8”  : 22.60
-          10” : 28.30
-          12” : 31.30
-      flat_rate : 4.718
-      system_charge : 26.38
-      commodity_charge: flat_rate*usage_ccf
-      bill: commodity_charge+service_charge
+rate_structure:
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8”  : 3.55
+        3/4”  : 3.55
+        1”  : 5.75
+        1½” : 11.45
+        2”  : 14.15
+        3”  : 17.15
+        4”  : 17.15
+        6”  : 22.60
+        8”  : 22.60
+        10” : 28.30
+        12” : 31.30
+    flat_rate : 4.718
+    system_charge : 26.38
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge

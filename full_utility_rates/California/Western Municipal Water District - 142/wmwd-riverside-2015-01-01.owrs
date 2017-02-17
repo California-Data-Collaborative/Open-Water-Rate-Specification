@@ -3,7 +3,7 @@ metadata:
   effective_date: 2015-01-01
   utility_name: "City of Santa Monica"
   bill_frequency: monthly
-  rate_structure:
+rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
