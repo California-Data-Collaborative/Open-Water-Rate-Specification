@@ -42,7 +42,7 @@ rate_structure:
         3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
-  
+
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
@@ -61,7 +61,7 @@ rate_structure:
          14"   : 4338.68
          16"   : 5500.12
          18"   : 6661.52
-    flat_rate: 4.46 
+    flat_rate: 4.46
     commodity_charge: flat_rate*usage_ccf
     elevation_rate:
       depends_on: pressure_zone
@@ -71,7 +71,7 @@ rate_structure:
         3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
-  
+
   NON_RESIDENTIAL:
     service_charge:
       depends_on: meter_size
@@ -90,7 +90,7 @@ rate_structure:
          14"   : 4338.68
          16"   : 5500.12
          18"   : 6661.52
-    flat_rate: 4.44 
+    flat_rate: 4.44
     commodity_charge: flat_rate*usage_ccf
     elevation_rate:
       depends_on: pressure_zone
@@ -100,7 +100,7 @@ rate_structure:
         3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
-    
+
   NONPOTABLE:
     service_charge:
       depends_on: meter_size
@@ -119,7 +119,7 @@ rate_structure:
          14"   : 4338.68
          16"   : 5500.12
          18"   : 6661.52
-    flat_rate: 3.46 
+    flat_rate: 3.46
     commodity_charge: flat_rate*usage_ccf
     elevation_rate:
       depends_on: pressure_zone
@@ -129,10 +129,10 @@ rate_structure:
         3: 1.33
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
-    
-  PRIVATE_FIRE:
+
+  FIRE_PROTECTION:
     service_charge:
-      depeds_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 11.01
          3/4"  : 11.01
@@ -148,4 +148,3 @@ rate_structure:
          14"   : 845.37
          16"   : 1070.89
          18"   : 1296.39
-
