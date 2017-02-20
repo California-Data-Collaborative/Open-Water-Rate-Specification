@@ -7,7 +7,7 @@ rate_structure:
 
   RESDENTIAL_SINGLE:
     carw_charge:
-      depends_on: 
+      depends_on:
         - carw_customer
         - meter_size
       values:
@@ -38,7 +38,7 @@ rate_structure:
 
   RESDENTIAL_MULTI:
     carw_charge:
-      depends_on: 
+      depends_on:
         - carw_customer
         - meter_size
       values:
@@ -197,7 +197,7 @@ rate_structure:
     service_charge: "flat_rate * diameter_of_connection"
     bill: "service_charge"
 
-  RECYCLED:
+  NONPOTABLE:
     service_charge:
       depends_on:
       values:

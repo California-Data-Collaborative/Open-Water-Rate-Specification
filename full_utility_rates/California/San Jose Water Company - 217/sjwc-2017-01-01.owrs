@@ -18,15 +18,15 @@ rate_structure:
         4"     : 416.87
         6"     : 833.73
         8"     : 1333.98
-        10"    : 1917.62       
+        10"    : 1917.62
     tier_starts:
       depends_on: meter_size
       values:
-        5/8": 
+        5/8":
           - 0
           - 4
           - 19
-        3/4": 
+        3/4":
           - 0
           - 4
           - 19
@@ -38,7 +38,7 @@ rate_structure:
           - 0
           - 4
           - 19
-        2": 
+        2":
           - 0
           - 4
           - 19
@@ -50,11 +50,11 @@ rate_structure:
     tier_prices:
       depends_on: meter_size
       values:
-        5/8": 
+        5/8":
           - 4.2210
           - 4.6900
           - 5.1590
-        3/4": 
+        3/4":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -66,7 +66,7 @@ rate_structure:
           - 4.2210
           - 4.6900
           - 5.1590
-        2": 
+        2":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -75,7 +75,7 @@ rate_structure:
         6"  : 4.6900
         8"  : 4.6900
         10" : 4.6900
-        
+
     commodity_charge: Tiered
     safe_drinking_water_surcharge:
       depends_on: meter_size
@@ -99,7 +99,7 @@ rate_structure:
       values:
         - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
         - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
-      
+
   RESIDENTIAL_SINGLE_MOUNTAIN:
     service_charge:
       depends_on: meter_size
@@ -112,11 +112,11 @@ rate_structure:
         4"     : 416.87
         6"     : 833.73
         8"     : 1333.98
-        10"    : 1917.62       
+        10"    : 1917.62
     tier_starts:
       depends_on: meter_size
       values:
-        3/4": 
+        3/4":
           - 0
           - 4
           - 19
@@ -131,30 +131,30 @@ rate_structure:
           - 4
           - 19
           - 21
-        2": 
+        2":
           - 0
           - 4
           - 19
           - 21
-        3": 
+        3":
           - 0
           - 21
-        4": 
+        4":
           - 0
           - 21
-        6": 
+        6":
           - 0
           - 21
-        8": 
+        8":
           - 0
           - 21
-        10": 
+        10":
           - 0
           - 21
     tier_prices:
       depends_on: meter_size
       values:
-        3/4": 
+        3/4":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -169,26 +169,26 @@ rate_structure:
           - 4.6900
           - 5.1590
           - 7.0000
-        2": 
+        2":
           - 4.2210
           - 4.6900
           - 5.1590
           - 7.0000
-        3": 
+        3":
           - 4.6900
           - 7.0000
-        4": 
+        4":
           - 4.6900
           - 7.0000
-        6": 
+        6":
           - 4.6900
           - 7.0000
-        8": 
+        8":
           - 4.6900
           - 7.0000
-        10": 
+        10":
           - 4.6900
-          - 7.0000  
+          - 7.0000
     commodity_charge: Tiered
     safe_drinking_water_surcharge:
       depends_on: meter_size
@@ -210,7 +210,7 @@ rate_structure:
       values:
         - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
         - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
-    
+
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
@@ -225,15 +225,15 @@ rate_structure:
         4"     : 416.87
         6"     : 833.73
         8"     : 1333.98
-        10"    : 1917.62 
+        10"    : 1917.62
     tier_starts:
       depends_on: meter_size
       values:
-        5/8": 
+        5/8":
           - 0
           - 4
           - 19
-        3/4": 
+        3/4":
           - 0
           - 4
           - 19
@@ -245,7 +245,7 @@ rate_structure:
           - 0
           - 4
           - 19
-        2": 
+        2":
           - 0
           - 4
           - 19
@@ -257,11 +257,11 @@ rate_structure:
     tier_prices:
       depends_on: meter_size
       values:
-        5/8": 
+        5/8":
           - 4.2210
           - 4.6900
           - 5.1590
-        3/4": 
+        3/4":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -273,7 +273,7 @@ rate_structure:
           - 4.2210
           - 4.6900
           - 5.1590
-        2": 
+        2":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -282,7 +282,7 @@ rate_structure:
         6"  : 4.6900
         8"  : 4.6900
         10" : 4.6900
-        
+
     commodity_charge: Tiered
     safe_drinking_water_surcharge:
       depends_on: meter_size
@@ -321,15 +321,15 @@ rate_structure:
         4"     : 416.87
         6"     : 833.73
         8"     : 1333.98
-        10"    : 1917.62 
+        10"    : 1917.62
     tier_starts:
       depends_on: meter_size
       values:
-        5/8": 
+        5/8":
           - 0
           - 4
           - 19
-        3/4": 
+        3/4":
           - 0
           - 4
           - 19
@@ -341,7 +341,7 @@ rate_structure:
           - 0
           - 4
           - 19
-        2": 
+        2":
           - 0
           - 4
           - 19
@@ -353,11 +353,11 @@ rate_structure:
     tier_prices:
       depends_on: meter_size
       values:
-        5/8": 
+        5/8":
           - 4.2210
           - 4.6900
           - 5.1590
-        3/4": 
+        3/4":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -369,7 +369,7 @@ rate_structure:
           - 4.2210
           - 4.6900
           - 5.1590
-        2": 
+        2":
           - 4.2210
           - 4.6900
           - 5.1590
@@ -396,8 +396,8 @@ rate_structure:
     wrap_surcharge: 1.45
     utility_surcharge: 1.0117
     bill: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
-    
-  Recycled:
+
+  NONPOTABLE:
     service_charge:
       depends_on:
         - water_supply
@@ -419,9 +419,9 @@ rate_structure:
         Piped|10"     : 1917.62
         Well|10"      : 145.36
     flat_rate:
-      depends_on: 
+      depends_on:
         - water_supply
-        - use_of_water
+        - water_type
       values:
         Piped|Irrigation   : 4.2194
         Piped|Industrial   : 4.2194
@@ -431,7 +431,7 @@ rate_structure:
         Well|Agricultural  : 2.2199
     commodity_charge: "flat_rate*usage_ccf"
     bill: "service_charge+commodity_charge"
-    
+
   TEMPORARY_CONSTRUCTION:
     service_charge:
       depends_on: meter_size
@@ -463,10 +463,10 @@ rate_structure:
     wrap_surcharge: 1.45
     utility_surcharge: 1.0117
     bill: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
-        
+
   FIRE_SERVICE:
     service_charge:
-      depends_on: service_connection_size
+      depends_on: meter_size
       values:
         2"  : 25.37
         3"  : 38.03
@@ -476,4 +476,3 @@ rate_structure:
         10" : 126.80
         12" : 152.15
     bill: service_charge
-      

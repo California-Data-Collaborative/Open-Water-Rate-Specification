@@ -130,7 +130,7 @@ rate_structure:
     elevation_charge: elevation_rate*usage_ccf
     bill: service_charge+commodity_charge+elevation_charge
 
-  FIRE_PROTECTION:
+  FIRE_SERVICE:
     service_charge:
       depends_on: meter_size
       values:
