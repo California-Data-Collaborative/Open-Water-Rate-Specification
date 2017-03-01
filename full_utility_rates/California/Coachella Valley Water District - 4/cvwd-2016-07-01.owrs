@@ -37,23 +37,23 @@ rate_structure:
         3  : 0.84
         4  : 1.00
         5  : 1.09
-    volumetric_conversion_factor: 0.00083 
-    irrigation_efficiency: 0.70 
+    volumetric_conversion_factor: 0.00083
+    irrigation_efficiency: 0.70
     indoor: 8
     outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "indoor+outdoor"
     tier_starts:
-      -0
-      -indoor
-      -100%
-      -175%
-      -300%
+      - 0
+      - indoor
+      - 100%
+      - 175%
+      - 300%
     tier_prices:
-      -0.95
-      -1.32
-      -2.46
-      -4.67
-      -6.13
+      - 0.95
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
     commodity_charge: Budget
     bill: "commodity_charge+service_charge"
 
@@ -90,23 +90,23 @@ rate_structure:
         3  : 0.84
         4  : 1.00
         5  : 1.09
-    volumetric_conversion_factor: 0.00083 
-    irrigation_efficiency: 0.70 
+    volumetric_conversion_factor: 0.00083
+    irrigation_efficiency: 0.70
     indoor: 8
     outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "indoor+outdoor"
     tier_starts:
-      -0
-      -indoor
-      -100%
-      -175%
-      -300%
+      - 0
+      - indoor
+      - 100%
+      - 175%
+      - 300%
     tier_prices:
-      -0.95
-      -1.32
-      -2.46
-      -4.67
-      -6.13
+      - 0.95
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
     commodity_charge: Budget
     bill: "commodity_charge+service_charge"
 
@@ -143,33 +143,33 @@ rate_structure:
         3  : 0.84
         4  : 1.00
         5  : 1.09
-    volumetric_conversion_factor: 0.00083 
-    irrigation_efficiency: 0.70 
+    volumetric_conversion_factor: 0.00083
+    irrigation_efficiency: 0.70
     outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "outdoor"
     tier_starts:
-      -0
-      -100%
-      -175%
-      -300%
+      - 0
+      - 100%
+      - 175%
+      - 300%
     tier_prices:
-      -1.32
-      -2.46
-      -4.67
-      -6.13
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
     commodity_charge: Budget
     bill: "commodity_charge+service_charge"
 
   COMMERCIAL:
     service_charge:
-    depends_on: meter_size
-    values:
-      3/4"   : 4.96
-      1"     : 8.26
-      1 1/2" : 16.53
-      2"     : 26.44
-      3"     : 49.52
-      4"     : 82.58
+      depends_on: meter_size
+      values:
+        3/4"   : 4.96
+        1"     : 8.26
+        1 1/2" : 16.53
+        2"     : 26.44
+        3"     : 49.52
+        4"     : 82.58
     monthly_plant_factor:
       depends_on: usage_month
       values:
@@ -193,21 +193,21 @@ rate_structure:
         3  : 0.84
         4  : 1.00
         5  : 1.09
-    volumetric_conversion_factor: 0.00083 
-    irrigation_efficiency: 0.70 
-    indoor: (8 * dwelling_units)
+    volumetric_conversion_factor: 0.00083
+    irrigation_efficiency: 0.70
+    indoor: "8 * dwelling_units"
     outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "indoor + outdoor"
     tier_starts:
-      -0
-      -100%
-      -175%
-      -300%
+      - 0
+      - 100%
+      - 175%
+      - 300%
     tier_prices:
-      -1.32
-      -2.46
-      -4.67
-      -6.13
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
     commodity_charge: Budget
     bill: "commodity_charge+service_charge"
 

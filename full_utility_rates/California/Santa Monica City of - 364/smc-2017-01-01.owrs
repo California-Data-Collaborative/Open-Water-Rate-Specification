@@ -5,6 +5,7 @@ metadata:
   bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
+     #service_charge: 0
     tier_starts:
       - 0
       - 15
@@ -67,10 +68,10 @@ rate_structure:
     tier_prices:
       depends_on: water_type
       values:
-        POTABLE:
+        potable:
           - 4.27
           - 10.53
-        RECYCLED:
+        recycled:
           - 3.84
           - 3.84
     commodity_charge: Tiered
@@ -112,10 +113,10 @@ rate_structure:
     tier_prices:
       depends_on: water_type
       values:
-        POTABLE:
+        potable:
           - 4.27
           - 10.53
-        RECYCLED:
+        recycled:
           - 3.84
           - 3.84
     commodity_charge: Tiered
@@ -157,10 +158,10 @@ rate_structure:
     tier_prices:
       depends_on: water_type
       values:
-        POTABLE:
+        potable:
           - 4.27
           - 10.53
-        RECYCLED:
+        recycled:
           - 3.84
           - 3.84
     commodity_charge: Tiered
@@ -202,10 +203,10 @@ rate_structure:
     tier_prices:
       depends_on: water_type
       values:
-        POTABLE:
+        potable:
           - 4.27
           - 10.53
-        RECYCLED:
+        recycled:
           - 3.84
           - 3.84
     commodity_charge: Tiered

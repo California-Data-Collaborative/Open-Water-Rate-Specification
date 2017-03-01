@@ -8,11 +8,9 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-	# Actually 5/8 x 3/4:
         5/8"          : 15.65
         3/4"          : 23.47
         1"            : 39.12
-	# Fire Sprinkler with 1"     : 16.74
         1 1/2"        : 78.23
         2"            : 125.17
         3"            : 234.70
@@ -20,8 +18,8 @@ rate_structure:
         6"            : 707.74
         8"            : 1050.59
         10"           : 1799.33
-	12"           : 2581.65
-	14"           : 3520.44
+        12"           : 2581.65
+        14"           : 3520.44
     tier_starts:
       - 0
       - 14
@@ -31,17 +29,17 @@ rate_structure:
       - 1.9818
       - 2.3088
     commodity_charge: Tiered
-    bill: "service_charge+commodity_charge"	
+    bill: "service_charge+commodity_charge"
   RESIDENTIAL_SINGLE_FIXED:
     flat_rate:
       depends_on: floor_area
       values:
         0 - 6000       : 72.62
-	6001 - 10000   : 83.62
-	10001 - 16000  : 104.28
-	16001 - 25000  : 132.22
+        6001 - 10000   : 83.62
+        10001 - 16000  : 104.28
+        16001 - 25000  : 132.22
     bill: flat_rate
-	
+
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
@@ -61,12 +59,12 @@ rate_structure:
     flat_rate: 1.7901
     commodity_charge: "flat_rate*usage_ccf"
     bill: "service_charge+commodity_charge"
-	
+
   IRRIGATION:
     service_charge:
       depends_on: meter_size
       values:
-	5/8"          : 12.64
+        5/8"          : 12.64
         3/4"          : 18.97
         1"            : 31.61
         1 1/2"        : 63.22
@@ -81,7 +79,7 @@ rate_structure:
     flat_rate: 1.7901
     commodity_charge: "flat_rate*usage_ccf"
     bill: "service_charge+commodity_charge"
-	
+
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
@@ -101,7 +99,7 @@ rate_structure:
     flat_rate: 1.7901
     commodity_charge: "flat_rate*usage_ccf"
     bill: "service_charge+commodity_charge"
-	
+
   INDUSTRIAL:
     service_charge:
       depends_on: meter_size
@@ -121,7 +119,7 @@ rate_structure:
     flat_rate: 1.7901
     commodity_charge: "flat_rate*usage_ccf"
     bill: "service_charge+commodity_charge"
-	
+
   FIRE_SERVICE:
     service_charge:
       depends_on: meter_size
@@ -134,4 +132,4 @@ rate_structure:
         8"     : 56.60
         10"    : 70.75
     bill: service_charge
-	
+

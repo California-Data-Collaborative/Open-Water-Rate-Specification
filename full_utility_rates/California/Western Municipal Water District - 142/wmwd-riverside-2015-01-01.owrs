@@ -1,24 +1,24 @@
 ---
 metadata:
   effective_date: 2015-01-01
-  utility_name: "City of Santa Monica"
+  utility_name: "Western Municipal Water District"
   bill_frequency: monthly
-  rate_structure:
+rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
       values:
-      5/8”  : 26.38
-      3/4”  : 26.38
-      1”  : 42.66
-      1½” : 85.34
-      2”  : 105.67
+      5/8"  : 26.38
+      3/4"  : 26.38
+      1"  : 42.66
+      1 1/2" : 85.34
+      2"  : 105.67
       3”  : 128.02
-      4”  : 148.31
-      6”  : 168.65
-      8”  : 190.99
-      10” : 211.30
-      12” : 233.63
+      4"  : 148.31
+      6"  : 168.65
+      8"  : 190.99
+      10" : 211.30
+      12" : 233.63
     tier_starts:
       - 0
       - 5

@@ -10,7 +10,7 @@ rate_structure:
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
@@ -37,21 +37,21 @@ rate_structure:
     elevation_rate:
       depends_on: zones
       values:
-	  1: 0.00
-	  2: 0.44
-	  3: 1.03
-	  4: 1.64
+        1 : 0.00
+        2 : 0.44
+        3 : 1.03
+        4 : 1.64
     elevation_charge: elevation_rate*usage_ccf
-    sanitation_charge:21.82
+    sanitation_charge: 21.82
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
-      
+
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
@@ -93,14 +93,14 @@ rate_structure:
         5: 80.58
         6: 95.27
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
-  
+
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
@@ -134,48 +134,48 @@ rate_structure:
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge
 
-    
+
   IRRIGATION:
     service_charge:
-      depends_on: 
+      depends_on:
         - meter_size
         - water_type
       values:
-        3/4"|potable  
+        3/4"|potable
           - 21.73
-        3/4"|recycled  
+        3/4"|recycled
           - 13.04
-        1"|potable 
+        1"|potable
           - 35.14
         1"|recycled
-          - 21.09 
-        1.5"|potable 
+          - 21.09
+        1.5"|potable
           - 68.65
-        1.5"|recycled 
+        1.5"|recycled
           - 41.19
-        2"|potable 
+        2"|potable
           - 108.86
-        2"|recycled 
+        2"|recycled
           - 65.32
-        3"|potable 
+        3"|potable
           - 236.20
-        3"|recycled 
+        3"|recycled
           - 141.72
-        4"|potable 
+        4"|potable
           - 423.85
-        4"|recycled 
+        4"|recycled
           - 254.31
-        6"|potable 
+        6"|potable
           - 1073.94
-        6"|recycled 
+        6"|recycled
           - 644.37
-        8"|potable 
+        8"|potable
           - 1878.17
-        8"|recycled 
+        8"|recycled
           - 1126.91
-        10"|potable 
+        10"|potable
           - 2816.44
-        10"|recycled 
+        10"|recycled
           - 1689.87
     gpcd: 55
     landscape_factor: 0.8
@@ -188,19 +188,19 @@ rate_structure:
       - 101%
       - 150%
     tier_prices:
-	depends_on: water_type
-	values:
-	  potable:
+      depends_on: water_type
+      values:
+        potable:
           - 3.24
           - 4.00
           - 5.02
-	  recycled:
+        recycled:
           - 1.19
           - 2.83
           - 3.67
     commodity_charge: Budget
     elevation_rate:
-      depends_on: 
+      depends_on:
         - water_type
         - zones
       values:
@@ -211,17 +211,17 @@ rate_structure:
           4: 1.64
         recycled:
           Las Virgenes Valley: 0.00
-          East/West : 0.34    
+          East/West : 0.34
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge
 
-  OTHER
+  OTHER:
     service_charge:
       depends_on: meter_size
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
