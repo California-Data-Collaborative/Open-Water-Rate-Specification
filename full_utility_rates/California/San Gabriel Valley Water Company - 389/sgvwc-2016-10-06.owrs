@@ -17,7 +17,7 @@ rate_structure:
         Yes|3/4": -10.00
         Yes|1"  : -20.00
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         5/8"      : 20.15
         3/4"      : 30.21
@@ -47,7 +47,7 @@ rate_structure:
         Yes|3/4": -10.00
         Yes|1"  : -20.00
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         5/8"           : 20.15
         3/4"           : 30.21
@@ -75,7 +75,7 @@ rate_structure:
 
   COMMERCIAL:
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         #Actually 5/8" x 3/4": 20.15
         5/8"           : 20.15
@@ -104,7 +104,7 @@ rate_structure:
 
   INDUSTRIAL:
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         #Actually 5/8" x 3/4": 20.15
         5/8"           : 20.15
@@ -133,7 +133,7 @@ rate_structure:
 
   IRRIGATION:
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         #Actually 5/8" x 3/4": 20.15
         5/8"           : 20.15
@@ -162,7 +162,7 @@ rate_structure:
 
   INSTITUTIONAL:
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         #Actually 5/8" x 3/4": 20.15
         5/8"           : 20.15
@@ -196,7 +196,7 @@ rate_structure:
 
   NONPOTABLE:
     service_charge:
-      depends_on:
+      depends_on: meter_size
       values:
         #Actually 5/8" x 3/4": 20.15
         5/8"           : 20.15

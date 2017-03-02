@@ -191,11 +191,12 @@ rate_structure:
       - 9.205
     commodity_charge: Tiered
     outside_city_service_rate: 0
-    outside_city_service_charge:
+    outside_city_service_price:
       depends_on: area
       values:
-        outside_city: "outside_city_service_rate * usage_ccf"
+        outside_city: outside_city_service_rate
         inside_city: 0
+    outside_city_service_charge: "outside_city_service_price*usage_ccf"
     bill: "commodity_charge + outside_city_service_charge"
 
   COMMERCIAL:
@@ -203,10 +204,8 @@ rate_structure:
     indoor:
       depends_on: season
       values:
-        Winter:
-          "usage_indoor_budget_ccf * days_in_period"
-        Summer:
-          "1.05 * usage_indoor_budget_ccf * days_in_period"
+        Winter: "usage_indoor_budget_ccf * days_in_period"
+        Summer: "1.05 * usage_indoor_budget_ccf * days_in_period"
     tier_starts:
       - 0
       - indoor
@@ -215,11 +214,7 @@ rate_structure:
       - 8.711
     commodity_charge: Tiered
     outside_city_service_rate: 0.441
-<<<<<<< HEAD
     outside_city_service_price:
-=======
-    outside_city_service_charge:
->>>>>>> 85762a814bd3432fbcfc3e9b784fce3a6220df0a
       depends_on: area
       values:
         outside_city: outside_city_service_rate
@@ -232,10 +227,8 @@ rate_structure:
     indoor:
       depends_on: season
       values:
-        Winter:
-          "usage_indoor_budget_ccf * days_in_period"
-        Summer:
-          "1.05 * usage_indoor_budget_ccf * days_in_period"
+        Winter: "usage_indoor_budget_ccf * days_in_period"
+        Summer: "1.05 * usage_indoor_budget_ccf * days_in_period"
     tier_starts:
       - 0
       - indoor
@@ -243,11 +236,12 @@ rate_structure:
       - 5.762
       - 8.711
     outside_city_service_rate: 0.441
-    outside_city_service_charge:
+    outside_city_service_price:
       depends_on: area
       values:
-        outside_city: "outside_city_service_rate * usage_ccf"
+        outside_city: outside_city_service_rate
         inside_city: 0
+    outside_city_service_charge: "outside_city_service_price*usage_ccf"
     bill: "commodity_charge + outside_city_service_charge"
 
   GOVERNMENTAL:
@@ -255,10 +249,8 @@ rate_structure:
     indoor:
       depends_on: season
       values:
-        Winter:
-          "usage_indoor_budget_ccf * days_in_period"
-        Summer:
-          "1.05 * usage_indoor_budget_ccf * days_in_period"
+        Winter: "usage_indoor_budget_ccf * days_in_period"
+        Summer: "1.05 * usage_indoor_budget_ccf * days_in_period"
     tier_starts:
       - 0
       - indoor
@@ -266,11 +258,12 @@ rate_structure:
       - 5.762
       - 8.711
     outside_city_service_rate: 0.441
-    outside_city_service_charge:
+    outside_city_service_price:
       depends_on: area
       values:
-        outside_city: "outside_city_service_rate * usage_ccf"
+        outside_city: outside_city_service_rate
         inside_city: 0
+    outside_city_service_charge: "outside_city_service_price*usage_ccf"
     bill: "commodity_charge + outside_city_service_charge"
 
   FIRE_SERVICE:
