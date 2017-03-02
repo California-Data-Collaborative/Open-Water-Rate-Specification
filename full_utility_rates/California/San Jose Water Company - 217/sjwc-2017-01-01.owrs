@@ -94,11 +94,19 @@ rate_structure:
     wrap_surcharge: 1.45
     utility_surcharge: 1.0117
     wrap_discount: .85
+<<<<<<< HEAD
     bill: "commodity_charge+service_charge"
       #depends_on: wrap_customer
       #values:
        # - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
         #- No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+=======
+    bill:
+      depends_on: wrap_customer
+      values:
+        - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
+        - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+>>>>>>> 85762a814bd3432fbcfc3e9b784fce3a6220df0a
 
   RESIDENTIAL_SINGLE_MOUNTAIN:
     service_charge:
@@ -397,7 +405,7 @@ rate_structure:
     utility_surcharge: 1.0117
     bill: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
 
-  Recycled:
+  NONPOTABLE:
     service_charge:
       depends_on:
         - water_supply
@@ -421,7 +429,7 @@ rate_structure:
     flat_rate:
       depends_on:
         - water_supply
-        - use_of_water
+        - water_type
       values:
         Piped|Irrigation   : 4.2194
         Piped|Industrial   : 4.2194
@@ -466,7 +474,7 @@ rate_structure:
 
   FIRE_SERVICE:
     service_charge:
-      depends_on: service_connection_size
+      depends_on: meter_size
       values:
         2"  : 25.37
         3"  : 38.03
@@ -476,4 +484,3 @@ rate_structure:
         10" : 126.80
         12" : 152.15
     bill: service_charge
-

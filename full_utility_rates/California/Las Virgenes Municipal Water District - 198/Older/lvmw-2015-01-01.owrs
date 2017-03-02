@@ -35,7 +35,7 @@ rate_structure:
       - 5.34
     commodity_charge: Budget
         elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
         1: 0.00
         2: 0.42
@@ -53,7 +53,7 @@ rate_structure:
         7.5: 52.46
         8: 55.37
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
-      
+
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
@@ -85,7 +85,7 @@ rate_structure:
       - 5.34
     commodity_charge: Budget
     elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
         1: 0.00
         2: 0.42
@@ -94,7 +94,7 @@ rate_structure:
     elevation_charge: elevation_rate*usage_ccf
     sanitation_charge: 34.99
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
-  
+
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
@@ -126,7 +126,7 @@ rate_structure:
       - 5.34
     commodity_charge: Budget
     elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
         1: 0.00
         2: 0.42
@@ -135,48 +135,48 @@ rate_structure:
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge
 
-    
+
   IRRIGATION:
     service_charge:
-      depends_on: 
+      depends_on:
         - meter_size
         - water_type
       values:
-        3/4"|potable  
+        3/4"|potable
           - 15.87
-        3/4"|recycled  
+        3/4"|recycled
           - 0
-        1"|potable 
+        1"|potable
           - 23.36
         1"|recycled
-          - 0 
-        1.5"|potable 
+          - 0
+        1.5"|potable
           - 42.09
-        1.5"|recycled 
+        1.5"|recycled
           - 0
-        2"|potable 
+        2"|potable
           - 64.83
-        2"|recycled 
+        2"|recycled
           - 0
-        3"|potable 
+        3"|potable
           - 124.45
-        3"|recycled 
+        3"|recycled
           - 0
-        4"|potable 
+        4"|potable
           - 192.17
-        4"|recycled 
+        4"|recycled
           - 0
-        6"|potable 
+        6"|potable
           - 379.13
-        6"|recycled 
+        6"|recycled
           - 0
-        8"|potable 
+        8"|potable
           - 604.29
-        8"|recycled 
+        8"|recycled
           - 0
-        10"|potable 
+        10"|potable
           - 866.49
-        10"|recycled 
+        10"|recycled
           - 0
     gpcd: 55
     landscape_factor: 0.8
@@ -201,9 +201,9 @@ rate_structure:
           - 2.26
     commodity_charge: Budget
     elevation_rate:
-      depends_on: 
+      depends_on:
         - water_type
-        - zones
+        - elevation_zone
       values:
         potable:
           1: 0.00

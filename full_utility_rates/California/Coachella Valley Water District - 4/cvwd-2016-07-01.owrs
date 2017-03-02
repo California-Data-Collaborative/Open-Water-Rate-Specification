@@ -211,7 +211,7 @@ rate_structure:
     commodity_charge: Budget
     bill: "commodity_charge+service_charge"
 
-  FIRE_PROTECTION:
+  FIRE_SERVICE:
     service_charge:
       depends_on: lateral_size
       values:

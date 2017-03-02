@@ -33,16 +33,17 @@ rate_structure:
       - 3.24
       - 4.00
       - 5.02
+
     commodity_charge: Budget
     elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
-        1 : 0.00
-        2 : 0.44
-        3 : 1.03
-        4 : 1.64
+	  1: 0.00
+	  2: 0.44
+	  3: 1.03
+	  4: 1.64
     elevation_charge: elevation_rate*usage_ccf
-    sanitation_charge: 21.82
+    sanitation_charge:21.82
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
 
   RESIDENTIAL_MULTI:
@@ -76,7 +77,7 @@ rate_structure:
       - 5.02
     commodity_charge: Budget
     elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
         1: 0.00
         2: 0.44
@@ -125,7 +126,7 @@ rate_structure:
       - 5.02
     commodity_charge: Budget
     elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
         1: 0.00
         2: 0.44
@@ -202,7 +203,7 @@ rate_structure:
     elevation_rate:
       depends_on:
         - water_type
-        - zones
+        - elevation_zone
       values:
         potable:
           1: 0.00
@@ -235,7 +236,7 @@ rate_structure:
         recycled: 1.96
     commodity_charge: rate*usage_ccf
     elevation_rate:
-      depends_on: zones
+      depends_on: elevation_zone
       values:
         1: 0.00
         2: 0.44

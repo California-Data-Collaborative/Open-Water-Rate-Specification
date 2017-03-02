@@ -294,7 +294,7 @@ rate_structure:
          #16"   : 63.986*days_in_period
          16"   : 1945.17
     flat_rate:
-      depends_on: water_use
+      depends_on: water_use_category
       values:
         peaking: 1.998
         non_peaking: 1.427
@@ -323,6 +323,7 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
+<<<<<<< HEAD
          #2"    : 1.020*days_in_period
          2"    : 31.00
          #3"    : 1.745*days_in_period
@@ -339,4 +340,14 @@ rate_structure:
          12"   : 33.67
          #16"   : 16.094*days_in_period
          16"   : 489.14
+=======
+         2"    : 1.020*days_in_period
+         3"    : 1.745*days_in_period
+         4"    : 2.577*days_in_period
+         6"    : 4.391*days_in_period
+         8"    : 6.438*days_in_period
+         10"   : 8.709*days_in_period
+         12"   : 10.976*days_in_period
+         16"   : 16.094*days_in_period
+>>>>>>> 85762a814bd3432fbcfc3e9b784fce3a6220df0a
     bill: service_charge
