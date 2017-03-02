@@ -1,0 +1,25 @@
+# Template for OWRS where rate depends on multiple variables.
+# The values correspond to all possible combinations of the 'depands_on' variable
+# {} indicates that the value should be substituted from Google sheet
+# [] indicates that the value should be substituted from Google sheet and are mandatory
+# () indicates value to be filled
+---
+metadata:
+  effective_date: ()
+  utility_name: ()
+  bill_frequency: ()
+
+rate_structure:
+  {consumer_class}:
+    {rate_component}:
+      tier_starts:
+        depends_on:
+         - {depends_on_1}
+         - {depends_on_2}
+         - {depends_on_3}
+       values:
+         (value_1)|(value_2)|(value_3):
+           - (price)
+           - (price)
+           - (price)
+           - (price)
