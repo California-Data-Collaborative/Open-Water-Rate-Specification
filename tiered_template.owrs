@@ -1,0 +1,28 @@
+# Structure when
+# {} indicates that the value should be substituted from Google sheet and are mandatory
+# [] indicates that the value should be substituted from Google sheet and are mandatory
+# () indicates value to be filled
+---
+metadata:
+  effective_date: ()
+  utility_name: ()
+  bill_frequency: ()
+
+rate_structure:
+  {consumer_class}:
+    {rate_component}: Tiered #Usually
+    tier_starts:
+      -(tier_1)
+      -(tier_2)
+      -(tier_3)
+      -(tier_4)
+      -(tier_5)
+      - ...
+    tier_prices:
+      -(tier_price_1)
+      -(tier_price_2)
+      -(tier_price_3)
+      -(tier_price_4)
+      -(tier_price_5)
+      - ...
+    bill : ()
