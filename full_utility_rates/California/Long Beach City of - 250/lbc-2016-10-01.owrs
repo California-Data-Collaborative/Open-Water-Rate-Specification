@@ -9,18 +9,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     tier_starts:
       - 0
       - 6
@@ -44,18 +55,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     tier_starts:
       - 0
       - 2.6
@@ -79,18 +101,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     tier_starts:
       - 0
       - 2.6
@@ -113,18 +146,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     flat_rate: 2.854
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
@@ -133,18 +177,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     flat_rate: 2.854
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
@@ -153,18 +208,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     flat_rate: 2.854
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
@@ -173,18 +239,29 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     flat_rate: 2.854
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
@@ -193,24 +270,35 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 0.489*days_in_period
-         3/4"  : 0.489*days_in_period
-         1"    : 0.736*days_in_period
-         1_1/2": 1.375*days_in_period
-         2"    : 2.037*days_in_period
-         3"    : 4.220*days_in_period
-         4"    : 6.677*days_in_period
-         6"    : 12.306*days_in_period
-         8"    : 19.315*days_in_period
-         10"   : 31.635*days_in_period
-         12"   : 38.662*days_in_period
-         16"   : 63.986*days_in_period
+         5/8"  : 0.489
+         #3/4"  : 0.489*days_in_period
+         3/4"  : 14.87
+         #1"    : 0.736*days_in_period
+         1"    : 22.37
+         #1 1/2": 1.375*days_in_period
+         1 1/2": 41.80
+         #2"    : 2.037*days_in_period
+         2"    : 61.92
+         #3"    : 4.220*days_in_period
+         3"    : 128.29
+         #4"    : 6.677*days_in_period
+         4"    : 202.98
+         #6"    : 12.306*days_in_period
+         6"    : 374.10
+         #8"    : 19.315*days_in_period
+         8"    : 587.18
+         #10"   : 31.635*days_in_period
+         10"   : 961.70
+         #12"   : 38.662*days_in_period
+         12"   : 1175.32
+         #16"   : 63.986*days_in_period
+         16"   : 1945.17
     flat_rate:
       depends_on: water_use_category
       values:
         peaking: 1.998
         non_peaking: 1.427
-        interruptible:1.427
+        interruptible: 1.427
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
 
@@ -219,17 +307,40 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"  : 2.386*days_in_period
-         3/4"  : 2.386*days_in_period
-         1"    : 4.036*days_in_period
-         1_1/2": 9.942*days_in_period
-         2"    : 15.640*days_in_period
+         #5/8"  : 2.386*days_in_period
+         5/8"  : 72.53
+         #3/4"  : 2.386*days_in_period
+         3/4"  : 72.53
+         #1"    : 4.036*days_in_period
+         1"    : 112.69
+         #1 1/2": 9.942*days_in_period
+         1 1/2": 302.24
+         #2"    : 15.640*days_in_period
+         2"    : 475.456
     bill: service_charge
 
   FIRE_SERVICE:
     service_charge:
       depends_on: meter_size
       values:
+<<<<<<< HEAD
+         #2"    : 1.020*days_in_period
+         2"    : 31.00
+         #3"    : 1.745*days_in_period
+         3"    : 53.05
+         #4"    : 2.577*days_in_period
+         4"    : 78.34
+         #6"    : 4.391*days_in_period
+         6"    : 133.49
+         #8"    : 6.438*days_in_period
+         8"    : 195.72
+         #10"   : 8.709*days_in_period
+         10"   : 264.75
+         #12"   : 10.976*days_in_period
+         12"   : 33.67
+         #16"   : 16.094*days_in_period
+         16"   : 489.14
+=======
          2"    : 1.020*days_in_period
          3"    : 1.745*days_in_period
          4"    : 2.577*days_in_period
@@ -238,4 +349,5 @@ rate_structure:
          10"   : 8.709*days_in_period
          12"   : 10.976*days_in_period
          16"   : 16.094*days_in_period
+>>>>>>> 85762a814bd3432fbcfc3e9b784fce3a6220df0a
     bill: service_charge

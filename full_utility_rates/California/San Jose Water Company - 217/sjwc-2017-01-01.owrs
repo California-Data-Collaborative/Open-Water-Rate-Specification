@@ -94,11 +94,19 @@ rate_structure:
     wrap_surcharge: 1.45
     utility_surcharge: 1.0117
     wrap_discount: .85
+<<<<<<< HEAD
+    bill: "commodity_charge+service_charge"
+      #depends_on: wrap_customer
+      #values:
+       # - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
+        #- No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+=======
     bill:
       depends_on: wrap_customer
       values:
         - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
         - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+>>>>>>> 85762a814bd3432fbcfc3e9b784fce3a6220df0a
 
   RESIDENTIAL_SINGLE_MOUNTAIN:
     service_charge:
@@ -301,11 +309,11 @@ rate_structure:
     wrap_surcharge: 1.45
     utility_surcharge: 1.0117
     wrap_discount: .85
-    bill:
-      depends_on: wrap_customer
-      values:
-        - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
-        - No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
+    bill: "commodity_charge+service_charge"
+      #depends_on: wrap_customer
+      #values:
+       # - Yes: "((commodity_charge+service_charge+safe_drinking_water_surcharge)*utility_surcharge)*wrap_discount"
+        #- No: "(commodity_charge+service_charge+safe_drinking_water_surcharge+wrap_surcharge)*utility_surcharge"
 
   COMMERCIAL:
     service_charge:

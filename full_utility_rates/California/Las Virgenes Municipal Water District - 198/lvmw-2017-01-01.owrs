@@ -10,7 +10,7 @@ rate_structure:
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
@@ -33,6 +33,7 @@ rate_structure:
       - 3.24
       - 4.00
       - 5.02
+
     commodity_charge: Budget
     elevation_rate:
       depends_on: elevation_zone
@@ -51,7 +52,7 @@ rate_structure:
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
@@ -100,7 +101,7 @@ rate_structure:
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85
@@ -188,13 +189,13 @@ rate_structure:
       - 101%
       - 150%
     tier_prices:
-	depends_on: water_type
-	values:
-	  potable:
+      depends_on: water_type
+      values:
+        potable:
           - 3.24
           - 4.00
           - 5.02
-	  recycled:
+        recycled:
           - 1.19
           - 2.83
           - 3.67
@@ -215,13 +216,13 @@ rate_structure:
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge
 
-  OTHER
+  OTHER:
     service_charge:
       depends_on: meter_size
       values:
         3/4"  : 21.73
         1"    : 35.14
-        1.5"  : 68.65
+        1 1/2"  : 68.65
         2"    : 108.86
         3"    : 236.20
         4"    : 423.85

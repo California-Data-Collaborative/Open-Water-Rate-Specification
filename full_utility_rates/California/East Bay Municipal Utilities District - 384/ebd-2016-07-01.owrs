@@ -27,8 +27,10 @@ rate_structure:
     Tier_3 : "days_in_period*394*(1/748)"
     tier_starts:
       - 0
-      - Tier_2
-      - Tier_3
+      #- days_in_period*173*(1/748)
+      #- days_in_period*394*(1/748)
+      - 14.062
+      - 32.026
     tier_prices:
       - 3.16
       - 4.34

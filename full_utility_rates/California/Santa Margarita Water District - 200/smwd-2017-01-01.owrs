@@ -40,16 +40,16 @@ rate_structure:
     commodity_charge: Budget
     sewer_charge: 1.03*usage_ccf
     bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
-      
+
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
       values:
         3/4"  : 21.79
         1"    : 26.76
-        1-1/2": 36.70
+        1 1/2": 36.70
         2"    : 52.98
-        2-1/2": 95.03
+        2 1/2": 95.03
         3"    : 137.07
         4"    : 198.06
         6"    : 357.02
@@ -77,16 +77,16 @@ rate_structure:
     commodity_charge: Budget
     sewer_charge: 1.03*usage_ccf
     bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
-      
+
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
       values:
         3/4"  : 21.79
         1"    : 26.76
-        1-1/2": 36.70
+        1 1/2": 36.70
         2"    : 52.98
-        2-1/2": 95.03
+        2 1/2": 95.03
         3"    : 137.07
         4"    : 198.06
         6"    : 357.02
@@ -94,15 +94,16 @@ rate_structure:
         10"   : 832.90
     fixed_sewer_charge: 25.51
     commodity_charge: 1.74*usage_ccf
-    sewer_charge:
+    sewer_price:
       depends_on: rate_class
       values:
-        C1 : 0.87*usage_ccf
-        C2 : 1.03*usage_ccf
-        C3 : 1.49*usage_ccf
-        C4 : 2.19*usage_ccf
+        C1 : 0.87
+        C2 : 1.03
+        C3 : 1.49
+        C4 : 2.19
+    sewer_charge: sewer_price*usage_ccf
     bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
-    
+
   IRRIGATION:
     service_charge:
       depends_on: meter_size

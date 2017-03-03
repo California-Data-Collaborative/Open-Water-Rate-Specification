@@ -4,8 +4,7 @@ metadata:
   utility_name: "San Gabriel Valley Water Company"
   bill_frequency: monthly
 rate_structure:
-
-  RESDENTIAL_SINGLE:
+  RESIDENTIAL_SINGLE:
     carw_charge:
       depends_on:
         - carw_customer
@@ -20,7 +19,6 @@ rate_structure:
     service_charge:
       depends_on:
       values:
-        #Actually 5/8" x 3/4": 20.15
         5/8"      : 20.15
         3/4"      : 30.21
         1"        : 50.35
@@ -34,9 +32,9 @@ rate_structure:
       - 2.6813
       - 3.0379
     commodity_charge: Tiered
-    bill:"service_charge+commodity_charge+carw_charge"
+    bill: "service_charge+commodity_charge+carw_charge"
 
-  RESDENTIAL_MULTI:
+  RESIDENTIAL_MULTI:
     carw_charge:
       depends_on:
         - carw_customer
@@ -51,7 +49,6 @@ rate_structure:
     service_charge:
       depends_on:
       values:
-        #Actually 5/8" x 3/4": 20.15
         5/8"           : 20.15
         3/4"           : 30.21
         1"             : 50.35
@@ -64,14 +61,14 @@ rate_structure:
         10"            : 2318.00
         12"            : 3322.00
         14"            : 4429.00
-        2 x 2"         : 321.00
-        3 x 2"         : 485.00
-        4 x 2"         : 645.00
-        2 x 3"         : 605.00
-        3 x 3"         : 907.00
-        2 x 4"         : 1006.00
-        2 x 4"         : 1511.00
-       #1 x 8", 1 x 2" : 1771.00
+        #2 x 2"         : 321.00
+        #3 x 2"         : 485.00
+        #4 x 2"         : 645.00
+        #2 x 3"         : 605.00
+        #3 x 3"         : 907.00
+        #2 x 4"         : 1006.00
+        #2 x 4"         : 1511.00
+        #1 x 8", 1 x 2" : 1771.00
     flat_rate: 2.8417
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge+carw_charge"
@@ -93,14 +90,14 @@ rate_structure:
         10"            : 2318.00
         12"            : 3322.00
         14"            : 4429.00
-        2 x 2"         : 321.00
-        3 x 2"         : 485.00
-        4 x 2"         : 645.00
-        2 x 3"         : 605.00
-        3 x 3"         : 907.00
-        2 x 4"         : 1006.00
-        2 x 4"         : 1511.00
-       #1 x 8", 1 x 2" : 1771.00
+        #2 x 2"         : 321.00
+        #3 x 2"         : 485.00
+        #4 x 2"         : 645.00
+        #2 x 3"         : 605.00
+        #3 x 3"         : 907.00
+        #2 x 4"         : 1006.00
+        #2 x 4"         : 1511.00
+        #1 x 8", 1 x 2" : 1771.00
     flat_rate: 2.8417
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge"
@@ -122,14 +119,14 @@ rate_structure:
         10"            : 2318.00
         12"            : 3322.00
         14"            : 4429.00
-        2 x 2"         : 321.00
-        3 x 2"         : 485.00
-        4 x 2"         : 645.00
-        2 x 3"         : 605.00
-        3 x 3"         : 907.00
-        2 x 4"         : 1006.00
-        2 x 4"         : 1511.00
-       #1 x 8", 1 x 2" : 1771.00
+        #2 x 2"         : 321.00
+        #3 x 2"         : 485.00
+        #4 x 2"         : 645.00
+        #2 x 3"         : 605.00
+        #3 x 3"         : 907.00
+        #2 x 4"         : 1006.00
+        #2 x 4"         : 1511.00
+        #1 x 8", 1 x 2" : 1771.00
     flat_rate: 2.8417
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge"
@@ -151,14 +148,14 @@ rate_structure:
         10"            : 2318.00
         12"            : 3322.00
         14"            : 4429.00
-        2 x 2"         : 321.00
-        3 x 2"         : 485.00
-        4 x 2"         : 645.00
-        2 x 3"         : 605.00
-        3 x 3"         : 907.00
-        2 x 4"         : 1006.00
-        2 x 4"         : 1511.00
-       #1 x 8", 1 x 2" : 1771.00
+        #2 x 2"         : 321.00
+        #3 x 2"         : 485.00
+        #4 x 2"         : 645.00
+        #2 x 3"         : 605.00
+        #3 x 3"         : 907.00
+        #2 x 4"         : 1006.00
+        #2 x 4"         : 1511.00
+        #1 x 8", 1 x 2" : 1771.00
     flat_rate: 2.8417
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge"
@@ -180,14 +177,14 @@ rate_structure:
         10"            : 2318.00
         12"            : 3322.00
         14"            : 4429.00
-        2 x 2"         : 321.00
-        3 x 2"         : 485.00
-        4 x 2"         : 645.00
-        2 x 3"         : 605.00
-        3 x 3"         : 907.00
-        2 x 4"         : 1006.00
-        2 x 4"         : 1511.00
-       #1 x 8", 1 x 2" : 1771.00
+        #2 x 2"         : 321.00
+        #3 x 2"         : 485.00
+        #4 x 2"         : 645.00
+        #2 x 3"         : 605.00
+        #3 x 3"         : 907.00
+        #2 x 4"         : 1006.00
+        #2 x 4"         : 1511.00
+        #1 x 8", 1 x 2" : 1771.00
     flat_rate: 2.8417
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge"
@@ -214,17 +211,17 @@ rate_structure:
         10"            : 2318.00
         12"            : 3322.00
         14"            : 4429.00
-        2 x 2"         : 321.00
-        3 x 2"         : 485.00
-        4 x 2"         : 645.00
-        2 x 3"         : 605.00
-        3 x 3"         : 907.00
-        2 x 4"         : 1006.00
-        2 x 4"         : 1511.00
-       #1 x 8", 1 x 2" : 1771.00
+        #2 x 2"         : 321.00
+        #3 x 2"         : 485.00
+        #4 x 2"         : 645.00
+        #2 x 3"         : 605.00
+        #3 x 3"         : 907.00
+        #2 x 4"         : 1006.00
+        #2 x 4"         : 1511.00
+        #1 x 8", 1 x 2" : 1771.00
     flat_rate: 2.4155
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge"
 
-  RESIDENTIAL_CONSTRUCTION:
-    bill: 15.83
+  #RESIDENTIAL_CONSTRUCTION:
+    #bill: 15.83
