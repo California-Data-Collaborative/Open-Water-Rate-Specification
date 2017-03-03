@@ -38,12 +38,12 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-	  1: 0.00
-	  2: 0.44
-	  3: 1.03
-	  4: 1.64
+        1 : 0.00
+        2 : 0.44
+        3 : 1.03
+        4 : 1.64
     elevation_charge: elevation_rate*usage_ccf
-    sanitation_charge:21.82
+    sanitation_charge: 21.82
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
 
   RESIDENTIAL_MULTI:
@@ -79,20 +79,20 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        1: 0.00
-        2: 0.44
-        3: 1.03
-        4: 1.64
+        1 : 0.00
+        2 : 0.44
+        3 : 1.03
+        4 : 1.64
     elevation_charge: elevation_rate*usage_ccf
     sanitation_charge:
       depends_on: hhsize
       values:
-        1: 21.82
-        2: 36.51
-        3: 51.20
-        4: 65.89
-        5: 80.58
-        6: 95.27
+        1 : 21.82
+        2 : 36.51
+        3 : 51.20
+        4 : 65.89
+        5 : 80.58
+        6 : 95.27
     bill: commodity_charge+service_charge+elevation_charge+sanitation_charge
 
   COMMERCIAL:
@@ -128,10 +128,10 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        1: 0.00
-        2: 0.44
-        3: 1.03
-        4: 1.64
+        1 : 0.00
+        2 : 0.44
+        3 : 1.03
+        4 : 1.64
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge
 
@@ -205,14 +205,13 @@ rate_structure:
         - water_type
         - elevation_zone
       values:
-        potable:
-          1: 0.00
-          2: 0.44
-          3: 1.03
-          4: 1.64
-        recycled:
-          Las Virgenes Valley: 0.00
-          East/West : 0.34
+        potable|1 : 0.00
+        potable|2 : 0.44
+        potable|3 : 1.03
+        potable|4 : 1.64
+        #recycled:
+        #  Las Virgenes Valley: 0.00
+        #  East/West : 0.34
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge
 
@@ -238,9 +237,9 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        1: 0.00
-        2: 0.44
-        3: 1.03
-        4: 1.64
+        1 : 0.00
+        2 : 0.44
+        3 : 1.03
+        4 : 1.64
     elevation_charge: elevation_rate*usage_ccf
     bill: commodity_charge+service_charge+elevation_charge

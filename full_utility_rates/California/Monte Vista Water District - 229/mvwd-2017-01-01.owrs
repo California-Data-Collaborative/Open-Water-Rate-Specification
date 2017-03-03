@@ -52,7 +52,7 @@ rate_structure:
     commodity_charge: Budget
     bill: commodity_charge+service_charge
     
-    RESIDENTIAL_MULTI:
+  RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
       values:
@@ -68,50 +68,10 @@ rate_structure:
     flat_rate:
       depends_on: water_type
       values:
-        domestic: 2.39
-        recycled: 1.96
+        potable: 2.39
+        nonpotable: 1.96
     commodity_charge: "flat_rate*usage_ccf"
     bill: "commodity_charge+service_charge"
-
-  IRRIGATION:
-    service_charge:
-      depends_on: meter_size
-      values:
-        3/4"  : 38.15
-        1"    : 55.85
-        1 1/2"  : 126.75
-        2"    : 156.25
-        3"    : 422.05
-        4"    : 776.40
-        6"    : 1780.50
-        8"    : 2371.10
-        10"   : 4142.95
-    et_amount: 45
-    landscape_factor:
-      depends_on: usage_month
-      values:
-        1:  0.1
-        2:  0.1
-        3:  0.07
-        4:  0.07
-        5:  0.13
-        6:  0.13
-        7:  0.25
-        8:  0.25
-        9:  0.25
-        10: 0.25
-        11: 0.2
-        12: 0.2
-    outdoor: "landscape_factor*et_amount*0.623/748”
-    budget: "outdoor"
-    tier_starts:
-      - 0
-      - 101%
-    tier_prices:
-        - 2.23
-        - 3.19
-    commodity_charge: Budget
-    bill: commodity_charge+service_charge
 
   COMMERCIAL:
     service_charge:
@@ -129,9 +89,47 @@ rate_structure:
     flat_rate:
       depends_on: water_type
       values:
-        domestic: 2.39
-        recycled: 1.96
+        potable: 2.39
+        nonpotable: 1.96
     commodity_charge: "flat_rate*usage_ccf"
+    bill: "commodity_charge+service_charge"  
+    
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4"    : 38.15
+        1"      : 55.85
+        1 1/2"  : 126.75
+        2"      : 156.25
+        3"      : 422.05
+        4"      : 776.40
+        6"      : 1780.50
+        8"      : 2371.10
+        10"     : 4142.95
+    et_amount: 45
+    landscape_factor:
+      depends_on: usage_month
+      values:
+        1 :  0.10
+        2 :  0.10
+        3 :  0.07
+        4 :  0.07
+        5 :  0.13
+        6 :  0.13
+        7 :  0.25
+        8 :  0.25
+        9 :  0.25
+        10 : 0.25
+        11 : 0.20
+        12 : 0.20
+    outdoor: "landscape_factor*et_amount*0.623/748"
+    budget: "outdoor"
+    tier_starts:
+      - 0
+      - 101%
+    tier_prices:
+      - 2.23
+      - 3.19
+    commodity_charge: Budget
     bill: "commodity_charge+service_charge"
-
-  
