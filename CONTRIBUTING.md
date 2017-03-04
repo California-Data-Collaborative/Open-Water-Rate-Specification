@@ -3,7 +3,7 @@
 
 This repository documents how to contribute data to the **Open Water Rate Specification** (OWRS), a machine-readable format for specifying and sharing water rate information.
 
-OWRS is designed so that any contributor can add data to
+OWRS is designed so that anyone can contribute standardized water rate data.
 
 ### Getting Started
 
@@ -34,7 +34,6 @@ Follow these simple steps
 13. GOTO #1
 14. Pioneer a brighter future for CA!
 
-![](http://imgur.com/6oRoiHf.gif)
 
 ### Open water rate spectacular
 
