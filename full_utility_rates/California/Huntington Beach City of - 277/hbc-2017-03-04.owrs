@@ -19,7 +19,7 @@ rate_structure:
          1"|compound        : 23.062
          1"|FM              : 23.062
          1 1/2"|compound    : 34.593
-         1 1/2"|compound    : 34.593
+         1 1/2"|FM   : 34.593
          2"|compound        : 57.655
          3"|compound        : 126.841
          4"|compound        : 196.027
@@ -43,7 +43,7 @@ rate_structure:
          1"|compound        : 23.062
          1"|FM              : 23.062
          1 1/2"|compound    : 34.593
-         1 1/2"|compound    : 34.593
+         1 1/2"|FM   : 34.593
          2"|compound        : 57.655
          3"|compound        : 126.841
          4"|compound        : 196.027
@@ -67,7 +67,7 @@ rate_structure:
          1"|compound        : 23.062
          1"|FM              : 23.062
          1 1/2"|compound    : 34.593
-         1 1/2"|compound    : 34.593
+         1 1/2"|FM   : 34.593
          2"|compound        : 57.655
          3"|compound        : 126.841
          4"|compound        : 196.027
@@ -91,7 +91,7 @@ rate_structure:
          1"|compound        : 23.062
          1"|FM              : 23.062
          1 1/2"|compound    : 34.593
-         1 1/2"|compound    : 34.593
+         1 1/2"|FM   : 34.593
          2"|compound        : 57.655
          3"|compound        : 126.841
          4"|compound        : 196.027
