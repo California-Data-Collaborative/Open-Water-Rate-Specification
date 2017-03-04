@@ -10,17 +10,18 @@ OWRS is designed so that any contributor can add data to
 Follow these simple steps:
 
 * Read the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md)
-* Fork the OWRS repo to your own Github
+* Fork the OWRS repo to your own Github.
 * Clone the forked OWRS repo locally to your machine. `git clone <LINK to the FORKED REPO>`
 * Find an open utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
 * Google search the Utility name and "water rate" to find the source of the water rate.
+* `cd Open-Water-Rate-Specification/full_utility_rates/California/`
 * `git checkout -b  <branch with the name of that utility>`
-* Create a new folder for that utility
-  * Use the naming convention "[Agency Name] - [utility_id]" e.g. "Moulton Niguel Water District - 147"
-  * [Agency Name] and [utility_id] can be found in the tracking spreadsheet
+* Create a new folder for that utility `mkdir [Agency Name] - [utility_id]`
+  * Use the naming convention "[Agency Name] - [utility_id]" e.g. `mkdir "Moulton Niguel Water District - 147"`
+  * [Agency Name] and [utility_id] can be found in the tracking spreadsheet.
 * Write an OWRS file for that utility in that folder
   * Use naming convention "[acronym]-YYYY-MM-DD.owrs"
-  * Use the date that the rate schedule becomes effective
+  * where YYY-MM-DD is the date when that utility's water rate is effective. (found on the Utility website)
 * Ask questions on the OWRS slack as need be
 * When your OWRS file is good to go, push your changes to the remote GitHub repo and submit a pull request!  
 * A member of the CaDC data team will review the OWRS file and let you know if there are any questions
