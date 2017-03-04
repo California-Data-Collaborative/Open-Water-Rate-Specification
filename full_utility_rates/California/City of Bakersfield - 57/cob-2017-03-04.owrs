@@ -1,0 +1,33 @@
+---
+metadata:
+  effective_date: 2016-07-01
+  utility_name: "City of Bakersfield"
+  bill_frequency: "monthly"
+  # Within city limits. Rate are different in Fairhaven & Unincorporated Areas
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 9.88
+         3/4"  : 9.88
+         1"    : 15.06
+         1_1/2": 22.98
+         2"    : 31.28
+         3"    : 57.80
+         4"    : 84.02
+         6"    : 151.00
+         8"    : 232.12
+         10"   : 319.95
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1_1/2": 9.33
+         2"    : 12.44
+         3"    : 18.66
+         4"    : 24.87
+         6"    : 37.30
+         8"    : 49.74
+         10"   : 62.17
+         12"   : 74.61
