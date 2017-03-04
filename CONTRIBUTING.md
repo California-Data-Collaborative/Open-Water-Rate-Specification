@@ -25,7 +25,7 @@ Follow these simple steps
 8. Write an OWRS file for that utility in that folder
   * Always helpful to compare with an OWRS file that [already exists here](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/tree/8316d643dc2b28e1089ee97ba9cb7425a1c5c674/full_utility_rates/California)
   * You will first use the [generic OWRS template aka `template.owrs` in the templates folder](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/tree/master/templates)
-  * Based on the type of rate however - you can use the other templates (depends_on_template.owrs OR tiered_template.owrs)
+  * Based on the type of rate however - you can use the other templates (`depends_on_template.owrs` OR `tiered_template.owrs`)
   * Use naming convention "[acronym]-YYYY-MM-DD.owrs"
   * where YYY-MM-DD is the date when that utility's water rate is effective. (found on the Utility website)
 9. Ask questions on the OWRS slack as need be
