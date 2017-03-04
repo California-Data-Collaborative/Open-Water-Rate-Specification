@@ -1,0 +1,414 @@
+  metadata:
+  effective_date: 2016-01-01
+  utility_name: "Oceanside City Of"
+  bill_frequency: monthly
+Rate_Structure: 
+  RESIDENTIAL_SINGLE:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 15.20
+        3/4" : 15.20
+        1" 	: 32.77
+        1 1/2" : 62.08
+        2" : 97.24
+        3" : 179.27
+        4" : 296.46
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1 1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1 1/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+  tier_Starts:
+    - 0
+    - 14
+  tier_prices:
+    - 2.45
+    - 3.06
+    
+  service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+  commodity_charge: Tiered
+  bill: service_charge+commodity_charge
+
+RESIDENTIAL_MULTI:
+   fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 21.62
+        3/4" : 21.62
+        1" 	: 48.85
+        1_1/2" : 94.22
+        2" : 148.67
+        3" : 275.70
+        4" : 457.20
+        6" : 910.92
+        8" : 1455.38
+        10" : 2090.60
+
+     mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05 
+        3/4" : 2.05
+        1" 	: 5.13
+        1_1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1_1/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 164.00
+        10" : 235.75
+   tier_Starts:
+    - 0
+    - 8
+  tier_prices:
+    - 2.45
+    - 2.98
+service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+
+  MASTER_METERED:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 21.62
+        3/4" : 21.62
+        1" 	: 48.85
+        1_1/2" : 94.22
+        2" : 148.67
+        3" : 275.70
+        4" : 457.20
+        6" : 910.92
+        8" : 1455.38
+        10" : 2090.60
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1_1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1_1/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 152.88
+        10" : 229.32
+  tier_Starts:
+    - 0
+    - 14
+  tier_prices:
+    - 2.45
+    - 3.06
+service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+
+Rate_Structure: 
+  SINGLE_FAMILY_MANUFACTURED:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 21.62
+        3/4" : 21.62
+        1" 	: 48.85
+        1_1/2" : 94.22
+        2" : 148.67
+        3" : 275.70
+        4" : 457.20
+        6" : 910.92
+        8" : 1455.38
+        10" : 2090.60
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1_1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1_1/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 152.88
+        10" : 229.32
+  tier_Starts:
+    - 0
+    - 8
+  tier_prices:
+    - 2.45
+    - 2.98
+service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+
+Rate_Structure: 
+  COMMERCIAL:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 22.18
+        3/4" : 22.18
+        1" 	: 50.24
+        1 1/2" : 97.00
+        2" : 153.11
+        3" : 284.04
+        4" : 471.06
+        6" : 938.65
+        8" : 1499.77
+        10" : 1254.40
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1 1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        11/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 152.88
+        10" : 229.32
+  tier_Starts:
+    - 0
+  tier_prices:
+    - 2.61
+service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+
+Rate_Structure: 
+  IRRIGATION:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 22.47
+        3/4" : 22.47
+        1" 	: 50.95
+        11/2" : 98.43
+        2" : 155.39
+        3" : 288.31
+        4" : 478.20
+        6" : 952.93
+        8" : 1522.60
+        10" : 2187.20
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1 1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1 1/2" : 8.82
+         2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 152.88
+        10" : 229.32
+  tier_Starts:
+    - 0
+  tier_prices:
+    - 2.61
+ service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+
+Rate_Structure: 
+  IRRIGATION:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 22.47
+        3/4" : 22.47
+        1" 	: 50.95
+        11/2" : 98.43
+        2" : 155.39
+        3" : 288.31
+        4" : 478.20
+        6" : 952.93
+        8" : 1522.60
+        10" : 2187.20
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1 1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1 1/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 152.88
+        10" : 229.32
+   tier_Starts:
+    - 0
+  tier_prices:
+    - 2.61
+service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
+
+Rate_Structure: 
+  RECYCLED_WATER:
+    fixed_water_service::
+      depends_on: meter_size
+      values:
+        5/8" : 22.47
+        3/4" : 22.47
+        1" 	: 50.95
+        1 1/2" : 98.43
+        2" : 155.39
+        3" : 288.31
+        4" : 478.20
+        6" : 952.93
+        8" : 1522.60
+        10" : 2187.20
+  tier_Starts:
+    - 0
+  tier_prices:
+    - 2.42
+
+  AGRICULTURE:
+    fixed_water_service:
+      depends_on: meter_size
+      values:
+        5/8" : 22.47
+        3/4" : 22.47
+        1" 	: 50.95
+        1 1/2" : 98.43
+        2" : 155.39
+        3" : 288.31
+        4" : 478.20
+        6" : 952.93
+        8" : 1522.60
+        10" : 2187.20
+
+    mwd_ready_to_serve:
+      depends_on: meter_size
+      values:
+        5/8" : 2.05
+        3/4" : 2.05
+        1" 	: 5.13
+        1 1/2" : 10.25
+        2" : 16.40
+        3" : 30.75
+        4" : 51.25
+        6" : 102.50
+        8" : 164.00
+        10" : 235.75
+
+    sdcwa_insfrastructure:
+      depends_on: meter_size
+      values:
+        5/8" : 2.94
+        3/4" : 2.94
+        1" 	: 4.71
+        1 1/2" : 8.82
+        2" : 15.29
+        3" : 28.23
+        4" : 48.22
+        6" : 88.20
+        8" : 152.88
+        10" : 229.32
+    tier_Starts:
+      - 0
+    tier_prices:
+      - 2.70
+    service_charge: "fixed_water_service+mwd_ready_to_serve+sdcwa_infrastructure"
