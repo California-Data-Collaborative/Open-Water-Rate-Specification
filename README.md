@@ -19,9 +19,15 @@ OWRS is designed for analysts, economists, and software developers interested in
    - [Example 6 - Other Cases](#example6)
 * [Full Utility Examples](#utility-examples)
 
+### Contribute
+
+Please see the [CONTRIBUTING](CONTRIBUTING.md) file for details.
+
 ### Contact
 
 Please reach out with comments, ideas or suggestions using the [issues page](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/issues), or [contact the CaDC](http://californiadatacollaborative.com/join-us/) directly.
+
+----------------------------------------
 
 ## <a name="why"></a>Why a Standard for Sharing Water Rates?
 
