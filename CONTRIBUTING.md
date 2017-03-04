@@ -14,7 +14,7 @@ Follow these simple steps:
 * Clone the forked OWRS repo locally to your machine. `git clone <LINK to the FORKED REPO>`
 * Find an open utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
 * Google search the Utility name and "water rate" to find the source of the water rate.
-* GIT Checkout a new branch with the name of that utility
+* `git checkout -b  <branch with the name of that utility>`
 * Create a new folder for that utility
   * Use the naming convention "[Agency Name] - [utility_id]" e.g. "Moulton Niguel Water District - 147"
   * [Agency Name] and [utility_id] can be found in the tracking spreadsheet
