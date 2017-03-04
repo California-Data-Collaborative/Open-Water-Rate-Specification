@@ -1,0 +1,48 @@
+# High level structure for all OWRS templates
+# {} indicates that the value should be substituted from Google sheet
+# [] indicates that the value should be substituted from Google sheet and are mandatory
+# () indicates value to be filled
+---
+metadata:
+  effective_date: 2016-07-01
+  utility_name: "City of Ventura"
+  bill_frequency: bi-monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    tier_starts:
+      - 0
+      - 15
+      - 31
+    tier_prices:
+      - 2.4
+      - 3.35
+      - 5.66
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
+  RESIDENTIAL_MULTI:
+    tier_starts:
+      - 0
+      - 11
+      - 17
+    tier_prices:
+      - 2.4
+      - 3.35
+      - 5.66
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
+  NON_RESIDENTIAL:
+    flat_rate: 3.09
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  Institutional/Interruptible:
+    flat_rate: 2.39
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge    
+  RECLAIMED:
+    flat_rate: 0.82
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  UNTREATED:
+    flat_rate: 2.49
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
