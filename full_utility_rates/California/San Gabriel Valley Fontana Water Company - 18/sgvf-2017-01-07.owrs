@@ -46,24 +46,12 @@ rate_structure:
           - 2.5585
           - 2.9423
     bill: commodity_charge+service_charge
-
-
-  {consumer_class}:
-    {rate_component}:
-      ...
-    [factors] : ()
-    {rate_component}:
-      ...
-    {rate_component}:
-      ...
-    bill : sum of rate_components
-
-  {consumer_class}:
-    {rate_component}:
-      ...
-    [factors] : ()
-    {rate_component}:
-      ...
-    {rate_component}:
-      ...
-    bill : sum of rate_components
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        inch_diameter: 9.24
+    bill: service_charge
+  RESIDENTAL_CONSTRUCTION:
+    service_charge: 35.67
+    bill: service_charge
+  
