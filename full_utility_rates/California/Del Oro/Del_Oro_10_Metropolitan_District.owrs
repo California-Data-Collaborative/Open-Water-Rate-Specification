@@ -1,0 +1,22 @@
+# New Service Advance Deposit: 209.52
+# Late Fee : 5.00
+---
+metadata:
+  effective_date: 2017-03-02
+  utility_name: "Del_Oro_10_Metropolitan_District"
+  bill_frequency: monthly
+
+rate_structure:
+  ALL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 26.19
+         3/4"   : 39.28
+         1"     : 65.47
+         1 1/2" : 130.93
+         2"     : 209.49
+    flat_rate: 2.219
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.0144 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge

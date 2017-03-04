@@ -1,0 +1,22 @@
+# New Service Advance Deposit: 129.60
+# Late Fee : 5.00
+---
+metadata:
+  effective_date: 2016-10-07
+  utility_name: "Del_Oro_2_Black_Butte_District"
+  bill_frequency: monthly
+
+rate_structure:
+  ALL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 10.80
+         3/4"   : 16.19
+         1"     : 26.99
+         1 1/2" : 53.98
+         2"     : 86.36
+    flat_rate: 0.80
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.0144 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge

@@ -1,0 +1,39 @@
+# New Service Facility Fee:  Varies
+# New Service Advance Deposit: 159.60
+# Late Fee : 5.00
+---
+metadata:
+  effective_date: 2016-06-14
+  utility_name: "Del_Oro_8_Lime_Saddle_District" #http://www.delorowater.com/deloro/water-districts/lime-saddle.html
+  bill_frequency: monthly
+
+rate_structure:
+  ALL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 13.30
+         3/4"   : 19.95
+         1"     : 33.25
+         1 1/2" : 66.50
+         2"     : 106.40
+         3"     : 199.50
+         4"     : 332.50
+         6"     : 665.00
+         
+    srf_surcharge:               #this is a special charge not applied to all customers
+      depends_on: meter_size
+      values:
+         5/8"   : 16.03
+         3/4"   : 24.03
+         1"     : 40.06
+         1 1/2" : 80.12
+         2"     : 128.19
+         3"     : 240.37
+         4"     : 400.61
+         6"     : 801.22
+         
+    flat_rate: 2.32 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.0144 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge
