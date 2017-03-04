@@ -1,0 +1,154 @@
+# WALNUT VALLEY WATER DISTRICT
+# CUSTOMER INFORMATION SHEET
+# http://www.wvwd.com/index.php?option=com_content&view=article&id=29&Itemid=21
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Walnut Valley District"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 19.43
+         3/4"  : 19.43
+         1"    : 24.47
+         1 1/2": 57.82
+         2"    : 75.51
+         3"    : 154.60
+         4"    : 243.61
+         6"    : 463.07
+         8"    : 712.98
+    tier_starts:
+      - 1
+      - 13
+      - 40
+    tier_prices:
+      - 2.97
+      - 3.39
+      - 3.39
+    commodity_charge: Tiered
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 0.00
+        2: 0.20
+        3: 0.39
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+  
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 19.43
+         3/4"  : 19.43
+         1"    : 24.47
+         1 1/2": 57.82
+         2"    : 75.51
+         3"    : 154.60
+         4"    : 243.61
+         6"    : 463.07
+         8"    : 712.98
+    tier_starts:
+      - 1
+    tier_prices:
+      - 3.19
+    commodity_charge: Tiered
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 0.00
+        2: 0.20
+        3: 0.39
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+  
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 19.43
+         3/4"  : 19.43
+         1"    : 24.47
+         1 1/2": 57.82
+         2"    : 75.51
+         3"    : 154.60
+         4"    : 243.61
+         6"    : 463.07
+         8"    : 712.98
+    tier_starts:
+      - 1
+    tier_prices:
+      - 3.25
+    commodity_charge: Tiered
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 0.00
+        2: 0.20
+        3: 0.39
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 19.43
+         3/4"  : 19.43
+         1"    : 24.47
+         1 1/2": 57.82
+         2"    : 75.51
+         3"    : 154.60
+         4"    : 243.61
+         6"    : 463.07
+         8"    : 712.98
+    tier_starts:
+      - 1
+    tier_prices:
+      - 3.25
+    commodity_charge: Tiered
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 0.00
+        2: 0.20
+        3: 0.39
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+
+  RECLAIMED:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 19.43
+         3/4"  : 19.43
+         1"    : 24.47
+         1 1/2": 57.82
+         2"    : 75.51
+         3"    : 154.60
+         4"    : 243.61
+         6"    : 463.07
+         8"    : 712.98
+    tier_starts:
+      - 1
+    tier_prices:
+      - 1.71
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
+  
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        private_hydrant : 25.35
+        1"              : 18.17
+        1 1/2"          : 18.63
+        2"              : 19.07
+        4"              : 22.16
+        6"              : 25.35
+        8"              : 29.34
+        10"             : 33.32
+    bill: service_charge
