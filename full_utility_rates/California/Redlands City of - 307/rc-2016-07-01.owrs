@@ -166,7 +166,7 @@ rate_structure:
          12"   : 383.66
     flat_rate: 2.20
 	commodity_charge = flat_rate*usage_ccf
-    bill : flat_rate+service_charge
+    bill : commodity_charge+service_charge
   NONPOTABLE:
 	service_charge:
 	  depends_on: meter_size
@@ -185,4 +185,4 @@ rate_structure:
          conversion  : 0.99
          non-conversion    : 0.64
 	commodity_charge = flat_rate*usage_ccf
-    bill : flat_rate+service_charge
+    bill : commodity_charge+service_charge
