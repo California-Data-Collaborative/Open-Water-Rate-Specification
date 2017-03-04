@@ -23,6 +23,8 @@ Follow these simple steps
   * Use the naming convention "[Agency Name] - [utility_id]" e.g. `mkdir "Moulton Niguel Water District - 147"`
   * [Agency Name] and [utility_id] can be found in the tracking spreadsheet.
 * Write an OWRS file for that utility in that folder
+  * You will first use the (generic OWRS template aka template.owrs in the templates folder)[https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/tree/master/templates]
+  * Based on the type of rate however - you can use the other templates (depends_on_template.owrs OR tiered_template.owrs)
   * Use naming convention "[acronym]-YYYY-MM-DD.owrs"
   * where YYY-MM-DD is the date when that utility's water rate is effective. (found on the Utility website)
 * Ask questions on the OWRS slack as need be
