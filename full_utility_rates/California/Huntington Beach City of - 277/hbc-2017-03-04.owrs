@@ -1,0 +1,105 @@
+---
+metadata:
+  effective_date: 2016-07-04
+  utility_name: "City of Huntington Beach"
+  bill_frequency: monthly
+  # http://www.huntingtonbeachca.gov/government/departments/finance/municipal_services_payments/index.cfm#water-rates
+  # Only a single list of rates given on website with no indication of customer class. I am assuming that it
+  # applies to RESIDENTIAL_SINGLE, RESIDENTIAL_MULTI, COMMERCIAL, and INDUSTRIAL but unclear. Cannot find any other rates.
+  
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - meter_type
+      values:
+         3/4"|compound      : 11.531
+         3/4"|FM            : 11.531
+         1"|compound        : 23.062
+         1"|FM              : 23.062
+         1 1/2"|compound    : 34.593
+         1 1/2"|compound    : 34.593
+         2"|compound        : 57.655
+         3"|compound        : 126.841
+         4"|compound        : 196.027
+         4"|FM              : 380.524
+         6"|compound        : 380.524
+         6"|FM              : 772.578
+         8"|FM              : 1349.129
+         10"|FM             : 2110.176
+    flat_rate: 1.9892
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - meter_type
+      values:
+         3/4"|compound      : 11.531
+         3/4"|FM            : 11.531
+         1"|compound        : 23.062
+         1"|FM              : 23.062
+         1 1/2"|compound    : 34.593
+         1 1/2"|compound    : 34.593
+         2"|compound        : 57.655
+         3"|compound        : 126.841
+         4"|compound        : 196.027
+         4"|FM              : 380.524
+         6"|compound        : 380.524
+         6"|FM              : 772.578
+         8"|FM              : 1349.129
+         10"|FM             : 2110.176
+    flat_rate: 1.9892
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - meter_type
+      values:
+         3/4"|compound      : 11.531
+         3/4"|FM            : 11.531
+         1"|compound        : 23.062
+         1"|FM              : 23.062
+         1 1/2"|compound    : 34.593
+         1 1/2"|compound    : 34.593
+         2"|compound        : 57.655
+         3"|compound        : 126.841
+         4"|compound        : 196.027
+         4"|FM              : 380.524
+         6"|compound        : 380.524
+         6"|FM              : 772.578
+         8"|FM              : 1349.129
+         10"|FM             : 2110.176
+    flat_rate: 1.9892
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+   
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - meter_type
+      values:
+         3/4"|compound      : 11.531
+         3/4"|FM            : 11.531
+         1"|compound        : 23.062
+         1"|FM              : 23.062
+         1 1/2"|compound    : 34.593
+         1 1/2"|compound    : 34.593
+         2"|compound        : 57.655
+         3"|compound        : 126.841
+         4"|compound        : 196.027
+         4"|FM              : 380.524
+         6"|compound        : 380.524
+         6"|FM              : 772.578
+         8"|FM              : 1349.129
+         10"|FM             : 2110.176
+    flat_rate: 1.9892
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
