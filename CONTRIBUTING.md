@@ -15,10 +15,10 @@ Follow these simple steps
 3. Clone the forked OWRS repo locally to your machine. `git clone <LINK to the FORKED REPO>`
 4. Find an unclaimed utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
 5. Google search the Utility name (Moulton Niguel Water District) and "water rate" to find the page containing water rate information.
-  * For Moulton Niguel Water District - this is https://www.mnwd.com/waterandwastewaterrates/
-6. On your computer 
+  * For Moulton Niguel Water District - this would be https://www.mnwd.com/waterandwastewaterrates/
+6. On your computer
    * `cd Open-Water-Rate-Specification/full_utility_rates/California/`
-   * `git checkout -b  "Moulton Niguel Water District"`
+   * `git checkout -b  "Moulton Niguel Water District - 147"`
 7. Create a new folder for that utility `mkdir "Moulton Niguel Water District - 147"` 
   * Use the naming convention "[Agency Name] - [utility_id]" e.g. `mkdir "Moulton Niguel Water District - 147"`
   * [Agency Name] and [utility_id] can be found in the tracking spreadsheet.
