@@ -33,6 +33,7 @@ Follow these simple steps
 * Iterate
 * ...
 * Pioneer a brighter future for CA!
+![](https://media.giphy.com/media/qdAviFAuYZ75m/giphy.gif)
 
 ### Open water rate spectacular
 
