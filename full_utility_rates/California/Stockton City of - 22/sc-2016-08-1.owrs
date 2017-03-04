@@ -1,0 +1,140 @@
+# Source: http://www.stocktongov.com/government/departments/adminServices/ubilServFee.html
+# CONTEXT After a series of public notices 
+# and meetings, new rates were adopted at a 
+# Public Hearing on June 28, 2016. The first 
+# adjustment is effective August 1, 2016.  
+# After review and approval by the City 
+# Council, rate adjustments in each of the 
+# next four years will become effective July 
+# 1 of 2017, 2018, 2019 and 2020.
+---
+metadata:
+  effective_date: 2016-08-1
+  utility_name: "City of Stockton"
+  bill_frequency: monthly
+rate_structure:
+
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 28
+        3/4"   : 28
+        1"     : 28
+        1 1/2" : 56
+        2"     : 89.6
+        3"     : 168
+        4"     : 280
+        6"     : 560
+        8"     : 896
+        10"    : 1288
+        12"    : 1890
+    tier_starts:
+      - 0
+      - 16
+    tier_prices:
+      - 2
+      - 2.39
+    commodity_charge: Tiered
+    drought_surcharge: .23
+    bill: "commodity_charge+service_charge+drought_surcharge"
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 28
+        3/4"   : 28
+        1"     : 28
+        1 1/2" : 56
+        2"     : 89.6
+        3"     : 168
+        4"     : 280
+        6"     : 560
+        8"     : 896
+        10"    : 1288
+        12"    : 1890
+    flat_rate:
+      depends_on: season
+      values:
+        Winter: 1.70
+        Summer: 1.85
+    commodity_charge: flat_rate*usage_ccf
+    drought_surcharge: .20
+    bill: "commodity_charge+service_charge+drought_surcharge"
+
+# commercial and industrial are identical as 
+# stockton just has non-residential
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 28
+        3/4"   : 28
+        1"     : 28
+        1 1/2" : 56
+        2"     : 89.6
+        3"     : 168
+        4"     : 280
+        6"     : 560
+        8"     : 896
+        10"    : 1288
+        12"    : 1890
+    flat_rate:
+      depends_on: season
+      values:
+        Winter: 1.70
+        Summer: 1.98
+    commodity_charge: flat_rate*usage_ccf
+    drought_surcharge: .21
+    bill: "commodity_charge+service_charge+drought_surcharge"
+
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 28
+        3/4"   : 28
+        1"     : 28
+        1 1/2" : 56
+        2"     : 89.6
+        3"     : 168
+        4"     : 280
+        6"     : 560
+        8"     : 896
+        10"    : 1288
+        12"    : 1890
+    flat_rate:
+      depends_on: season
+      values:
+        Winter: 1.70
+        Summer: 1.98
+    commodity_charge: flat_rate*usage_ccf
+    drought_surcharge: .21
+    bill: "commodity_charge+service_charge+drought_surcharge"
+
+
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 28
+        3/4"   : 28
+        1"     : 28
+        1 1/2" : 56
+        2"     : 89.6
+        3"     : 168
+        4"     : 280
+        6"     : 560
+        8"     : 896
+        10"    : 1288
+        12"    : 1890
+    flat_rate:
+      depends_on: season
+      values:
+        Winter: 1.78
+        Summer: 2.26
+    commodity_charge: flat_rate*usage_ccf
+    drought_surcharge: .23
+    bill: "commodity_charge+service_charge+drought_surcharge"
+  
