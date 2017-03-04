@@ -34,7 +34,7 @@ Follow these simple steps
 * ...
 * Pioneer a brighter future for CA!
 
-![](https://media.giphy.com/media/qdAviFAuYZ75m/giphy.gif)
+![](http://imgur.com/6oRoiHf)
 
 ### Open water rate spectacular
 
