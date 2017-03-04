@@ -9,6 +9,8 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
+         5/8"    : 12.29
+         3/4"    : 12.29
          1"      : 12.29
          1 1/2"  : 24.58
          2"      : 39.33
@@ -28,7 +30,9 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         1"     : 12.29
+         5/8"    : 12.29
+         3/4"    : 12.29
+         1"      : 12.29
          1 1/2"   : 24.58  
          2"     : 39.33
          3"     : 78.66
@@ -76,7 +80,9 @@ rate_structure:
      service_charge:
       depends_on: meter_size
       values:
-         1"     : 12.29
+         5/8"    : 12.29
+         3/4"    : 12.29
+         1"      : 12.29
          1 1/2"   : 24.58  
          2"     : 39.33
          3"     : 78.66
@@ -101,7 +107,9 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         1"     : 12.29
+         5/8"    : 12.29
+         3/4"    : 12.29
+         1"      : 12.29
          1.5"   : 24.58  
          2"     : 39.33
          3"     : 78.66
