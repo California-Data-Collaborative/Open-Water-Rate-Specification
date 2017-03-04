@@ -1,17 +1,16 @@
 ---
 metadata:
-  effective_date: 2016-07-04
-  utility_name: "City of Huntington Beach"
+  effective_date: 2017-01-01
+  utility_name: "Desert Water Agency"
   bill_frequency: monthly
-  # http://www.huntingtonbeachca.gov/government/departments/finance/municipal_services_payments/index.cfm#water-rates
-  # Only a single list of rates given on website with no indication of customer class. I am assuming that it
-  # applies to RESIDENTIAL_SINGLE, RESIDENTIAL_MULTI, COMMERCIAL, and INDUSTRIAL but unclear. Cannot find any other rates.
-  
+  # http://www.dwa.org/board-meeting-agenda/misc/119-residential-commercial-rates/file
+
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
       values:
+         5/8"    : 
          3/4"       : 11.531
          1"          : 23.062
          1_1/2"        : 34.593
