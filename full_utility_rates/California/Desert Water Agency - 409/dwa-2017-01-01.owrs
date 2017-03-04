@@ -10,75 +10,113 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8"    : 
-         3/4"       : 11.531
-         1"          : 23.062
-         1_1/2"        : 34.593
-         2"          : 57.655
-         3"          : 126.841
-         4" compound : 196.027
-         4" FM       : 380.524
-         6" compound : 380.524
-         6" FM       : 772.578
-         8" FM       : 1349.129
-         10" FM      : 2110.176
-    flat_rate: 1.9892
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
     commodity_charge: flat_rate*usage_ccf
-    bill: service_charge+commodity_charge
+    utility_surcharge:
+      depends_on: pressure_zone
+      values:
+        A: 0.16*usage_hcf
+        B: 0.22*usage_hcf
+        C: 0.53*usage_hcf
+        D: 2.30*usage_hcf
+    bill: service_charge+commodity_charge+utility_surcharge
 
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
       values:
-         3/4"       : 11.531
-         1"          : 23.062
-         1_1/2"        : 34.593
-         2"          : 57.655
-         3"          : 126.841
-         4" compound : 196.027
-         4" FM       : 380.524
-         6" compound : 380.524
-         6" FM       : 772.578
-         8" FM       : 1349.129
-         10" FM      : 2110.176
-    flat_rate: 1.9892
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
     commodity_charge: flat_rate*usage_ccf
-    bill: service_charge+commodity_charge
+    utility_surcharge:
+      depends_on: pressure_zone
+      values:
+        A: 0.16*usage_hcf
+        B: 0.22*usage_hcf
+        C: 0.53*usage_hcf
+        D: 2.30*usage_hcf
+    bill: service_charge+commodity_charge+utility_surcharge
 
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
       values:
-         3/4"       : 11.531
-         1"          : 23.062
-         1_1/2"        : 34.593
-         2"          : 57.655
-         3"          : 126.841
-         4" compound : 196.027
-         4" FM       : 380.524
-         6" compound : 380.524
-         6" FM       : 772.578
-         8" FM       : 1349.129
-         10" FM      : 2110.176
-    flat_rate: 1.9892
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
     commodity_charge: flat_rate*usage_ccf
-    bill: service_charge+commodity_charge
-   
+    utility_surcharge:
+      depends_on: pressure_zone
+      values:
+        A: 0.16*usage_hcf
+        B: 0.22*usage_hcf
+        C: 0.53*usage_hcf
+        D: 2.30*usage_hcf
+    bill: service_charge+commodity_charge+utility_surcharge
+
   INDUSTRIAL:
     service_charge:
       depends_on: meter_size
       values:
-         3/4"       : 11.531
-         1"          : 23.062
-         1_1/2"        : 34.593
-         2"          : 57.655
-         3"          : 126.841
-         4" compound : 196.027
-         4" FM       : 380.524
-         6" compound : 380.524
-         6" FM       : 772.578
-         8" FM       : 1349.129
-         10" FM      : 2110.176
-    flat_rate: 1.9892
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
     commodity_charge: flat_rate*usage_ccf
-    bill: service_charge+commodity_charge
+    utility_surcharge:
+      depends_on: pressure_zone
+      values:
+        A: 0.16*usage_hcf
+        B: 0.22*usage_hcf
+        C: 0.53*usage_hcf
+        D: 2.30*usage_hcf
+    bill: service_charge+commodity_charge+utility_surcharge
+
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         4"      : 17.91
+         6"      : 39.25
+         8"      : 67.71
+         10"     : 105.66
+         12"     : 127.00
+    bill: service_charge
