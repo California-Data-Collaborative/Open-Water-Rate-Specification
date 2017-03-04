@@ -1,4 +1,4 @@
----
+ ---
 metadata:
   effective_date: 2016-07-01
   utility_name: City of Redlands
@@ -7,12 +7,12 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 26.28
          3/4"  : 35.35
          1"    : 52.96
-         1_1/2": 95.65
+         1 1/2": 95.65
          2"    : 141.54
          3"    : 245.06
          4"    : 378.46
@@ -32,12 +32,12 @@ rate_structure:
     bill : commodity_charge+service_charge
   RESIDENTIAL_MULTI:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 26.28
          3/4"  : 35.35
          1"    : 52.96
-         1_1/2": 95.65
+         1 1/2": 95.65
          2"    : 141.54
          3"    : 245.06
          4"    : 378.46
@@ -55,9 +55,10 @@ rate_structure:
       - 1.45
       - 2.20
     bill : commodity_charge+service_charge
+    
   COMMERCIAL:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 26.28
          3/4"  : 35.35
@@ -82,7 +83,7 @@ rate_structure:
     bill : commodity_charge+service_charge
   INDUSTRIAL:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 26.28
          3/4"  : 35.35
@@ -107,7 +108,7 @@ rate_structure:
     bill : commodity_charge+service_charge
   INSTITUTIONAL:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 26.28
          3/4"  : 35.35
@@ -130,9 +131,10 @@ rate_structure:
       - 1.45
       - 2.20
     bill : commodity_charge+service_charge
+    
   IRRIGATION:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          5/8"  : 26.28
          3/4"  : 35.35
@@ -153,9 +155,10 @@ rate_structure:
       - 1.45
       - 2.20
     bill : commodity_charge+service_charge
+    
   FIRE_SERVICE:
     service_charge:
-	  depends_on: meter_size
+      depends_on: meter_size
       values:
          2"    : 8.34
          3"    : 14.82
@@ -167,11 +170,12 @@ rate_structure:
     flat_rate: 2.20
 	commodity_charge = flat_rate*usage_ccf
     bill : flat_rate+service_charge
+    
   NONPOTABLE:
-	service_charge:
-	  depends_on: meter_size
+    service_charge:
+      depends_on: meter_size
       values:
-	     3/4"  : 13.81
+          3/4"  : 13.81
          1"    : 20.65
          1_1/2": 37.29
          2"    : 55.16
@@ -180,9 +184,9 @@ rate_structure:
          6"    : 272.16
          8"    : 401.04
     flat_rate:
-	  depends_on: conversion_status
+      depends_on: conversion_status
       values:
          conversion  : 0.99
          non-conversion    : 0.64
-	commodity_charge = flat_rate*usage_ccf
+    commodity_charge: flat_rate*usage_ccf
     bill : flat_rate+service_charge
