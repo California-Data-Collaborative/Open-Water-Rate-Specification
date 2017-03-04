@@ -13,18 +13,18 @@ rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
-        values:
-          5/8"   : 22.08
-          3/4"   : 28.02
-          1"     : 36.92
-          1 1/2" : 60.67
-          2"     : 72.54
-          3"     : 250.62
-          4"     : 488.06
-          6"     : 903.58
-          8"     : 2090.78
-          10"    : 3277.98
-          12"    : 3277.98
+      values:
+        5/8"   : 22.08
+        3/4"   : 28.02
+        1"     : 36.92
+        1 1/2" : 60.67
+        2"     : 72.54
+        3"     : 250.62
+        4"     : 488.06
+        6"     : 903.58
+        8"     : 2090.78
+        10"    : 3277.98
+        12"    : 3277.98
     tier_starts:
       - 0
       - 6
@@ -37,23 +37,24 @@ rate_structure:
       - 4.17
     commodity_charge: Tiered
     bill: "commodity_charge+service_charge"
-	
+
   #number of units x 5 hcf (bit unclear)
   RESIDENTIAL_MULTI:
     service_charge:
+      service_charge:
       depends_on: meter_size
-        values:
-          5/8"   : 22.08
-          3/4"   : 28.02
-          1"     : 36.92
-          1 1/2" : 60.67
-          2"     : 72.54
-          3"     : 250.62
-          4"     : 488.06
-          6"     : 903.58
-          8"     : 2090.78
-          10"    : 3277.98
-          12"    : 3277.98
+      values:
+        5/8"   : 22.08
+        3/4"   : 28.02
+        1"     : 36.92
+        1 1/2" : 60.67
+        2"     : 72.54
+        3"     : 250.62
+        4"     : 488.06
+        6"     : 903.58
+        8"     : 2090.78
+        10"    : 3277.98
+        12"    : 3277.98
     tier_starts:
       - 0
       - 5
@@ -62,85 +63,86 @@ rate_structure:
       - 3.75
     commodity_charge: Tiered
     bill: "commodity_charge+service_charge"
-	
+
   COMMERCIAL:
     service_charge:
+      service_charge:
       depends_on: meter_size
-        values:
-          5/8"   : 22.08
-          3/4"   : 28.02
-          1"     : 36.92
-          1 1/2" : 60.67
-          2"     : 72.54
-          3"     : 250.62
-          4"     : 488.06
-          6"     : 903.58
-          8"     : 2090.78
-          10"    : 3277.98
-          12"    : 3277.98
+      values:
+        5/8"   : 22.08
+        3/4"   : 28.02
+        1"     : 36.92
+        1 1/2" : 60.67
+        2"     : 72.54
+        3"     : 250.62
+        4"     : 488.06
+        6"     : 903.58
+        8"     : 2090.78
+        10"    : 3277.98
+        12"    : 3277.98
     flat_rate: 3.04
     commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge+service_charge
 
   IRRIGATION:
     service_charge:
+      service_charge:
       depends_on: meter_size
-        values:
-          5/8"   : 22.08
-          3/4"   : 28.02
-          1"     : 36.92
-          1 1/2" : 60.67
-          2"     : 72.54
-          3"     : 250.62
-          4"     : 488.06
-          6"     : 903.58
-          8"     : 2090.78
-          10"    : 3277.98
-          12"    : 3277.98
+      values:
+        5/8"   : 22.08
+        3/4"   : 28.02
+        1"     : 36.92
+        1 1/2" : 60.67
+        2"     : 72.54
+        3"     : 250.62
+        4"     : 488.06
+        6"     : 903.58
+        8"     : 2090.78
+        10"    : 3277.98
+        12"    : 3277.98
     flat_rate: 3.14
     commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge+service_charge
   
   RECYCLED:
     service_charge:
+      service_charge:
       depends_on: meter_size
-        values:
-          5/8"   : 18.77
-          3/4"   : 23.82
-          1"     : 31.38
-          1 1/2" : 51.57
-          2"     : 61.66
-          3"     : 213.03
-          4"     : 414.85
-          6"     : 768.04
-          8"     : 1777.16
-          10"    : 2786.28
-          12"    : 2786.28
+      values:
+        5/8"   : 22.08
+        3/4"   : 28.02
+        1"     : 36.92
+        1 1/2" : 60.67
+        2"     : 72.54
+        3"     : 250.62
+        4"     : 488.06
+        6"     : 903.58
+        8"     : 2090.78
+        10"    : 3277.98
+        12"    : 3277.98
     commodity_price:
-    depends_on: water_type
+      depends_on: water_type
       values:
         COMMERCIAL: 2.58
         RECYCLED: 2.67
     commodity_charge: commodity_price*usage_ccf
     bill: commodity_charge+service_charge
-	
+
   FIRE_SERVICES:
     service_charge:
       depends_on: meter_size
-        values:
-          1"     : 8.60
-          1 1/2" : 9.51
-          2"     : 11.09
-          3"     : 16.75
-          4"     : 26.51
-          6"     : 61.55
-          8"     : 121.98
-          10"    : 212.88
-          12"    : 338.86
+      values:
+        1"     : 8.60
+        1 1/2" : 9.51
+        2"     : 11.09
+        3"     : 16.75
+        4"     : 26.51
+        6"     : 61.55
+        8"     : 121.98
+        10"    : 212.88
+        12"    : 338.86
     flat_rate: 3.04
     commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge+service_charge
 
 # note the City has also had drought surcharges at various points
-
-			
