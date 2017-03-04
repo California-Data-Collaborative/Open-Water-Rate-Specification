@@ -1,11 +1,11 @@
-# Source: 
+# Source:   
 # CONTEXT On Tuesday, August 5, 2014, Glendale City Council approved new water 
 # revenue increases of 4%, 4%, 4%, 4%, for the next four years. The new 
 # rates went into effect on September 1, 2014 and all subsequent increases 
 # will start on July 1.
 ---
 metadata:
-  effective_date: 2017-03-1
+  effective_date: 2016-07-1
   utility_name: "City of Glendale"
   bill_frequency: monthly
 rate_structure:
