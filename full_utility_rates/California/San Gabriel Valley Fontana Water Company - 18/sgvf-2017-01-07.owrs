@@ -1,0 +1,42 @@
+# High level structure for all OWRS templates
+# {} indicates that the value should be substituted from Google sheet
+# [] indicates that the value should be substituted from Google sheet and are mandatory
+# () indicates value to be filled
+#
+# Need to find bill frequency 
+---
+metadata:
+  effective_date: 2017-01-07  
+  utility_name: San Gabriel Valley Fontana Water Company
+  bill_frequency:
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    commodity_charge:
+      
+    [factors] : ()
+    {rate_component}:
+      ...
+    {rate_component}:
+      ...
+    bill : sum of rate_components
+
+  {consumer_class}:
+    {rate_component}:
+      ...
+    [factors] : ()
+    {rate_component}:
+      ...
+    {rate_component}:
+      ...
+    bill : sum of rate_components
+
+  {consumer_class}:
+    {rate_component}:
+      ...
+    [factors] : ()
+    {rate_component}:
+      ...
+    {rate_component}:
+      ...
+    bill : sum of rate_components
