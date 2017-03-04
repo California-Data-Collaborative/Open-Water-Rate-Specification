@@ -10,13 +10,13 @@ OWRS is designed so that any contributor can add data to
 Follow these simple steps
 (The example we use here is Moulton Niguel Water District)
 
- 1. Read the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md)
- 2.  Fork the OWRS repo to your own Github.
- 3. Clone the forked OWRS repo locally to your machine. `git clone <LINK to the FORKED REPO>`
- 4. Find an unclaimed utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
- 5. Google search the Utility name (Moulton Niguel Water District) and "water rate" to find the page containing water rate information.
+* Read the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md)
+* Fork the OWRS repo to your own Github.
+* Clone the forked OWRS repo locally to your machine. `git clone <LINK to the FORKED REPO>`
+* Find an unclaimed utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
+* Google search the Utility name (Moulton Niguel Water District) and "water rate" to find the page containing water rate information.
   * For Moulton Niguel Water District - this is https://www.mnwd.com/waterandwastewaterrates/
-6. On your computer 
+* On your computer 
    * `cd Open-Water-Rate-Specification/full_utility_rates/California/`
    * `git checkout -b  "Moulton Niguel Water District"`
 * Create a new folder for that utility `mkdir "Moulton Niguel Water District - 147"` 
