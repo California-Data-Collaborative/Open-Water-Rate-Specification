@@ -9,6 +9,7 @@ rate_structure:
       depends_on: meter_size
       values:
         5/8"   : 21.80
+        3/4"   : 21.80
         1"     : 30.68
         1 1/2" : 46.86
         2"     : 64.62
@@ -30,6 +31,7 @@ rate_structure:
       depends_on: meter_size
       values:
         5/8"   : 5.74
+        3/4"   : 5.74
         1"     : 9.18
         1 1/2" : 17.22
         2"     : 29.84
@@ -39,14 +41,15 @@ rate_structure:
         9"     : 298.48
         10"    : 447.72      
     flat_rate: 5.93
-    commodity_charge:Tiered
-    bill: “commodity_charge+service_charge+utility_surcharge”
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge+utility_surcharge"
 
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
       values:
         5/8"   : 21.80
+        3/4"   : 21.80
         1"     : 30.68
         1 1/2" : 46.86
         2"     : 64.62
@@ -68,6 +71,7 @@ rate_structure:
       depends_on: meter_size
       values:
         5/8"   : 5.74
+        3/4"   : 5.74
         1"     : 9.18
         1 1/2" : 17.22
         2"     : 29.84
@@ -77,14 +81,15 @@ rate_structure:
         9"     : 298.48
         10"    : 447.72      
     flat_rate: 5.93
-    commodity_charge:Tiered
-    bill: “commodity_charge+service_charge+utility_surcharge”
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge+utility_surcharge"
 
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
       values:
         5/8"   : 21.80
+        3/4"   : 21.80
         1"     : 30.68
         1 1/2" : 46.86
         2"     : 64.62
@@ -106,6 +111,7 @@ rate_structure:
       depends_on: meter_size
       values:
         5/8"   : 5.74
+        3/4"   : 5.74
         1"     : 9.18
         1 1/2" : 17.22
         2"     : 29.84
@@ -115,14 +121,15 @@ rate_structure:
         9"     : 298.48
         10"    : 447.72      
     flat_rate: 6.08
-    commodity_charge:Tiered
-    bill: “commodity_charge+service_charge+utility_surcharge”
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge+utility_surcharge"
 
   INDUSTRIAL:
     service_charge:
       depends_on: meter_size
       values:
         5/8"   : 21.80
+        3/4"   : 21.80
         1"     : 30.68
         1 1/2" : 46.86
         2"     : 64.62
@@ -144,6 +151,7 @@ rate_structure:
       depends_on: meter_size
       values:
         5/8"   : 5.74
+        3/4"   : 5.74
         1"     : 9.18
         1 1/2" : 17.22
         2"     : 29.84
@@ -153,14 +161,15 @@ rate_structure:
         9"     : 298.48
         10"    : 447.72      
     flat_rate: 9.35
-    commodity_charge:Tiered
-    bill: “commodity_charge+service_charge+utility_surcharge”
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge+utility_surcharge"
 
   GOVERNMENTAL:
     service_charge:
       depends_on: meter_size
       values:
         5/8"   : 21.80
+        3/4"   : 21.80
         1"     : 30.68
         1 1/2" : 46.86
         2"     : 64.62
@@ -182,6 +191,7 @@ rate_structure:
       depends_on: meter_size
       values:
         5/8"   : 5.74
+        3/4"   : 5.74
         1"     : 9.18
         1 1/2" : 17.22
         2"     : 29.84
@@ -191,5 +201,5 @@ rate_structure:
         9"     : 298.48
         10"    : 447.72      
     flat_rate: 6.58
-    commodity_charge:Tiered
-    bill: “commodity_charge+service_charge+utility_surcharge”
+    commodity_charge: Tiered
+    bill: "commodity_charge+service_charge+utility_surcharge"
