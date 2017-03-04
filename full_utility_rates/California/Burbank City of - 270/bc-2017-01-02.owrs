@@ -1,0 +1,143 @@
+---
+metadata:
+  effective_date: 2016-07-01
+  utility_name: "City of Burbank"
+  bill_frequency: monthly
+  # https://www.burbankwaterandpower.com/water/water-rates-and-charges
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1"      : 12.29
+         1 1/2"  : 24.58
+         2"      : 39.33
+    tier_starts:
+      - 0
+      - 16
+      - 31
+    tier_prices:
+      - 1.257
+      - 1.548
+      - 1.948
+    commodity_charge: Tiered
+    cost_adjustment_charge: 1.689*usage_ccf
+    bill: "service_charge+commodity_charge+cost_adjustment_charge"
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1"     : 12.29
+         1 1/2"   : 24.58  
+         2"     : 39.33
+         3"     : 78.66
+         4"     : 122.90
+         6"     : 245.80
+         8"     : 393.28
+         10"    : 565.34
+         Larger : 1056.90
+    flat_rate:
+      depends_on: season
+      values:
+        summer:
+          - 1.785*usage_ccf
+        non-summer:
+          - 0.833*usage_ccf
+    commodity_charge: flat_rate*usage_ccf
+    cost_adjustment_charge: 1.689*usage_ccf 
+    bill: service_charge+commodity_charge+cost_adjustment_charge
+
+  COMMERCIAL:
+    service_charge:
+     depends_on: meter_size
+     values:
+        1"     : 12.29
+        1 1/2"   : 24.58  
+        2"     : 39.33
+        3"     : 78.66
+        4"     : 122.90
+        6"     : 245.80
+        8"     : 393.28
+        10"    : 565.34
+        Larger : 1056.90
+    flat_rate:
+     depends_on: season
+     values:
+       Summer:
+         - 1.785
+       Winter:
+         - 0.833
+    commodity_charge: flat_rate*usage_ccf
+    cost_adjustment_charge: 1.689*usage_ccf 
+    bill: service_charge+commodity_charge+cost_adjustment_charge
+   
+  INDUSTRIAL:
+     service_charge:
+      depends_on: meter_size
+      values:
+         1"     : 12.29
+         1 1/2"   : 24.58  
+         2"     : 39.33
+         3"     : 78.66
+         4"     : 122.90
+         6"     : 245.80
+         8"     : 393.28
+         10"    : 565.34
+         Larger : 1056.90
+     flat_rate:
+      depends_on: season
+      values:
+        Summer:
+          - 1.785
+        Winter:
+          - 0.833
+     commodity_charge: flat_rate*usage_ccf
+     cost_adjustment_charge: 1.689*usage_ccf 
+     bill: service_charge+commodity_charge+cost_adjustment_charge
+   
+  # Unmetered class is for city landscaping
+  UNMETERED:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1"     : 12.29
+         1.5"   : 24.58  
+         2"     : 39.33
+         3"     : 78.66
+         4"     : 122.90
+         6"     : 245.80
+         8"     : 393.28
+         10"    : 565.34
+         Larger : 1056.90
+    flat_rate:
+      depends_on: season
+      values:
+        summer:
+          - 1.785
+        non-summer:
+          - 0.833
+    commodity_charge: flat_rate*usage_ccf
+    cost_adjustment_charge: 1.689
+    bill: service_charge+commodity_charge+cost_adjustment_charge
+    
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         2"     : 20.90
+         4"     : 35.53  
+         6"     : 64.79
+         8"     : 114.95
+         10"    : 188.10
+         12"    : 274.10
+    flat_rate:
+      depends_on: season
+      values:
+        summer:
+          - 5.355
+        non-summer:
+          - 2.499
+    commodity_charge: flat_rate*usage_ccf
+    cost_adjustment_charge: 5.067
+    bill: service_charge+commodity_charge+cost_adjustment_charge
