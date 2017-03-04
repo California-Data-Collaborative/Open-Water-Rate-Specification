@@ -5,6 +5,7 @@ metadata:
   utility_name: City of Garden Grove
   bill_frequency: bimonthly
 
+rate_structure:
   RESIDENTIAL_SINGLE:
     minimum_charge:
       depends_on: meter_size
@@ -12,7 +13,7 @@ metadata:
           5/8"  : 12.74
           3/4"  : 12.74
           1"    : 33.99
-          1.5"  : 65.82
+          1 1/2"  : 65.82
           2"    : 99.79
           3"    : 165.62
           4"    : 229.32
@@ -32,13 +33,13 @@ metadata:
       - 3.09
       - 3.18
       
-    capital_improvemnets_charge:
+    capital_improvements_charge:
       depends_on: meter_size
       values:
           5/8"  : 1.47
           3/4"  : 1.47
           1"    : 2.07
-          1.5"  : 2.64
+          1 1/2"  : 2.64
           2"    : 4.27
           3"    : 16.19
           4"    : 20.60
@@ -57,7 +58,7 @@ metadata:
           5/8"  : 12.74
           3/4"  : 12.74
           1"    : 33.99
-          1.5"  : 65.82
+          1 1/2"  : 65.82
           2"    : 99.79
           3"    : 165.62
           4"    : 229.32
@@ -102,7 +103,7 @@ metadata:
           5/8"  : 12.74
           3/4"  : 12.74
           1"    : 33.99
-          1.5"  : 65.82
+          1 1/2"  : 65.82
           2"    : 99.79
           3"    : 165.62
           4"    : 229.32
@@ -122,13 +123,13 @@ metadata:
       - 3.09
       - 3.18
       
-    capital_improvemnets_charge
+    capital_improvemnets_charge:
       depends_on: meter_size
       values:
           5/8"  : 1.47
           3/4"  : 1.47
           1"    : 2.07
-          1.5"  : 2.64
+          1 1/2"  : 2.64
           2"    : 4.27
           3"    : 16.19
           4"    : 20.60
