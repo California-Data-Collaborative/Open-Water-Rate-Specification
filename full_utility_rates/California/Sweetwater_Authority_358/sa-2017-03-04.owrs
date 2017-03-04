@@ -1,0 +1,195 @@
+---
+metadata:
+  effective_date: 2016-09-01
+  utility_name: "Sweetwater Authority"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.80
+        1"     : 30.68
+        1 1/2" : 46.86
+        2"     : 64.62
+        3"     : 118.88
+        4"     : 196.88
+        8"     : 619.74
+        9"     : 925.72
+    tier_starts:
+      - 0
+      - 11
+      - 17
+      - 28
+    tier_prices:
+      - 3.86
+      - 4.75
+      - 6.39
+      - 6.90
+    utility_surcharge:
+      depends_on: meter_size
+      values:
+        5/8"   : 5.74
+        1"     : 9.18
+        1 1/2" : 17.22
+        2"     : 29.84
+        3"     : 55.10
+        4"     : 94.14
+        8"     : 172.20
+        9"     : 298.48
+        10"    : 447.72      
+    flat_rate: 5.93
+    commodity_charge:Tiered
+    bill: “commodity_charge+service_charge+utility_surcharge”
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.80
+        1"     : 30.68
+        1 1/2" : 46.86
+        2"     : 64.62
+        3"     : 118.88
+        4"     : 196.88
+        8"     : 619.74
+        9"     : 925.72
+    tier_starts:
+      - 0
+      - 11
+      - 17
+      - 28
+    tier_prices:
+      - 3.86
+      - 4.75
+      - 6.39
+      - 6.90
+    utility_surcharge:
+      depends_on: meter_size
+      values:
+        5/8"   : 5.74
+        1"     : 9.18
+        1 1/2" : 17.22
+        2"     : 29.84
+        3"     : 55.10
+        4"     : 94.14
+        8"     : 172.20
+        9"     : 298.48
+        10"    : 447.72      
+    flat_rate: 5.93
+    commodity_charge:Tiered
+    bill: “commodity_charge+service_charge+utility_surcharge”
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.80
+        1"     : 30.68
+        1 1/2" : 46.86
+        2"     : 64.62
+        3"     : 118.88
+        4"     : 196.88
+        8"     : 619.74
+        9"     : 925.72
+    tier_starts:
+      - 0
+      - 11
+      - 17
+      - 28
+    tier_prices:
+      - 3.86
+      - 4.75
+      - 6.39
+      - 6.90
+    utility_surcharge:
+      depends_on: meter_size
+      values:
+        5/8"   : 5.74
+        1"     : 9.18
+        1 1/2" : 17.22
+        2"     : 29.84
+        3"     : 55.10
+        4"     : 94.14
+        8"     : 172.20
+        9"     : 298.48
+        10"    : 447.72      
+    flat_rate: 6.08
+    commodity_charge:Tiered
+    bill: “commodity_charge+service_charge+utility_surcharge”
+
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.80
+        1"     : 30.68
+        1 1/2" : 46.86
+        2"     : 64.62
+        3"     : 118.88
+        4"     : 196.88
+        8"     : 619.74
+        9"     : 925.72
+    tier_starts:
+      - 0
+      - 11
+      - 17
+      - 28
+    tier_prices:
+      - 3.86
+      - 4.75
+      - 6.39
+      - 6.90
+    utility_surcharge:
+      depends_on: meter_size
+      values:
+        5/8"   : 5.74
+        1"     : 9.18
+        1 1/2" : 17.22
+        2"     : 29.84
+        3"     : 55.10
+        4"     : 94.14
+        8"     : 172.20
+        9"     : 298.48
+        10"    : 447.72      
+    flat_rate: 9.35
+    commodity_charge:Tiered
+    bill: “commodity_charge+service_charge+utility_surcharge”
+
+  GOVERNMENTAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.80
+        1"     : 30.68
+        1 1/2" : 46.86
+        2"     : 64.62
+        3"     : 118.88
+        4"     : 196.88
+        8"     : 619.74
+        9"     : 925.72
+    tier_starts:
+      - 0
+      - 11
+      - 17
+      - 28
+    tier_prices:
+      - 3.86
+      - 4.75
+      - 6.39
+      - 6.90
+    utility_surcharge:
+      depends_on: meter_size
+      values:
+        5/8"   : 5.74
+        1"     : 9.18
+        1 1/2" : 17.22
+        2"     : 29.84
+        3"     : 55.10
+        4"     : 94.14
+        8"     : 172.20
+        9"     : 298.48
+        10"    : 447.72      
+    flat_rate: 6.58
+    commodity_charge:Tiered
+    bill: “commodity_charge+service_charge+utility_surcharge”
