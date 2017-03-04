@@ -8,10 +8,10 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-         5/8*3/4": 21.97
+         5/8": 21.97
          3/4": 32.96
          1"  : 54.93
-         1_1/2": 109.85
+         1 1/2": 109.85
          2"  : 175.76
          3"  : 329.55
          4"  : 549.25
@@ -28,16 +28,15 @@ rate_structure:
       - 6.275
     commodity_charge: Tiered
     bill: commodity_charge+service_charge
-
-rate_structure:
+    
   NON_RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
       values:
-         5/8*3/4": 21.97
+         5/8": 21.97
          3/4": 32.96
          1"  : 54.93
-         1_1/2": 109.85
+         1 1/2": 109.85
          2"  : 175.76
          3"  : 329.55
          4"  : 549.25
@@ -49,15 +48,14 @@ rate_structure:
     commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge+service_charge
 
-rate_structure:
   RECLAIMED:
     service_charge:
       depends_on: meter_size
       values:
-         5/8*3/4": 21.97
+         5/8": 21.97
          3/4": 32.96
          1"  : 54.93
-         1_1/2": 109.85
+         1 1/2": 109.85
          2"  : 175.76
          3"  : 329.55
          4"  : 549.25
