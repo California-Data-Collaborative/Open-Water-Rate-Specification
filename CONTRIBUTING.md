@@ -10,7 +10,7 @@ OWRS is designed so that anyone can contribute standardized water rate data.
 Follow these simple steps
 (The example we use here is Moulton Niguel Water District)
 
-1. Read the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md)
+1. Refer the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md)
 2. Fork the OWRS repo to your own Github.
 3. Clone the forked OWRS repo locally to your machine. `git clone <LINK to the FORKED REPO>`
 4. Find an unclaimed utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
@@ -31,7 +31,7 @@ Follow these simple steps
 10. When your OWRS file is good to go, push your changes to the remote GitHub repo and submit a pull request!  
 11. A member of the CaDC data team will review the OWRS file and let you know if there are any questions
 12. Pick another utility!
-13. GOTO #1
+13. GOTO #4
 14. Pioneer a brighter future for CA!
 
 
