@@ -49,6 +49,7 @@ rate_structure:
     utility_surcharge: 1.689*usage_ccf 
     bill: service_charge+commodity_charge+utility_surcharge
 
+  # CII are not separated out on the website.
   COMMERCIAL:
     service_charge:
       depends_on: meter_size
