@@ -29,6 +29,7 @@ Follow these simple steps
   * Use naming convention "[acronym]-YYYY-MM-DD.owrs"
   * where YYY-MM-DD is the date when that utility's water rate is effective. (found on the Utility website)
 9. Ask questions on the OWRS slack as need be
+  * Make sure you capture Usage units correctly (if you encounter *GALLONS* - then conver to ccf/hcf 1 ccf/hcf = 748.052 gallons
 10. When your OWRS file is good to go, push your changes to the remote GitHub repo and submit a pull request!  
 11. A member of the CaDC data team will review the OWRS file and let you know if there are any questions
 12. Pick another utility!
