@@ -3,14 +3,15 @@
 
 This repository documents how to contribute data to the **Open Water Rate Specification** (OWRS), a machine-readable format for specifying and sharing water rate information.
 
-OWRS is designed so that any contributor can add data to 
+OWRS is designed so that any contributor can add data to
 
 ### Getting Started
 
-Follow these simple steps: 
+Follow these simple steps:
 
 * Read the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md)
-* Clone the OWRS repo locally to your machine
+* For the OWRS repo.
+* Clone the forked OWRS repo locally to your machine.
 * Find an open utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
 * Checkout a new branch with the name of that utility
 * Create a new folder for that utility
