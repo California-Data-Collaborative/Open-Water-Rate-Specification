@@ -1,0 +1,100 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "El Dorado Irrigation District"
+  bill_frequency: bi-monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8*3/4" : 59.88
+        1"       : 87.69
+        1 1/2"   : 151.33
+        1 1.2" T : 179.15
+        2"       : 230.82
+        2" T     : 230.82
+        3"       : 466.03
+        3" T     : 485.29
+        4"       : 684.08
+        4" T     : 855.04
+        6"       : 1355.84
+        6" T     : 1876.84
+        8" T     : 3215.12
+        10" T    : 5091.96
+        12" T    : 6699.52
+    budget: Tiered
+    tier_starts:
+      - 0
+      - 1801
+      - 4501
+    tier_prices:
+      - 0.01454
+      - 0.01755
+      - 0.02059
+    commodity_charge: budget
+    bill: service_charge+commodity_charge
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8*3/4" : 62.97
+        1"       : 92.97
+        1 1/2"   : 161.56
+        1 1.2" T : 191.56
+        2"       : 247.28
+        2" T     : 247.28
+        3"       : 478.73
+        3" T     : 521.59
+        4"       : 735.89
+        4" T     : 920.20
+        6"       : 1447.40
+        6" T     : 1731.92
+        8" T     : 3449.03
+        10" T    : 5462.39
+        12" T    : 7165.09
+    flat_rate: 0.01731
+    commodity_charge: flat_rate*usage_cf
+    bill: commodity_charge+service_charge
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8*3/4" : 62.97
+        1"       : 92.97
+        1 1/2"   : 161.56
+        1 1.2" T : 191.56
+        2"       : 247.28
+        2" T     : 247.28
+        3"       : 478.73
+        3" T     : 521.59
+        4"       : 735.89
+        4" T     : 920.20
+        6"       : 1447.40
+        6" T     : 1731.92
+        8" T     : 3449.03
+        10" T    : 5462.39
+        12" T    : 7165.09
+    flat_rate: 0.01731
+    commodity_charge: flat_rate*usage_cf
+    bill: commodity_charge+service_charge
+
+  RECLAIMED:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4" : 23.84
+    budget: Tiered
+    tier_starts:
+      - 0
+      - 3001
+      - 4501
+    tier_prices:
+      - 0.00688
+      - 0.01163
+      - 0.01751
+    commodity_charge: budget
+    bill: commodity_charge+service_charge
