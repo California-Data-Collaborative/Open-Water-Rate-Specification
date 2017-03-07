@@ -1,0 +1,158 @@
+---
+metadata:
+  effective_date: 2016-08-01
+  utility_name: "Whittier Utility Authority Water Division"
+  bill_frequency: bi-monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4"  : 40.35
+         1"    : 60.26
+         1_1/2": 134.11
+         2"    : 181.79
+         3"    : 390.73
+         4"    : 530.14
+         6"    : 830.42
+         8"    : 868.39
+    tier_starts:
+      depends_on: meter_size
+      values:
+        3/4":
+          - 0
+          - 40
+        1":
+          - 0
+          - 56
+        1_1/2":
+          - 0
+          - 140
+        2":
+          - 0
+          - 466
+        3":
+          - 0
+          - 642
+        4":
+          - 0
+          - 886
+    tier_prices:
+      - 1.76
+      - 2.50
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+
+  RESIDENTIAL_MULTIPLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4"  : 40.35
+         1"    : 60.26
+         1_1/2": 134.11
+         2"    : 181.79
+         3"    : 390.73
+         4"    : 530.14
+         6"    : 830.42
+         8"    : 868.39
+    tier_starts:
+      depends_on: meter_size
+      values:
+        3/4":
+          - 0
+          - 40
+        1":
+          - 0
+          - 56
+        1_1/2":
+          - 0
+          - 140
+        2":
+          - 0
+          - 466
+        3":
+          - 0
+          - 642
+        4":
+          - 0
+          - 886
+    tier_prices:
+      - 1.76
+      - 2.50
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4"  : 40.35
+         1"    : 60.26
+         1_1/2": 134.11
+         2"    : 181.79
+         3"    : 390.73
+         4"    : 530.14
+         6"    : 830.42
+         8"    : 868.39
+    tier_starts:
+      depends_on: meter_size
+      values:
+        3/4":
+          - 0
+          - 40
+        1":
+          - 0
+          - 56
+        1_1/2":
+          - 0
+          - 140
+        2":
+          - 0
+          - 466
+        3":
+          - 0
+          - 642
+        4":
+          - 0
+          - 886
+    tier_prices:
+      - 1.76
+      - 2.50
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+    
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         3/4"  : 40.35
+         1"    : 60.26
+         1_1/2": 134.11
+         2"    : 181.79
+         3"    : 390.73
+         4"    : 530.14
+         6"    : 830.42
+         8"    : 868.39
+    tier_starts:
+      depends_on: meter_size
+      values:
+        3/4":
+          - 0
+          - 40
+        1":
+          - 0
+          - 56
+        1_1/2":
+          - 0
+          - 140
+        2":
+          - 0
+          - 466
+        3":
+          - 0
+          - 642
+        4":
+          - 0
+          - 886
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge

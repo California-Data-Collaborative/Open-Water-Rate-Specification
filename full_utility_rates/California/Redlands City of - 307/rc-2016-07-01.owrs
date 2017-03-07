@@ -31,6 +31,7 @@ rate_structure:
       - 1.45
       - 2.20
     bill : commodity_charge+service_charge
+    
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size
@@ -82,6 +83,7 @@ rate_structure:
       - 1.45
       - 2.20
     bill : commodity_charge+service_charge
+    
   INDUSTRIAL:
     service_charge:
       depends_on: meter_size
@@ -107,6 +109,7 @@ rate_structure:
       - 1.45
       - 2.20
     bill : commodity_charge+service_charge
+    
   INSTITUTIONAL:
     service_charge:
       depends_on: meter_size
@@ -170,7 +173,7 @@ rate_structure:
          12"   : 383.66
     flat_rate: 2.20
     commodity_charge: flat_rate*usage_ccf
-    bill: flat_rate+service_charge
+    bill: commodity_charge+service_charge
     
   NONPOTABLE:
     service_charge:
@@ -178,7 +181,7 @@ rate_structure:
       values:
          3/4"  : 13.81
          1"    : 20.65
-         1_1/2": 37.29
+         1 1/2": 37.29
          2"    : 55.16
          3"    : 95.50
          4"    : 147.45
@@ -190,4 +193,4 @@ rate_structure:
          conversion  : 0.99
          non-conversion    : 0.64
     commodity_charge: flat_rate*usage_ccf
-    bill : flat_rate+service_charge
+    bill : commodity_charge+service_charge
