@@ -1,0 +1,88 @@
+# Tract Nos. 6593 and 6598 and vicinity near Yermo, and Tract Nos. 2459 and 2195 in Yermo, San Bernardino County, California.
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Apple Valley Ranchos Water Company"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8": 24.20
+         3/4": 36.31
+         1"  : 60.50
+         1_1/2": 120.99
+         2"  : 193.58
+         3"  : 362.96
+         4"  : 604.94
+  
+    tier_starts:
+      - 0
+      - 13
+      - 26
+    tier_prices:
+      - 2.631
+      - 2.960
+      - 3.289
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
+
+rate_structure:
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8": 24.20
+         3/4": 36.31
+         1"  : 60.50
+         1_1/2": 120.99
+         2"  : 193.58
+         3"  : 362.96
+         4"  : 604.94
+  
+    tier_starts:
+      - 0
+      - 13
+      - 26
+    tier_prices:
+      - 2.631
+      - 2.960
+      - 3.289
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
+
+rate_structure:
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8": 23.15
+         3/4": 34.73
+         1"  : 57.88
+         1_1/2": 115.75
+         2"  : 185.20
+         3"  : 347.25
+         4"  : 578.75
+         6"  : 1157.50
+         8"  : 1852.00
+         10" : 3356.750
+    flat_rate: 0.389 
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+
+rate_structure:
+  NON-RESIDENTIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8": 24.20
+         3/4": 36.31
+         1"  : 60.50
+         1_1/2": 120.99
+         2"  : 193.58
+         3"  : 362.96
+         4"  : 604.94
+    flat_rate: 2.913 
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
