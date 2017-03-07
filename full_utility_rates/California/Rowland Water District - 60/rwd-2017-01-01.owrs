@@ -1,0 +1,128 @@
+# ROWLAND WATER DISTRICT
+# CUSTOMER INFORMATION SHEET
+# http://www.rowlandwater.com/rates-fees/
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Rowland Water District"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 25.91
+         3/4"  : 25.91
+         1"    : 43.03
+         1 1/2": 85.83
+         2"    : 137.19
+         3"    : 257.04
+         4"    : 243.61
+         6"    : 856.27
+         8"    : 1369.89
+         10"    : 1969.12
+         12"    : 3681.20
+    tier_starts:
+      - 1
+      - 17
+      - 24
+    tier_prices:
+      - 2.84
+      - 3.27
+      - 4.12
+    commodity_charge: Tiered
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 0.00
+        2: 0.22
+        3: 0.53
+        4: 1.48
+        5: 2.12
+        6: 2.49
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+  
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 25.91
+         3/4"  : 25.91
+         1"    : 43.03
+         1 1/2": 85.83
+         2"    : 137.19
+         3"    : 257.04
+         4"    : 243.61
+         6"    : 856.27
+         8"    : 1369.89
+         10"    : 1969.12
+         12"    : 3681.20
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 3.04
+        2: 3.26
+        3: 3.57
+        4: 4.52
+        5: 5.16
+        6: 5.53
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+  
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 25.91
+         3/4"  : 25.91
+         1"    : 43.03
+         1 1/2": 85.83
+         2"    : 137.19
+         3"    : 257.04
+         4"    : 243.61
+         6"    : 856.27
+         8"    : 1369.89
+         10"    : 1969.12
+         12"    : 3681.20
+    elevation_rate:
+      depends_on: pressure_zone
+      values:
+        1: 3.04
+        2: 3.26
+        3: 3.57
+        4: 4.52
+        5: 5.16
+        6: 5.53
+    elevation_charge: elevation_rate*usage_ccf
+    bill: commodity_charge+service_charge+elevation_charge
+
+  RECLAIMED:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 19.43
+         3/4"  : 19.43
+         1"    : 24.47
+         1 1/2": 57.82
+         2"    : 75.51
+         3"    : 154.60
+         4"    : 243.61
+         6"    : 463.07
+         8"    : 712.98
+    flat_rate: 1.76
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+  
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        2"              : 9.96
+        3"              : 14.44
+        4"              : 18.38
+        6"              : 36.75
+        8"              : 84.89
+        10"             : 152.66
+        12"             : 246.58
+    bill: service_charge
