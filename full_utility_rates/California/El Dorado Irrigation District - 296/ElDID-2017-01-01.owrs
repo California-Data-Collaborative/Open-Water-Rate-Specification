@@ -26,12 +26,12 @@ rate_structure:
         12" T    : 6699.52
     tier_starts:
       - 0
-      - 1801
-      - 4501
+      - 18
+      - 45
     tier_prices:
-      - 0.01454
-      - 0.01755
-      - 0.02059
+      - 1.454
+      - 1.755
+      - 2.059
     commodity_charge: Tiered
     bill: service_charge+commodity_charge
 
@@ -54,8 +54,8 @@ rate_structure:
         8" T     : 3449.03
         10" T    : 5462.39
         12" T    : 7165.09
-    flat_rate: 0.01731
-    commodity_charge: flat_rate*usage_cf
+    flat_rate: 1.731
+    commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge+service_charge
 
   COMMERCIAL:
@@ -77,8 +77,8 @@ rate_structure:
         8" T     : 3449.03
         10" T    : 5462.39
         12" T    : 7165.09
-    flat_rate: 0.01731
-    commodity_charge: flat_rate*usage_cf
+    flat_rate: 1.731
+    commodity_charge: flat_rate*usage_ccf
     bill: commodity_charge+service_charge
 
   RECLAIMED:
@@ -88,11 +88,11 @@ rate_structure:
         3/4" : 23.84
     tier_starts:
       - 0
-      - 3001
-      - 4501
+      - 30
+      - 45
     tier_prices:
-      - 0.00688
-      - 0.01163
-      - 0.01751
+      - 0.688
+      - 1.163
+      - 1.751
     commodity_charge: Tiered
     bill: commodity_charge+service_charge
