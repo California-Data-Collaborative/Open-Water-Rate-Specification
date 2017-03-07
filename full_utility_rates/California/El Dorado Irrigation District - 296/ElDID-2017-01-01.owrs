@@ -24,7 +24,6 @@ rate_structure:
         8" T     : 3215.12
         10" T    : 5091.96
         12" T    : 6699.52
-    budget: Tiered
     tier_starts:
       - 0
       - 1801
@@ -33,7 +32,7 @@ rate_structure:
       - 0.01454
       - 0.01755
       - 0.02059
-    commodity_charge: budget
+    commodity_charge: Tiered
     bill: service_charge+commodity_charge
 
   RESIDENTIAL_MULTI:
@@ -87,7 +86,6 @@ rate_structure:
       depends_on: meter_size
       values:
         3/4" : 23.84
-    budget: Tiered
     tier_starts:
       - 0
       - 3001
@@ -96,5 +94,5 @@ rate_structure:
       - 0.00688
       - 0.01163
       - 0.01751
-    commodity_charge: budget
+    commodity_charge: Tiered
     bill: commodity_charge+service_charge
