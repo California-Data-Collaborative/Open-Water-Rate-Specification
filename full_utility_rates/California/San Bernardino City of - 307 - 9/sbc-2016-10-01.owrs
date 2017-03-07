@@ -2,7 +2,7 @@
 metadata:
 
   effective_date: 2016-10-01
-  utility_name: City of San Bernardino
+  utility_name: "City of San Bernardino"
   bill_frequency: monthly
 
 rate_structure:
@@ -24,22 +24,23 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        Zone 1 : 0.11
-        Zone 2 : 0.19
-        Zone 3 : 0.19
-        Zone 4 : 0.14
-        Zone 5 : 0.23
-        Zone 6 : 0.23
-    elevation_charge: elevation_rate*usage_ccf
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
+    elevation_charge: elevation_rate * usage_ccf
     flat_rate: 1.15
-    utility_surcharge: 0.11
-    commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
+    utility_surcharge: 0.11 *usage_ccf
+    rate_charge: flat_rate*usage_ccf
+    commodity_charge: rate_charge+utility_surcharge+elevation_charge
     outside_city_service_price:
       depends_on: area
       values:
         outside_city: 1.5
         inside_city: 0
-    outside_city_service_charge: commodity_charge*usage_ccf
+    outside_city_service_charge: outside_city_service_price*usage_ccf
     # The rate also includes a "conservation charge" that is applied per ccf if
     # more than a certain amount is used per month. The amount depends on the
     # type of property and the meter size. This couldn't be modeled in the
@@ -63,12 +64,12 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        Zone 1 : 0.11
-        Zone 2 : 0.19
-        Zone 3 : 0.19
-        Zone 4 : 0.14
-        Zone 5 : 0.23
-        Zone 6 : 0.23
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
     elevation_charge: elevation_rate*usage_ccf
     flat_rate: 1.15
     utility_surcharge: 0.11
@@ -102,12 +103,12 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        Zone 1 : 0.11
-        Zone 2 : 0.19
-        Zone 3 : 0.19
-        Zone 4 : 0.14
-        Zone 5 : 0.23
-        Zone 6 : 0.23
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
     elevation_charge: elevation_rate*usage_ccf
     flat_rate: 1.15
     utility_surcharge: 0.11
@@ -141,12 +142,12 @@ rate_structure:
     elevation_rate:
       depends_on: elevation_zone
       values:
-        Zone 1 : 0.11
-        Zone 2 : 0.19
-        Zone 3 : 0.19
-        Zone 4 : 0.14
-        Zone 5 : 0.23
-        Zone 6 : 0.23
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
     elevation_charge: elevation_rate*usage_ccf
     flat_rate: 1.15
     utility_surcharge: 0.11
