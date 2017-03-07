@@ -81,5 +81,5 @@ rate_structure:
         8       : 853.19
         10      : 1222.35
     flat_rate: 2.84
-    commodity_charge: flat_rate*meter_size
+    commodity_charge: flat_rate*meter_size  
     bill: commodity_charge+service_charge
