@@ -1,0 +1,45 @@
+---
+metadata:
+  effective_date: 2018-01-01
+  utility_name: "Sacramento Suburban Water District"
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_MULTI:
+    meter_service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 4.21
+        3/4"   : 6.14
+        1"     : 9.94
+        1 1/2" : 19.42
+        2"     : 30.88
+        3"     : 57.67
+        4"     : 95.64
+        8"     : 190.86
+        9"     : 343.24
+        10"    : 552.76
+        12"    : 819.37
+    flat_service_charge:
+      depends_on: connection
+      values:
+        3/4"   : 17.42
+        1"     : 25.21
+        1 1/2" : 47.60
+        2"     : 47.02
+    capital_facilities_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 1120.26
+        9"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    flat_rate: 9.39
+    bill: meter_service_charge + capital_facilities_charge + flat_service_charge
+
