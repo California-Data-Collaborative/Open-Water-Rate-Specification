@@ -3,7 +3,7 @@
 metadata:
   effective_date: 2017-01-01
   utility_name: "El Dorado Irrigation District"
-  bill_frequency: bi-monthly
+  bill_frequency: bimonthly
 
 rate_structure:
   RESIDENTIAL_SINGLE:

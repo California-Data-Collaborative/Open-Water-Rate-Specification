@@ -2,7 +2,7 @@
 metadata:
   effective_date: 2016-08-01
   utility_name: "Whittier Utility Authority Water Division"
-  bill_frequency: bi-monthly
+  bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
