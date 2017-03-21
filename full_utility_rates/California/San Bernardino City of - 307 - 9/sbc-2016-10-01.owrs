@@ -33,8 +33,7 @@ rate_structure:
     elevation_charge: elevation_rate * usage_ccf
     flat_rate: 1.15
     utility_surcharge: 0.11 *usage_ccf
-    rate_charge: flat_rate*usage_ccf
-    commodity_charge: rate_charge+utility_surcharge+elevation_charge
+    commodity_charge: flat_rate*usage_ccf
     outside_city_service_price:
       depends_on: area
       values:
@@ -45,7 +44,7 @@ rate_structure:
     # more than a certain amount is used per month. The amount depends on the
     # type of property and the meter size. This couldn't be modeled in the
     # specification. See rate sheet: http://www.sbcity.org/civicax/filebank/blobdload.aspx?blobid=4008
-    bill: commodity_charge+service_charge+outside_city_service_charge
+    bill: commodity_charge+service_charge+outside_city_service_charge+utility_surcharge+elevation_charge
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on: meter_size

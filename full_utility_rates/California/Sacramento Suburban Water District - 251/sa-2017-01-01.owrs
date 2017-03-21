@@ -1,0 +1,92 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Sacramento Suburban Water District"
+  bill_frequency: monthly
+rate_structure:
+  #Contributor did not provide residential_single
+  #therefore residential_multi was copied and 
+  #we must checkif there is a residential_single
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 4.05
+        3/4"   : 5.91
+        1"     : 9.56
+        1 1/2" : 18.67
+        2"     : 29.70
+        3"     : 55.34
+        4"     : 91.96
+        8"     : 183.52
+        9"     : 330.04
+        10"    : 531.50
+        12"    : 787.85
+    #Need to figure out what these are for exactly
+    flat_service_charge:
+      depends_on: meter_size
+      values:
+        3/4"   : 16.75
+        1"     : 24.24
+        1 1/2" : 45.77
+        2"     : 45.21
+    capital_facilities_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.65
+        3/4"   : 32.28
+        1"     : 53.99
+        1 1/2" : 107.59
+        2"     : 172.22
+        3"     : 323.17
+        4"     : 538.75
+        8"     : 1077.17
+        9"     : 1939.04
+        10"    : 3124.25
+        12"    : 4631.80
+    #End
+    flat_rate: 9.03
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 4.05
+        3/4"   : 5.91
+        1"     : 9.56
+        1 1/2" : 18.67
+        2"     : 29.70
+        3"     : 55.34
+        4"     : 91.96
+        8"     : 183.52
+        9"     : 330.04
+        10"    : 531.50
+        12"    : 787.85
+    #Need to figure out what these are for exactly
+    flat_service_charge:
+      depends_on: meter_size
+      values:
+        3/4"   : 16.75
+        1"     : 24.24
+        1 1/2" : 45.77
+        2"     : 45.21
+    capital_facilities_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 21.65
+        3/4"   : 32.28
+        1"     : 53.99
+        1 1/2" : 107.59
+        2"     : 172.22
+        3"     : 323.17
+        4"     : 538.75
+        8"     : 1077.17
+        9"     : 1939.04
+        10"    : 3124.25
+        12"    : 4631.80
+    #End
+    flat_rate: 9.03
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+
