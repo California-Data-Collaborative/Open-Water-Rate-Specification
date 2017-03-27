@@ -56,25 +56,19 @@ rate_structure:
         8"    : 555.74
         10"  : 832.90
     fixed_sewer_charge: 25.51
-    gpcd: 55
-    landscape_factor: 0.8
-    days_in_period: 30
-    indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_factor*et_amount*irr_area*(1/1200)"
-    budget: "indoor+outdoor"
     tier_starts:
       - 0
-      - indoor
-      - 101%
-      - 151%
-      - 201%
+      - 4
+      - 7
+      - 13
+      - 25
     tier_prices:
       - 1.67
       - 1.94
       - 2.44
       - 2.95
       - 4.84
-    commodity_charge: Budget
+    commodity_charge: Tiered
     sewer_charge: 1.03*usage_ccf
     bill: commodity_charge+service_charge+fixed_sewer_charge+sewer_charge
 
@@ -93,7 +87,8 @@ rate_structure:
         8"    : 555.74
         10"   : 832.90
     fixed_sewer_charge: 25.51
-    commodity_charge: 1.74*usage_ccf
+    flat_rate: 1.74
+    commodity_charge: flat_rate*usage_ccf
     sewer_price:
       depends_on: rate_class
       values:
@@ -144,3 +139,16 @@ rate_structure:
           - 5.21
     commodity_charge: Budget
     bill: commodity_charge+service_charge
+  
+  LAKEFILL:
+    service_charge: 0
+    flat_rate: 1.74
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+    
+  DISTRICT_FACILITY:
+    service_charge: 0
+    flat_rate: 0
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+   
