@@ -79,7 +79,7 @@ rate_structure:
         12" : 1772.50
         14" : 2417.05
     commodity_charge: flat_rate*usage_ccf
-      flat_rate: 1.5872
+    flat_rate: 1.5872
     bill : commodity_charge+service_charge
 
   FIRE_SERVICE: 
