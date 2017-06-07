@@ -1,0 +1,70 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: Dublin San Ramon Services District
+  bill_frequency: bimonthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 35.23
+        3/4": 52.86
+        1"  : 88.08
+        1 1/2": 176.11
+        2"  : 281.78
+        3" : 616.44
+        4"  : 1761.18
+        6"  : 3522.35
+        8"  : 6164.11
+        10" : 9686.46
+    tier_starts:
+      - 0
+      - 11
+      - 35
+    tier_prices:
+      - 0.55
+      - 1.16
+      - 1.55
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  COMMERCIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 35.23
+        3/4": 52.86
+        1"  : 88.08
+        1 1/2": 176.11
+        2"  : 281.78
+        3" : 616.44
+        4"  : 1761.18
+        6"  : 3522.35
+        8"  : 6164.11
+        10" : 9686.46
+    commodity_charge: flat_rate*usage_ccf
+      flat_rate:
+        depends_on:season
+        values:
+          Winter:1.11
+          Summer:1.33
+    bill : commodity_charge+service_charge
+
+  PORTABLE_IRRIGATION: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 35.23
+        3/4": 52.86
+        1"  : 88.08
+        1 1/2": 176.11
+        2"  : 281.78
+        3" : 616.44
+        4"  : 1761.18
+        6"  : 3522.35
+        8"  : 6164.11
+        10" : 9686.46
+    commodity_charge: flat_rate*usage_ccf
+      flat_rate:1.55
+    bill : commodity_charge+service_charge
