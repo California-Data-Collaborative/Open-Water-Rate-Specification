@@ -1,6 +1,6 @@
 metadata:
   effective_date: 2016-10-01
-  utility_name: City of Hayward
+  utility_name: "City of Hayward"
   bill_frequency: bimonthly
 
 rate_structure:

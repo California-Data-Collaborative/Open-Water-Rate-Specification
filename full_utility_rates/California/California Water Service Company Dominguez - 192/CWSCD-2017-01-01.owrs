@@ -1,0 +1,122 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Dominguez"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 17.00
+        3/4": 25.50
+        #1",fire_sprinkler : 18.02
+        1"  : 42.51
+        1 1/2": 85.01
+        2"  : 136.02
+        3"  : 255.03
+        4"  : 425.06
+        6"  : 850.12
+        8"  : 1360.19
+        10" : 1955.27
+        12" : 2805.38
+        14" : 3825.52
+        16" : 3910.53
+        18" : 4165.57
+    tier_starts:
+      - 0
+      - 12
+      - 18
+    tier_prices:
+      - 3.2532
+      - 3.5271
+      - 4.1090
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 14.80
+        3/4": 22.20
+        1"  : 37.00
+        1 1/2": 73.99
+        2"  : 118.39
+        3" : 221.98
+        4"  : 369.97
+        6"  : 739.93
+        8"  : 1183.89
+        10" : 1701.85
+        12" : 2441.78
+        14" : 3329.70
+        16" : 3403.70
+        18" : 3625.68
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.5371
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 14.80
+        3/4": 22.20
+        1"  : 37.00
+        1 1/2": 73.99
+        2"  : 118.39
+        3" : 221.98
+        4"  : 369.97
+        6"  : 739.93
+        8"  : 1183.89
+        10" : 1701.85
+        12" : 2441.78
+        14" : 3329.70
+        16" : 3403.70
+        18" : 3625.68
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.5371
+    bill : commodity_charge+service_charge
+
+  RECYCLED: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 15.69
+        3/4": 23.53
+        1"  : 39.22
+        1 1/2": 78.44
+        2"  : 125.52
+        3"  : 235.32
+        4"  : 392.21
+        6"  : 784.41
+        8"  : 1255.06
+        10" : 1804.15
+        12" : 2588.56
+        14" : 3529.85
+        16" : 3608.29
+        18" : 3843.61
+    tier_starts:
+      depends_on:water_type
+      values:
+        Title_22 :  
+          - 0
+          - 21781
+          - 87121
+        R.O :
+          - 0
+        Nitrified_Water :
+          - 0
+    tier_prices:
+      depends_on:water_type
+      values:
+        Title_22 :  
+          - 2.7221
+          - 2.4487
+          - 2.1754
+        R.O :
+          - 3.3338
+        Nitrified_Water :
+          - 2.6689
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge

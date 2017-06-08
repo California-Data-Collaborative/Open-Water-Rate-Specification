@@ -1,0 +1,108 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Hermosa Redondo"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 11.87
+        3/4": 17.81
+        #1",fire_sprinkler : 11.87
+        1"  : 29.68
+        1 1/2": 59.37
+        2"  : 94.98
+        3"  : 178.10
+        4"  : 296.83
+        6"  : 593.65
+        8"  : 949.84
+        10" : 1365.40
+        12" : 1959.05
+        14" : 2671.43
+    tier_starts:
+      - 0
+      - 11
+      - 16
+    tier_prices:
+      - 4.1926
+      - 4.5493
+      - 5.3521
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 9.55
+        3/4": 14.32
+        1"  : 23.87
+        1 1/2": 47.74
+        2"  : 76.38
+        3" : 143.22
+        4"  : 238.70
+        6"  : 477.40
+        8"  : 763.85
+        10" : 1098.03
+        12" : 1575.44
+        14" : 2148.32
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.8277
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 9.55
+        3/4": 14.32
+        1"  : 23.87
+        1 1/2": 47.74
+        2"  : 76.38
+        3" : 143.22
+        4"  : 238.70
+        6"  : 477.40
+        8"  : 763.85
+        10" : 1098.03
+        12" : 1575.44
+        14" : 2148.32
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.8277
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 11.83
+        2"  : 15.77
+        3" : 23.65
+        4"  : 31.54
+        6"  : 47.30
+        8"  : 63.07
+        10" : 78.84
+        12" : 94.61
+        14" : 110.37
+    bill : service_charge
+
+  RECLAIMED: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 10.87
+        3/4": 16.30
+        1"  : 27.17
+        1 1/2": 54.33
+        2"  : 86.93
+        3" : 162.99
+        4"  : 271.65
+        6"  : 543.30
+        8"  : 869.28
+        10" : 1249.59
+        12" : 1792.89
+        14" : 2444.85
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.8853
+    bill : commodity_charge+service_charge

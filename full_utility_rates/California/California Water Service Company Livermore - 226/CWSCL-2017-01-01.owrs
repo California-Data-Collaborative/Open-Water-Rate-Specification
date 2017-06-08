@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-01-01
-  utility_name: California Water Service Company Livermore
-  bill_frequency: bimonthly
+  utility_name: "California Water Service Company Livermore"
+  bill_frequency: monthly
 
 rate_structure:
   RESIDENTIAL_SINGLE: 
@@ -36,28 +36,20 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-        5/8": 18.64
-        3/4": 27.96
-        #1",fire_sprinkler : 21.14
-        1"  : 46.60
-        1 1/2": 85.93
-        2"  : 149.13
-        3" : 267.18
-        4"  : 466.03
-        6"  : 814.25
-        8"  : 1348.64
-        10" : 2143.72
-        12" : 3075.77
-        14" : 4194.24
-    tier_starts:
-      - 0
-      - 10
-      - 24
-    tier_prices:
-      - 3.6063
-      - 3.8364
-      - 4.6035
-    commodity_charge: Tiered
+        5/8": 13.98
+        3/4": 20.97
+        1"  : 34.95
+        1 1/2": 64.45
+        2"  : 111.85
+        3" : 200.35
+        4"  : 349.53
+        6"  : 610.53
+        8"  : 1011.20
+        10" : 1607.85
+        12" : 2306.92
+        14" : 3145.80
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.9865
     bill : commodity_charge+service_charge
 
   NONRESIDENTIAL: 
@@ -77,7 +69,7 @@ rate_structure:
         12" : 2306.92
         14" : 3145.80
     commodity_charge: flat_rate*usage_ccf
-      flat_rate: 3.9865
+    flat_rate: 3.9865
     bill : commodity_charge+service_charge
 
   FIRE_SERVICE: 
