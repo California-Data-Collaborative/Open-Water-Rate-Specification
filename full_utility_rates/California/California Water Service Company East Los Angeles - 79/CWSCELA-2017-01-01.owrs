@@ -1,0 +1,106 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company East Los Angeles"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 17.07
+        3/4": 25.08
+        #1",fire_sprinkler : 17.92
+        1"  : 42.68
+        1 1/2": 85.35
+        2"  : 136.56
+        3"  : 250.76
+        4"  : 417.94
+        6"  : 753.83
+        8"  : 1138.55
+        10" : 1922.51
+        12" : 2758.38
+        14" : 3761.43
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 3.4469
+      - 4.2477
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 16.46
+        3/4": 24.18
+        1"  : 41.14
+        1 1/2": 82.29
+        2"  : 131.66
+        3" : 246.86
+        4"  : 411.44
+        6"  : 741.84
+        8"  : 1120.43
+        10" : 1892.60
+        12" : 2659.38
+        14" : 3626.43
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.8136
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 16.46
+        3/4": 24.18
+        1"  : 41.14
+        1 1/2": 82.29
+        2"  : 131.66
+        3" : 246.86
+        4"  : 411.44
+        6"  : 741.84
+        8"  : 1120.43
+        10" : 1892.60
+        12" : 2659.38
+        14" : 3626.43
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.8136
+    bill : commodity_charge+service_charge
+
+  RECLAIMED: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 16.46
+        3/4": 24.18
+        1"  : 41.14
+        1 1/2": 82.29
+        2"  : 131.66
+        3" : 246.86
+        4"  : 411.44
+        6"  : 741.84
+        8"  : 1120.43
+        10" : 1892.60
+        12" : 2659.38
+        14" : 3626.43
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 2.5743
+    bill : commodity_charge+service_charge
+    
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 11.13
+        2"  : 14.85
+        3" : 22.27
+        4"  : 29.69
+        6"  : 44.54
+        8"  : 59.36
+        10" : 74.23
+        12" : 89.07
+        14" : 103.92
+    bill : service_charge

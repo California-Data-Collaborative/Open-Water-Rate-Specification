@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-01-01
-  utility_name: California Water Service Company Oroville
-  bill_frequency: bimonthly
+  utility_name: "California Water Service Company Oroville"
+  bill_frequency: monthly
 
 rate_structure:
   RESIDENTIAL_SINGLE: 
@@ -36,28 +36,20 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-        5/8": 31.15
-        3/4": 46.72
-        #1",fire_sprinkler : 32.39
-        1"  : 60.98
-        1 1/2": 123.65
-        2"  : 158.06
-        3" : 293.44
-        4"  : 404.51
-        6"  : 664.64
-        8"  : 989.72
-        10" : 3582.07
-        12" : 5139.49
-        14" : 7008.39
-    tier_starts:
-      - 0
-      - 9
-      - 23
-    tier_prices:
-      - 2.6342
-      - 2.8284
-      - 3.3301
-    commodity_charge: Tiered
+        5/8": 26.92
+        3/4": 40.37
+        1"  : 52.69
+        1 1/2": 106.84
+        2"  : 136.56
+        3" : 253.53
+        4"  : 349.48
+        6"  : 574.25
+        8"  : 855.11
+        10" : 3095.24
+        12" : 4441.00
+        14" : 6055.90
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.2666
     bill : commodity_charge+service_charge
 
   NONRESIDENTIAL: 

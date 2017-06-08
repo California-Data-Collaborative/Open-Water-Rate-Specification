@@ -1,0 +1,88 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Willows"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 39.18
+        3/4": 52.59
+        #1",fire_sprinkler : 40.36
+        1"  : 78.75
+        1 1/2": 124.41
+        2"  : 174.35
+        3"  : 351.47
+        4"  : 522.99
+        6"  : 1345.43
+        8"  : 1941.70
+        10" : 2374.29
+        12" : 3406.09
+        14" : 4944.96
+    tier_starts:
+      - 0
+      - 9
+      - 26
+    tier_prices:
+      - 1.9794
+      - 2.1263
+      - 2.2929
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 35.22
+        3/4": 47.27
+        1"  : 70.79
+        1 1/2": 111.84
+        2"  : 156.73
+        3" : 315.97
+        4"  : 470.16
+        6"  : 1209.51
+        8"  : 1745.52
+        10" : 2134.42
+        12" : 3061.98
+        14" : 4175.69
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 2.2814
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 35.22
+        3/4": 47.27
+        1"  : 70.79
+        1 1/2": 111.84
+        2"  : 156.73
+        3" : 315.97
+        4"  : 470.16
+        6"  : 1209.51
+        8"  : 1745.52
+        10" : 2134.42
+        12" : 3061.98
+        14" : 4175.69
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 2.2814
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 12.05
+        2"  : 16.06
+        3" : 24.10
+        4"  : 32.13
+        6"  : 48.19
+        8"  : 64.26
+        10" : 80.32
+        12" : 96.39
+        14" : 112.45
+    bill : service_charge

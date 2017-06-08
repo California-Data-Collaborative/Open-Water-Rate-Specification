@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-01-01
-  utility_name: California Water Service Company Chico District
-  bill_frequency: bimonthly
+  utility_name: "California Water Service Company Chico District"
+  bill_frequency: monthly
 
 rate_structure:
   RESIDENTIAL_SINGLE: 
@@ -37,29 +37,20 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-        5/8": 13.75
-        #3/4",fire_sprinkler : 14.02
-        3/4": 20.62
-        #1",fire_sprinkler : 14.16
-        1"  : 34.37
-        1 1/2": 68.73
-        2"  : 109.97
-        3"  : 206.20
-        4"  : 343.66
-        6"  : 631.71
-        8"  : 964.80
-        10" : 1580.85
-        12" : 2268.18
-        14" : 3092.97
-    tier_starts:
-      - 0
-      - 11
-      - 32
-    tier_prices:
-      - 1.5810
-      - 1.6774
-      - 1.7736
-    commodity_charge: Tiered
+        5/8": 10.74
+        3/4": 16.11
+        1"  : 26.86
+        1 1/2": 53.71
+        2"  : 85.94
+        3" : 161.14
+        4"  : 268.56
+        6"  : 493.91
+        8"  : 754.33
+        10" : 1235.38
+        12" : 1772.50
+        14" : 2417.05
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.5872
     bill : commodity_charge+service_charge
 
   NONRESIDENTIAL: 

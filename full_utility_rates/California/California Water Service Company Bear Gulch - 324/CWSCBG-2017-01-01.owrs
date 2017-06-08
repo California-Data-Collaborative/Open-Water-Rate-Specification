@@ -1,0 +1,88 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Bear Gulch"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 20.29
+        3/4": 30.44
+        #1",fire_sprinkler : 21.31
+        1"  : 50.73
+        1 1/2": 101.47
+        2"  : 162.35
+        3"  : 304.41
+        4"  : 2507.34
+        6"  : 1014.69
+        8"  : 1623.50
+        10" : 2333.79
+        12" : 3348.48
+        14" : 4566.10
+    tier_starts:
+      - 0
+      - 11
+      - 36
+    tier_prices:
+      - 6.7360
+      - 7.1580
+      - 8.5607
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 20.23
+        3/4": 30.34
+        1"  : 50.57
+        1 1/2": 101.14
+        2"  : 161.83
+        3" : 303.43
+        4"  : 505.71
+        6"  : 1011.43
+        8"  : 1618.29
+        10" : 2326.29
+        12" : 3337.72
+        14" : 4551.43
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 7.2776
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 20.23
+        3/4": 30.34
+        1"  : 50.57
+        1 1/2": 101.14
+        2"  : 161.83
+        3" : 303.43
+        4"  : 505.71
+        6"  : 1011.43
+        8"  : 1618.29
+        10" : 2326.29
+        12" : 3337.72
+        14" : 4551.43
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 7.2776
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 14.95
+        2"  : 19.93
+        3" : 29.89
+        4"  : 39.85
+        6"  : 59.78
+        8"  : 79.71
+        10" : 99.64
+        12" : 119.56
+        14" : 139.49
+    bill : service_charge

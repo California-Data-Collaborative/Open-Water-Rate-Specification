@@ -1,6 +1,6 @@
 metadata:
   effective_date: 2017-01-01
-  utility_name: Dublin San Ramon Services District
+  utility_name: "Dublin San Ramon Services District"
   bill_frequency: bimonthly
 
 rate_structure:

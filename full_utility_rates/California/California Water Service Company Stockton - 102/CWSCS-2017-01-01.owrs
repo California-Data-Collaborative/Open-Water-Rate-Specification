@@ -1,0 +1,88 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Stockton"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 17.54
+        3/4": 26.31
+        #1",fire_sprinkler : 18.77
+        1"  : 43.85
+        1 1/2": 87.70
+        2"  : 140.33
+        3"  : 263.11
+        4"  : 438.52
+        6"  : 877.04
+        8"  : 1403.26
+        10" : 2017.19
+        12" : 2894.23
+        14" : 3946.68
+    tier_starts:
+      - 0
+      - 10
+      - 21
+    tier_prices:
+      - 3.0138
+      - 3.2666
+      - 3.7063
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 13.56
+        3/4": 20.35
+        1"  : 33.91
+        1 1/2": 67.82
+        2"  : 108.52
+        3" : 203.47
+        4"  : 339.12
+        6"  : 678.23
+        8"  : 1085.18
+        10" : 1559.94
+        12" : 2238.18
+        14" : 3052.06
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.0731
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 13.56
+        3/4": 20.35
+        1"  : 33.91
+        1 1/2": 67.82
+        2"  : 108.52
+        3" : 203.47
+        4"  : 339.12
+        6"  : 678.23
+        8"  : 1085.18
+        10" : 1559.94
+        12" : 2238.18
+        14" : 3052.06
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.0731
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 13.43
+        2"  : 17.91
+        3" : 26.86
+        4"  : 35.81
+        6"  : 53.72
+        8"  : 71.63
+        10" : 89.54
+        12" : 107.44
+        14" : 125.35
+    bill : service_charge
