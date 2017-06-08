@@ -66,5 +66,5 @@ rate_structure:
         8"  : 6164.11
         10" : 9686.46
     commodity_charge: flat_rate*usage_ccf
-    flat_rate:1.55
+    flat_rate: 1.55
     bill : commodity_charge+service_charge

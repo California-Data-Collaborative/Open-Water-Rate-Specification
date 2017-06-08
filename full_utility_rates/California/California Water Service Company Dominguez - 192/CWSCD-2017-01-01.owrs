@@ -97,7 +97,7 @@ rate_structure:
         16" : 3608.29
         18" : 3843.61
     tier_starts:
-      depends_on:water_type
+      depends_on: water_type
       values:
         Title_22 :  
           - 0
@@ -108,7 +108,7 @@ rate_structure:
         Nitrified_Water :
           - 0
     tier_prices:
-      depends_on:water_type
+      depends_on: water_type
       values:
         Title_22 :  
           - 2.7221

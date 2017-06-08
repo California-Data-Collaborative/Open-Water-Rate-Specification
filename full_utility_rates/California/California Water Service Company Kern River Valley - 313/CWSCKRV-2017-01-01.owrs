@@ -17,7 +17,7 @@ rate_structure:
         3" : 791.41
         4"  : 1319.02
     commodity_charge: flat_rate*usage_ccf
-      flat_rate: 11.8841
+    flat_rate: 11.8841
     bill : commodity_charge+service_charge
 
   RESIDENTIAL_MULTI: 
@@ -53,5 +53,5 @@ rate_structure:
     bill : commodity_charge+service_charge
 
   INTERRUPTIBLE IRRIGATION: 
-    commodity_charge:1.3941
+    commodity_charge: 1.3941
     bill : commodity_charge
