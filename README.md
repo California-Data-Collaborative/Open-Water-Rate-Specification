@@ -9,7 +9,7 @@ OWRS is designed for analysts, economists, and software developers interested in
 
 * [Why a Standard for Sharing Water Rates?](#why)
    - [Benefits of OWRS](#benefits)
-   - [Alliance for Water Efficiency - Building a better (efficiency-oriented) rate structure] (https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/AWE-Building-a-better-RateStructure.pdf)
+   - [Alliance for Water Efficiency - Building a better (efficiency-oriented) rate structure](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/AWE-Building-a-better-RateStructure.pdf)
 * [Getting Started](#getting-started)
    - [Example 1 - Simple Flat Rate](#example1)
    - [Example 2 - Fixed Service Charge](#example2)
