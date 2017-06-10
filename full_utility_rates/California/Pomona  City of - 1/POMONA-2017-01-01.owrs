@@ -1,0 +1,182 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: Pomona  City of
+  bill_frequency: BiMonthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - area
+      values:
+        5/8"|inside_city: 49.45
+        5/8"|outside_city: 61.8
+        3/4"|inside_city: 66.78
+        3/4"|outside_city: 83.49
+        1"|inside_city: 101.49
+        1"|outside_city: 126.87
+        1|1/2"|inside_city: 188.25
+        1|1/2"|outside_city: 235.34
+        2"|inside_city: 292.36
+        2"|outside_city: 365.45
+        3"|inside_city: 535.26
+        3"|outside_city: 669.13
+        4"|inside_city: 882.29
+        4"|outside_city: 1102.87
+        6"|inside_city: 1749.85
+        6"|outside_city: 2187.35
+        8"|inside_city: 2790.9
+        8"|outside_city: 3488.67
+        10"|inside_city: 4005.51
+        10"|outside_city: 5006.9
+    commodity_charge: Tiered
+    tier_starts:
+      depends_on:
+        - area
+      values:
+        inside_city:
+          - 0
+          - 16
+          - 76
+        outside_city:
+          - 0
+          - 16
+          - 76
+    tier_prices:
+      depends_on:
+        - area
+      values:
+        inside_city:
+          - 0.96
+          - 1.75
+          - 3.13
+        outside_city:
+          - 1.21
+          - 2.18
+          - 3.95
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - area
+      values:
+        5/8"|inside_city: 49.45
+        5/8"|outside_city: 61.8
+        3/4"|inside_city: 66.78
+        3/4"|outside_city: 83.49
+        1"|inside_city: 101.49
+        1"|outside_city: 126.87
+        1|1/2"|inside_city: 188.25
+        1|1/2"|outside_city: 235.34
+        2"|inside_city: 292.36
+        2"|outside_city: 365.45
+        3"|inside_city: 535.26
+        3"|outside_city: 669.13
+        4"|inside_city: 882.29
+        4"|outside_city: 1102.87
+        6"|inside_city: 1749.85
+        6"|outside_city: 2187.35
+        8"|inside_city: 2790.9
+        8"|outside_city: 3488.67
+        10"|inside_city: 4005.51
+        10"|outside_city: 5006.9
+    commodity_charge: Tiered
+    tier_starts:
+      depends_on:
+        - area
+      values:
+        inside_city:
+          - 0
+          - 16
+        outside_city:
+          - 0
+          - 16
+    tier_prices:
+      depends_on:
+        - area
+      values:
+        inside_city:
+          - 0.96
+          - 1.9
+        outside_city:
+          - 1.21
+          - 2.42
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - area
+      values:
+        5/8"|inside_city: 49.45
+        5/8"|outside_city: 61.8
+        3/4"|inside_city: 66.78
+        3/4"|outside_city: 83.49
+        1"|inside_city: 101.49
+        1"|outside_city: 126.87
+        1|1/2"|inside_city: 188.25
+        1|1/2"|outside_city: 235.34
+        2"|inside_city: 292.36
+        2"|outside_city: 365.45
+        3"|inside_city: 535.26
+        3"|outside_city: 669.13
+        4"|inside_city: 882.29
+        4"|outside_city: 1102.87
+        6"|inside_city: 1749.85
+        6"|outside_city: 2187.35
+        8"|inside_city: 2790.9
+        8"|outside_city: 3488.67
+        10"|inside_city: 4005.51
+        10"|outside_city: 5006.9
+    commodity_charge: Tiered
+    tier_starts:
+      depends_on:
+        - area
+      values:
+        inside_city:
+          - 0
+          - 16
+        outside_city:
+          - 0
+          - 16
+    tier_prices:
+      depends_on:
+        - area
+      values:
+        inside_city:
+          - 0.96
+          - 1.9
+        outside_city:
+          - 1.21
+          - 2.42
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - area
+      values:
+        5/8"|inside_city: 69.03
+        5/8"|outside_city: 87.46
+        3/4"|inside_city: 69.03
+        3/4"|outside_city: 87.46
+        1"|inside_city: 69.03
+        1"|outside_city: 87.46
+        1|1/2"|inside_city: 69.03
+        1|1/2"|outside_city: 87.46
+        2"|inside_city: 69.03
+        2"|outside_city: 87.46
+        3"|inside_city: 119.77
+        3"|outside_city: 149.68
+        4"|inside_city: 179.68
+        4"|outside_city: 225.76
+        6"|inside_city: 331.78
+        6"|outside_city: 417.09
+        8"|inside_city: 481.06
+        8"|outside_city: 603.79
+        10"|inside_city: 633.74
+        10"|outside_city: 792.81
+        12"|inside_city: 753.57
+        12"|outside_city: 944.96
+    bill: service_charge

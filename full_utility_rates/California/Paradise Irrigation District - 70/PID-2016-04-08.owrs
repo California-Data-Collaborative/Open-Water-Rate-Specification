@@ -1,0 +1,55 @@
+metadata:
+  effective_date: 2016-04-08
+  utility_name: Paradise Irrigation District
+  bill_frequency: Monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 33.34
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.62
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.34
+        3/4": 33.34
+        1": 55.68
+        1|1/2": 111.02
+        2": 177.7
+        3": 333.4
+        4": 555.78
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.62
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.34
+        3/4": 33.34
+        1": 55.68
+        1|1/2": 111.02
+        2": 177.7
+        3": 333.4
+        4": 555.78
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 0.35
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.34
+        3/4": 33.34
+        1": 55.68
+        1|1/2": 111.02
+        2": 177.7
+        3": 333.4
+        4": 555.78
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.62
+    bill: service_charge+commodity_charge

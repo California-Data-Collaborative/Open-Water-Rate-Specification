@@ -1,0 +1,108 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Los Altos Suburban"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 17.88
+        3/4": 26.82
+        #1",fire_sprinkler : 18.95
+        1"  : 44.70
+        1 1/2": 89.40
+        2"  : 143.04
+        3"  : 268.20
+        4"  : 381.89
+        6"  : 620.60
+        8"  : 992.98
+        10" : 1414.56
+        12" : 1826.44
+        14" : 2491.61
+    tier_starts:
+      - 0
+      - 11
+      - 28
+    tier_prices:
+      - 4.4004
+      - 4.6813
+      - 5.6176
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 13.98
+        3/4": 20.97
+        1"  : 34.95
+        1 1/2": 69.90
+        2"  : 111.84
+        3" : 209.71
+        4"  : 298.37
+        6"  : 484.85
+        8"  : 775.73
+        10" : 1105.14
+        12" : 1426.93
+        14" : 1946.58
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.8345
+    bill : commodity_charge+service_charge
+
+  RECLAIMED: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 13.60
+        3/4": 20.40
+        1"  : 34.00
+        1 1/2": 68.01
+        2"  : 108.81
+        3" : 204.02
+        4"  : 298.37
+        6"  : 484.85
+        8"  : 775.73
+        10" : 1105.14
+        12" : 1426.93
+        14" : 1946.58
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.8345
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 13.98
+        3/4": 20.97
+        1"  : 34.95
+        1 1/2": 69.90
+        2"  : 111.84
+        3" : 209.71
+        4"  : 298.37
+        6"  : 484.85
+        8"  : 775.73
+        10" : 1105.14
+        12" : 1426.93
+        14" : 1946.58
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.8345
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 13.66
+        2"  : 18.21
+        3" : 27.31
+        4"  : 36.42
+        6"  : 54.62
+        8"  : 72.83
+        10" : 91.04
+        12" : 109.25
+        14" : 127.46
+    bill : service_charge

@@ -1,0 +1,88 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Marysville"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 23.12
+        3/4": 34.68
+        #1",fire_sprinkler : 24.50
+        1"  : 57.79
+        1 1/2": 115.59
+        2"  : 184.94
+        3"  : 346.76
+        4"  : 577.93
+        6"  : 1155.86
+        8"  : 1849.37
+        10" : 2658.48
+        12" : 3814.34
+        14" : 5201.37
+    tier_starts:
+      - 0
+      - 10
+      - 22
+    tier_prices:
+      - 2.5234
+      - 2.7429
+      - 3.1541
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 19.57
+        3/4": 29.35
+        1"  : 48.92
+        1 1/2": 97.84
+        2"  : 156.54
+        3" : 293.51
+        4"  : 489.18
+        6"  : 978.35
+        8"  : 1565.37
+        10" : 2250.21
+        12" : 3228.57
+        14" : 4402.59
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 2.6836
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 19.57
+        3/4": 29.35
+        1"  : 48.92
+        1 1/2": 97.84
+        2"  : 156.54
+        3" : 293.51
+        4"  : 489.18
+        6"  : 978.35
+        8"  : 1565.37
+        10" : 2250.21
+        12" : 3228.57
+        14" : 4402.59
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 2.6836
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 14.06
+        2"  : 18.75
+        3" : 28.13
+        4"  : 37.50
+        6"  : 56.25
+        8"  : 75.00
+        10" : 93.75
+        12" : 112.50
+        14" : 131.25
+    bill : service_charge

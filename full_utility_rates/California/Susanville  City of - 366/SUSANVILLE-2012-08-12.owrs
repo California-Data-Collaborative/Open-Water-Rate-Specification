@@ -1,0 +1,98 @@
+metadata:
+  effective_date: 2012-08-12
+  utility_name: Susanville  City of
+  bill_frequency: Monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.65
+        3/4": 23.65
+        1": 31.93
+        1|1/2": 41.6
+        2": 54.11
+        3": 81.37
+        4": 124.84
+        6": 217.27
+        8": 289.69
+        10": 362.1
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 301
+      - 1501
+      - 4001
+      - 6501
+      - 10001
+    tier_prices:
+      - 0
+      - 1.25
+      - 1.37
+      - 1.49
+      - 1.57
+      - 1.65
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.65
+        3/4": 23.65
+        1": 31.93
+        1|1/2": 41.6
+        2": 54.11
+        3": 81.37
+        4": 124.84
+        6": 217.27
+        8": 289.69
+        10": 362.1
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 301
+      - 1501
+      - 4001
+      - 6501
+      - 10001
+    tier_prices:
+      - 0
+      - 1.25
+      - 1.37
+      - 1.49
+      - 1.57
+      - 1.65
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.65
+        3/4": 23.65
+        1": 31.93
+        1|1/2": 41.6
+        2": 54.11
+        3": 81.37
+        4": 124.84
+        6": 217.27
+        8": 289.69
+        10": 362.1
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 301
+      - 1501
+      - 4001
+      - 6501
+      - 10001
+    tier_prices:
+      - 0
+      - 1.25
+      - 1.37
+      - 1.49
+      - 1.57
+      - 1.65
+    bill: service_charge+commodity_charge
