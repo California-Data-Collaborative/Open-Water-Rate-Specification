@@ -11,6 +11,8 @@ rate_structure:
         - meter_type
       values:
         5/8"|Displacement: 15.38
+        #3/4"|Turbine doesn't exist just for testing purposes
+        3/4"|Turbine: 15.38
         #1",Fireline|Displacement: 15.38
         1"|Displacement: 38.45
         1 1/2"|Displacement: 76.90
@@ -63,6 +65,8 @@ rate_structure:
         - meter_type
       values:
         5/8"|Displacement: 15.38
+        #3/4"|Turbine doesn't exist just for testing purpose
+        3/4"|Turbine: 15.38
         #1",Fireline|Displacement: 15.38
         1"|Displacement: 38.45
         1 1/2"|Displacement: 76.90
@@ -99,10 +103,10 @@ rate_structure:
     service_charge:
       depends_on: meter_size
       values:
-        5/8":15.50 
-        3/4":21.05
+        5/8": 15.50 
+        3/4": 21.05
         #1"|fire_meter:19.60
-        1":31.85
+        1": 31.85
         1 1/2": 59.05
         2"  : 91.95
         3" : 195.30

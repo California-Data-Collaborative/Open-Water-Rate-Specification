@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-01-01
   utility_name: Pittsburg  City of
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -11,43 +11,103 @@ rate_structure:
         5/8": 24.29
         3/4": 24.29
         1": 53.03
-        1|1/2": 101.09
+        1 1/2": 101.09
         2": 158.68
         3": 312.25
         4": 485.02
         6": 965.08
         8": 1733.09
         10": 2789.05
-    commodity_charge: Tiered
     tier_starts:
       depends_on:
+        - elevation_zone
         - senior
       values:
-        no:
+        1|no:
           - 0
+          - 1
           - 15
-        yes:
-          -0
-          -5
-          -15
+        2|no:
+          - 0
+          - 1
+          - 15
+        3|no:
+          - 0
+          - 1
+          - 15
+        4|no:
+          - 0
+          - 1
+          - 15
+        5|no:
+          - 0
+          - 1
+          - 15
+        6|no:
+          - 0
+          - 1
+          - 15
+        1|yes:
+          - 0
+          - 5
+          - 15
+        2|yes:
+          - 0
+          - 5
+          - 15
+        3|yes:
+          - 0
+          - 5
+          - 15
+        4|yes:
+          - 0
+          - 5
+          - 15
+        5|yes:
+          - 0
+          - 5
+          - 15
+        6|yes:
+          - 0
+          - 5
+          - 15
     tier_prices:
       depends_on:
         - elevation_zone
         - senior
       values:
+        1|no:
+          - 0.01
+          - 3.56
+          - 5.27
+        2|no:
+          - 0.01
+          - 3.56
+          - 5.27
         3|no:
+          - 0.01
           - 3.62
           - 5.33
         4|no:
+          - 0.01
           - 3.64
           - 5.35
         5|no:
+          - 0.01
           - 3.66
           - 5.33
         6|no:
+          - 0.01
           - 3.68
           - 5.39
-
+        1|yes:
+          - 1.40
+          - 3.56
+          - 5.27
+        2|yes:
+          - 1.40
+          - 3.56
+          - 5.27
         3|yes:
           - 1.46
           - 3.62
@@ -64,6 +124,7 @@ rate_structure:
           - 1.52
           - 3.68
           - 5.39
+    commodity_charge: Tiered
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
     service_charge:
@@ -73,7 +134,7 @@ rate_structure:
         5/8": 24.29
         3/4": 24.29
         1": 53.03
-        1|1/2": 101.09
+        1 1/2": 101.09
         2": 158.68
         3": 312.25
         4": 485.02
@@ -85,6 +146,8 @@ rate_structure:
       depends_on:
         - elevation_zone
       values:
+        1: 4.17
+        2: 4.17
         3: 4.23
         4: 4.25
         5: 4.27
@@ -97,7 +160,7 @@ rate_structure:
         5/8": 24.29
         3/4": 24.29
         1": 53.03
-        1|1/2": 101.09
+        1 1/2": 101.09
         2": 158.68
         3": 312.25
         4": 485.02
@@ -109,6 +172,8 @@ rate_structure:
       depends_on:
         - elevation_zone
       values:
+        1: 4.17
+        2: 4.17
         3: 4.23
         4: 4.25
         5: 4.27

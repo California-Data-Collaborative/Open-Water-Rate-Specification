@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-01-01
   utility_name: Castaic Lake Water Agency Santa Clarita Water Division
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
