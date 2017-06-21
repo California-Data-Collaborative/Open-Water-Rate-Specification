@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2016-04-08
   utility_name: Paradise Irrigation District
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 33.34
@@ -16,7 +16,7 @@ rate_structure:
         5/8": 33.34
         3/4": 33.34
         1": 55.68
-        1|1/2": 111.02
+        1 1/2": 111.02
         2": 177.7
         3": 333.4
         4": 555.78
@@ -31,7 +31,7 @@ rate_structure:
         5/8": 33.34
         3/4": 33.34
         1": 55.68
-        1|1/2": 111.02
+        1 1/2": 111.02
         2": 177.7
         3": 333.4
         4": 555.78
@@ -46,7 +46,7 @@ rate_structure:
         5/8": 33.34
         3/4": 33.34
         1": 55.68
-        1|1/2": 111.02
+        1 1/2": 111.02
         2": 177.7
         3": 333.4
         4": 555.78

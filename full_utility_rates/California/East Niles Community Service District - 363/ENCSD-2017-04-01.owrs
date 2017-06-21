@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-04-01
   utility_name: East Niles Community Service District
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:

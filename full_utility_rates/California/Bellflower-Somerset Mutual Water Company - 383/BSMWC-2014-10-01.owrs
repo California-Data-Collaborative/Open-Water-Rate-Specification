@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2014-10-01
   utility_name: Bellflower-Somerset Mutual Water Company
-  bill_frequency: BiMonthly
+  bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:

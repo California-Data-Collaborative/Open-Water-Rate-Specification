@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2016-01-01
   utility_name: South Feather Water and Power Agency
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -9,8 +9,9 @@ rate_structure:
         - meter_size
       values:
         5/8": 15
+        3/4": 15
         1": 21
-        1|1/2": 31
+        1 1/2": 31
         2": 35.5
         3": 65
         4": 87.5
@@ -30,7 +31,7 @@ rate_structure:
       values:
         5/8": 15
         1": 21
-        1|1/2": 31
+        1 1/2": 31
         2": 35.5
         3": 65
         4": 87.5
@@ -50,7 +51,7 @@ rate_structure:
       values:
         5/8": 15
         1": 21
-        1|1/2": 31
+        1 1/2": 31
         2": 35.5
         3": 65
         4": 87.5

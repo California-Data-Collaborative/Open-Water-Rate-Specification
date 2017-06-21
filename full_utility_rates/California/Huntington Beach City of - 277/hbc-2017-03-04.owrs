@@ -15,6 +15,8 @@ rate_structure:
         - meter_type
       values:
          3/4"|compound      : 11.531
+         # turbine doesn't exist in this rate structure just for testing purposes
+         3/4"|Turbine      : 11.531
          3/4"|FM            : 11.531
          1"|compound        : 23.062
          1"|FM              : 23.062

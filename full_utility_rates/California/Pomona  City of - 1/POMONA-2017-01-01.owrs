@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-01-01
   utility_name: Pomona  City of
-  bill_frequency: BiMonthly
+  bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:

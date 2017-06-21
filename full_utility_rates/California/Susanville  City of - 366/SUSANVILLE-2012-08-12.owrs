@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2012-08-12
   utility_name: Susanville  City of
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -11,7 +11,7 @@ rate_structure:
         5/8": 23.65
         3/4": 23.65
         1": 31.93
-        1|1/2": 41.6
+        1 1/2": 41.6
         2": 54.11
         3": 81.37
         4": 124.84
@@ -42,7 +42,7 @@ rate_structure:
         5/8": 23.65
         3/4": 23.65
         1": 31.93
-        1|1/2": 41.6
+        1 1/2": 41.6
         2": 54.11
         3": 81.37
         4": 124.84

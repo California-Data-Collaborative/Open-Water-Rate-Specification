@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-03-31
   utility_name: Martinez  City of
-  bill_frequency: BiMonthly
+  bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -10,6 +10,7 @@ rate_structure:
       values:
         #Lifeline: 29.72
         5/8": 59.44
+        3/4": 59.44
         #1,fire_service: 76.50
         1": 133.64
         1|1/2": 267.42

@@ -1,7 +1,7 @@
 metadata:
   effective_date: 2017-07-01
   utility_name: Rosamond Community Service District
-  bill_frequency: Monthly
+  bill_frequency: monthly
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -11,7 +11,7 @@ rate_structure:
         5/8": 33.53
         3/4": 33.53
         1": 47.33
-        1|1/2": 81.53
+        1 1/2": 81.53
         2": 122.73
         3": 218.93
         4": 356.13
@@ -36,7 +36,7 @@ rate_structure:
         5/8": 33.53
         3/4": 33.53
         1": 47.33
-        1|1/2": 81.53
+        1 1/2": 81.53
         2": 122.73
         3": 218.93
         4": 356.13
