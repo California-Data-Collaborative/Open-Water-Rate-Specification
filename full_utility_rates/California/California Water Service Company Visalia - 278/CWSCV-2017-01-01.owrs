@@ -1,0 +1,116 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Visalia"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 10.14
+        3/4": 15.20
+        #1",fire_sprinkler : 11.21
+        1"  : 25.34
+        1 1/2": 50.68
+        2"  : 81.09
+        3"  : 152.04
+        4"  : 230.42
+        6"  : 377.86
+        8"  : 576.03
+        10" : 1165.62
+        12" : 1672.42
+        14" : 2280.57
+    tier_starts:
+      - 0
+      - 12
+      - 30
+    tier_prices:
+      - 1.4144
+      - 1.4398
+      - 1.6057
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 8.61
+        3/4": 12.91
+        1"  : 21.52
+        1 1/2": 43.04
+        2"  : 68.86
+        3" : 129.11
+        4"  : 195.85
+        6"  : 321.18
+        8"  : 489.61
+        10" : 989.82
+        12" : 1420.18
+        14" : 1936.61
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 
+      depends_on : meter_size
+      values:
+        5/8": 1.5735
+        3/4": 1.5735
+        1"  : 1.5735
+        1 1/2": 1.5735
+        2"  : 1.5735
+        3" : 1.5735
+        4"  : 1.5735
+        6"  : 1.5735
+        8"  : 1.4396
+        10" : 1.4396
+        12" : 1.4396
+        14" : 1.4396
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 8.61
+        3/4": 12.91
+        1"  : 21.52
+        1 1/2": 43.04
+        2"  : 68.86
+        3" : 129.11
+        4"  : 195.85
+        6"  : 321.18
+        8"  : 489.61
+        10" : 989.82
+        12" : 1420.18
+        14" : 1936.61
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 
+      depends_on : meter_size
+      values:
+        5/8": 1.5735
+        3/4": 1.5735
+        1"  : 1.5735
+        1 1/2": 1.5735
+        2"  : 1.5735
+        3" : 1.5735
+        4"  : 1.5735
+        6"  : 1.5735
+        8"  : 1.4396
+        10" : 1.4396
+        12" : 1.4396
+        14" : 1.4396
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 11.62
+        2"  : 15.50
+        3" : 23.24
+        4"  : 30.99
+        6"  : 46.49
+        8"  : 61.98
+        10" : 77.48
+        12" : 92.98
+        14" : 108.47
+    bill : service_charge

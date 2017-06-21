@@ -1,0 +1,65 @@
+metadata:
+  effective_date: 2014-10-01
+  utility_name: Bellflower-Somerset Mutual Water Company
+  bill_frequency: BiMonthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.35
+        1": 32.55
+        1|1/4": 44.65
+        1|1/2": 52.5
+        2": 61
+        3": 85
+        4": 166
+        6": 263.55
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.75
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.35
+        1": 32.55
+        1|1/4": 44.65
+        1|1/2": 52.5
+        2": 61
+        3": 85
+        4": 166
+        6": 263.55
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.75
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.35
+        1": 32.55
+        1|1/4": 44.65
+        1|1/2": 52.5
+        2": 61
+        3": 85
+        4": 166
+        6": 263.55
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.75
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge: &ref_0
+      depends_on:
+        - meter_size
+      values:
+        3": 26
+        4": 32
+        6": 50
+        8": 74
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.75
+    bill: service_charge+commodity_charge

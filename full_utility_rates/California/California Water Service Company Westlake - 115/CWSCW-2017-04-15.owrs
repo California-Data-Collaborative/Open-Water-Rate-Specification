@@ -1,0 +1,108 @@
+metadata:
+  effective_date: 2017-04-15
+  utility_name: "California Water Service Company Westlake"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 26.65
+        3/4": 39.98
+        #1",fire_sprinkler : 27.72
+        1"  : 55.20
+        1 1/2": 99.92
+        2"  : 152.10
+        3"  : 289.26
+        4"  : 506.95
+        6"  : 999.90
+        8"  : 2132.12
+        10" : 3064.92
+        12" : 4397.50
+        14" : 5996.59
+    tier_starts:
+      - 0
+      - 14
+      - 45
+    tier_prices:
+      - 4.2435
+      - 5.0389
+      - 5.5726
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RECLAIMED: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 25.13
+        3/4": 37.69
+        1"  : 62.82
+        1 1/2": 125.65
+        2"  : 201.04
+        3" : 376.94
+        4"  : 628.24
+        6"  : 1256.48
+        8"  : 2010.48
+        10" : 2889.91
+        12" : 4146.39
+        14" : 5654.17
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.5605
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 24.68
+        3/4": 37.02
+        1"  : 51.15
+        1 1/2": 92.56
+        2"  : 140.90
+        3" : 267.94
+        4"  : 469.60
+        6"  : 925.38
+        8"  : 1974.52
+        10" : 2838.37
+        12" : 4072.44
+        14" : 5533.33
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.1434
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 24.68
+        3/4": 37.02
+        1"  : 51.15
+        1 1/2": 92.56
+        2"  : 140.90
+        3" : 267.94
+        4"  : 469.60
+        6"  : 925.38
+        8"  : 1974.52
+        10" : 2838.37
+        12" : 4072.44
+        14" : 5533.33
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.1434
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 12.79
+        2"  : 17.05
+        3" : 25.57
+        4"  : 34.30
+        6"  : 51.15
+        8"  : 68.20
+        10" : 85.25
+        12" : 102.30
+        14" : 119.35
+    bill : service_charge

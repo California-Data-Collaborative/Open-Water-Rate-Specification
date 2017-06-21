@@ -1,0 +1,71 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: McKinleyville Community Service District
+  bill_frequency: Monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.23
+        3/4": 24.55
+        1": 37.18
+        1|1/2": 68.76
+        2": 106.66
+        3": 195.08
+        4": 321.04
+        6": 637.21
+        8": 1016.18
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 1.39
+      - 3.46
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.23
+        3/4": 24.55
+        1": 37.18
+        1|1/2": 68.76
+        2": 106.66
+        3": 195.08
+        4": 321.04
+        6": 637.21
+        8": 1016.18
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 1.39
+      - 3.46
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.23
+        3/4": 24.55
+        1": 37.18
+        1|1/2": 68.76
+        2": 106.66
+        3": 195.08
+        4": 321.04
+        6": 637.21
+        8": 1016.18
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 1.39
+      - 3.46
+    bill: service_charge+commodity_charge
