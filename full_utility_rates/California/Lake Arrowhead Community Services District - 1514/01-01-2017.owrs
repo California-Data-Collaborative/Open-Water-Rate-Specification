@@ -1,0 +1,48 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Lake Arrowhead Community Services District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.23
+        3/4": 38.23
+        1": 93.66
+        1|1/2": 187.33
+        2": 299.34
+        3": 599.04
+        4": 935.83
+        6": 1871.68
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 14
+      - 31
+    tier_prices_commodity:
+      - 1.26
+      - 2.39
+      - 7.09
+      - 14.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 1.87
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 15805
+    3/4": 15805
+    1": 26341
+    1 1/2": 52683
+    2": 84292
+    3": 168584
+    4": 263413
+    6": 526836
