@@ -1,0 +1,33 @@
+metadata:
+  effective_date: 06/30/2015
+  utility_name: Lower Lake County Waterworks District No. 1
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 59.64
+        3/4": 59.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 1101
+      - 2601
+      - 4601
+      - 7101
+      - 9601
+    tier_prices_commodity:
+      - 1.5
+      - 1.85
+      - 2
+      - 2.5
+      - 3
+      - 4
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
