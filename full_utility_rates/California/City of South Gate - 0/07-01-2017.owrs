@@ -6,7 +6,8 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 0
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.98
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -14,7 +15,8 @@ rate_structure:
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
     service_charge: 0
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.98
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -22,7 +24,8 @@ rate_structure:
     bill: service_charge+commodity_charge
   COMMERCIAL:
     service_charge: 0
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.31
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -30,7 +33,8 @@ rate_structure:
     bill: service_charge+commodity_charge
   INDUSTRIAL:
     service_charge: 0
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.31
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -38,15 +42,26 @@ rate_structure:
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
     service_charge: 0
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.31
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   FIRE_SERVICE:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 28.09
+        3": 40.41
+        4": 53.89
+        6": 80.82
+        8": 107.76
+        10": 134.71
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.31
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -54,7 +69,8 @@ rate_structure:
     bill: service_charge+commodity_charge
   RECYCLED:
     service_charge: 0
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.98
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
