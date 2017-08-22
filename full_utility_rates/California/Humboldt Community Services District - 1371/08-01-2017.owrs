@@ -9,8 +9,9 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        5/8": 23.19
-    commodity_charge: 0
+        1": 54.63
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.56
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
