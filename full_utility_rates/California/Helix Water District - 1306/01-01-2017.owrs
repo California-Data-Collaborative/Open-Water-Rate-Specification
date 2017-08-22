@@ -1,0 +1,39 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Helix Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.07
+        3/4": 47.07
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+      - 35
+    tier_prices_commodity:
+      - 4.42
+      - 5.21
+      - 6.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 6842
+    1": 11403
+    1 1/2": 22806
+    2": 36489
+    3": 68418
+    4": 114029
+    6": 228059
+    8": 364894
