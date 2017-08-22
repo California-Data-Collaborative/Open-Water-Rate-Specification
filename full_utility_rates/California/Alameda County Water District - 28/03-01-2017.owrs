@@ -1,0 +1,102 @@
+metadata:
+  effective_date: 03/01/2017
+  utility_name: Alameda County Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 49.84
+        1": 76.86
+        1|1/2": 144.38
+        2": 225.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.047
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 49.84
+        1": 76.86
+        1|1/2": 144.38
+        2": 225.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.047
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 49.84
+        1": 76.86
+        1|1/2": 144.38
+        2": 225.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.047
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 49.84
+        1": 76.86
+        1|1/2": 144.38
+        2": 225.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.047
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 49.84
+        1": 76.86
+        1|1/2": 144.38
+        2": 225.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.047
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 49.84
+        1": 76.86
+        1|1/2": 144.38
+        2": 225.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.047
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
