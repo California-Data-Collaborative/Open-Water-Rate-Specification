@@ -1,0 +1,14 @@
+metadata:
+  effective_date: 08/22/2017
+  utility_name: North Yuba Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 25
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
