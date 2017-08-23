@@ -1,0 +1,72 @@
+metadata:
+  effective_date: 06/01/2017
+  utility_name: North Marin Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.5
+        1": 63
+        1|1/2": 77
+        2": 120
+        3": 238
+        4": 382
+        6": 799
+        8": 1191
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.5
+        1": 63
+        1|1/2": 77
+        2": 120
+        3": 238
+        4": 382
+        6": 799
+        8": 1191
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+        - pressure_zone
+      values:
+        Summer|1: 5.93
+        Summer|2: 6.53
+        Summer|3: 7.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.5
+        1": 63
+        1|1/2": 77
+        2": 120
+        3": 238
+        4": 382
+        6": 799
+        8": 1191
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.52
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
