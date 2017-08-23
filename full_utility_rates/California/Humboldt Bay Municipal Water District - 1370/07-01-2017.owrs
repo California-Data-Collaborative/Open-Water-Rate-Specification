@@ -1,0 +1,25 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Humboldt Bay Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.77
+        1": 31.7
+        1|1/2": 39.63
+        2": 55.48
+        3": 118.87
+        4": 237.75
+        6": 363.88
+        8": 581.19
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
