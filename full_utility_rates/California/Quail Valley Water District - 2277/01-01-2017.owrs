@@ -5,8 +5,9 @@ metadata:
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 77.66
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.99
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
