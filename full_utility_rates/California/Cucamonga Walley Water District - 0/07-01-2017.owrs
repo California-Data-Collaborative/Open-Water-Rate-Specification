@@ -1,0 +1,33 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Cucamonga Walley Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 41.75
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 41
+      - 101
+    tier_prices_commodity:
+      - 1.61
+      - 2.14
+      - 2.68
+      - 3.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge: 49.75
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.68
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
