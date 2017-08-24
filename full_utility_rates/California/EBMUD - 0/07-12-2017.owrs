@@ -1,0 +1,109 @@
+metadata:
+  effective_date: 07/12/2017
+  utility_name: EBMUD
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.2
+        3/4": 45.2
+        1": 68.26
+        1|1/2": 125.96
+        2": 195.16
+        3": 379.74
+        4": 587.4
+        6": 1164.1
+        8": 1856.22
+        10": 2663.66
+        12": 3701.88
+        14": 4740
+        16": 6008.88
+        18": 7277.72
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 16
+    tier_prices_commodity:
+      - 3.45
+      - 4.74
+      - 6.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 7
+      - 16
+    tier_prices_drought:
+      - 0.86
+      - 1.19
+      - 1.57
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.2
+        3/4": 45.2
+        1": 68.26
+        1|1/2": 125.96
+        2": 195.16
+        3": 379.74
+        4": 587.4
+        6": 1164.1
+        8": 1856.22
+        10": 2663.66
+        12": 3701.88
+        14": 4740
+        16": 6008.88
+        18": 7277.72
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 1.22
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.2
+        3/4": 45.2
+        1": 68.26
+        1|1/2": 125.96
+        2": 195.16
+        3": 379.74
+        4": 587.4
+        6": 1164.1
+        8": 1856.22
+        10": 2663.66
+        12": 3701.88
+        14": 4740
+        16": 6008.88
+        18": 7277.72
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 1.21
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 17530
+    3/4": 17530
+    1": 29280
+    1 1/2": 58560
