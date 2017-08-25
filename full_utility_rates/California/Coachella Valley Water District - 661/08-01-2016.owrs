@@ -1,0 +1,144 @@
+metadata:
+  effective_date: 08/01/2016
+  utility_name: Coachella Valley Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 6.92
+        1": 11.51
+        1|1/2": 23.02
+        2": 36.85
+        3": 69.05
+        4": 115.08
+        6": 230.17
+        8": 368.27
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.7*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .86
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 175%
+      - 300%
+    tier_prices_commodity:
+      - 0.95
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 7.9
+        1": 13.16
+        1|1/2": 26.38
+        2": 42.18
+        3": 79.09
+        4": 131.79
+        6": 263.65
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.7*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .86
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 175%
+      - 300%
+    tier_prices_commodity:
+      - 0.95
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 17.14
+        1": 28.59
+        1|1/2": 57.17
+        2": 91.52
+        3": 171.58
+        4": 285.93
+        6": 571.87
+        8": 915.03
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.7*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .86
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 175%
+      - 300%
+    tier_prices_commodity:
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 4.96
+        1": 8.26
+        1|1/2": 16.53
+        2": 26.44
+        3": 49.52
+        4": 82.58
+        6": 165.16
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: number of EDUsX8Ccf
+    outdoor_commodity: none
+    budget_commodity: indoor only
+    landscape_factor_commodity: none
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 175%
+      - 300%
+    tier_prices_commodity:
+      - 1.32
+      - 2.46
+      - 4.67
+      - 6.13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
