@@ -1,0 +1,144 @@
+metadata:
+  effective_date: 01/01/2014
+  utility_name: Indio  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 62.5
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 101%
+      - 200%
+      - 400%
+    tier_prices_commodity:
+      - 0.97
+      - 1.46
+      - 1.95
+      - 2.92
+      - 3.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 62.5
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 101%
+      - 200%
+      - 400%
+    tier_prices_commodity:
+      - 0.97
+      - 1.46
+      - 1.95
+      - 2.92
+      - 3.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 62.5
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 101%
+      - 200%
+      - 400%
+    tier_prices_commodity:
+      - 1.31
+      - 1.31
+      - 1.95
+      - 2.92
+      - 3.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 62.5
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 101%
+      - 200%
+      - 400%
+    tier_prices_commodity:
+      - 1.31
+      - 1.31
+      - 1.95
+      - 2.92
+      - 3.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 62.5
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 101%
+      - 200%
+      - 400%
+    tier_prices_commodity:
+      - 1.31
+      - 1.31
+      - 1.95
+      - 2.92
+      - 3.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 19.59
+    3/4": 19.59
+    1": 48.98
+    1 1/2": 97.97
+    2": 156.72
+    3": 293.87
+    4": 489.78
+    6": 979.51
+    8": 1567.23
