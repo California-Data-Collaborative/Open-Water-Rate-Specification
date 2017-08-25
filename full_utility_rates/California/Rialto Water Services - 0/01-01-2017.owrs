@@ -1,0 +1,26 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Rialto Water Services
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 30.25
+        3/4": 30.25
+        1": 43.76
+        1|1/2": 52.73
+        2": 151.65
+        3": 322.56
+        4": 547.37
+        6": 1131.96
+        8": 1626.69
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
