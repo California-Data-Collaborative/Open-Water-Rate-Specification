@@ -1,0 +1,79 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Suburban Water Systems
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.11
+        3/4": 19.66
+        1": 32.76
+        1|1/2": 65.52
+        2": 104.84
+        3": 196.57
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 20
+    tier_prices_commodity:
+      - 0
+      - 20
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge: .nan
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.11
+        3/4": 19.66
+        1": 32.76
+        1|1/2": 65.52
+        2": 104.84
+        3": 196.57
+        4": 327.62
+        6": 655.24
+        8": 1048.39
+        10": 1507.05
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.11
+        3/4": 19.66
+        1": 32.76
+        1|1/2": 65.52
+        2": 104.84
+        3": 196.57
+        4": 327.62
+        6": 655.24
+        8": 1048.39
+        10": 1507.05
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
