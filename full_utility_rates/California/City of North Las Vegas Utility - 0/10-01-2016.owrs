@@ -1,0 +1,102 @@
+metadata:
+  effective_date: 10/01/2016
+  utility_name: City of North Las Vegas Utility
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 1420
+    3/4": 1420
+    1": 2367
+    1 1/2": 4733
+    2": 7573
+    3": 16567
+    4": 29820
+    6": 66267
+    8": 113600
+    10": 179867
+    12": 236667
+    14": 285000
