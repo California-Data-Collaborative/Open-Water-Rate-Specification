@@ -1,0 +1,31 @@
+metadata:
+  effective_date: 06/01/2017
+  utility_name: Dublin San Ramon Services District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 35.23
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 35
+    tier_prices_commodity:
+      - 0.55
+      - 1.16
+      - 1.55
+    fixed_drought_surcharge: 0.57
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 12763
