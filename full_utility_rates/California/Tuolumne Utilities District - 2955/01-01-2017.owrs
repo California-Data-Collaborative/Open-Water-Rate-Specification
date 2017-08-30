@@ -1,0 +1,51 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Tuolumne Utilities District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.5
+        3/4": 52.5
+        1": 52.5
+        1|1/2": 84
+        2": 120.75
+        3": 267.75
+        4": 372.75
+        6": 656.25
+        8": 1002.75
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RAW:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20
+        3/4": 20
+        1": 20
+        1|1/2": 32
+        2": 46
+        3": 102
+        4": 142
+        6": 250
+        8": 382
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 6637
