@@ -1,0 +1,14 @@
+metadata:
+  effective_date: 01/01/2007
+  utility_name: Amberwoods Water Users Association
+  bill_frequency: Semi-Annually
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 20
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
