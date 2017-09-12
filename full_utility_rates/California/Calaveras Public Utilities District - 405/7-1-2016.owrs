@@ -1,0 +1,32 @@
+metadata:
+  effective_date: 7/1/2016
+  utility_name: Calaveras Public Utilities District
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39.73
+        1": 63.66
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5001
+      - 20001
+    tier_prices_commodity:
+      - 1.6
+      - 2.6
+      - 2.2
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 39.73
