@@ -2,6 +2,7 @@ metadata:
   effective_date: 2017-01-01
   utility_name: Santa Rosa City of
   bill_frequency: Monthly
+  bill_unit: kgal
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
