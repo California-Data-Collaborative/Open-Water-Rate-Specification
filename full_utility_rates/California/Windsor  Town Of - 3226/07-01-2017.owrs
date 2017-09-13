@@ -15,9 +15,9 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 4001
-      - 7001
-      - 17001
+      - 4
+      - 7
+      - 17
     tier_prices_commodity:
       - 3.12
       - 3.4
@@ -27,9 +27,9 @@ rate_structure:
     variable_drought_surcharge: Tiered
     tier_starts_drought:
       - 0
-      - 4001
-      - 7001
-      - 17001
+      - 4
+      - 7
+      - 17
     tier_prices_drought:
       - 3.48
       - 3.78
