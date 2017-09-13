@@ -13,7 +13,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 1000
+      - 40
     tier_prices_commodity:
       - 3.91
       - 7.82
@@ -31,7 +31,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 1000
+      - 40
     tier_prices_commodity:
       - 3.91
       - 7.82
@@ -49,7 +49,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 1000
+      - 40
     tier_prices_commodity:
       - 3.91
       - 7.82
