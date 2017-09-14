@@ -1,0 +1,38 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Los Angeles County Waterworks District 29 - Malibu & Marina Del Rey
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 37.81
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 20
+          - 50
+        Winter:
+          - 0
+          - 15
+          - 35
+    tier_prices_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 6.598
+          - 7.703
+          - 10.986
+        Winter:
+          - 6.598
+          - 7.703
+          - 10.986
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
