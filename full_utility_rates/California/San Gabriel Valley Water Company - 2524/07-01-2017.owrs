@@ -11,17 +11,18 @@ rate_structure:
       values:
         5/8": 22.43
     commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity: 2.8185
+    flat_rate_commodity: 3.3159
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  RECYCLED:
+  OTHER:
     service_charge: 0
     commodity_charge: 0
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
