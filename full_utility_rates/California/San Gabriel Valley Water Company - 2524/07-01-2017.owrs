@@ -10,13 +10,16 @@ rate_structure:
         - meter_size
       values:
         5/8": 22.43
-    commodity_charge: Tiered
-    tier_starts_commodity:
-      - 0
-      - 14
-    tier_prices_commodity:
-      - 3.178
-      - 3.6375
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.8185
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge: 0
+    commodity_charge: 0
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
