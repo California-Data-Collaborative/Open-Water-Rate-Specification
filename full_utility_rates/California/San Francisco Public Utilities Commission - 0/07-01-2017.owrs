@@ -1,0 +1,173 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: San Francisco Public Utilities Commission
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.63
+        3/4": 14.64
+        1": 20.66
+        1|1/2": 35.71
+        2": 53.78
+        3": 95.95
+        4": 156.17
+        6": 306.76
+        8": 487.45
+        10": 698.25
+        12": 1300.55
+        16": 2264.24
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
+      - 6.42
+      - 8.62
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.63
+        3/4": 14.64
+        1": 20.66
+        1|1/2": 35.71
+        2": 53.78
+        3": 95.95
+        4": 156.17
+        6": 306.76
+        8": 487.45
+        10": 698.25
+        12": 1300.55
+        16": 2264.24
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+    tier_prices_commodity:
+      - 6.57
+      - 8.81
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 10.36
+        1|1/2": 15.05
+        2": 20.7
+        3": 33.86
+        4": 52.67
+        6": 99.67
+        8": 156.09
+        10": 221.9
+        12": 409.95
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RAW:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.63
+        3/4": 14.64
+        1": 20.66
+        1|1/2": 35.71
+        2": 53.78
+        3": 95.95
+        4": 156.17
+        6": 306.76
+        8": 487.45
+        10": 698.25
+        12": 1300.55
+        16": 2264.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.63
+        3/4": 14.64
+        1": 20.66
+        1|1/2": 35.71
+        2": 53.78
+        3": 95.95
+        4": 156.17
+        6": 306.76
+        8": 487.45
+        10": 698.25
+        12": 1300.55
+        16": 2264.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INTERRUPTIBLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.63
+        3/4": 14.64
+        1": 20.66
+        1|1/2": 35.71
+        2": 53.78
+        3": 95.95
+        4": 156.17
+        6": 306.76
+        8": 487.45
+        10": 698.25
+        12": 1300.55
+        16": 2264.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.93
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 1346
+    3/4": 2020
+    1": 3369
+    1 1/2": 6734
+    2": 10776
+    3": 20204
+    4": 33673
+    6": 67349
+    8": 107758
+    10": 154821
+    12": 289448
+    16": 504852
