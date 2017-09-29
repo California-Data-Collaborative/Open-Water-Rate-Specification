@@ -1,0 +1,88 @@
+metadata:
+  effective_date: 2017-04-15
+  utility_name: "California Water Service Company Selma"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 22.06
+        3/4": 33.08
+        #1",fire_sprinkler : 23.60
+        1"  : 41.90
+        1 1/2": 73.87
+        2"  : 104.74
+        3"  : 193.62
+        4"  : 288.68
+        6"  : 529.79
+        8"  : 819.21
+        10" : 2536.39
+        12" : 3639.10
+        14" : 4962.44
+    tier_starts:
+      - 0
+      - 13
+      - 35
+    tier_prices:
+      - 1.6457
+      - 1.6786
+      - 1.7986
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 17.78
+        3/4": 23.37
+        1"  : 30.04
+        1 1/2": 53.38
+        2"  : 76.36
+        3" : 141.32
+        4"  : 212.62
+        6"  : 393.24
+        8"  : 610.05
+        10" : 1791.28
+        12" : 2570.07
+        14" : 3504.64
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.7609
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 17.78
+        3/4": 23.37
+        1"  : 30.04
+        1 1/2": 53.38
+        2"  : 76.36
+        3" : 141.32
+        4"  : 212.62
+        6"  : 393.24
+        8"  : 610.05
+        10" : 1791.28
+        12" : 2570.07
+        14" : 3504.64
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 1.7609
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 12.68
+        2"  : 16.90
+        3" : 25.35
+        4"  : 33.80
+        6"  : 50.71
+        8"  : 67.61
+        10" : 84.51
+        12" : 101.41
+        14" : 118.31
+    bill : service_charge

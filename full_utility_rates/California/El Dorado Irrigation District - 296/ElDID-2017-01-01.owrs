@@ -1,0 +1,126 @@
+#Water billed in cf instead of ccf but prices are adjusted for ccf
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "El Dorado Irrigation District"
+  bill_frequency: bimonthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - turbine_meter
+      values:
+        5/8"|Yes     : 59.88
+        5/8"|No      : 59.88
+        3/4"|Yes     : 59.88
+        3/4"|No      : 59.88
+        1"|Yes       : 87.69
+        1"|No        : 87.69
+        1 1/2"|No    : 151.33
+        1 1/2"|Yes   : 179.15
+        2"|No        : 230.82
+        2"|Yes       : 230.82
+        3"|No        : 466.03
+        3"|Yes       : 485.29
+        4"|No        : 684.08
+        4"|Yes       : 855.04
+        6"|No        : 1355.84
+        6"|Yes       : 1876.84
+        8"|Yes       : 3215.12
+        8"|No        : 3215.12
+        10"|Yes      : 5091.96
+        10"|No       : 5091.96
+        12"|Yes      : 6699.52
+        12"|No       : 6699.52
+    tier_starts:
+      - 0
+      - 18
+      - 45
+    tier_prices:
+      - 1.454
+      - 1.755
+      - 2.059
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - turbine_meter
+      values:
+        5/8"|Yes     : 62.97
+        5/8"|No      : 62.97
+        3/4"|Yes     : 62.97
+        3/4"|No      : 62.97
+        1"|Yes       : 92.97
+        1"|No        : 92.97
+        1 1/2"|No    : 161.56
+        1 1/2"|Yes   : 191.56
+        2"|No        : 247.28
+        2"|Yes       : 247.28
+        3"|No        : 478.73
+        3"|Yes       : 521.59
+        4"|No        : 735.89
+        4"|Yes       : 920.20
+        6"|No        : 1447.40
+        6"|Yes       : 1731.92
+        8"|Yes       : 3449.03
+        8"|No        : 3449.03
+        10"|Yes      : 5462.39
+        10"|No       : 5462.39
+        12"|Yes      : 7165.09
+        12"|No       : 7165.09
+    flat_rate: 1.731
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - turbine_meter
+      values:
+        5/8"|Yes     : 62.97
+        5/8"|No      : 62.97
+        3/4"|Yes     : 62.97
+        3/4"|No      : 62.97
+        1"|Yes       : 92.97
+        1"|No        : 92.97
+        1 1/2"|No    : 161.56
+        1 1/2"|Yes   : 191.56
+        2"|No        : 247.28
+        2"|Yes       : 247.28
+        3"|No        : 478.73
+        3"|Yes       : 521.59
+        4"|No        : 735.89
+        4"|Yes       : 920.20
+        6"|No        : 1447.40
+        6"|Yes       : 1731.92
+        8"|Yes       : 3449.03
+        8"|No        : 3449.03
+        10"|Yes      : 5462.39
+        10"|No       : 5462.39
+        12"|Yes      : 7165.09
+        12"|No       : 7165.09
+    flat_rate: 1.731
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+
+  RECLAIMED:
+    service_charge:
+      depends_on: meter_size
+      values:
+        3/4" : 23.84
+    tier_starts:
+      - 0
+      - 30
+      - 45
+    tier_prices:
+      - 0.688
+      - 1.163
+      - 1.751
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge

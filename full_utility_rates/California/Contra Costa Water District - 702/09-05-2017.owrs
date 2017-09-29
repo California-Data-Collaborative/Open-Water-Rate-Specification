@@ -1,0 +1,60 @@
+metadata:
+  effective_date: 09/05/2017
+  utility_name: Contra Costa Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+    tier_prices_commodity:
+      - 3.91
+      - 7.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+    tier_prices_commodity:
+      - 3.91
+      - 7.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+    tier_prices_commodity:
+      - 3.91
+      - 7.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge

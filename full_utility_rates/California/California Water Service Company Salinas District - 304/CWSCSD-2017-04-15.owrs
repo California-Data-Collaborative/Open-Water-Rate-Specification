@@ -1,0 +1,87 @@
+metadata:
+  effective_date: 2017-04-15
+  utility_name: "California Water Service Company Salinas District"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.60
+        3/4": 27.91
+        #1",fire_sprinkler : 19.72
+        1"  : 46.51
+        1 1/2": 93.02
+        #2",fire_sprinkler : 27.91
+        2"  : 148.84
+        3"  : 279.07
+        4"  : 465.11
+        6"  : 930.23
+        8"  : 1488.36
+        10" : 2139.52
+        12" : 3069.75
+        14" : 4186.02
+    tier_starts:
+      - 0
+      - 7
+      - 18
+    tier_prices:
+      - 3.0297
+      - 3.1999
+      - 3.5755
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 16.71
+        3/4": 25.06
+        1"  : 41.77
+        1 1/2": 83.53
+        2"  : 133.65
+        3" : 250.60
+        4"  : 417.67
+        6"  : 835.55
+        8"  : 1336.53
+        10" : 1921.26
+        12" : 2756.59
+        14" : 3758.99
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.1858
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 16.71
+        3/4": 25.06
+        1"  : 41.77
+        1 1/2": 83.53
+        2"  : 133.65
+        3" : 250.60
+        4"  : 417.67
+        6"  : 835.55
+        8"  : 1336.53
+        10" : 1921.26
+        12" : 2756.59
+        14" : 3758.99
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.1858
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1 1/2": 9.72
+        2"  : 12.96
+        3" : 19.44
+        4"  : 25.92
+        6"  : 38.89
+        8"  : 51.85
+        10" : 64.81
+    bill : service_charge

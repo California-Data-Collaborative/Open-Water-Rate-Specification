@@ -1,0 +1,126 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Desert Water Agency"
+  bill_frequency: monthly
+  # http://www.dwa.org/board-meeting-agenda/misc/119-residential-commercial-rates/file
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
+    commodity_charge: flat_rate*usage_ccf
+    utility_surcharge_price:
+      depends_on: pressure_zone
+      values:
+        1: 0.16
+        2: 0.22
+        3: 0.53
+        4: 2.30
+    utility_surcharge: utility_surcharge_price*usage_ccf
+    bill: service_charge+commodity_charge+utility_surcharge
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
+    commodity_charge: flat_rate*usage_ccf
+    utility_surcharge_price:
+      depends_on: pressure_zone
+      values:
+        1: 0.16
+        2: 0.22
+        3: 0.53
+        4: 2.30
+    utility_surcharge: utility_surcharge_price*usage_ccf
+    bill: service_charge+commodity_charge+utility_surcharge
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
+    commodity_charge: flat_rate*usage_ccf
+    utility_surcharge_price:
+      depends_on: pressure_zone
+      values:
+        1: 0.16
+        2: 0.22
+        3: 0.53
+        4: 2.30
+    utility_surcharge: utility_surcharge_price*usage_ccf
+    bill: service_charge+commodity_charge+utility_surcharge
+
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"    : 14.41
+         3/4"    : 14.41
+         1"      : 14.41
+         1 1/2"  : 27.52
+         2"      : 43.24
+         3"      : 85.18 
+         4"      : 132.35
+         6"      : 263.40
+         8"      : 420.66
+         10"     : 1102.12
+         12"     : 1390.41
+    flat_rate: 1.57
+    commodity_charge: flat_rate*usage_ccf
+    utility_surcharge_price:
+      depends_on: pressure_zone
+      values:
+        1: 0.16
+        2: 0.22
+        3: 0.53
+        4: 2.30
+    utility_surcharge: utility_surcharge_price*usage_ccf
+    bill: service_charge+commodity_charge+utility_surcharge
+
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         4"      : 17.91
+         6"      : 39.25
+         8"      : 67.71
+         10"     : 105.66
+         12"     : 127.00
+    bill: service_charge

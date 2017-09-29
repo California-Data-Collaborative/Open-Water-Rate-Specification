@@ -1,0 +1,145 @@
+All customers with 5/8" x 3/4" meters who use 6 units or less of water in a billing period shall pay only the minimum charge. If usage exceeds 6 units, then the water customer shall pay the minimum charge plus the commodity delivery charge and capital improvements charge.
+---
+metadata:
+  effective_date: 2016-07-01
+  utility_name: City of Garden Grove
+  bill_frequency: bimonthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    minimum_charge:
+      depends_on: meter_size
+      values:
+          5/8"  : 12.74
+          3/4"  : 12.74
+          1"    : 33.99
+          1 1/2"  : 65.82
+          2"    : 99.79
+          3"    : 165.62
+          4"    : 229.32
+          6"    : 524.45
+          8"    : 819.60
+          10"   : 1114.73
+
+    tier_starts:
+      - 0
+      - 37
+      - 251
+      - 501
+      
+    tier_prices:
+      - 2.92
+      - 3.00
+      - 3.09
+      - 3.18
+      
+    capital_improvements_charge:
+      depends_on: meter_size
+      values:
+          5/8"  : 1.47
+          3/4"  : 1.47
+          1"    : 2.07
+          1 1/2"  : 2.64
+          2"    : 4.27
+          3"    : 16.19
+          4"    : 20.60
+          6"    : 30.90
+          8"    : 42.68
+          10"   : 54.45
+
+    service_charge: "minimum_charge + capital_improvements_charge"
+    commodity_charge: Tiered
+    bill: "service_charge+commodity_charge"
+
+  COMMERCIAL:
+    minimum_charge:
+      depends_on: meter_size
+      values:
+          5/8"  : 12.74
+          3/4"  : 12.74
+          1"    : 33.99
+          1 1/2"  : 65.82
+          2"    : 99.79
+          3"    : 165.62
+          4"    : 229.32
+          6"    : 524.45
+          8"    : 819.60
+          10"   : 1114.73
+
+    tier_starts:
+      - 0
+      - 37
+      - 251
+      - 501
+      
+    tier_prices:
+      - 2.92
+      - 3.00
+      - 3.09
+      - 3.18
+      
+    capital_improvemnets_charge:
+      depends_on: meter_size
+      values:
+          5/8"  : 1.47
+          3/4"  : 1.47
+          1"    : 2.07
+          1.5"  : 2.64
+          2"    : 4.27
+          3"    : 16.19
+          4"    : 20.60
+          6"    : 30.90
+          8"    : 42.68
+          10"   : 54.45
+
+    service_charge: "minimum_charge + capital_improvements_charge"
+    commodity_charge: Tiered
+    bill: "service_charge+commodity_charge"
+
+  INDUSTRIAL:
+    minimum_charge:
+      depends_on: meter_size
+      values:
+          5/8"  : 12.74
+          3/4"  : 12.74
+          1"    : 33.99
+          1 1/2"  : 65.82
+          2"    : 99.79
+          3"    : 165.62
+          4"    : 229.32
+          6"    : 524.45
+          8"    : 819.60
+          10"   : 1114.73
+
+    tier_starts:
+      - 0
+      - 37
+      - 251
+      - 501
+      
+    tier_prices:
+      - 2.92
+      - 3.00
+      - 3.09
+      - 3.18
+      
+    capital_improvemnets_charge:
+      depends_on: meter_size
+      values:
+          5/8"  : 1.47
+          3/4"  : 1.47
+          1"    : 2.07
+          1 1/2"  : 2.64
+          2"    : 4.27
+          3"    : 16.19
+          4"    : 20.60
+          6"    : 30.90
+          8"    : 42.68
+          10"   : 54.45
+
+    service_charge: "minimum_charge + capital_improvements_charge"
+    commodity_charge: Tiered
+    bill: "service_charge+commodity_charge"
+
+
+    

@@ -1,0 +1,73 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "California Water Service Company Antelope Valley-LAR"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 20.68
+        3/4": 31.02
+        #1",fire_sprinkler : 21.72
+        1"  : 51.71
+        1 1/2": 103.42
+        2"  : 165.47
+        3"  : 310.25
+        4"  : 517.08
+        6"  : 1034.16
+        8"  : 1654.66
+        10" : 2378.57
+        12" : 3412.73
+        14" : 4653.72
+    tier_starts:
+      - 0
+      - 16
+      - 36
+    tier_prices:
+      - 4.3569
+      - 4.6233
+      - 5.5433
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.14
+        3/4": 27.21
+        1"  : 45.34
+        1 1/2": 90.68
+        2"  : 145.09
+        3" : 272.05
+        4"  : 453.42
+        6"  : 906.84
+        8"  : 1450.94
+        10" : 2082.72
+        12" : 2992.56
+        14" : 4080.76
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.6768
+    bill : commodity_charge+service_charge
+
+  NONRESIDENTIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.14
+        3/4": 27.21
+        1"  : 45.34
+        1 1/2": 90.68
+        2"  : 145.09
+        3" : 272.05
+        4"  : 453.42
+        6"  : 906.84
+        8"  : 1450.94
+        10" : 2082.72
+        12" : 2992.56
+        14" : 4080.76
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 4.6768
+    bill : commodity_charge+service_charge

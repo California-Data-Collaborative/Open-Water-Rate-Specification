@@ -1,0 +1,229 @@
+---
+metadata:
+  effective_date: 2014-02-01
+  utility_name: "City of Corona - Department of Water & Power"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 19.23
+        3/4"  : 25.23
+        1"    : 36.09
+        1 1/2": 62.90
+        2"    : 91.80
+        3"    : 156.91
+        4"    : 241.02
+        6"    : 442.64
+        8"    : 651.04
+    gpcd: 60
+    monthly_plant_factor: 0.8
+    days_in_period: 30.4
+    irrigation_efficiency: 0.7
+    indoor: "hhsize*gpcd*days_in_period*(1/178)"
+    outdoor: "irr_area*et_amount*(1/748)*0.632*(monthly_plant_factor/irrigation_efficiency)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 101%
+      - 121%
+      - 140%
+    tier_prices:
+      - 2.10
+      - 2.33
+      - 3.17
+      - 6.35
+      - 11.64
+    commodity_charge: Budget
+    bill: "commodity_charge+service_charge"
+
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 19.23
+        3/4"  : 25.23
+        1"    : 36.09
+        1 1/2": 62.90
+        2"    : 91.80
+        3"    : 156.91
+        4"    : 241.02
+        6"    : 442.64
+        8"    : 651.04
+    gpcd: 60
+    monthly_plant_factor: 0.8
+    irrigation_efficiency: 0.7
+    days_in_period: 30.4
+    indoor: "hhsize*gpcd*days_in_period*(1/178)"
+    outdoor: "irr_area*et_amount*(1/748)*0.632*(monthly_plant_factor/irrigation_efficiency)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - indoor
+      - 101%
+      - 121%
+      - 140%
+    tier_prices:
+      - 2.10
+      - 2.33
+      - 3.17
+      - 6.35
+      - 11.64
+    commodity_charge: Budget
+    bill: "commodity_charge+service_charge"
+
+  RECLAIMED:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 18.90
+        3/4"  : 24.79
+        1"    : 35.46
+        1 1/2": 61.79
+        2"    : 90.18
+        3"    : 154.12
+        4"    : 236.76
+        6"    : 434.82
+        8"    : 639.52
+    budget: Tiered
+    tier_starts:
+      - 0
+      - 101%
+      - 121%
+      - 141%
+    tier_prices:
+      - 1.51
+      - 2.27
+      - 3.02
+      - 4.53
+    commodity_charge: budget
+    bill: "commodity_charge+service_charge"
+
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 19.23
+        3/4"  : 25.23
+        1"    : 36.09
+        1 1/2": 62.90
+        2"    : 91.80
+        3"    : 156.91
+        4"    : 241.02
+        6"    : 442.64
+        8"    : 651.04
+    monthly_plant_factor: 0.8
+    irrigation_efficiency: 0.7
+    outdoor: "irr_area*et_amount*(1/748)*0.632*(monthly_plant_factor/irrigation_efficiency)"
+    budget: Tiered
+    tier_starts:
+      - 0
+      - outdoor
+      - 121%
+      - 140%
+    tier_prices:
+      - 2.33
+      - 3.17
+      - 6.35
+      - 11.64
+    commodity_charge: budget
+    bill: "commodity_charge+service_charge"
+
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 19.23
+        3/4"  : 25.23
+        1"    : 36.09
+        1 1/2": 62.90
+        2"    : 91.80
+        3"    : 156.91
+        4"    : 241.02
+        6"    : 442.64
+        8"    : 651.04
+    budget: Tiered
+    tier_starts:
+      - 0
+      - outdoor
+      - 121%
+      - 140%
+    tier_prices:
+      - 2.33
+      - 3.17
+      - 6.35
+      - 11.64
+    commodity_charge: budget
+    bill: "commodity_charge+service_charge"
+
+  INSTITUTIONAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 19.23
+        3/4"  : 25.23
+        1"    : 36.09
+        1 1/2": 62.90
+        2"    : 91.80
+        3"    : 156.91 
+        4"    : 241.02
+        6"    : 442.64
+        8"    : 651.04
+    budget: Tiered
+    tier_starts:
+      - 0
+      - outdoor
+      - 121%
+      - 140%
+    tier_prices:
+      - 2.33
+      - 3.17
+      - 6.35
+      - 11.64
+    commodity_charge: budget
+    bill: "commodity_charge+service_charge"
+
+  GOVERNMENTAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"  : 19.23
+        3/4"  : 25.23
+        1"    : 36.09
+        1 1/2": 62.90
+        2"    : 91.80
+        3"    : 156.91
+        4"    : 241.02
+        6"    : 442.64
+        8"    : 651.04
+    budget: Tiered
+    tier_starts:
+      - 0
+      - outdoor
+      - 121%
+      - 140%
+    tier_prices:
+      - 2.33
+      - 3.17
+      - 6.35
+      - 11.64
+    commodity_charge: budget
+    bill: "commodity_charge+service_charge"
+
+  FIRE_SERVICE:
+  service_charge:
+    depends_on: meter_size
+    values:
+      2"   : 16.25
+      2 1/2": 21.50
+      3"    : 27.75
+      3 1.2": 34.75
+      4"    : 42.75
+      6"    : 78.25
+      8"    : 115.25
+      10"   : 152.00
+      12"   : 188.75
+  bill: service_charge

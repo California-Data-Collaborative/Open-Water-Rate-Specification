@@ -1,0 +1,53 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: El Centro  City of
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.56
+        3/4": 3.56
+        1": 4.33
+        2": 6.03
+        3": 19.2
+        4": 22.23
+        6": 32.71
+        8": 44.68
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.75
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.56
+        3/4": 3.56
+        1": 4.33
+        2": 6.03
+        3": 19.2
+        4": 22.23
+        6": 32.71
+        8": 44.68
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.75
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.56
+        3/4": 3.56
+        1": 4.33
+        2": 6.03
+        3": 19.2
+        4": 22.23
+        6": 32.71
+        8": 44.68
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 3.75
+    bill: service_charge+commodity_charge

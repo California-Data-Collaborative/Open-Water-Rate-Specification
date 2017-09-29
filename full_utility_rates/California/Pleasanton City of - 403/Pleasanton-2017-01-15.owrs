@@ -1,0 +1,102 @@
+metadata:
+  effective_date: 2017-01-15
+  utility_name: "City of Pleasanton"
+  bill_frequency: bimonthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.07
+        3/4": 27.09
+        1"  : 45.18
+        1 1/2": 90.35
+        2"  : 144.56
+        3" : 316.26
+        4"  : 903.59
+        6"  : 1807.18
+        8"  : 3162.56
+        10" : 4969.73
+    tier_starts:
+      - 0
+      - 21
+      - 41
+    tier_prices:
+      - 3.74
+      - 4.1050
+      - 4.3354
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.07
+        3/4": 27.09
+        1"  : 45.18
+        1 1/2": 90.35
+        2"  : 144.56
+        3" : 316.26
+        4"  : 903.59
+        6"  : 1807.18
+        8"  : 3162.56
+        10" : 4969.73
+    commodity_charge: flat_rate*usage_ccf
+      flat_rate:4.1165
+    bill : commodity_charge+service_charge
+
+  COMMERCIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.07
+        3/4": 27.09
+        1"  : 45.18
+        1 1/2": 90.35
+        2"  : 144.56
+        3" : 316.26
+        4"  : 903.59
+        6"  : 1807.18
+        8"  : 3162.56
+        10" : 4969.73
+    commodity_charge: flat_rate*usage_ccf
+      flat_rate:4.1165
+    bill : commodity_charge+service_charge
+
+  PORTABLE_IRRIGATION: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.07
+        3/4": 27.09
+        1"  : 45.18
+        1 1/2": 90.35
+        2"  : 144.56
+        3" : 316.26
+        4"  : 903.59
+        6"  : 1807.18
+        8"  : 3162.56
+        10" : 4969.73
+    commodity_charge: flat_rate*usage_ccf
+      flat_rate:4.2663
+    bill : commodity_charge+service_charge
+
+  RECYCLED_IRRIGATION: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 18.07
+        3/4": 27.09
+        1"  : 45.18
+        1 1/2": 90.35
+        2"  : 144.56
+        3" : 316.26
+        4"  : 903.59
+        6"  : 1807.18
+        8"  : 3162.56
+        10" : 4969.73
+    commodity_charge: flat_rate*usage_ccf
+      flat_rate:3.8396
+    bill : commodity_charge+service_charge

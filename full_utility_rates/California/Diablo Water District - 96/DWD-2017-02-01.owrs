@@ -1,0 +1,38 @@
+metadata:
+  effective_date: 2017-02-01
+  utility_name: Diablo Water District
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.05
+        3/4": 11.05
+        1": 27.34
+        1 1/2": 54.54
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 3.19
+      - 3.43
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.05
+        1": 27.34
+        1 1/2": 54.54
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 3.19
+      - 3.43
+    bill: service_charge+commodity_charge

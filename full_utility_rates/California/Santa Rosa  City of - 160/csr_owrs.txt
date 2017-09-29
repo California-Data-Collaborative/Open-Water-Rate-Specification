@@ -1,0 +1,179 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: Santa Rosa City of
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+    commodity_charge: Budget
+    budget: sewer_cap
+    tier_starts:
+      - 0
+      - 100%
+    tier_prices:
+      - 5.25
+      - 6.14
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+    commodity_charge: Budget
+    budget: sewer_cap
+    tier_starts:
+      - 0
+      - 100%
+    tier_prices:
+      - 5.25
+      - 6.14
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_TWO_UNIT:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+    flat_rate: 5.59
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+    commodity_charge: Budget
+    landscape_factor: 0.7
+    outdoor: landscape_factor*et_amount*irr_area*0.623*(1/1000)
+    budget: outdoor
+    tier_starts:
+      - 0
+      - 125%
+    tier_prices:
+      - 5.29
+      - 6.70
+    bill: service_charge+commodity_charge
+  RECYCLED_IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.70
+        3/4": 10.70
+        1": 23.99
+        1|1/2": 46.15
+        2": 72.74
+        3": 134.78
+        4": 223.41
+        6": 444.98
+    commodity_charge: Budget
+    landscape_factor: 0.7
+    outdoor: landscape_factor*et_amount*irr_area*0.623*(1/1000)
+    budget: outdoor
+    tier_starts:
+      - 0
+      - 125%
+    tier_prices:
+      - 5.03
+      - 6.37
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+	flat_rate: 5.59
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+	flat_rate: 5.59
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  RECYCLED_COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+	flat_rate: 5.03
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+  RECYCLED_INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.89
+        3/4": 11.89
+        1": 26.66
+        1|1/2": 51.28
+        2": 80.83
+        3": 149.75
+        4": 248.24
+        6": 494.42
+	flat_rate: 5.03
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge
+	

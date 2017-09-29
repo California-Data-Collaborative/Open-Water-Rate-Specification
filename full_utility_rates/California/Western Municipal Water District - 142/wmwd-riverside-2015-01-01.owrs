@@ -11,7 +11,7 @@ rate_structure:
         5/8"   : 26.38
         3/4"   : 26.38
         1"     : 42.66
-        1 1/2" : 85.34
+        1.5"   : 85.34
         2"     : 105.67
         3"     : 128.02
         4"     : 148.31
@@ -19,17 +19,235 @@ rate_structure:
         8"     : 190.99
         10"    : 211.30
         12"    : 233.63
+        TEMP   : 250
+    reliability_charge: 0.420*usage_ccf
+    commodity_charge: Budget
+    gpcd: 55
+    landscape_factor: 
+        depends_on: 
+            - usage_month
+        values:
+            1   : 0.61 
+            2   : 0.64 
+            3   : 0.75 
+            4   : 1.04
+            5   : 0.95
+            6   : 0.88 
+            7   : 0.94
+            8   : 0.86 
+            9   : 0.74
+            10  : 0.75
+            11  : 0.69 
+            12  : 0.60
+    indoor: hhsize*gpcd*days_in_period*(1/748)
+    outdoor: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget: indoor+outdoor
     tier_starts:
       - 0
-      - 5
-      - 13
-      - 19
-      - 25
+      - indoor
+      - 100%
+      - 125%
+      - 150%
     tier_prices:
       - 1.978
       - 2.306
       - 2.849
       - 4.424
       - 5.314
-    commodity_charge: Tiered
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+reliability_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 26.38
+        3/4"   : 26.38
+        1"     : 42.66
+        1.5"   : 85.34
+        2"     : 105.67
+        3"     : 128.02
+        4"     : 148.31
+        6"     : 168.65
+        8"     : 190.99
+        10"    : 211.30
+        12"    : 233.63
+        TEMP   : 250
+    reliability_charge: 0.420*usage_ccf
+    commodity_charge: Budget
+    gpcd: 55
+    landscape_factor: 
+        depends_on: 
+            - usage_month
+        values:
+            1   : 0.61 
+            2   : 0.64 
+            3   : 0.75 
+            4   : 1.04
+            5   : 0.95
+            6   : 0.88 
+            7   : 0.94
+            8   : 0.86 
+            9   : 0.74
+            10  : 0.75
+            11  : 0.69 
+            12  : 0.60
+    indoor: hhsize*gpcd*days_in_period*(1/748)
+    outdoor: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget: indoor+outdoor
+    tier_starts:
+      - 0
+      - indoor
+      - 100%
+      - 125%
+      - 150%
+    tier_prices:
+      - 1.978
+      - 2.306
+      - 2.849
+      - 4.424
+      - 5.314
+    bill: service_charge+commodity_charge+reliability_charge
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 26.38
+        3/4"   : 26.38
+        1"     : 42.66
+        1.5"   : 85.34
+        2"     : 105.67
+        3"     : 128.02
+        4"     : 148.31
+        6"     : 168.65
+        8"     : 190.99
+        10"    : 211.30
+        12"    : 233.63
+        TEMP   : 250
+    reliability_charge: 0.420*usage_ccf
+    commodity_charge: Budget
+    landscape_factor: 
+        depends_on: 
+            - usage_month
+        values:
+            1   : 0.61 
+            2   : 0.64 
+            3   : 0.75 
+            4   : 1.04
+            5   : 0.95
+            6   : 0.88 
+            7   : 0.94
+            8   : 0.86 
+            9   : 0.74
+            10  : 0.75
+            11  : 0.69 
+            12  : 0.60
+    outdoor: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget: outdoor
+    tier_starts:
+      - 0
+      - 40%
+      - 100%
+      - 125%
+      - 150%
+    tier_prices:
+      - 1.978
+      - 2.306
+      - 2.849
+      - 4.424
+      - 5.314
+    bill: service_charge+commodity_charge+reliability_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 26.38
+        3/4"   : 26.38
+        1"     : 42.66
+        1.5"   : 85.34
+        2"     : 105.67
+        3"     : 128.02
+        4"     : 148.31
+        6"     : 168.65
+        8"     : 190.99
+        10"    : 211.30
+        12"    : 233.63
+        TEMP   : 250
+    reliability_charge: 0.420*usage_ccf
+    commodity_charge: Budget
+    budget: comm_budget
+    tier_starts:
+      - 0
+      - 90%
+      - 100%
+      - 125%
+      - 150%
+    tier_prices:
+      - 1.978
+      - 2.306
+      - 2.849
+      - 4.424
+      - 5.314
+    bill: service_charge+commodity_charge+reliability_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 26.38
+        3/4"   : 26.38
+        1"     : 42.66
+        1.5"   : 85.34
+        2"     : 105.67
+        3"     : 128.02
+        4"     : 148.31
+        6"     : 168.65
+        8"     : 190.99
+        10"    : 211.30
+        12"    : 233.63
+        TEMP   : 250
+    reliability_charge: 0.420*usage_ccf
+    commodity_charge: Budget
+    budget: comm_budget
+    tier_starts:
+      - 0
+      - 90%
+      - 100%
+      - 125%
+      - 150%
+    tier_prices:
+      - 1.978
+      - 2.306
+      - 2.849
+      - 4.424
+      - 5.314
+    bill: service_charge+commodity_charge+reliability_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"   : 26.38
+        3/4"   : 26.38
+        1"     : 42.66
+        1.5"   : 85.34
+        2"     : 105.67
+        3"     : 128.02
+        4"     : 148.31
+        6"     : 168.65
+        8"     : 190.99
+        10"    : 211.30
+        12"    : 233.63
+        TEMP   : 250
+    reliability_charge: 0.420*usage_ccf
+    commodity_charge: Budget
+    budget: comm_budget
+    tier_starts:
+      - 0
+      - 90%
+      - 100%
+      - 125%
+      - 150%
+    tier_prices:
+      - 1.978
+      - 2.306
+      - 2.849
+      - 4.424
+      - 5.314
+    bill: service_charge+commodity_charge+reliability_charge

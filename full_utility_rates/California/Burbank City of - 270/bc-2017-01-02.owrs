@@ -45,9 +45,9 @@ rate_structure:
       depends_on: season
       values:
         Summer:
-          - 1.785*usage_ccf
+          - 1.785
         Winter:
-          - 0.833*usage_ccf
+          - 0.833
     commodity_charge: flat_rate*usage_ccf
     cost_adjustment_charge: 1.689*usage_ccf 
     bill: service_charge+commodity_charge+cost_adjustment_charge

@@ -1,0 +1,34 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Placer County Water Agency
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.63
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 10
+      - 20
+      - 40
+      - 58
+      - 77
+    tier_prices_commodity:
+      - 1.44
+      - 1.55
+      - 1.65
+      - 1.78
+      - 1.89
+      - 2.21
+      - 2.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge

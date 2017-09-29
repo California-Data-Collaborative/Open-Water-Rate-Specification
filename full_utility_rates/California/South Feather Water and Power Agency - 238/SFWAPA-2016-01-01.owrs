@@ -1,0 +1,66 @@
+metadata:
+  effective_date: 2016-01-01
+  utility_name: South Feather Water and Power Agency
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15
+        3/4": 15
+        1": 21
+        1 1/2": 31
+        2": 35.5
+        3": 65
+        4": 87.5
+        6": 120
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 101
+    tier_prices:
+      - 0.35
+      - 0.35
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15
+        1": 21
+        1 1/2": 31
+        2": 35.5
+        3": 65
+        4": 87.5
+        6": 120
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 101
+    tier_prices:
+      - 0.35
+      - 0.35
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15
+        1": 21
+        1 1/2": 31
+        2": 35.5
+        3": 65
+        4": 87.5
+        6": 120
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 101
+    tier_prices:
+      - 0.35
+      - 0.35
+    bill: service_charge+commodity_charge

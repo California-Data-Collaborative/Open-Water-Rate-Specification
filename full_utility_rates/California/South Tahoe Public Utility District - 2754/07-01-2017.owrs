@@ -1,0 +1,89 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: South Tahoe Public Utility District
+  bill_frequency: Quarterly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 134.2
+        1": 224
+        1|1/2": 446.8
+        2": 715
+        3": 1341.6
+        4": 2236.4
+        6": 4471.3
+        8": 7154.5
+        10": 10285.6
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 46
+    tier_prices_commodity:
+      - 1.04
+      - 1.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 134.2
+        1": 224
+        1|1/2": 446.8
+        2": 715
+        3": 1341.6
+        4": 2236.4
+        6": 4471.3
+        8": 7154.5
+        10": 10285.6
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.46
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 134.2
+        1": 224
+        1|1/2": 446.8
+        2": 715
+        3": 1341.6
+        4": 2236.4
+        6": 4471.3
+        8": 7154.5
+        10": 10285.6
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.45
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 6832
+    1": 11386
+    1 1/2": 22773
+    2": 36436
+    3": 72872
+    4": 113863
+    6": 227726
+    8": 409907
+    10": 660405
+    12": 979221
+    16": 1821807

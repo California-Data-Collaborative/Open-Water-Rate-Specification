@@ -1,0 +1,53 @@
+metadata:
+  effective_date: 2017-01-01
+  utility_name: Lamont Public Utility District
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.86
+        1": 44.86
+        1|1/2": 89.44
+        2": 143.16
+        3": 286.6
+        4": 447.76
+        6": 895.24
+        8": 1432.44
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 15.4
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.86
+        1": 44.86
+        1|1/2": 89.44
+        2": 143.16
+        3": 286.6
+        4": 447.76
+        6": 895.24
+        8": 1432.44
+    commodity_charge: flat_rate*usage_ccf
+    flat_rate: 15.4
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.86
+        1": 44.86
+        1|1/2": 89.44
+        2": 143.16
+        3": 286.6
+        4": 447.76
+        6": 895.24
+        8": 1432.44
+    commodity_charge: flat_rate*usage_ccf
+    #flat_rate: Contact District office
+    bill: service_charge+commodity_charge

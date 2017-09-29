@@ -5,7 +5,23 @@ This repository documents how to contribute data to the **Open Water Rate Specif
 
 OWRS is designed so that anyone can contribute standardized water rate data.
 
-### Getting Started
+### Getting Started (Web survey survey.californiadatacollaborative.org)
+
+1. Refer the [OWRS README](https://github.com/California-Data-Collaborative/Open-Water-Rate-Specification/blob/master/README.md) for background information
+2. Find an unclaimed utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
+
+3. Google search the Utility name (Moulton Niguel Water District) and "water rate" to find the page containing water rate information.
+4. Use the [OWRS creator web form](survey.californiadatacollaborative.org) and carefully answer the questions based on what you see on the Agency’s Water rate page.
+5. If you have any questions, please email info@californiadatacollaborative.com.
+6. After you have completed answering all questions, mark the agency as DONE.
+7. Pick another utility!
+8. GOTO #2
+...
+9. Iterate
+...
+10. Pioneer a brighter future for CA!
+
+### Getting Started (Git)
 
 Follow these simple steps
 (The example we use here is Moulton Niguel Water District)
@@ -40,3 +56,4 @@ Follow these simple steps
 ### Open water rate spectacular
 
 If you're attending this event in person, please feel free to ask [Chris](https://github.com/christophertull), [Vyki](https://github.com/vykster), [Patrick](https://github.com/patwater), [Vincent](https://github.com/vincent-hebble) or [David](https://github.com/dmarulli) (in CA) or [Varun](https://github.com/vr00n) / [Vipassana](https://github.com/vipassana) (in NYC) if you have any questions.  Regardless you can always ask questions in the open_water_rates ARGO slack channel.
+

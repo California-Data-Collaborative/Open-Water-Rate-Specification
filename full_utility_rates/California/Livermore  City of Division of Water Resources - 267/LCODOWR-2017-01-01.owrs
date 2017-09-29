@@ -1,0 +1,117 @@
+metadata:
+  effective_date: 2017-04-15
+  utility_name: "Livermore  City of Division of Water Resources"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE: 
+    service_charge:
+      depends_on: 
+        - meter_size
+        - meter_type
+      values:
+        5/8"|Displacement: 15.38
+        #3/4"|Turbine doesn't exist just for testing purposes
+        3/4"|Turbine: 15.38
+        #1",Fireline|Displacement: 15.38
+        1"|Displacement: 38.45
+        1 1/2"|Displacement: 76.90
+        2"|Displacement: 123.04
+        1 1/2"|Turbine: 92.28
+        2"|Turbine: 146.11
+        3"|Turbine: 334.52
+        4"|Turbine: 576.75
+        6"|Turbine: 1230.40
+    tier_starts:
+      - 0
+      - 6
+      - 36
+    tier_prices:
+      - 3.066
+      - 3.619
+      - 5.444
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  RESIDENTIAL_MULTI: 
+    service_charge:
+      depends_on: 
+        - meter_size
+        - meter_type
+      values:
+        5/8"|Displacement: 15.38
+        #1",Fireline|Displacement: 15.38
+        1"|Displacement: 38.45
+        1 1/2"|Displacement: 76.90
+        2"|Displacement: 123.04
+        1 1/2"|Turbine: 92.28
+        2"|Turbine: 146.11
+        3"|Turbine: 334.52
+        4"|Turbine: 576.75
+        6"|Turbine: 1230.40
+    tier_starts:
+      - 0
+      - 51
+    tier_prices:
+      - 3.619
+      - 5.444
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  COMMERCIAL: 
+    service_charge:
+      depends_on: 
+        - meter_size
+        - meter_type
+      values:
+        5/8"|Displacement: 15.38
+        #3/4"|Turbine doesn't exist just for testing purpose
+        3/4"|Turbine: 15.38
+        #1",Fireline|Displacement: 15.38
+        1"|Displacement: 38.45
+        1 1/2"|Displacement: 76.90
+        2"|Displacement: 123.04
+        1 1/2"|Turbine: 92.28
+        2"|Turbine: 146.11
+        3"|Turbine: 334.52
+        4"|Turbine: 576.75
+        6"|Turbine: 1230.40
+    tier_starts:
+      - 0
+      - 51
+    tier_prices:
+      - 3.619
+      - 5.444
+    commodity_charge: Tiered
+    bill : commodity_charge+service_charge
+
+  FIRE_SERVICE: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        1": 4.10
+        1 1/2": 6.55
+        2"  : 8.85
+        3" : 13.15
+        4"  : 17.50
+        6"  : 26.65
+        8"  : 35.10
+        10" : 44.20
+    bill : service_charge
+
+  CITY: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8": 15.50 
+        3/4": 21.05
+        #1"|fire_meter:19.60
+        1": 31.85
+        1 1/2": 59.05
+        2"  : 91.95
+        3" : 195.30
+        4"  : 550.00
+        6"  : 1091.00
+        8"  : 1893.00
+        10" : 2998.00
+    bill : service_charge

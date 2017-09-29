@@ -1,0 +1,164 @@
+---
+metadata:
+
+  effective_date: 2016-10-01
+  utility_name: "City of San Bernardino"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1/2"  : 16.09
+         5/8"  : 16.09
+         3/4"  : 20.15
+         1"    : 28.19
+         1 1/2": 48.40
+         2"    : 72.60
+         3"    : 129.12
+         4"    : 197.36
+         6"    : 411.68
+         8"    : 653.88
+         10"   : 936.44
+    elevation_rate:
+      depends_on: elevation_zone
+      values:
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
+    elevation_charge: elevation_rate * usage_ccf
+    flat_rate: 1.15
+    utility_surcharge: 0.11 *usage_ccf
+    commodity_charge: flat_rate*usage_ccf
+    outside_city_service_price:
+      depends_on: area
+      values:
+        outside_city: 1.5
+        inside_city: 0
+    outside_city_service_charge: outside_city_service_price*usage_ccf
+    # The rate also includes a "conservation charge" that is applied per ccf if
+    # more than a certain amount is used per month. The amount depends on the
+    # type of property and the meter size. This couldn't be modeled in the
+    # specification. See rate sheet: http://www.sbcity.org/civicax/filebank/blobdload.aspx?blobid=4008
+    bill: commodity_charge+service_charge+outside_city_service_charge+utility_surcharge+elevation_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1/2"  : 16.09
+         5/8"  : 16.09
+         3/4"  : 20.15
+         1"    : 28.19
+         1 1/2": 48.40
+         2"    : 72.60
+         3"    : 129.12
+         4"    : 197.36
+         6"    : 411.68
+         8"    : 653.88
+         10"   : 936.44
+    elevation_rate:
+      depends_on: elevation_zone
+      values:
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
+    elevation_charge: elevation_rate*usage_ccf
+    flat_rate: 1.15
+    utility_surcharge: 0.11
+    commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
+    outside_city_service_price:
+      depends_on: area
+      values:
+        outside_city: 1.5
+        inside_city: 0
+    outside_city_service_charge: commodity_charge*usage_ccf
+    # The rate also includes a "conservation charge" that is applied per ccf if
+    # more than a certain amount is used per month. The amount depends on the
+    # type of property and the meter size. This couldn't be modeled in the
+    # specification. See rate sheet: http://www.sbcity.org/civicax/filebank/blobdload.aspx?blobid=4008
+    bill: commodity_charge+service_charge+outside_city_service_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1/2"  : 16.09
+         5/8"  : 16.09
+         3/4"  : 20.15
+         1"    : 28.19
+         1 1/2": 48.40
+         2"    : 72.60
+         3"    : 129.12
+         4"    : 197.36
+         6"    : 411.68
+         8"    : 653.88
+         10"   : 936.44
+    elevation_rate:
+      depends_on: elevation_zone
+      values:
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
+    elevation_charge: elevation_rate*usage_ccf
+    flat_rate: 1.15
+    utility_surcharge: 0.11
+    commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
+    outside_city_service_price:
+      depends_on: area
+      values:
+        outside_city: 1.5
+        inside_city: 0
+    outside_city_service_charge: commodity_charge*usage_ccf
+    # The rate also includes a "conservation charge" that is applied per ccf if
+    # more than a certain amount is used per month. The amount depends on the
+    # type of property and the meter size. This couldn't be modeled in the
+    # specification. See rate sheet: http://www.sbcity.org/civicax/filebank/blobdload.aspx?blobid=4008
+    bill: commodity_charge+service_charge+outside_city_service_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         1/2"  : 16.09
+         5/8"  : 16.09
+         3/4"  : 20.15
+         1"    : 28.19
+         1 1/2": 48.40
+         2"    : 72.60
+         3"    : 129.12
+         4"    : 197.36
+         6"    : 411.68
+         8"    : 653.88
+         10"   : 936.44
+    elevation_rate:
+      depends_on: elevation_zone
+      values:
+        1 : 0.11
+        2 : 0.19
+        3 : 0.19
+        4 : 0.14
+        5 : 0.23
+        6 : 0.23
+    elevation_charge: elevation_rate*usage_ccf
+    flat_rate: 1.15
+    utility_surcharge: 0.11
+    commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
+    outside_city_service_price:
+      depends_on: area
+      values:
+        outside_city: 1.5
+        inside_city: 0
+    outside_city_service_charge: commodity_charge*usage_ccf
+    # The rate also includes a "conservation charge" that is applied per ccf if
+    # more than a certain amount is used per month. The amount depends on the
+    # type of property and the meter size. This couldn't be modeled in the
+    # specification. See rate sheet: http://www.sbcity.org/civicax/filebank/blobdload.aspx?blobid=4008
+    bill: commodity_charge+service_charge+outside_city_service_charge

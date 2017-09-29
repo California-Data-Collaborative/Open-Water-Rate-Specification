@@ -1,0 +1,59 @@
+metadata:
+  effective_date: 2016-07-01
+  utility_name: Brentwood  City of
+  bill_frequency: monthly
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.61
+        3/4": 29.83
+        1": 29.83
+        1|1/2": 29.83
+        2": 29.83
+        3": 29.83
+        4": 29.83
+        6": 29.83
+        8": 29.83
+        10": 29.83
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 6
+      - 15
+      - 22
+    tier_prices:
+      - 2.49
+      - 4.96
+      - 5.93
+      - 6.52
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.61
+        3/4": 29.83
+        1": 29.83
+        1|1/2": 29.83
+        2": 29.83
+        3": 29.83
+        4": 29.83
+        6": 29.83
+        8": 29.83
+        10": 29.83
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 6
+      - 15
+      - 22
+    tier_prices:
+      - 2.49
+      - 4.96
+      - 5.93
+      - 6.52
+    bill: service_charge+commodity_charge

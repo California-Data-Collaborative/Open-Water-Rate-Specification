@@ -1,0 +1,85 @@
+---
+metadata:
+  effective_date: 2017-01-01
+  utility_name: "Santa Clarita Water Division"
+  bill_frequency: monthly
+
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"    : 19.98
+        3/4"    : 25.26
+        1"      : 35.80
+        1 1/2"  : 62.16
+        2"      : 93.80
+        3"      : 178.18
+        4       : 273.11
+        6       : 536.79
+        8       : 853.19
+        10      : 1222.35
+    tier_starts:
+      - 0
+      - 15
+      - 50
+    tier_prices:
+      - 1.8015
+      - 2.0094
+      - 2.6417
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
+
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"    : 19.98
+        3/4"    : 25.26
+        1"      : 35.80
+        1 1/2"  : 62.16
+        2"      : 93.80
+        3"      : 178.18
+        4       : 273.11
+        6       : 536.79
+        8       : 853.19
+        10      : 1222.35
+    flat_rate: 2.6417
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+
+  OTHER:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"    : 19.98
+        3/4"    : 25.26
+        1"      : 35.80
+        1 1/2"  : 62.16
+        2"      : 93.80
+        3"      : 178.18
+        4       : 273.11
+        6       : 536.79
+        8       : 853.19
+        10      : 1222.35
+    flat_rate: 2.0094
+    commodity_charge: flat_rate*usage_ccf
+    bill: commodity_charge+service_charge
+
+  FIRE_SERVICE:
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8"    : 19.98
+        3/4"    : 25.26
+        1"      : 35.80
+        1 1/2"  : 62.16
+        2"      : 93.80
+        3"      : 178.18
+        4       : 273.11
+        6       : 536.79
+        8       : 853.19
+        10      : 1222.35
+    flat_rate: 2.84
+    commodity_charge: flat_rate*meter_size  
+    bill: commodity_charge+service_charge
