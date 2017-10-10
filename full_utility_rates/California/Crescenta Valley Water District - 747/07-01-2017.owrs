@@ -1,0 +1,143 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Crescenta Valley Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        3/4"|inside_city: 47.92
+        3/4"|outside_city: 48.32
+        1"|inside_city: 71.48
+        1"|outside_city: 71.88
+        1|1/2"|inside_city: 130.39
+        1|1/2"|outside_city: 130.79
+        2"|inside_city: 201.1
+        2"|outside_city: 201.5
+        3"|inside_city: 424.97
+        3"|outside_city: 425.37
+        4"|inside_city: 754.9
+        4"|outside_city: 755.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 27
+    tier_prices_commodity:
+      - 4.58
+      - 7.21
+      - 10.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        3/4"|inside_city: 47.92
+        3/4"|outside_city: 48.32
+        1"|inside_city: 71.48
+        1"|outside_city: 71.88
+        1|1/2"|inside_city: 130.39
+        1|1/2"|outside_city: 130.79
+        2"|inside_city: 201.1
+        2"|outside_city: 201.5
+        3"|inside_city: 424.97
+        3"|outside_city: 425.37
+        4"|inside_city: 754.9
+        4"|outside_city: 755.3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.49
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        3/4"|inside_city: 47.92
+        3/4"|outside_city: 48.32
+        1"|inside_city: 71.48
+        1"|outside_city: 71.88
+        1|1/2"|inside_city: 130.39
+        1|1/2"|outside_city: 130.79
+        2"|inside_city: 201.1
+        2"|outside_city: 201.5
+        3"|inside_city: 424.97
+        3"|outside_city: 425.37
+        4"|inside_city: 754.9
+        4"|outside_city: 755.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 81
+    tier_prices_commodity:
+      - 5.01
+      - 9.6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        3/4"|inside_city: 47.92
+        3/4"|outside_city: 48.32
+        1"|inside_city: 71.48
+        1"|outside_city: 71.88
+        1|1/2"|inside_city: 130.39
+        1|1/2"|outside_city: 130.79
+        2"|inside_city: 201.1
+        2"|outside_city: 201.5
+        3"|inside_city: 424.97
+        3"|outside_city: 425.37
+        4"|inside_city: 754.9
+        4"|outside_city: 755.3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.49
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        3/4"|inside_city: 47.92
+        3/4"|outside_city: 48.32
+        1"|inside_city: 71.48
+        1"|outside_city: 71.88
+        1|1/2"|inside_city: 130.39
+        1|1/2"|outside_city: 130.79
+        2"|inside_city: 201.1
+        2"|outside_city: 201.5
+        3"|inside_city: 424.97
+        3"|outside_city: 425.37
+        4"|inside_city: 754.9
+        4"|outside_city: 755.3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.49
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
