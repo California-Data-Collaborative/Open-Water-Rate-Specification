@@ -1,0 +1,41 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Olivehurst Public Utility District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 15
+        1": 25
+        1|1/2": 25
+        2": 25
+        3": 25
+        4": 25
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 43.5
+        1": 66.7
+        1|1/2": 101.2
+        2": 145.7
+        3": 303.5
+        4": 424.9
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
