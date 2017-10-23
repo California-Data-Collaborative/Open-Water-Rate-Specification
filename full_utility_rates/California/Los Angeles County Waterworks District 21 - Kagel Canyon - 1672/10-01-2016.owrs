@@ -1,0 +1,15 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Los Angeles County Waterworks District 21 - Kagel Canyon
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 40.548
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.824
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
