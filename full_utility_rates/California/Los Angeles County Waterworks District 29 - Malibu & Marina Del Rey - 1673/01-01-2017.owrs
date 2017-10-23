@@ -13,12 +13,12 @@ rate_structure:
       values:
         Summer:
           - 0
-          - 20
-          - 50
+          - 21
+          - 51
         Winter:
           - 0
-          - 15
-          - 35
+          - 16
+          - 36
     tier_prices_commodity:
       depends_on:
         - season
