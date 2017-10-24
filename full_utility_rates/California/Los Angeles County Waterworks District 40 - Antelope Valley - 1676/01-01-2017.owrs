@@ -1,0 +1,59 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Los Angeles County Waterworks District 40 - Antelope Valley
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 25.257
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+        - pressure_zone
+      values:
+        Summer|1:
+          - 0
+          - 21
+          - 66
+        Summer|2:
+          - 0
+          - 21
+          - 81
+        Summer|3:
+          - 0
+          - 21
+          - 86
+        Winter|1:
+          - 0
+          - 16
+          - 31
+        Winter|2:
+          - 0
+          - 16
+          - 31
+        Winter|3:
+          - 0
+          - 16
+          - 36
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 1.08
+          - 1.26
+          - 1.8
+        2:
+          - 1.224
+          - 1.428
+          - 2.04
+        3:
+          - 1.49
+          - 1.738
+          - 2.438
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
