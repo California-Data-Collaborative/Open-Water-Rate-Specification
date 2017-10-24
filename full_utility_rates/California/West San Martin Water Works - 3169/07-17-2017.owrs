@@ -1,0 +1,162 @@
+metadata:
+  effective_date: 07/12/2017
+  utility_name: West San Martin Water Works
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.45
+         3/4"  : 23.45
+         1"    : 32.83
+         1 1/2": 42.22
+         2"    : 56.29
+         3"    : 70.36
+         4"    : 82.09
+         6"    : 140.71
+         8"    : 187.62
+         10"   : 234.52 
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 2.382
+      - 2.815
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.45
+         3/4"  : 23.45
+         1"    : 32.83
+         1 1/2": 42.22
+         2"    : 56.29
+         3"    : 70.36
+         4"    : 82.09
+         6"    : 140.71
+         8"    : 187.62
+         10"   : 234.52 
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 2.382
+      - 2.815
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.45
+         3/4"  : 23.45
+         1"    : 32.83
+         1 1/2": 42.22
+         2"    : 56.29
+         3"    : 70.36
+         4"    : 82.09
+         6"    : 140.71
+         8"    : 187.62
+         10"   : 234.52 
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 2.382
+      - 2.815
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.45
+         3/4"  : 23.45
+         1"    : 32.83
+         1 1/2": 42.22
+         2"    : 56.29
+         3"    : 70.36
+         4"    : 82.09
+         6"    : 140.71
+         8"    : 187.62
+         10"   : 234.52 
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 2.382
+      - 2.815
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.45
+         3/4"  : 23.45
+         1"    : 32.83
+         1 1/2": 42.22
+         2"    : 56.29
+         3"    : 70.36
+         4"    : 82.09
+         6"    : 140.71
+         8"    : 187.62
+         10"   : 234.52 
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 2.382
+      - 2.815
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"  : 23.45
+         3/4"  : 23.45
+         1"    : 32.83
+         1 1/2": 42.22
+         2"    : 56.29
+         3"    : 70.36
+         4"    : 82.09
+         6"    : 140.71
+         8"    : 187.62
+         10"   : 234.52 
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 9
+    tier_prices:
+      - 2.382
+      - 2.815
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
