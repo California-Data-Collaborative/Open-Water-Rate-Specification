@@ -1,5 +1,5 @@
 metadata:
-  effective_date: 09/15/2017
+  effective_date: 07/01/2017
   utility_name: Fontana Water Company
   bill_frequency: Monthly
   bill_unit: ccf
@@ -9,20 +9,47 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        5/8": 16.85
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity: 3.4525
+        5/8"  : 17.02
+        3/4"  : 25.53
+        1"    : 42.56
+        1 1/2": 85.11
+        2"    : 136.20
+        3"    : 255.3
+        4"    : 425.60
+        6"    : 850
+        8"    : 1360
+        10"   : 1960
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 17
+    tier_prices:
+      - 3.32
+      - 3.8181
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  OTHER:
-    service_charge: 0
-    commodity_charge: 0
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8"  : 17.02
+        3/4"  : 25.53
+        1"    : 42.56
+        1 1/2": 85.11
+        2"    : 136.20
+        3"    : 255.3
+        4"    : 425.60
+        6"    : 850
+        8"    : 1360
+        10"   : 1960
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.4884
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: >-
-      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
+    bill: service_charge+commodity_charge
