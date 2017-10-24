@@ -5,7 +5,7 @@ metadata:
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 0
+    service_charge: 25.257
     commodity_charge: Tiered
     tier_starts_commodity:
       depends_on:
@@ -14,28 +14,28 @@ rate_structure:
       values:
         Summer|1:
           - 0
-          - 20
-          - 65
+          - 21
+          - 66
         Summer|2:
           - 0
-          - 20
-          - 80
+          - 21
+          - 81
         Summer|3:
           - 0
-          - 20
-          - 85
+          - 21
+          - 86
         Winter|1:
           - 0
-          - 15
-          - 30
+          - 16
+          - 31
         Winter|2:
           - 0
-          - 15
-          - 30
+          - 16
+          - 31
         Winter|3:
           - 0
-          - 15
-          - 35
+          - 16
+          - 36
     tier_prices_commodity:
       depends_on:
         - pressure_zone
