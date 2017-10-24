@@ -1,0 +1,163 @@
+metadata:
+  effective_date: 10/01/2016
+  utility_name: City of North Las Vegas Utility
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.64
+        3/4": 10.64
+        1": 12.77
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 7
+      - 16
+      - 25
+    tier_prices:
+      - 1.90
+      - 2.46
+      - 3.20
+      - 4.14
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.85
+        3/4": 18.85
+        1": 27.36
+        1|1/2": 51.68
+        2": 80
+        3": 157.47
+        4": 243.8
+        6": 479.4
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 5
+      - 11
+      - 17
+    tier_prices:
+      - 1.90
+      - 2.46
+      - 3.20
+      - 4.14
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.85
+        3/4": 18.85
+        1": 27.36
+        1|1/2": 51.68
+        2": 80
+        3": 157.47
+        4": 243.8
+        6": 479.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.23
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.85
+        3/4": 18.85
+        1": 27.36
+        1|1/2": 51.68
+        2": 80
+        3": 157.47
+        4": 243.8
+        6": 479.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.23
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.61
+        3/4": 3.61
+        1": 6.84
+        1|1/2": 13.67
+        2": 21.88
+        3": 43.76
+        4": 68.37
+        6": 136.74
+        8": 218.79
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 1420
+    3/4": 1420
+    1": 2367
+    1 1/2": 4733
+    2": 7573
+    3": 16567
+    4": 29820
+    6": 66267
+    8": 113600
+    10": 179867
+    12": 236667
+    14": 285000
