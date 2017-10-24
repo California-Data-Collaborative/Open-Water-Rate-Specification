@@ -26,8 +26,8 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 7
-      - 16
+      - 8
+      - 17
     tier_prices_commodity:
       - 3.45
       - 4.74
@@ -36,8 +36,8 @@ rate_structure:
     variable_drought_surcharge: Tiered
     tier_starts_drought:
       - 0
-      - 7
-      - 16
+      - 8
+      - 17
     tier_prices_drought:
       - 0.86
       - 1.19
@@ -72,7 +72,61 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  NON_RESIDENTIAL:
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.2
+        3/4": 45.2
+        1": 68.26
+        1|1/2": 125.96
+        2": 195.16
+        3": 379.74
+        4": 587.4
+        6": 1164.1
+        8": 1856.22
+        10": 2663.66
+        12": 3701.88
+        14": 4740
+        16": 6008.88
+        18": 7277.72
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 1.21
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.2
+        3/4": 45.2
+        1": 68.26
+        1|1/2": 125.96
+        2": 195.16
+        3": 379.74
+        4": 587.4
+        6": 1164.1
+        8": 1856.22
+        10": 2663.66
+        12": 3701.88
+        14": 4740
+        16": 6008.88
+        18": 7277.72
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 1.21
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
     service_charge:
       depends_on:
         - meter_size
