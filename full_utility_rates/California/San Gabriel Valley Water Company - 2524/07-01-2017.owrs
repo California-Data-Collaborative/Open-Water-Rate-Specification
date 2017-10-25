@@ -1,0 +1,52 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: San Gabriel Valley Water Company
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.43
+        3/4": 33.65
+        1": 56.09
+        2": 179.50
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 14
+    tier_prices:
+      - 3.178
+      - 3.6375
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.43
+        3/4": 33.65
+        1": 56.09
+        2": 179.50
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.3159
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
