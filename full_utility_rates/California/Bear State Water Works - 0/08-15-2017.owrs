@@ -1,0 +1,22 @@
+metadata:
+  effective_date: 08/15/2017
+  utility_name: Bear State Water Works
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 4.17
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 12
+    tier_prices_commodity:
+      - 0
+      - 2.25
+      - 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
