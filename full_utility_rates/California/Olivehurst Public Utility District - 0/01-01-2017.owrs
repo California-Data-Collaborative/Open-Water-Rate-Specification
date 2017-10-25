@@ -15,8 +15,28 @@ rate_structure:
         2": 25
         3": 25
         4": 25
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity: 1.5
+    commodity_charge: Tiered
+    tier_starts:
+      depends_on: meter_size
+      values:
+        3/4": 
+          - 0
+          - 7
+        1":  
+          - 0
+          - 16
+        1|1/2": 
+          - 0
+          - 16
+        2": 
+          - 0
+          - 16
+        3":
+          - 0
+          - 16
+    tier_prices:
+      - 0
+      - 1.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
