@@ -1,0 +1,145 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Menlo Park Municipal Water District  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1|1/2": 13.49
+        2": 21.59
+        3": 40.4
+        4": 67.61
+        6": 134.95
+        8": 215.92
+        10": 310.38
+        12": 580.28
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.49
+        3/4": 22.49
+        1": 37.49
+        1|1/2": 74.97
+        2": 119.95
+        3": 224.92
+        4": 375.6
+        6": 749.72
+        8": 1199.54
+        10": 1724.34
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+    tier_prices_commodity:
+      - 5.98
+      - 7.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.49
+        3/4": 22.49
+        1": 37.49
+        1|1/2": 74.97
+        2": 119.95
+        3": 224.92
+        4": 375.6
+        6": 749.72
+        8": 1199.54
+        10": 1724.34
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+    tier_prices_commodity:
+      - 5.98
+      - 7.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.49
+        3/4": 22.49
+        1": 37.49
+        1|1/2": 74.97
+        2": 119.95
+        3": 224.92
+        4": 375.6
+        6": 749.72
+        8": 1199.54
+        10": 1724.34
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+    tier_prices_commodity:
+      - 5.98
+      - 7.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.49
+        3/4": 22.49
+        1": 37.49
+        1|1/2": 74.97
+        2": 119.95
+        3": 224.92
+        4": 375.6
+        6": 749.72
+        8": 1199.54
+        10": 1724.34
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+    tier_prices_commodity:
+      - 5.98
+      - 7.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 5203
+    3/4": 5203
+    1": 8671
+    1 1/2": 17341
+    2": 27747
+    3": 52026
+    4": 86883
+    6": 173419
