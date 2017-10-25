@@ -1,12 +1,75 @@
 metadata:
-  effective_date: 04/01/2017
+  effective_date: 01/01/2017
   utility_name: Arcadia  City Of
   bill_frequency: Monthly
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 56.03
-    commodity_charge: 0
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+        3/4": 20.34
+        5/8": 22.17
+        1": 25.82
+        1|1/2": 34.97
+        2": 45.94
+        3": 71.55
+        4": 108.13
+        6": 217.87
+        8": 345.9
+        10" 528.8
+    commodity_charge: Tiered
+    tier_starts:
+      depends_on: 
+        - meter_size
+        - season
+      values:
+        5/8"|Winter:
+          - 0
+          - 23
+          - 29
+          - 35
+        3/4"|Winter:
+          - 0
+          - 23
+          - 37
+          - 47
+        1"|Winter:
+          - 0
+          - 23
+          - 43
+          - 59
+        2"|Winter:
+          - 0
+          - 23
+          - 61
+          - 87
+        5/8"|Summer:
+          - 0
+          - 23
+          - 35
+          - 45
+        3/4"|Summer:
+          - 0
+          - 23
+          - 49
+          - 67
+        1"|Summer:
+          - 0
+          - 23
+          - 63
+          - 93
+        2"|Summer:
+          - 0
+          - 23
+          - 95
+          - 141
+    tier_prices:
+      - 1.54
+      - 1.88
+      - 2.13
+      - 2.29
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
