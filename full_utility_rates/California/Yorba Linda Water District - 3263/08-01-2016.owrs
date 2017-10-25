@@ -1,0 +1,86 @@
+metadata:
+  effective_date: 08/01/2016
+  utility_name: Yorba Linda Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.45
+        3/4": 19.45
+        1": 32.49
+        1|1/2": 64.78
+        2": 103.69
+        3": 227.04
+        4": 408.55
+        6": 907.95
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.45
+        3/4": 19.45
+        1": 32.49
+        1|1/2": 64.78
+        2": 103.69
+        3": 227.04
+        4": 408.55
+        6": 907.95
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.45
+        3/4": 19.45
+        1": 32.49
+        1|1/2": 64.78
+        2": 103.69
+        3": 227.04
+        4": 408.55
+        6": 907.95
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.45
+        3/4": 19.45
+        1": 32.49
+        1|1/2": 64.78
+        2": 103.69
+        3": 227.04
+        4": 408.55
+        6": 907.95
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
