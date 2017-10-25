@@ -17,7 +17,8 @@ rate_structure:
         3": 227.04
         4": 408.55
         6": 907.95
-    commodity_charge: 0
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -36,7 +37,8 @@ rate_structure:
         3": 227.04
         4": 408.55
         6": 907.95
-    commodity_charge: 0
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -55,7 +57,8 @@ rate_structure:
         3": 227.04
         4": 408.55
         6": 907.95
-    commodity_charge: 0
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -74,7 +77,8 @@ rate_structure:
         3": 227.04
         4": 408.55
         6": 907.95
-    commodity_charge: 0
+    flat_rate: 2.70
+    commodity_charge: flat_rate*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
