@@ -1,12 +1,118 @@
 metadata:
-  effective_date: 04/01/2017
+  effective_date: 07/10/2017
   utility_name: Golden State Water Company Bell-Bell Gardens
   bill_frequency: Monthly
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 56.03
-    commodity_charge: 0
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8": 16.69
+        3/4": 25.04
+        1": 41.73
+        1|1/2": 83.45 
+        2": 133.52
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 12
+      - 16
+    tier_prices:
+      - 3.902
+      - 4.487
+      - 5.160
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8": 16.69
+        3/4": 25.04
+        1": 41.73
+        1|1/2": 83.45 
+        2": 133.52
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 12
+      - 16
+    tier_prices:
+      - 3.902
+      - 4.487
+      - 5.160
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8": 22.39
+        3/4": 33.59
+        1": 55.98
+        1|1/2": 111.95
+        2": 179.12
+        3": 335.85
+        4": 559.75
+        6": 1119.50
+        8": 1791.20
+        10": 2574.85
+    flat_rate: 3.902
+    commodity_charge: flat_rate*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8": 22.39
+        3/4": 33.59
+        1": 55.98
+        1|1/2": 111.95
+        2": 179.12
+        3": 335.85
+        4": 559.75
+        6": 1119.50
+        8": 1791.20
+        10": 2574.85
+    flat_rate: 3.902
+    commodity_charge: flat_rate*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8": 22.39
+        3/4": 33.59
+        1": 55.98
+        1|1/2": 111.95
+        2": 179.12
+        3": 335.85
+        4": 559.75
+        6": 1119.50
+        8": 1791.20
+        10": 2574.85
+    flat_rate: 3.902
+    commodity_charge: flat_rate*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
