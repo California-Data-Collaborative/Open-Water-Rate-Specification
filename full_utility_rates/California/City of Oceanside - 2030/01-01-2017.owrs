@@ -1,0 +1,183 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: City of Oceanside
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.2
+        3/4": 15.2
+        1": 32.77
+        1|1/2": 62.08
+        2": 97.24
+        3": 179.27
+        4": 296.46
+        6": 589.44
+        8": 941.01
+        10": 1351.18
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 14
+    tier_prices_commodity:
+      - 2.45
+      - 3.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.62
+        3/4": 21.62
+        1": 48.85
+        1|1/2": 94.22
+        2": 148.67
+        3": 275.70
+        4": 457.20
+        6": 910.92
+        8": 1455.38
+        10": 2090.60
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+    tier_prices_commodity:
+      - 2.45
+      - 2.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.47
+        3/4": 22.47
+        1": 50.95
+        1|1/2": 98.43
+        2": 155.39
+        3": 288.31
+        4": 478.2
+        6": 952.93
+        8": 1522.6
+        10": 2187.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.18
+        3/4": 22.18
+        1": 50.24
+        1|1/2": 97
+        2": 153.11
+        3": 284.04
+        4": 471.06
+        6": 938.65
+        8": 1499.77
+        10": 2154.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.61
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.18
+        3/4": 22.18
+        1": 50.24
+        1|1/2": 97
+        2": 153.11
+        3": 284.04
+        4": 471.06
+        6": 938.65
+        8": 1499.77
+        10": 2154.4
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.61
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.47
+        3/4": 22.47
+        1": 50.95
+        1|1/2": 98.43
+        2": 155.39
+        3": 288.31
+        4": 478.2
+        6": 952.93
+        8": 1522.6
+        10": 2187.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.7
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.47
+        3/4": 22.47
+        1": 50.95
+        1|1/2": 98.43
+        2": 155.39
+        3": 288.31
+        4": 478.2
+        6": 952.93
+        8": 1522.6
+        10": 2187.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.42
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 10837
+    3/4": 13677
+    1": 22451
+    1 1/2": 43871
+    2": 72257
+    3": 134707
+    4": 226575
+    6": 438710
+    8": 722564

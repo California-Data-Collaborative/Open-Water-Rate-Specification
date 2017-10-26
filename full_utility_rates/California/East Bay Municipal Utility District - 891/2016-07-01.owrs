@@ -1,7 +1,7 @@
 ---
 metadata:
   effective_date: 2016-07-01
-  utility_name: "East Bay Municipal Utilities District"
+  utility_name: "East Bay Municipal Utility District"
   bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
