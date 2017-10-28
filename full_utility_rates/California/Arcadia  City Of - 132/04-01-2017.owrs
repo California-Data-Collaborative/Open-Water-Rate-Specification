@@ -18,7 +18,7 @@ rate_structure:
         4": 108.13
         6": 217.87
         8": 345.9
-        10" 528.8
+        10": 528.8
     commodity_charge: Tiered
     tier_starts:
       depends_on: 
