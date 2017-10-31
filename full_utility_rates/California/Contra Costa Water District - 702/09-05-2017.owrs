@@ -10,6 +10,7 @@ rate_structure:
         - meter_size
       values:
         5/8": 17.95
+        3/4": 17.95
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -28,6 +29,7 @@ rate_structure:
         - meter_size
       values:
         5/8": 17.95
+        3/4": 17.95
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -46,6 +48,7 @@ rate_structure:
         - meter_size
       values:
         5/8": 17.95
+        3/4": 17.95
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0

@@ -35,7 +35,7 @@ rate_structure:
     utility_surcharge: 0.11 *usage_ccf
     commodity_charge: flat_rate*usage_ccf
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 1.5
         inside_city: 0
@@ -74,7 +74,7 @@ rate_structure:
     utility_surcharge: 0.11
     commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 1.5
         inside_city: 0
@@ -113,7 +113,7 @@ rate_structure:
     utility_surcharge: 0.11
     commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 1.5
         inside_city: 0
@@ -152,7 +152,7 @@ rate_structure:
     utility_surcharge: 0.11
     commodity_charge: flat_rate*usage_ccf+utility_surcharge*usage_ccf+elevation_charge
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 1.5
         inside_city: 0

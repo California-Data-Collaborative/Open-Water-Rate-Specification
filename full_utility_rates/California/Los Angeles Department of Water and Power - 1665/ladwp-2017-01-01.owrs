@@ -168,7 +168,7 @@ rate_structure:
         - 8.206
     commodity_charge: Tiered
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 0.441
         inside_city: 0
@@ -194,7 +194,7 @@ rate_structure:
       - 9.205
     commodity_charge: Budget
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 0.441
         inside_city: 0
@@ -220,7 +220,7 @@ rate_structure:
       - 8.711
     commodity_charge: Budget
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 0.441
         inside_city: 0
@@ -243,7 +243,7 @@ rate_structure:
       - 5.762
       - 8.711
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: 0.441
         inside_city: 0
@@ -266,7 +266,7 @@ rate_structure:
       - 5.762
       - 8.711
     outside_city_service_price:
-      depends_on: area
+      depends_on: city_limits
       values:
         outside_city: outside_city_service_rate
         inside_city: 0.441

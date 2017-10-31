@@ -8,7 +8,7 @@ rate_structure:
     service_charge:
       depends_on: 
         - meter_size
-        - area
+        - city_limits
       values:
         #5/8",Low Income|inside_city: 5.60
         5/8"|inside_city: 16.00
@@ -38,7 +38,7 @@ rate_structure:
       - 26
     tier_prices:
       depends_on:
-       - area
+       - city_limits
       values:
         inside_city:
           - 5.80
@@ -55,7 +55,7 @@ rate_structure:
     service_charge:
       depends_on: 
         - meter_size
-        - area
+        - city_limits
       values:
         #5/8",Low Income|inside_city: 5.60
         5/8"|inside_city: 16.00
@@ -85,7 +85,7 @@ rate_structure:
       - 21
     tier_prices:
       depends_on:
-       - area
+       - city_limits
       values:
         inside_city:
           - 6.97
@@ -102,7 +102,7 @@ rate_structure:
     service_charge:
       depends_on: 
         - meter_size
-        - area
+        - city_limits
       values:
         #5/8",Low Income|inside_city: 5.60
         5/8"|inside_city: 16.00
@@ -131,7 +131,7 @@ rate_structure:
       - 201
     tier_prices:
       depends_on:
-       - area
+       - city_limits
       values:
         inside_city:
           - 6.95
@@ -146,7 +146,7 @@ rate_structure:
     service_charge:
       depends_on: 
       - meter_size
-      - area
+      - city_limits
       values:
         2"|inside_city: 25.00
         4"|inside_city: 29.00

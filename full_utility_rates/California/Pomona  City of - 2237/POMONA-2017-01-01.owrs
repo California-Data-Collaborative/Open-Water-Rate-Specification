@@ -7,7 +7,7 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
-        - area
+        - city_limits
       values:
         5/8"|inside_city: 49.45
         5/8"|outside_city: 61.8
@@ -32,7 +32,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts:
       depends_on:
-        - area
+        - city_limits
       values:
         inside_city:
           - 0
@@ -44,7 +44,7 @@ rate_structure:
           - 76
     tier_prices:
       depends_on:
-        - area
+        - city_limits
       values:
         inside_city:
           - 0.96
@@ -59,7 +59,7 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
-        - area
+        - city_limits
       values:
         5/8"|inside_city: 49.45
         5/8"|outside_city: 61.8
@@ -84,7 +84,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts:
       depends_on:
-        - area
+        - city_limits
       values:
         inside_city:
           - 0
@@ -94,7 +94,7 @@ rate_structure:
           - 16
     tier_prices:
       depends_on:
-        - area
+        - city_limits
       values:
         inside_city:
           - 0.96
@@ -107,7 +107,7 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
-        - area
+        - city_limits
       values:
         5/8"|inside_city: 49.45
         5/8"|outside_city: 61.8
@@ -132,7 +132,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts:
       depends_on:
-        - area
+        - city_limits
       values:
         inside_city:
           - 0
@@ -142,7 +142,7 @@ rate_structure:
           - 16
     tier_prices:
       depends_on:
-        - area
+        - city_limits
       values:
         inside_city:
           - 0.96
@@ -155,7 +155,7 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
-        - area
+        - city_limits
       values:
         5/8"|inside_city: 69.03
         5/8"|outside_city: 87.46
