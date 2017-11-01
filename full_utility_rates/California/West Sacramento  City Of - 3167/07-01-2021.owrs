@@ -1,0 +1,75 @@
+metadata:
+  effective_date: 07/01/2021
+  utility_name: West Sacramento  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 40.98
+        1|1/2": 81.78
+        2": 131.02
+        3": 262.13
+        4": 409.61
+        6": 818.94
+        8": 1310.45
+        10": 1883.65
+        12": 2764.37
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.43
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 40.98
+        1|1/2": 81.78
+        2": 131.02
+        3": 262.13
+        4": 409.61
+        6": 818.94
+        8": 1310.45
+        10": 1883.65
+        12": 2764.37
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.43
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 40.98
+        1|1/2": 81.78
+        2": 131.02
+        3": 262.13
+        4": 409.61
+        6": 818.94
+        8": 1310.45
+        10": 1883.65
+        12": 2764.37
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.43
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
