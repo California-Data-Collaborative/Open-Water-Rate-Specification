@@ -1,0 +1,147 @@
+metadata:
+  effective_date: 04/01/2017
+  utility_name: Woodland  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 1201
+      - 3601
+    tier_prices_commodity:
+      - 3.2
+      - 3.85
+      - 4.74
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.31
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.31
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.31
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.31
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.31
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 44.85
+        1": 44.85
+        1|1/2": 44.85
+        2": 44.85
+        3": 84.25
+        4": 140.4
+        6": 280.35
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.71
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
