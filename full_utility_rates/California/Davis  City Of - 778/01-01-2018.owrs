@@ -1,0 +1,90 @@
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Davis  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.2
+        3/4": 12.2
+        1": 18.53
+        1|1/2": 33.15
+        2": 52.28
+        3": 96.25
+        4": 147.49
+        6": 286.31
+        8": 451.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.61
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.2
+        3/4": 12.2
+        1": 18.53
+        1|1/2": 33.15
+        2": 52.28
+        3": 96.25
+        4": 147.49
+        6": 286.31
+        8": 451.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.66
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.2
+        3/4": 12.2
+        1": 18.53
+        1|1/2": 33.15
+        2": 52.28
+        3": 96.25
+        4": 147.49
+        6": 286.31
+        8": 451.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.71
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.2
+        3/4": 12.2
+        1": 18.53
+        1|1/2": 33.15
+        2": 52.28
+        3": 96.25
+        4": 147.49
+        6": 286.31
+        8": 451.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
