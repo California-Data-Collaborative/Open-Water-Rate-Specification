@@ -1,0 +1,75 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Turlock  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.74
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.74
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge: 3
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 24.1
+    3/4": 24.1
+    1": 24.1
+    1 1/2": 48.2
+    2": 77.2
+    3": 169
+    4": 290
+    6": 603
+    8": 1157
+    10": 1832
