@@ -1,0 +1,33 @@
+metadata:
+  effective_date: 12/19/2016
+  utility_name: Arrowbear Park County Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 27.5
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 7
+    tier_prices:
+      - 0
+      - 6.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 5
+      - 7
+      - 11
+      - 21
+    tier_prices_drought:
+      - 0
+      - 6.5
+      - 7.1
+      - 7.7
+      - 8.3
+      - 9.5
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
