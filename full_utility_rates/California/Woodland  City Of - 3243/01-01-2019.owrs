@@ -125,7 +125,7 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  OTHER:
+  IRRIGATION:
     service_charge:
       depends_on:
         - meter_size
