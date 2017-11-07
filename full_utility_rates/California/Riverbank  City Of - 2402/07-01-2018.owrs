@@ -1,0 +1,151 @@
+metadata:
+  effective_date: 07/01/2018
+  utility_name: Riverbank  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 25.78
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.800
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.377
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.78
+        3/4": 25.78
+        1": 25.78
+        1|1/2": 25.78
+        2": 41.24
+        3": 82.49
+        4": 128.89
+        6": 128.89
+        8": 128.89
+        10": 128.89
+        12": 128.89
+        14": 128.89
+        16": 128.89
+        18": 128.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.800
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.377
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.78
+        3/4": 25.78
+        1": 25.78
+        1|1/2": 25.78
+        2": 41.24
+        3": 82.49
+        4": 128.89
+        6": 128.89
+        8": 128.89
+        10": 128.89
+        12": 128.89
+        14": 128.89
+        16": 128.89
+        18": 128.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.800
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.377
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.78
+        3/4": 25.78
+        1": 25.78
+        1|1/2": 25.78
+        2": 41.24
+        3": 82.49
+        4": 128.89
+        6": 128.89
+        8": 128.89
+        10": 128.89
+        12": 128.89
+        14": 128.89
+        16": 128.89
+        18": 128.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.800
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.377
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.78
+        3/4": 25.78
+        1": 25.78
+        1|1/2": 25.78
+        2": 41.24
+        3": 82.49
+        4": 128.89
+        6": 128.89
+        8": 128.89
+        10": 128.89
+        12": 128.89
+        14": 128.89
+        16": 128.89
+        18": 128.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.800
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.377
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.78
+        3/4": 25.78
+        1": 25.78
+        1|1/2": 25.78
+        2": 41.24
+        3": 82.49
+        4": 128.89
+        6": 128.89
+        8": 128.89
+        10": 128.89
+        12": 128.89
+        14": 128.89
+        16": 128.89
+        18": 128.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.800
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.377
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
