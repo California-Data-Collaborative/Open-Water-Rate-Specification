@@ -1,0 +1,144 @@
+metadata:
+  effective_date: 07/01/2020
+  utility_name: West Sacramento  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.37
+        3/4": 24.37
+        1": 40.58
+        1|1/2": 80.97
+        2": 129.73
+        3": 259.54
+        4": 405.56
+        6": 810.84
+        8": 1297.47
+        10": 1865
+        12": 2737
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.37
+        3/4": 24.37
+        1": 40.58
+        1|1/2": 80.97
+        2": 129.73
+        3": 259.54
+        4": 405.56
+        6": 810.84
+        8": 1297.47
+        10": 1865
+        12": 2737
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.37
+        3/4": 24.37
+        1": 40.58
+        1|1/2": 80.97
+        2": 129.73
+        3": 259.54
+        4": 405.56
+        6": 810.84
+        8": 1297.47
+        10": 1865
+        12": 2737
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.37
+        3/4": 24.37
+        1": 40.58
+        1|1/2": 80.97
+        2": 129.73
+        3": 259.54
+        4": 405.56
+        6": 810.84
+        8": 1297.47
+        10": 1865
+        12": 2737
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.37
+        3/4": 24.37
+        1": 40.58
+        1|1/2": 80.97
+        2": 129.73
+        3": 259.54
+        4": 405.56
+        6": 810.84
+        8": 1297.47
+        10": 1865
+        12": 2737
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.37
+        3/4": 24.37
+        1": 40.58
+        1|1/2": 80.97
+        2": 129.73
+        3": 259.54
+        4": 405.56
+        6": 810.84
+        8": 1297.47
+        10": 1865
+        12": 2737
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
