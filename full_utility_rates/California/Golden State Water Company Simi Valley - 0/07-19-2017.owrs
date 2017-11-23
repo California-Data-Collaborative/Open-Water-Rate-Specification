@@ -1,0 +1,52 @@
+metadata:
+  effective_date: 07/19/2017
+  utility_name: Golden State Water Company Simi Valley
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.55
+        3/4": 26.33
+        1": 43.88
+        1|1/2": 87.75
+        2": 140.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 1300
+      - 2000
+    tier_prices_commodity:
+      - 3.707
+      - 4.264
+      - 4.903
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.52
+        3/4": 27.78
+        1": 46.3
+        1|1/2": 92.6
+        2": 148.16
+        3": 277.8
+        4": 463
+        6": 926
+        8": 1481.6
+        10": 2129.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.707
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
