@@ -11,7 +11,7 @@ OWRS is designed so that anyone can contribute standardized water rate data.
 2. Find an unclaimed utility on the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542) and put your name in the "Assignment" column to claim it as yours.
 
 3. Google search the Utility name (Moulton Niguel Water District) and "water rate" to find the page containing water rate information.
-4. Use the [OWRS creator web form](survey.californiadatacollaborative.org) and carefully answer the questions based on what you see on the Agency’s Water rate page.
+4. Use the [OWRS creator web form](https://survey.californiadatacollaborative.org) and carefully answer the questions based on what you see on the Agency’s Water rate page.
 5. If you have any questions, please email info@californiadatacollaborative.com.
 6. After you have completed answering all questions, mark the agency as DONE in the [spreadsheet tracking OWRS status for California water utilities](https://docs.google.com/spreadsheets/d/1THqfs-tCxQiov65hHD3pG-9wRULHMo1aANy3EOiEAQ4/edit#gid=1887640542).
 7. Pick another utility!
