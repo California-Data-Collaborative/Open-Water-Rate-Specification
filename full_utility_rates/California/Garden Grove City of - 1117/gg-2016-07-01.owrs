@@ -1,4 +1,4 @@
-All customers with 5/8" x 3/4" meters who use 6 units or less of water in a billing period shall pay only the minimum charge. If usage exceeds 6 units, then the water customer shall pay the minimum charge plus the commodity delivery charge and capital improvements charge.
+#All customers with 5/8" x 3/4" meters who use 6 units or less of water in a billing period shall pay only the minimum charge. If usage exceeds 6 units, then the water customer shall pay the minimum charge plus the commodity delivery charge and capital improvements charge.
 ---
 metadata:
   effective_date: 2016-07-01
@@ -78,13 +78,13 @@ rate_structure:
       - 3.09
       - 3.18
       
-    capital_improvemnets_charge:
+    capital_improvements_charge:
       depends_on: meter_size
       values:
           5/8"  : 1.47
           3/4"  : 1.47
           1"    : 2.07
-          1.5"  : 2.64
+          1 1/2"  : 2.64
           2"    : 4.27
           3"    : 16.19
           4"    : 20.60
@@ -123,7 +123,7 @@ rate_structure:
       - 3.09
       - 3.18
       
-    capital_improvemnets_charge:
+    capital_improvements_charge:
       depends_on: meter_size
       values:
           5/8"  : 1.47

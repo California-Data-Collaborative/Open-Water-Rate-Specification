@@ -12,7 +12,7 @@ rate_structure:
         5/8": 16.46
         3/4": 20.48
         1": 31.63
-        1|1/2": 62.83
+        1 1/2": 62.83
         2": 131.54
     commodity_charge: Budget
     gpcd: 55
@@ -43,7 +43,7 @@ rate_structure:
         5/8": 16.46
         3/4": 20.48
         1": 31.63
-        1|1/2": 62.83
+        1 1/2": 62.83
         2": 131.54
     commodity_charge: Budget
     gpcd: 55
@@ -74,7 +74,7 @@ rate_structure:
         5/8": 16.46
         3/4": 20.48
         1": 31.63
-        1|1/2": 62.83
+        1 1/2": 62.83
         2": 131.54
     commodity_charge: Budget
     outdoor: landscape_factor*et_amount*irr_area*0.62*(1/748)
@@ -106,7 +106,7 @@ rate_structure:
         5/8": 16.46
         3/4": 20.48
         1": 31.63
-        1|1/2": 62.83
+        1 1/2": 62.83
         2": 131.54
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.89
@@ -123,7 +123,7 @@ rate_structure:
         5/8": 16.46
         3/4": 20.48
         1": 31.63
-        1|1/2": 62.83
+        1 1/2": 62.83
         2": 131.54
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.89
@@ -140,7 +140,7 @@ rate_structure:
         5/8": 16.46
         3/4": 20.48
         1": 31.63
-        1|1/2": 62.83
+        1 1/2": 62.83
         2": 131.54
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.89

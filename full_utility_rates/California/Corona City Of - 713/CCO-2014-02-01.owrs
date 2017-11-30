@@ -214,16 +214,16 @@ rate_structure:
     bill: "commodity_charge+service_charge"
 
   FIRE_SERVICE:
-  service_charge:
+   service_charge:
     depends_on: meter_size
     values:
       2"   : 16.25
       2 1/2": 21.50
       3"    : 27.75
-      3 1.2": 34.75
+      3 1/2": 34.75
       4"    : 42.75
       6"    : 78.25
       8"    : 115.25
       10"   : 152.00
       12"   : 188.75
-  bill: service_charge
+   bill: service_charge
