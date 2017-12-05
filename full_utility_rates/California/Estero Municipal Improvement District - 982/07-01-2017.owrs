@@ -1,0 +1,25 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Estero Municipal Improvement District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 19.85
+        1": 33.08
+        1|1/2": 79.4
+        2": 105.87
+        3": 231.58
+        4": 416.85
+        6": 926.33
+        8": 1588
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
