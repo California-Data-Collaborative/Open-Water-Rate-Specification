@@ -1,0 +1,34 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Mid-Peninsula Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24
+        1": 36
+        1|1/2": 60
+        2": 96
+        3": 144
+        4": 240
+        6": 600
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 9
+      - 21
+    tier_prices_commodity:
+      - 5.62
+      - 8.22
+      - 9.82
+      - 11.42
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
