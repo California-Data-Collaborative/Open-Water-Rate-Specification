@@ -1,7 +1,7 @@
 metadata:
   effective_date: 07/01/2017
   utility_name: Millbrae  City of
-  bill_frequency: Monthly
+  bill_frequency: bimonthly
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
