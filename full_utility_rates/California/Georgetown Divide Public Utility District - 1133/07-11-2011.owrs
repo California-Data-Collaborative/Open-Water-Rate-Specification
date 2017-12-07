@@ -9,16 +9,16 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 2001
-      - 4001
-      - 6001
-      - 8001
+      - 20
+      - 40
+      - 60
+      - 80
     tier_prices_commodity:
       - 0
-      - 0.0138
-      - 0.0165
-      - 0.0193
-      - 0.0221
+      - 1.38
+      - 1.65
+      - 1.93
+      - 2.21
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -29,16 +29,16 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 2001
-      - 4001
-      - 6001
-      - 8001
+      - 20
+      - 40
+      - 60
+      - 80
     tier_prices_commodity:
       - 0
-      - 0.0138
-      - 0.0165
-      - 0.0193
-      - 0.0221
+      - 1.38
+      - 1.65
+      - 1.93
+      - 2.21
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
