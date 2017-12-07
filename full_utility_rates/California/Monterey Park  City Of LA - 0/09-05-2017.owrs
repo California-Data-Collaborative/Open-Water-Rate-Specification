@@ -1,0 +1,27 @@
+metadata:
+  effective_date: 09/05/2017
+  utility_name: Monterey Park  City Of LA
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 21.25
+    3/4": 21.25
+    1": 23
+    1 1/2": 36.3
+    2": 46.65
+    3": 93.4
+    4": 154.45
+    6": 471.65
+    8": 1179.3
