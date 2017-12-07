@@ -1,0 +1,111 @@
+metadata:
+  effective_date: 1/1/2017
+  utility_name: Lake Arrowhead Community Services District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 38.23
+        1": 93.66
+        1|1/2": 187.33
+        2": 299.34
+        3": 599.04
+        4": 935.83
+        6": 1871.68
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 14
+      - 31
+    tier_prices_commodity:
+      - 1.26
+      - 2.39
+      - 7.09
+      - 14.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 38.23
+        1": 93.66
+        1|1/2": 187.33
+        2": 299.34
+        3": 599.04
+        4": 935.83
+        6": 1871.68
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 14
+    tier_prices_commodity:
+      - 4.25
+      - 8.3
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 38.23
+        1": 93.66
+        1|1/2": 187.33
+        2": 299.34
+        3": 599.04
+        4": 935.83
+        6": 1871.68
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 43
+      - 151
+    tier_prices_commodity:
+      - 3.81
+      - 4.15
+      - 4.6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 13.1
+        1|1/2": 17.28
+        2": 19.4
+        3": 30.39
+        4": 40.58
+        6": 56.05
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 14
+      - 31
+    tier_prices_commodity:
+      - 1.26
+      - 2.39
+      - 7.09
+      - 14.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
