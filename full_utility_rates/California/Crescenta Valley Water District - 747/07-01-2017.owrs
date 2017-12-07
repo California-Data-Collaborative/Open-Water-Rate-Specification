@@ -14,8 +14,8 @@ rate_structure:
         3/4"|outside_city: 48.32
         1"|inside_city: 71.48
         1"|outside_city: 71.88
-        1|1/2"|inside_city: 130.39
-        1|1/2"|outside_city: 130.79
+        1 1/2"|inside_city: 130.39
+        1 1/2"|outside_city: 130.79
         2"|inside_city: 201.1
         2"|outside_city: 201.5
         3"|inside_city: 424.97
@@ -46,8 +46,8 @@ rate_structure:
         3/4"|outside_city: 48.32
         1"|inside_city: 71.48
         1"|outside_city: 71.88
-        1|1/2"|inside_city: 130.39
-        1|1/2"|outside_city: 130.79
+        1 1/2"|inside_city: 130.39
+        1 1/2"|outside_city: 130.79
         2"|inside_city: 201.1
         2"|outside_city: 201.5
         3"|inside_city: 424.97
@@ -71,8 +71,8 @@ rate_structure:
         3/4"|outside_city: 48.32
         1"|inside_city: 71.48
         1"|outside_city: 71.88
-        1|1/2"|inside_city: 130.39
-        1|1/2"|outside_city: 130.79
+        1 1/2"|inside_city: 130.39
+        1 1/2"|outside_city: 130.79
         2"|inside_city: 201.1
         2"|outside_city: 201.5
         3"|inside_city: 424.97
@@ -101,8 +101,8 @@ rate_structure:
         3/4"|outside_city: 48.32
         1"|inside_city: 71.48
         1"|outside_city: 71.88
-        1|1/2"|inside_city: 130.39
-        1|1/2"|outside_city: 130.79
+        1 1/2"|inside_city: 130.39
+        1 1/2"|outside_city: 130.79
         2"|inside_city: 201.1
         2"|outside_city: 201.5
         3"|inside_city: 424.97
@@ -126,8 +126,8 @@ rate_structure:
         3/4"|outside_city: 48.32
         1"|inside_city: 71.48
         1"|outside_city: 71.88
-        1|1/2"|inside_city: 130.39
-        1|1/2"|outside_city: 130.79
+        1 1/2"|inside_city: 130.39
+        1 1/2"|outside_city: 130.79
         2"|inside_city: 201.1
         2"|outside_city: 201.5
         3"|inside_city: 424.97

@@ -138,11 +138,11 @@ rate_structure:
     tier_prices:
       depends_on: season
       values:
-          Summer
+          Summer:
             - 1.77
             - 1.89
             - 2.32
-          Winter
+          Winter:
             - 1.42
             - 1.54
             - 1.99
@@ -170,10 +170,10 @@ rate_structure:
           3/4"   : 14.27
           1"     : 23.74
           1 1/2" : 47.56
-          2      : 71.73
-          3      : 143.45
-          4      : 286.90
-          6      : 569.26
+          2"     : 71.73
+          3"     : 143.45
+          4"     : 286.90
+          6"     : 569.26
     flat_rate: 1.14
     commodity_charge: "flat_rate*usage_ccf"
     bill: "service_charge+commodity_charge"

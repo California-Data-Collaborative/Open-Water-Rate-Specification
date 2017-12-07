@@ -1,3 +1,4 @@
+---
 metadata:
   effective_date: 2017-01-01
   utility_name: Santa Rosa City of
@@ -12,7 +13,7 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
@@ -34,7 +35,7 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
@@ -56,7 +57,7 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
@@ -72,7 +73,7 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
@@ -96,7 +97,7 @@ rate_structure:
         5/8": 10.70
         3/4": 10.70
         1": 23.99
-        1|1/2": 46.15
+        1 1/2": 46.15
         2": 72.74
         3": 134.78
         4": 223.41
@@ -120,12 +121,12 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
         6": 494.42
-	flat_rate: 5.59
+    flat_rate: 5.59
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
   INDUSTRIAL:
@@ -136,12 +137,12 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
         6": 494.42
-	flat_rate: 5.59
+    flat_rate: 5.59
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
   RECYCLED_COMMERCIAL:
@@ -152,12 +153,12 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
         6": 494.42
-	flat_rate: 5.03
+    flat_rate: 5.03
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
   RECYCLED_INDUSTRIAL:
@@ -168,12 +169,11 @@ rate_structure:
         5/8": 11.89
         3/4": 11.89
         1": 26.66
-        1|1/2": 51.28
+        1 1/2": 51.28
         2": 80.83
         3": 149.75
         4": 248.24
         6": 494.42
-	flat_rate: 5.03
+    flat_rate: 5.03
     commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
-	
