@@ -1,0 +1,28 @@
+metadata:
+  effective_date: 01/01/2014
+  utility_name: Mesa Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23
+        3/4": 34.5
+        1": 57.5
+        1 1/2"  : 115
+        2"    : 184
+        3"    : 402
+        4"    : 724
+        6"    : 1610
+        8"    : 2760
+        10"   : 4370
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.62
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
