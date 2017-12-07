@@ -1,0 +1,38 @@
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Santa Fe Irrigation District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 16
+      - 38
+      - 165
+    tier_prices_commodity:
+      - 2.3
+      - 2.8
+      - 5.16
+      - 6.01
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 81.05
+    3/4": 81.05
+    1": 129.83
+    1 1/2": 251.18
+    2": 399.79
+    3": 742.35
+    4": 1234.65
+    6": 2445.93
+    8": 3932.06
+    10": 5667.79
