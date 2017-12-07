@@ -17,9 +17,16 @@ rate_structure:
         4": 237.75
         6": 363.88
         8": 581.19
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    tier_starts:
+      - 0
+      - 5
+      - 15
+      - 50
+      - 1000
+    tier_prices:
+      - 0
+      - 1.66
+      - 1.96
+      - 0.71
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
