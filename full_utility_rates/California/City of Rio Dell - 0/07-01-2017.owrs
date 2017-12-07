@@ -6,7 +6,7 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 46.63
-    commodity_charge: 0
+    commodity_charge: 3.04
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -14,7 +14,7 @@ rate_structure:
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
     service_charge: 46.63
-    commodity_charge: 0
+    commodity_charge: 3.04
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -22,7 +22,7 @@ rate_structure:
     bill: service_charge+commodity_charge
   COMMERCIAL:
     service_charge: 46.63
-    commodity_charge: 0
+    commodity_charge: 3.04
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
