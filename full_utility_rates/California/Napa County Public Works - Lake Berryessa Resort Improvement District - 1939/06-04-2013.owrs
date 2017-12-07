@@ -1,0 +1,15 @@
+metadata:
+  effective_date: 06/04/2013
+  utility_name: Napa County Public Works - Lake Berryessa Resort Improvement District
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 115
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
