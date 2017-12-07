@@ -1,18 +1,17 @@
 metadata:
-  effective_date: 03/01/2013
-  utility_name: 
-    Napa County Public Works - Napa Berryessa Resort Improvement District
-    (NBRID)
-  bill_frequency: Bi-Monthly
-  bill_unit: kgal
-rate_structure:
-  RESIDENTIAL_SINGLE:
-    service_charge: 77
-     tier_starts:
-      - 0
-      - 2
-    tier_prices:
-      - 0
-      - 3.85
-    commodity_charge: Tiered
-    bill: service_charge+commodity_charge
+   effective_date: 02/01/2011
+   utility_name: >-
+     Napa County Public Works - Napa Berryessa Resort Improvement District
+     (NBRID)
+   bill_frequency: Bi-Monthly
+   bill_unit: kgal
+ rate_structure:
+   RESIDENTIAL_SINGLE:
+     service_charge: 65
+     commodity_charge: flat_rate_commodity*usage_ccf
+     flat_rate_commodity: 4
+     fixed_drought_surcharge: 0
+     variable_drought_surcharge: 0
+     fixed_wastewater_charge: 0
+     variable_wastewater_charge: 0
+     bill: service_charge+commodity_charge
