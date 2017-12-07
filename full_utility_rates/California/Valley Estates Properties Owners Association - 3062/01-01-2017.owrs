@@ -1,0 +1,24 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Valley Estates Properties Owners Association
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 27.5
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 200
+      - 300
+      - 400
+    tier_prices_commodity:
+      - 27.5
+      - 25
+      - 50
+      - 75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
