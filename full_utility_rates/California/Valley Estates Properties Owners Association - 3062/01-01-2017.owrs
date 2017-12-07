@@ -9,9 +9,9 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 200000
-      - 300000
-      - 400000
+      - 200
+      - 300
+      - 400
     tier_prices_commodity:
       - 27.5
       - 25
