@@ -1,0 +1,29 @@
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Hollister  City of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+      depends_on: meter_size
+      values:
+        5/8": 13.29
+        3/4": 13.29
+        1": 28.16
+        1 1/2": 52.68
+        2": 78.95
+        3": 155.53
+        4": 232.13
+        6": 461.93
+        8": 713.61
+    tier_starts:
+      - 0
+      - 9
+      - 15
+    tier_prices:
+      - 3.38
+      - 5.54
+      - 6.34
+    commodity_charge: Tiered
+    bill: service_charge+commodity_charge
