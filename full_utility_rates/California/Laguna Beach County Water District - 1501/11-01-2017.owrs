@@ -1,0 +1,27 @@
+metadata:
+  effective_date: 11/01/2017
+  utility_name: Laguna Beach County Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+      depends_on: meter_size
+      values:
+        3/4": 32.36
+        1": 80.91
+        1 1/2": 161.82
+        2": 258.91
+        3": 485.45
+        6": 1618.18
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - 100%
+    tier_prices:
+      - 4.17
+      - 7.85
+    commodity_charge: Budget
+    bill: commodity_charge+service_charge
