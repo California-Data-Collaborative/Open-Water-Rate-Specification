@@ -1,0 +1,27 @@
+metadata:
+  effective_date: 11/14/2017
+  utility_name: San Bernardino County Service Area 64 Spring Valley Lake
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  OTHER:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 14.1
+    1": 23.5
+    1 1/2": 47
+    2": 75.2
+    3": 150.4
+    4": 235
+    6": 470
+    8": 752
