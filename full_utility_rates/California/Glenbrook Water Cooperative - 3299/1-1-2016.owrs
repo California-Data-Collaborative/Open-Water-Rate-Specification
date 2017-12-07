@@ -6,9 +6,11 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 1400
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    tier_starts:
+      - 0
+      - 250
+    tier_prices:
+      - 0
+      - 34
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
