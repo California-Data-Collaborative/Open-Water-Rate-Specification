@@ -14,11 +14,14 @@ rate_structure:
         2": 258.91
         3": 485.45
         6": 1618.18
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-capacity_charge:
-  
+    indoor: "gpcd*hhsize*days_in_period*(1/748)"
+    outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
+    budget: "indoor+outdoor"
+    tier_starts:
+      - 0
+      - 100%
+    tier_prices:
+      - 4.17
+      - 7.85
+    commodity_charge: Budget
+    bill: commodity_charge+service_charge
