@@ -1,0 +1,87 @@
+metadata:
+  effective_date: 01/01/2016
+  utility_name: Orange Vale Water Company
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+      depends_on: meter_size
+      values:
+         5/8": 24.19
+         3/4": 24.19
+         1": 24.19
+         1 1/2": 47.94
+         2": 76.41
+         3": 152.4
+         4": 237.83
+         6": 475.26
+         8": 855.14
+         10": 1377.21
+         12": 2042.51
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0.66
+      - 0.66
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 
+      depends_on: meter_size
+      values:
+         5/8": 24.19
+         3/4": 24.19
+         1": 24.19
+         1 1/2": 47.94
+         2": 76.41
+         3": 152.4
+         4": 237.83
+         6": 475.26
+         8": 855.14
+         10": 1377.21
+         12": 2042.51
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0.66
+      - 0.66
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge: 
+      depends_on: meter_size
+      values:
+         5/8": 24.19
+         3/4": 24.19
+         1": 24.19
+         1 1/2": 47.94
+         2": 76.41
+         3": 152.4
+         4": 237.83
+         6": 475.26
+         8": 855.14
+         10": 1377.21
+         12": 2042.51
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0.66
+      - 0.66
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
