@@ -1,0 +1,110 @@
+metadata:
+  effective_date: 04/01/2008
+  utility_name: Tracy  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 20.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 19
+      - 30
+      - 287
+    tier_prices_commodity:
+      - 1
+      - 1.45
+      - 1.65
+      - 1.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 20.4
+        1|1/2": 46.65
+        2": 82.75
+        3": 186.25
+        4": 331.25
+        6": 745.25
+        8": 1325.05
+        10": 2070.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 19
+          - 30
+          - 287
+        Winter:
+          - 0
+          - 13
+          - 20
+          - 191
+    tier_prices_commodity:
+      - 1
+      - 1.45
+      - 1.65
+      - 1.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 20.4
+        1|1/2": 46.65
+        2": 82.75
+        3": 186.25
+        4": 331.25
+        6": 745.25
+        8": 1325.05
+        10": 2070.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 19
+          - 30
+          - 287
+        Winter:
+          - 0
+          - 13
+          - 20
+          - 19
+    tier_prices_commodity:
+      - 1
+      - 1.45
+      - 1.65
+      - 1.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
