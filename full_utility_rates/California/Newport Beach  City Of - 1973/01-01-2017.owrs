@@ -5,24 +5,19 @@ metadata:
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 17
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
+    service_charge: 
+      depends_on: meter_size
+      values:
+        5/8": 11.5
+        3/4": 17.25
+        1": 28.75
+        1 1/2": 57.5
+        2": 92.5
+        3": 201
+        4": 362
+        6": 805
+        8": 1380
+        10": 2185
+    flat_rate: 3.08
+    commodity_charge: flat_rate*usage_ccf
     bill: service_charge+commodity_charge
-capacity_charge:
-  depends_on:
-    - meter_size
-  values:
-    5/8": 11.5
-    3/4": 17.25
-    1": 28.75
-    1 1/2": 57.5
-    2": 92.5
-    3": 201
-    4": 362
-    6": 805
-    8": 1380
-    10": 2185
