@@ -17,8 +17,8 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 7500
-      - 20000
+      - 7.5
+      - 20
     tier_prices_commodity:
       - 3.123
       - 3.42
@@ -46,12 +46,12 @@ rate_structure:
       values:
         inside_city:
           - 0
-          - 4000
-          - 10000
+          - 4
+          - 10
         outside_city:
           - 0
-          - 1000
-          - 1000
+          - 1
+          - 1
     tier_prices_commodity:
       depends_on:
         - city_limits
@@ -226,8 +226,8 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 7500
-      - 20000
+      - 7.5
+      - 20
     tier_prices_commodity:
       - 3.123
       - 3.42
