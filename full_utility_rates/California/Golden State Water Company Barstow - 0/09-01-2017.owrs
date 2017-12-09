@@ -1,0 +1,47 @@
+metadata:
+  effective_date: 09/01/2017
+  utility_name: Golden State Water Company Barstow
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 13
+      - 21
+    tier_prices_commodity:
+      - 3.85
+      - 4.43
+      - 5.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 13
+      - 21
+    tier_prices_commodity:
+      - 3.85
+      - 4.43
+      - 5.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 15.42
+    3/4": 23.13
+    1": 38.55
+    1 1/2": 77.1
+    2": 123.36
