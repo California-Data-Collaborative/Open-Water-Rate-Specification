@@ -1,0 +1,34 @@
+metadata:
+  effective_date: 04/01/2017
+  utility_name: Goleta Water District
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.57
+        1": 73.02
+        1|1/2": 136.66
+        2": 213.02
+        3": 454.82
+        4": 811.15
+        6": 1791.1
+        8": 3063.74
+        10": 4845.46
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4488
+      - 11968
+    tier_prices_commodity:
+      - 4.85
+      - 5.97
+      - 6.57
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
