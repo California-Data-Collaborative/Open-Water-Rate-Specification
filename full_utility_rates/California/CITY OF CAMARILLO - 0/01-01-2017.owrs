@@ -1,0 +1,139 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: CITY OF CAMARILLO
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.11
+        1": 27.59
+        1|1/2": 49.04
+        2": 74.74
+        3": 143.31
+        4": 220.4
+        6": 434.68
+        8": 691.79
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
