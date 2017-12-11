@@ -1,0 +1,311 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Fillmore City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RAW:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INTERRUPTIBLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  POTABLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
