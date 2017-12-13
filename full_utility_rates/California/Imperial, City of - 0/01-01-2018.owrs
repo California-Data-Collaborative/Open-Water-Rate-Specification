@@ -6,7 +6,8 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 
-      depends_on: meter_size
+      depends_on: 
+       - meter_size
       values:
         5/8": 13.06
         3/4": 13.06
