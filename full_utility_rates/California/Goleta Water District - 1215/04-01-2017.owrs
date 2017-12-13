@@ -1,8 +1,8 @@
 metadata:
-  effective_date: 04/01/2017
+  effective_date: 07/01/2017
   utility_name: Goleta Water District
   bill_frequency: Monthly
-  bill_unit: kgal
+  bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -21,14 +21,15 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 4488
-      - 11968
+      - 7
+      - 17
     tier_prices_commodity:
       - 4.85
       - 5.97
       - 6.57
     fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
+    flat_rate_drought: 2.79
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
