@@ -1,8 +1,6 @@
 metadata:
    effective_date: 02/01/2011
-   utility_name: >-
-     Napa County Public Works - Napa Berryessa Resort Improvement District
-     (NBRID)
+   utility_name: Napa County Public Works - Napa Berryessa Resort Improvement District (NBRID)
    bill_frequency: Bi-Monthly
    bill_unit: kgal
  rate_structure:
