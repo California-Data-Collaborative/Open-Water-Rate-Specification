@@ -14,6 +14,7 @@ rate_structure:
         2": 258.91
         3": 485.45
         6": 1618.18
+    gpcd: 60
     indoor: "gpcd*hhsize*days_in_period*(1/748)"
     outdoor: "landscape_factor*et_amount*irr_area*0.62*(1/748)"
     budget: "indoor+outdoor"
