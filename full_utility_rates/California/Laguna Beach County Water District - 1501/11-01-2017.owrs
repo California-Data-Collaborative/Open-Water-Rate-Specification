@@ -18,7 +18,7 @@ rate_structure:
     plant_factor: 0.8
     irrigation_efficiency: 0.7
     indoor: "gpcd*hhsize*days_in_period*(1/748)"
-    outdoor: "landscape_area*plant_factor*irrigation_efficiency*et_amount*0.62*(1/748)"
+    outdoor: "irr_area*plant_factor*irrigation_efficiency*et_amount*0.62*(1/748)"
     budget: "indoor+outdoor"
     tier_starts:
       - 0
