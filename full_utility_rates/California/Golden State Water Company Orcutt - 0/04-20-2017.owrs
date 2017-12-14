@@ -1,0 +1,30 @@
+metadata:
+  effective_date: 04/20/2017
+  utility_name: Golden State Water Company Orcutt
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.04
+        3/4": 25.56
+        1": 42.59
+        1|1/2": 85.19
+        2": 136.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 16
+      - 28
+    tier_prices_commodity:
+      - 2.83
+      - 3.255
+      - 3.743
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
