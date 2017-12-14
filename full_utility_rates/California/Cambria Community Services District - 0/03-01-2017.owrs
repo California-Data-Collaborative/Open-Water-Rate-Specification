@@ -10,7 +10,7 @@ rate_structure:
     tier_starts_commodity:
       - 0
       - 5
-      - 16
+      - 17
     tier_prices_commodity:
       - 6.76
       - 8.84
