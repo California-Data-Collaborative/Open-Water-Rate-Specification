@@ -1,7 +1,7 @@
 metadata:
   effective_date: 01/01/2017
   utility_name: Arcadia  City Of
-  bill_frequency: Monthly
+  bill_frequency: Bimonthly
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
