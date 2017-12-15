@@ -1,0 +1,44 @@
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Western Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+    depends_on: meter_size
+    values:
+      5/8": 25.71
+      3/4": 34.67
+      1": 52.29
+      1 1/2": 96.48
+      2": 114.64
+      3": 205.4
+      4": 310.74
+      6": 384.41
+      8": 442.7
+      10": 508.17
+      12": 603.77
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - outdoor
+      - 100%
+      - 125%
+      - 150%
+    tier_prices_commodity:
+      - 1.216
+      - 2.574
+      - 3.889
+      - 4.489
+      - 7.979
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
