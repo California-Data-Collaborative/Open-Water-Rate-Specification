@@ -40,7 +40,7 @@ rate_structure:
     volumetric_conversion_factor: 0.00083
     irrigation_efficiency: 0.70
     indoor: 8
-    outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
+    outdoor: "((irr_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "indoor+outdoor"
     tier_starts:
       - 0
@@ -93,7 +93,7 @@ rate_structure:
     volumetric_conversion_factor: 0.00083
     irrigation_efficiency: 0.70
     indoor: 8
-    outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
+    outdoor: "((irr_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "indoor+outdoor"
     tier_starts:
       - 0
@@ -145,7 +145,7 @@ rate_structure:
         5  : 1.09
     volumetric_conversion_factor: 0.00083
     irrigation_efficiency: 0.70
-    outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
+    outdoor: "((irr_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "outdoor"
     tier_starts:
       - 0
@@ -196,7 +196,7 @@ rate_structure:
     volumetric_conversion_factor: 0.00083
     irrigation_efficiency: 0.70
     indoor: "8 * dwelling_units"
-    outdoor: "((landscape_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
+    outdoor: "((irr_area*et_amount*weather_adjustment_factor)*(monthly_plant_factor*volumetric_conversion_factor/irrigation_efficiency))"
     budget: "indoor + outdoor"
     tier_starts:
       - 0
