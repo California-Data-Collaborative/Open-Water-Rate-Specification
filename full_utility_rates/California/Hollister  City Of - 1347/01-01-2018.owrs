@@ -1,0 +1,56 @@
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Hollister  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.29
+        3/4": 13.29
+        1": 28.16
+        1|1/2": 52.68
+        2": 78.95
+        3": 155.53
+        4": 232.13
+        6": 461.93
+        8": 713.61
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 900
+      - 1500
+    tier_prices_commodity:
+      - 3.38
+      - 5.54
+      - 6.34
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.29
+        3/4": 13.29
+        1": 28.16
+        1|1/2": 52.68
+        2": 78.95
+        3": 155.53
+        4": 232.13
+        6": 461.93
+        8": 713.61
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
