@@ -5,7 +5,11 @@ metadata:
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 0
+    service_charge: 
+      depends_on: meter_size
+      values:
+        5/8" : 91.20
+        1" : 163.26
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -15,12 +19,30 @@ rate_structure:
       - 61
       - 100
     tier_prices_commodity:
-      - 2.75
+      - 0
       - 2.75
       - 3.82
       - 5.69
       - 9.69
       - 13.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL: 
+    service_charge:
+      depends_on: meter_size
+      values:
+        5/8" : 54.01 
+        1" : 90.05
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+    tier_prices_commodity:
+      - 0
+      - 3.94
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
