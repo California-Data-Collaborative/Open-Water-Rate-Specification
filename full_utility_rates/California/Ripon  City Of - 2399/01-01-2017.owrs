@@ -1,0 +1,36 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Ripon  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 29.6
+        1": 29.6
+        1|1/2": 54.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.73
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 16.8
+        1": 16.8
+        1|1/2": 28.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
