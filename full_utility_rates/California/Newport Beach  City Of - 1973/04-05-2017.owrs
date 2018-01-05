@@ -1,0 +1,29 @@
+metadata:
+  effective_date: 04/05/2017
+  utility_name: Newport Beach  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.27
+        3/4": 17.27
+        1": 28.79
+        1|1/2": 57.58
+        2": 92.12
+        3": 172.73
+        4": 287.88
+        6": 575.76
+        8": 921.22
+        10": 1655.9
+        12": 2663.48
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.08
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
