@@ -1,0 +1,23 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Total: - White alone
+HD02_VD02,Margin of Error; Total: - White alone
+HD01_VD03,Estimate; Total: - Black or African American alone
+HD02_VD03,Margin of Error; Total: - Black or African American alone
+HD01_VD04,Estimate; Total: - American Indian and Alaska Native alone
+HD02_VD04,Margin of Error; Total: - American Indian and Alaska Native alone
+HD01_VD05,Estimate; Total: - Asian alone
+HD02_VD05,Margin of Error; Total: - Asian alone
+HD01_VD06,Estimate; Total: - Native Hawaiian and Other Pacific Islander alone
+HD02_VD06,Margin of Error; Total: - Native Hawaiian and Other Pacific Islander alone
+HD01_VD07,Estimate; Total: - Some other race alone
+HD02_VD07,Margin of Error; Total: - Some other race alone
+HD01_VD08,Estimate; Total: - Two or more races:
+HD02_VD08,Margin of Error; Total: - Two or more races:
+HD01_VD09,Estimate; Total: - Two or more races: - Two races including Some other race
+HD02_VD09,Margin of Error; Total: - Two or more races: - Two races including Some other race
+HD01_VD10,"Estimate; Total: - Two or more races: - Two races excluding Some other race, and three or more races"
+HD02_VD10,"Margin of Error; Total: - Two or more races: - Two races excluding Some other race, and three or more races"
