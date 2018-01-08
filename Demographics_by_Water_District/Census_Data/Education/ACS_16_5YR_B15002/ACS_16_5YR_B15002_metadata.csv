@@ -1,0 +1,73 @@
+GEO.id,Id
+GEO.id2,Id2
+GEO.display-label,Geography
+HD01_VD01,Estimate; Total:
+HD02_VD01,Margin of Error; Total:
+HD01_VD02,Estimate; Male:
+HD02_VD02,Margin of Error; Male:
+HD01_VD03,Estimate; Male: - No schooling completed
+HD02_VD03,Margin of Error; Male: - No schooling completed
+HD01_VD04,Estimate; Male: - Nursery to 4th grade
+HD02_VD04,Margin of Error; Male: - Nursery to 4th grade
+HD01_VD05,Estimate; Male: - 5th and 6th grade
+HD02_VD05,Margin of Error; Male: - 5th and 6th grade
+HD01_VD06,Estimate; Male: - 7th and 8th grade
+HD02_VD06,Margin of Error; Male: - 7th and 8th grade
+HD01_VD07,Estimate; Male: - 9th grade
+HD02_VD07,Margin of Error; Male: - 9th grade
+HD01_VD08,Estimate; Male: - 10th grade
+HD02_VD08,Margin of Error; Male: - 10th grade
+HD01_VD09,Estimate; Male: - 11th grade
+HD02_VD09,Margin of Error; Male: - 11th grade
+HD01_VD10,"Estimate; Male: - 12th grade, no diploma"
+HD02_VD10,"Margin of Error; Male: - 12th grade, no diploma"
+HD01_VD11,Estimate; Male: - High school graduate (includes equivalency)
+HD02_VD11,Margin of Error; Male: - High school graduate (includes equivalency)
+HD01_VD12,"Estimate; Male: - Some college, less than 1 year"
+HD02_VD12,"Margin of Error; Male: - Some college, less than 1 year"
+HD01_VD13,"Estimate; Male: - Some college, 1 or more years, no degree"
+HD02_VD13,"Margin of Error; Male: - Some college, 1 or more years, no degree"
+HD01_VD14,Estimate; Male: - Associate's degree
+HD02_VD14,Margin of Error; Male: - Associate's degree
+HD01_VD15,Estimate; Male: - Bachelor's degree
+HD02_VD15,Margin of Error; Male: - Bachelor's degree
+HD01_VD16,Estimate; Male: - Master's degree
+HD02_VD16,Margin of Error; Male: - Master's degree
+HD01_VD17,Estimate; Male: - Professional school degree
+HD02_VD17,Margin of Error; Male: - Professional school degree
+HD01_VD18,Estimate; Male: - Doctorate degree
+HD02_VD18,Margin of Error; Male: - Doctorate degree
+HD01_VD19,Estimate; Female:
+HD02_VD19,Margin of Error; Female:
+HD01_VD20,Estimate; Female: - No schooling completed
+HD02_VD20,Margin of Error; Female: - No schooling completed
+HD01_VD21,Estimate; Female: - Nursery to 4th grade
+HD02_VD21,Margin of Error; Female: - Nursery to 4th grade
+HD01_VD22,Estimate; Female: - 5th and 6th grade
+HD02_VD22,Margin of Error; Female: - 5th and 6th grade
+HD01_VD23,Estimate; Female: - 7th and 8th grade
+HD02_VD23,Margin of Error; Female: - 7th and 8th grade
+HD01_VD24,Estimate; Female: - 9th grade
+HD02_VD24,Margin of Error; Female: - 9th grade
+HD01_VD25,Estimate; Female: - 10th grade
+HD02_VD25,Margin of Error; Female: - 10th grade
+HD01_VD26,Estimate; Female: - 11th grade
+HD02_VD26,Margin of Error; Female: - 11th grade
+HD01_VD27,"Estimate; Female: - 12th grade, no diploma"
+HD02_VD27,"Margin of Error; Female: - 12th grade, no diploma"
+HD01_VD28,Estimate; Female: - High school graduate (includes equivalency)
+HD02_VD28,Margin of Error; Female: - High school graduate (includes equivalency)
+HD01_VD29,"Estimate; Female: - Some college, less than 1 year"
+HD02_VD29,"Margin of Error; Female: - Some college, less than 1 year"
+HD01_VD30,"Estimate; Female: - Some college, 1 or more years, no degree"
+HD02_VD30,"Margin of Error; Female: - Some college, 1 or more years, no degree"
+HD01_VD31,Estimate; Female: - Associate's degree
+HD02_VD31,Margin of Error; Female: - Associate's degree
+HD01_VD32,Estimate; Female: - Bachelor's degree
+HD02_VD32,Margin of Error; Female: - Bachelor's degree
+HD01_VD33,Estimate; Female: - Master's degree
+HD02_VD33,Margin of Error; Female: - Master's degree
+HD01_VD34,Estimate; Female: - Professional school degree
+HD02_VD34,Margin of Error; Female: - Professional school degree
+HD01_VD35,Estimate; Female: - Doctorate degree
+HD02_VD35,Margin of Error; Female: - Doctorate degree
