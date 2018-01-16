@@ -1,0 +1,39 @@
+metadata:
+  effective_date: 06/01/2017
+  utility_name: Rubio Canyon Land And Water Association
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 26.25
+        3/4": 31.5
+        1": 35
+        1|1/2": 43
+        2": 47
+        3": 47
+        4": 47
+        6": 47
+        8": 47
+        10": 47
+        12": 47
+        14": 47
+        16": 47
+        18": 47
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 26
+    tier_prices_commodity:
+      - 2.6
+      - 3.2
+      - 3.7
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
