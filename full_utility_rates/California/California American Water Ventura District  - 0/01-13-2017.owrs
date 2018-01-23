@@ -6,7 +6,7 @@ metadata:
   effective_date: 01/13/2017
   utility_name: California American Water Ventura District 
   bill_frequency: Monthly
-  bill_unit: 100 gal (CGL)
+  bill_unit: Kgal
   prop_218_link: >-
     https://dnnh3qht4.blob.core.windows.net/portals/2/Customer%20Service%20and%20Billing/Rates/Ventura/Ventura%20County%20Rate%20Schedule.pdf?sr=b&si=DNNFileManagerPolicy&sig=srFbmVJZ1fR6cZd7%2BVhltQekWFCyTEGYJlz%2BxaOlXs8%3D
 rate_structure:
@@ -28,14 +28,14 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 89
-      - 179
-      - 448
+      - 8.97
+      - 17.94
+      - 44.86
     tier_prices_commodity:
-      - 0.494
-      - 0.6334
-      - 0.8424
-      - 1.2414
+      - 4.94
+      - 6.334
+      - 8.424
+      - 12.414
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
