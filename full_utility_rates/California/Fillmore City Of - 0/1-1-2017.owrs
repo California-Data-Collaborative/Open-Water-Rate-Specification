@@ -1,0 +1,30 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 1/1/2017
+  utility_name: Fillmore City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.fillmoreca.com/home/showdocument?id=1940
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 38.75
+        3/4": 38.75
+        1": 59.85
+        1|1/2": 73.91
+        2": 144.23
+        3": 214.55
+        4": 284.87
+        6": 706.78
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
