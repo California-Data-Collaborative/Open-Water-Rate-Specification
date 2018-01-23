@@ -1,0 +1,35 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Golden State Water Company - Bay Point
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.gswater.com/bay-point/download/rates_accountability/BY-1-R.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.99
+        3/4": 28.49
+        1": 47.48
+        1|1/2": 94.95
+        2": 151.92
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+      - 14
+    tier_prices_commodity:
+      - 5.635
+      - 6.48
+      - 7.452
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
