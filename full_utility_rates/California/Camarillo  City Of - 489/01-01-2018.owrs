@@ -1,0 +1,41 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Camarillo  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.cityofcamarillo.org/Water/Rate%20Increase%202018/Prop%20218%20notice%20Water%20Rates%20Public%20Hearing%2011-01-17%20FINAL.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.58
+        1": 28.15
+        1|1/2": 50.03
+        2": 76.24
+        3": 146.18
+        4": 224.81
+        6": 443.38
+        8": 705.63
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 19
+      - 25
+    tier_prices_commodity:
+      - 1.59
+      - 3.77
+      - 4.78
+      - 6.66
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
