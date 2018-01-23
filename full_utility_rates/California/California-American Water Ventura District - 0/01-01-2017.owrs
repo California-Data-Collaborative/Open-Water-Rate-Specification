@@ -1,0 +1,27 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: California-American Water Ventura District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.82
+        3/4": 14.73
+        1": 24.56
+        1|1/2": 49.12
+        2": 78.58
+        3": 147.35
+        4": 245.58
+        6": 491.15
+        8": 785.84
+        10": 1129.65
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
