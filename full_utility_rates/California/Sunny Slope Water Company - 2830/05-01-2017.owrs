@@ -52,7 +52,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 800
+      - 8
     tier_prices_commodity:
       depends_on:
         - season
