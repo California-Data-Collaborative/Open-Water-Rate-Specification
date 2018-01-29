@@ -1,0 +1,73 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2012
+  utility_name: Port Hueneme  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.ci.port-hueneme.ca.us/DocumentCenter/Home/View/80
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 37.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 37.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.13
+        3/4": 31.13
+        1": 77.82
+        1|1/2": 155.63
+        2": 249.01
+        3": 466.89
+        4": 778.16
+        6": 1556.31
+        8": 2490.1
+        10": 3579.52
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.13
+        3/4": 31.13
+        1": 77.82
+        1|1/2": 155.63
+        2": 249.01
+        3": 466.89
+        4": 778.16
+        6": 1556.31
+        8": 2490.1
+        10": 3579.52
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
