@@ -1,0 +1,74 @@
++author_info:
++  author: 
++  email: 
++  phone: 
++metadata:
++  effective_date: 09/01/2017
++  utility_name: Calaveras County Water District
++  bill_frequency: Bi-Monthly
++  bill_unit: ccf
++  prop_218_link: >-
++    http://ccwd.org/wp-content/uploads/2013/12/2013-2017-CCWD-Wastewater-and-Water-Rate-Sheet-1.pdf
++rate_structure:
++  RESIDENTIAL_SINGLE:
++    service_charge:
++      depends_on:
++        - meter_size
++      values:
++        5/8": 113.56
++        3/4": 170.34
++        1": 283.9
++        1|1/2": 567.82
++        2": 908.5
++        3": 1817
++        4": 2839.06
++    commodity_charge: Tiered
++    tier_starts_commodity:
++      depends_on:
++        - meter_size
++      values:
++        5/8":
++          - 0
++          - 10
++          - 60
++          - 120
++        3/4":
++          - 0
++          - 15
++          - 90
++          - 180
++        1":
++          - 0
++          - 25
++          - 150
++          - 300
++        1|1/2":
++          - 0
++          - 50
++          - 300
++          - 600
++        2":
++          - 0
++          - 80
++          - 480
++          - 960
++        3":
++          - 0
++          - 160
++          - 960
++          - 1920
++        4":
++          - 0
++          - 250
++          - 1500
++          - 3000
++    tier_prices_commodity:
++      - 0
++      - 1.44
++      - 1.8
++      - 2.3
++    fixed_drought_surcharge: 0
++    variable_drought_surcharge: 0
++    fixed_wastewater_charge: 0
++    variable_wastewater_charge: 0
++    bill: service_charge+commodity_charge
