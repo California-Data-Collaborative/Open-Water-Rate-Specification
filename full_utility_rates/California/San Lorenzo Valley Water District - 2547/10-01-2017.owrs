@@ -1,0 +1,30 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/01/2017
+  utility_name: San Lorenzo Valley Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.slvwd.com/finance/10.01.2017_New%20Water%20Rate%20Schedule.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.27
+        3/4": 28.27
+        1": 42.36
+        1|1/2": 77.61
+        2": 119.91
+        3": 232.7
+        4": 359.58
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 10.12
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
