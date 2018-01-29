@@ -1,0 +1,59 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 1/1/2018
+  utility_name: Santa Paula City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.ci.santa-paula.ca.us/WaterSewerRateStudy-Eng.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.91
+        3/4": 43.81
+        1": 67.66
+        1|1/2": 83.57
+        2": 163.07
+        3": 242.57
+        4": 322.07
+        6": 799.09
+        8": 2866.18
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 18
+    tier_prices_commodity:
+      - 2.47
+      - 3.09
+      - 3.86
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.91
+        3/4": 43.81
+        1": 67.66
+        1|1/2": 83.57
+        2": 163.07
+        3": 242.57
+        4": 322.07
+        6": 799.09
+        8": 2866.18
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 12
+      - 18
+    tier_prices_drought:
+      - 2.73
+      - 3.42
+      - 4.27
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
