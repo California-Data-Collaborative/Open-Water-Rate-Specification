@@ -1,0 +1,88 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 1/1/2018
+  utility_name: Discovery Bay Town Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.todb.ca.gov/sites/main/files/file-attachments/2016_adopted_rates.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.02
+        1": 18.02
+        1|1/2": 35.07
+        2": 55.5
+        3": 109.99
+        4": 171.3
+        6": 341.6
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.015
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.02
+        1": 18.02
+        1|1/2": 35.07
+        2": 55.5
+        3": 109.99
+        4": 171.3
+        6": 341.6
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.015
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.02
+        1": 18.02
+        1|1/2": 35.07
+        2": 55.5
+        3": 109.99
+        4": 171.3
+        6": 341.6
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.015
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17
+        1": 17
+        1|1/2": 33.03
+        2": 52.23
+        3": 103.45
+        4": 161.08
+        6": 321.17
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.015
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
