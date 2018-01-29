@@ -7,7 +7,7 @@ metadata:
   utility_name: Scotts Valley Water District
   bill_frequency: Bi-Monthly
   bill_unit: kgal
-  prop_218_link: 
+  prop_218_link: https://www.svwd.org/customer-info/rates-and-fees 
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
