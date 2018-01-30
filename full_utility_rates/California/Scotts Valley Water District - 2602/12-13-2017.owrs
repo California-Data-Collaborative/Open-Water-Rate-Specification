@@ -1,0 +1,107 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 12/13/2017
+  utility_name: Scotts Valley Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+  prop_218_link: https://www.svwd.org/customer-info/rates-and-fees 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 68.92
+        3/4": 108.44
+        1": 116.65
+        1|1/2": 274.15
+        2": 372.24
+        3": 663.65
+        4": 1160.39
+        6": 2478.76
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 12
+      - 16
+    tier_prices_commodity:
+      - 5.63
+      - 9.82
+      - 15.72
+      - 18.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 68.92
+        3/4": 108.44
+        1": 116.65
+        1|1/2": 274.15
+        2": 372.24
+        3": 663.65
+        4": 1160.39
+        6": 2478.76
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 12
+      - 16
+    tier_prices_commodity:
+      - 5.63
+      - 9.82
+      - 15.72
+      - 18.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 13.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 13.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 13.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 20971
+    3/4": 31457
+    1": 52428
+    1 1/2": 104854
+    2": 167768
+    3": 366990
+    4": 660581
