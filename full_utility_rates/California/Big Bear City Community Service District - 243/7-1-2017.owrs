@@ -1,0 +1,71 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 7/1/2017
+  utility_name: Big Bear City Community Service District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.bbccsd.org/images/DOWNLOADS/CUSTOMER_SERVICES/WATER_RATES/Water%20Service%20Fees%2017-18.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 73.96
+        3/4": 73.96
+        1": 73.96
+        1|1/2": 147.91
+        2": 236.66
+        3": 443.73
+        4": 739.55
+        6": 1479.09
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 13
+          - 39
+        3/4":
+          - 0
+          - 13
+          - 39
+        1":
+          - 0
+          - 13
+          - 39
+        1|1/2":
+          - 0
+          - 25
+          - 49
+        2":
+          - 0
+          - 39
+          - 78
+        3":
+          - 0
+          - 73
+          - 145
+        4":
+          - 0
+          - 121
+          - 241
+        6":
+          - 0
+          - 241
+          - 481
+    tier_prices_commodity:
+      - 1.9
+      - 2.04
+      - 2.83
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
