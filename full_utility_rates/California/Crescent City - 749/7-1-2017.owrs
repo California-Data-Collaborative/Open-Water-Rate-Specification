@@ -1,0 +1,25 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 7/1/2017
+  utility_name: Crescent City
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.crescentcity.org/csa.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 22.49
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+    tier_prices_commodity:
+      - 0
+      - 2.62
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
