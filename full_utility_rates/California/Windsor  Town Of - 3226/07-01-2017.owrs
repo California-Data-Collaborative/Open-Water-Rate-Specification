@@ -22,7 +22,7 @@ rate_structure:
       - 3.12
       - 3.4
       - 4.8
-      - 6.04
+      - 6.2
     fixed_drought_surcharge: 0
     variable_drought_surcharge: Tiered
     tier_starts_drought:
@@ -31,10 +31,10 @@ rate_structure:
       - 7
       - 17
     tier_prices_drought:
-      - 3.48
-      - 3.78
-      - 5.34
-      - 6.36
+      - 3.43
+      - 3.74
+      - 5.28
+      - 6.82
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
