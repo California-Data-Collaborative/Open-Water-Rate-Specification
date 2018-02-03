@@ -139,7 +139,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 60
+    gpcd_commodity: 0
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
@@ -173,7 +173,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 60
+    gpcd_commodity: 0
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
@@ -191,6 +191,23 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+   FIRE_SERVICE:
+     service_charge:
+       depends_on:
+         - meter_size
+       values:
+         2": 32.17
+         4": 76.35
+         6": 148.73
+         8": 242.73
+         10": 374.33
+     commodity_charge: flat_rate_commodity*usage_ccf
+     flat_rate_commodity: 0
+     fixed_drought_surcharge: 0
+     variable_drought_surcharge: 0
+     fixed_wastewater_charge: 0
+     variable_wastewater_charge: 0
+     bill: service_charge+commodity_charge
   RAW:
     service_charge:
       depends_on:
@@ -229,7 +246,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 60
+    gpcd_commodity: 0
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
