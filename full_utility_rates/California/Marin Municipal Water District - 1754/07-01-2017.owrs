@@ -1,8 +1,13 @@
+author_info:
+  author: 
+  email: 
+  phone: 
 metadata:
   effective_date: 07/01/2017
   utility_name: Marin Municipal Water District
   bill_frequency: Bi-Monthly
   bill_unit: ccf
+  prop_218_link: 
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -21,10 +26,19 @@ rate_structure:
         10": 3752.53
     commodity_charge: Tiered
     tier_starts_commodity:
-      - 0
-      - 27
-      - 60
-      - 100
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 27
+          - 60
+          - 100
+        Winter:
+          - 0
+          - 22
+          - 49
+          - 81
     tier_prices_commodity:
       - 4.07
       - 7.13
@@ -52,10 +66,19 @@ rate_structure:
         10": 3752.53
     commodity_charge: Tiered
     tier_starts_commodity:
-      - 0
-      - 11
-      - 21
-      - 29
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 11
+          - 21
+          - 29
+        Winter:
+          - 0
+          - 11
+          - 19
+          - 27
     tier_prices_commodity:
       - 4.16
       - 7.07
@@ -82,11 +105,11 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
-    indoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
-    outdoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
-    budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .55
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 85%
@@ -116,41 +139,19 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
-    indoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
-    outdoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .45
+    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 85%
       - 150%
     tier_prices_commodity:
-      - 3.96
+      - 3.98
       - 10.82
       - 16.26
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-  INDUSTRIAL:
-    service_charge:
-      depends_on:
-        - meter_size
-      values:
-        5/8": 36.79
-        3/4": 46.62
-        1": 66.28
-        1|1/2": 115.43
-        2": 174.41
-        3": 361.18
-        4": 636.42
-        6": 1393.33
-        8": 2376.33
-        10": 3752.53
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity: 4.23
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -172,11 +173,11 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
-    indoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
-    outdoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .45
+    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 85%
@@ -185,23 +186,6 @@ rate_structure:
       - 3.98
       - 10.82
       - 16.26
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-  FIRE_SERVICE:
-    service_charge:
-      depends_on:
-        - meter_size
-      values:
-        2": 32.17
-        4": 76.35
-        6": 148.73
-        8": 242.73
-        10": 374.33
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity: 8.14
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -230,13 +214,26 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RECYCLED:
-    service_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.79
+        3/4": 46.62
+        1": 66.28
+        1|1/2": 115.43
+        2": 174.41
+        3": 361.18
+        4": 636.42
+        6": 1393.33
+        8": 2376.33
+        10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
-    indoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
-    outdoor_commodity: MAWA = Eto x .62 x (ETAF x LA)
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .55
+    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 100%
