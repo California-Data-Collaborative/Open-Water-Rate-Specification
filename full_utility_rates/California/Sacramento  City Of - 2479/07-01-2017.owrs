@@ -119,3 +119,22 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+   FIRE_SERVICE:
+     service_charge:
+       depends_on:
+         - meter_size
+       values:
+         2": 33.23
+         3": 50.04
+         4": 66.42
+         6": 00.68
+         8": 132.94
+         10": 166.14
+         12": 199.30
+     commodity_charge: flat_rate_commodity*usage_ccf
+     flat_rate_commodity: 0
+     fixed_drought_surcharge: 0
+     variable_drought_surcharge: 0
+     fixed_wastewater_charge: 0
+     variable_wastewater_charge: 0
+     bill: service_charge+commodity_charge
