@@ -35,8 +35,8 @@ rate_structure:
       - 3.74
       - 5.28
       - 6.82
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
+    fixed_wastewater_charge: 10.20
+    variable_wastewater_charge: 13.56
     bill: service_charge+commodity_charge
 capacity_charge:
   depends_on:
