@@ -1,0 +1,211 @@
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Moulton Niguel Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.22
+        3/4": 11.22
+        1": 11.22
+        1|1/2": 37.41
+        2": 59.85
+        3": 120.94
+        4": 224.46
+        6": 467.62
+        8": 673.37
+        10": 1084.87
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 125%
+      - 150%
+    tier_prices_commodity:
+      - 1.69
+      - 1.94
+      - 3.32
+      - 5.12
+      - 9.59
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.78
+        3/4": 10.78 
+        1": 10.78
+        1|1/2": 25.20
+        2": 37.56
+        3": 76.70
+        4": 128.19
+        6": 262.09
+        8": 375.38
+        10": 601.96
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 125%
+      - 150%
+    tier_prices_commodity:
+      - 1.69
+      - 1.94
+      - 3.32
+      - 5.12
+      - 9.59
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.06
+        3/4": 18.06
+        1": 18.06
+        1|1/2": 60.21
+        2": 96.34
+        3": 210.76
+        4": 361.29
+        6": 752.68
+        8": 1083.86
+        10": 1746.22
+    commodity_charge: Budget
+    gpcd_commodity: 0
+    indoor_commodity: 0
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - outdoor
+      - 125%
+      - 150%
+    tier_prices_commodity:
+      - 1.94
+      - 3.32
+      - 5.12
+      - 9.59
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.54
+        3/4": 5.54
+        1": 5.54
+        1|1/2": 18.46
+        2": 29.54
+        3": 64.61
+        4": 110.76
+        6": 230.76
+        8": 332.29
+        10": 535.36
+    commodity_charge: Budget
+    gpcd_commodity: 0
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: rolling_average
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 125%
+      - 150%
+    tier_prices_commodity:
+      - 1.94
+      - 3.32
+      - 5.12
+      - 9.59
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.29
+        3/4": 4.29
+        1": 4.29
+        1|1/2": 14.31
+        2": 22.90
+        3": 50.10
+        4": 85.88
+        6": 178.92
+        8": 257.65
+        10": 415.10
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.06
+        3/4": 18.06
+        1": 18.06
+        1|1/2": 60.21
+        2": 96.34
+        3": 210.76
+        4": 361.29
+        6": 752.68
+        8": 1083.86
+        10": 1746.22
+    commodity_charge: Budget
+    gpcd_commodity: 0
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - outdoor
+      - 125%
+      - 150%
+    tier_prices_commodity:
+      - 1.39
+      - 2.51
+      - 4.31
+      - 8.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
