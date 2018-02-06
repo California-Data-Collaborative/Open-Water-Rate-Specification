@@ -3,6 +3,8 @@ metadata:
   utility_name: CITY OF CAMARILLO
   bill_frequency: Monthly
   bill_unit: ccf
+  prop_218_link: >-
+    http://www.cityofcamarillo.org/Water/CITY%20WA%20&%20SW%20%20RATES%20form%201-1-2017.pdf
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -17,7 +19,26 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 19
+      - 25
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 1.55
+          - 3.69
+          - 4.68
+          - 6.52
+        outside_city:
+          - 4.3
+          - 4.5
+          - 4.68
+          - 6.52
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -36,7 +57,17 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 19
+      - 25
+    tier_prices_commodity:
+      - 1.55
+      - 3.69
+      - 4.68
+      - 6.52
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -55,7 +86,8 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.66
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -74,7 +106,8 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.66
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -93,7 +126,8 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.62
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -112,7 +146,8 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.66
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -131,7 +166,8 @@ rate_structure:
         4": 220.4
         6": 434.68
         8": 691.79
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.91
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
