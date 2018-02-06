@@ -105,10 +105,8 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 60
-    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
-    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
-    budget_commodity: outdoor
+    gpcd_commodity: 0
+    budget_commodity: commercial_budget
     landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
@@ -140,9 +138,7 @@ rate_structure:
         10": 3752.53
     commodity_charge: Budget
     gpcd_commodity: 0
-    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
-    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
-    budget_commodity: indoor+outdoor
+    budget_commodity: commercial_budget
     landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
@@ -174,9 +170,7 @@ rate_structure:
         10": 3752.53
     commodity_charge: Budget
     gpcd_commodity: 0
-    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
-    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
-    budget_commodity: indoor+outdoor
+    budget_commodity: commercial_budget
     landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
@@ -247,9 +241,7 @@ rate_structure:
         10": 3752.53
     commodity_charge: Budget
     gpcd_commodity: 0
-    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
-    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
-    budget_commodity: indoor+outdoor
+    budget_commodity: commercial_budget
     landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
