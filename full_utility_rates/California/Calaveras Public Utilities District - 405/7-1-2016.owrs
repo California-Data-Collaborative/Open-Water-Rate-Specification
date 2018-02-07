@@ -1,0 +1,132 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 7/1/2016
+  utility_name: Calaveras Public Utility District 
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: https://www.cpud.org/files/d1db6b6b9/Schedule+E.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39.73
+        3/4": 39.73
+        1": 63.66
+        1|1/2": 115.63
+        2": 219.55
+        4": 401.42
+        6": 531.33
+        8": 661.24
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 5
+          - 20
+          - 250
+        3/4":
+          - 0
+          - 5
+          - 20
+          - 250
+        1":
+          - 0
+          - 20
+          - 250
+        1|1/2":
+          - 0
+          - 40
+          - 250
+        2":
+          - 0
+          - 80
+          - 250
+        4":
+          - 0
+          - 150
+          - 250
+        6":
+          - 0
+          - 200
+          - 250
+        8":
+          - 0
+          - 250
+    tier_prices_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 1.6
+          - 2.6
+          - 2.2
+        3/4":
+          - 0
+          - 1.6
+          - 2.6
+          - 2.2
+        1":
+          - 0
+          - 2.6
+          - 2.2
+        1|1/2":
+          - 0
+          - 2.6
+          - 2.2
+        2":
+          - 0
+          - 2.6
+          - 2.2
+        4":
+          - 0
+          - 2.6
+          - 2.2
+        6":
+          - 0
+          - 2.6
+          - 2.2
+        8":
+          - 0
+          - 2.2
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 531.33
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 200
+    tier_prices_commodity:
+      - 0
+      - 1.93
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge: 167.59
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 60
+    tier_prices_commodity:
+      - 0
+      - 1.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
