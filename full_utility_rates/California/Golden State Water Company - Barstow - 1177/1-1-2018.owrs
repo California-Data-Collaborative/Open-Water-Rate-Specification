@@ -33,7 +33,95 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  NON_RESIDENTIAL:
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
     service_charge:
       depends_on:
         - meter_size
