@@ -1,0 +1,154 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: Soquel Creek Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 29.42
+        3/4": 29.42
+        1": 29.42
+        1|1/2": 29.42
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 8
+      - 14
+    tier_prices_commodity:
+      - 5.9
+      - 7.84
+      - 16.61
+      - 28.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 4
+      - 8
+      - 14
+    tier_prices_drought:
+      - 6.16
+      - 8.14
+      - 18.76
+      - 39.3
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.89
+        3/4": 29.83
+        1": 49.72
+        1|1/2": 89.49
+        2": 174.01
+        3": 328.13
+        4": 437.51
+        6": 1193.2
+        8": 1590.94
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 6
+      - 11
+    tier_prices_commodity:
+      - 5.9
+      - 7.84
+      - 16.61
+      - 28.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 3
+      - 6
+      - 11
+    tier_prices_drought:
+      - 6.16
+      - 8.14
+      - 18.76
+      - 39.3
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 53.75
+        3/4": 80.62
+        1": 134.37
+        1|1/2": 241.86
+        2": 470.29
+        3": 886.83
+        4": 1182.44
+        6": 3224.85
+        8": 4299.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.9
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 9.28
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.88
+        3/4": 50.81
+        1": 84.69
+        1|1/2": 152.44
+        2": 296.41
+        3": 558.94
+        4": 745.25
+        6": 2032.51
+        8": 2710.02
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.9
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 9.28
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1|1/2": 9.51
+        2": 16.91
+        3": 36.98
+        4": 66.57
+        6": 147.92
+        8": 253.58
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 16560
+    3/4": 24840
+    1": 41400
+    1 1/2": 74520
+    2": 144900
+    3": 273240
+    4": 364320
+    6": 993600
