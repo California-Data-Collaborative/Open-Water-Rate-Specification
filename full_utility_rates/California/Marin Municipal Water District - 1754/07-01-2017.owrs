@@ -105,9 +105,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
     budget_commodity: commercial_budget
-    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 85%
@@ -137,9 +135,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
     budget_commodity: commercial_budget
-    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 85%
@@ -169,9 +165,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
     budget_commodity: commercial_budget
-    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 85%
@@ -240,9 +234,7 @@ rate_structure:
         8": 2376.33
         10": 3752.53
     commodity_charge: Budget
-    gpcd_commodity: 0
     budget_commodity: commercial_budget
-    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - 100%
