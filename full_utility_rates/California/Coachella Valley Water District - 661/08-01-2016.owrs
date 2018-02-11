@@ -1,5 +1,5 @@
 metadata:
-  effective_date: 08/01/2016
+  effective_date: 11/01/2016
   utility_name: Coachella Valley Water District
   bill_frequency: Monthly
   bill_unit: ccf
@@ -92,7 +92,7 @@ rate_structure:
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.7*(1/748)
-    budget_commodity: indoor+outdoor
+    budget_commodity: outdoor
     landscape_factor_commodity: .86
     tier_starts_commodity:
       - 0
@@ -123,10 +123,10 @@ rate_structure:
         6": 165.16
     commodity_charge: Budget
     gpcd_commodity: 50
-    indoor_commodity: number of EDUsX8Ccf
-    outdoor_commodity: none
-    budget_commodity: indoor only
-    landscape_factor_commodity: none
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.7*(1/748)
+    budget_commodity: indoor
+    landscape_factor_commodity: 0.86
     tier_starts_commodity:
       - 0
       - 100%
@@ -142,3 +142,22 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+   FIRE_SERVICE:
+     service_charge:
+       depends_on:
+         - meter_size
+       values:
+         2": 2.10
+         3": 6.00
+         4": 12.40
+         6": 35.50
+         8": 75.90
+         10": 136.20
+         12": 219.90
+     commodity_charge: flat_rate_commodity*usage_ccf
+     flat_rate_commodity: 0
+     fixed_drought_surcharge: 0
+     variable_drought_surcharge: 0
+     fixed_wastewater_charge: 0
+     variable_wastewater_charge: 0
+     bill: service_charge+commodity_charge
