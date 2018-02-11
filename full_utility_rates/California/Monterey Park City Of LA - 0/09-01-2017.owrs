@@ -36,7 +36,74 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    water_treatment_charge: (commodity_charge+service_charge)*0.375
+    bill: commodity_charge+service_charge+water_treatment_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.3
+        3/4": 19.3
+        1": 20.9
+        1|1/2": 33
+        2": 42.4
+        3": 84.9
+        4": 140.4
+        6": 428.75
+        8": 1072.1
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.41
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    water_treatment_charge: (commodity_charge+service_charge)*0.375
+    bill: commodity_charge+service_charge+water_treatment_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.3
+        3/4": 19.3
+        1": 20.9
+        1|1/2": 33
+        2": 42.4
+        3": 84.9
+        4": 140.4
+        6": 428.75
+        8": 1072.1
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.41
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    water_treatment_charge: (commodity_charge+service_charge)*0.375
+    bill: commodity_charge+service_charge+water_treatment_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.3
+        3/4": 19.3
+        1": 20.9
+        1|1/2": 33
+        2": 42.4
+        3": 84.9
+        4": 140.4
+        6": 428.75
+        8": 1072.1
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.41
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    water_treatment_charge: (commodity_charge+service_charge)*0.375
+    bill: commodity_charge+service_charge+water_treatment_charge
   IRRIGATION:
     service_charge:
       depends_on:
@@ -57,4 +124,5 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    water_treatment_charge: (commodity_charge+service_charge)*0.375
+    bill: commodity_charge+service_charge+water_treatment_charge    
