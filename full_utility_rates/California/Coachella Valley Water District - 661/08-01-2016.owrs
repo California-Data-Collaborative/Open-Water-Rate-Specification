@@ -123,7 +123,6 @@ rate_structure:
         6": 165.16
     commodity_charge: Budget
     budget_commodity: commercial_budget
-    landscape_factor_commodity: 0.86
     tier_starts_commodity:
       - 0
       - 100%
