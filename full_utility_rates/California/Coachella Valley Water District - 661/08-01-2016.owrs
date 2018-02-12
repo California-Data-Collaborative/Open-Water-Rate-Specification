@@ -122,10 +122,7 @@ rate_structure:
         4": 82.58
         6": 165.16
     commodity_charge: Budget
-    gpcd_commodity: 50
-    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
-    outdoor_commodity: landscape_factor*et_amount*irr_area*0.7*(1/748)
-    budget_commodity: indoor
+    budget_commodity: commercial_budget
     landscape_factor_commodity: 0.86
     tier_starts_commodity:
       - 0
