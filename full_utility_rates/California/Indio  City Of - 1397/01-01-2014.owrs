@@ -5,7 +5,19 @@ metadata:
   bill_unit: ccf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 0
+    service_charge: 
+      depends_on:
+        -  meter_size
+      values:
+        5/8": 19.59
+        3/4": 19.59
+        1": 48.98
+        1 1/2": 97.97
+        2": 156.72
+        3": 293.87
+        4": 489.78
+        6": 979.51
+        8": 1567.23
     commodity_charge: Budget
     gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -30,7 +42,19 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
+    service_charge: 
+      depends_on:
+        -  meter_size
+      values:
+        5/8": 19.59
+        3/4": 19.59
+        1": 48.98
+        1 1/2": 97.97
+        2": 156.72
+        3": 293.87
+        4": 489.78
+        6": 979.51
+        8": 1567.23
     commodity_charge: Budget
     gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -55,7 +79,19 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   IRRIGATION:
-    service_charge: 0
+    service_charge: 
+      depends_on:
+        -  meter_size
+      values:
+        5/8": 19.59
+        3/4": 19.59
+        1": 48.98
+        1 1/2": 97.97
+        2": 156.72
+        3": 293.87
+        4": 489.78
+        6": 979.51
+        8": 1567.23
     commodity_charge: Budget
     gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -80,7 +116,19 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
+    service_charge: 
+      depends_on:
+        -  meter_size
+      values:
+        5/8": 19.59
+        3/4": 19.59
+        1": 48.98
+        1 1/2": 97.97
+        2": 156.72
+        3": 293.87
+        4": 489.78
+        6": 979.51
+        8": 1567.23
     commodity_charge: Budget
     gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -105,7 +153,19 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: 0
+    service_charge: 
+      depends_on:
+        -  meter_size
+      values:
+        5/8": 19.59
+        3/4": 19.59
+        1": 48.98
+        1 1/2": 97.97
+        2": 156.72
+        3": 293.87
+        4": 489.78
+        6": 979.51
+        8": 1567.23   
     commodity_charge: Budget
     gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -129,16 +189,3 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-capacity_charge:
-  depends_on:
-    - meter_size
-  values:
-    5/8": 19.59
-    3/4": 19.59
-    1": 48.98
-    1 1/2": 97.97
-    2": 156.72
-    3": 293.87
-    4": 489.78
-    6": 979.51
-    8": 1567.23
