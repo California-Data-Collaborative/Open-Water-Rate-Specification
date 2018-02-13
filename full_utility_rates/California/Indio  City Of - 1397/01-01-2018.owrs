@@ -34,7 +34,7 @@ rate_structure:
     tier_starts_commodity:
       - 0
       - indoor
-      - 150%
+      - 100%
       - 200%
       - 400%
     tier_prices_commodity:
@@ -72,7 +72,7 @@ rate_structure:
     tier_starts_commodity:
       - 0
       - indoor
-      - 150%
+      - 100%
       - 200%
       - 400%
     tier_prices_commodity:
