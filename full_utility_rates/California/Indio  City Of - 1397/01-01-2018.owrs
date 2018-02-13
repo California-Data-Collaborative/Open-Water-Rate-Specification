@@ -26,7 +26,7 @@ rate_structure:
         8": 1692.61
         12": 1692.61
     commodity_charge: Budget
-    gpcd_commodity: 60
+    gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
@@ -34,9 +34,9 @@ rate_structure:
     tier_starts_commodity:
       - 0
       - indoor
-      - 100%
-      - 125%
       - 150%
+      - 200%
+      - 400%
     tier_prices_commodity:
       - 1.05
       - 1.58
@@ -64,7 +64,7 @@ rate_structure:
         8": 1692.61
         12": 1692.61
     commodity_charge: Budget
-    gpcd_commodity: 60
+    gpcd_commodity: 62.5
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
@@ -72,9 +72,9 @@ rate_structure:
     tier_starts_commodity:
       - 0
       - indoor
-      - 100%
-      - 125%
       - 150%
+      - 200%
+      - 400%
     tier_prices_commodity:
       - 1.05
       - 1.58
@@ -106,8 +106,8 @@ rate_structure:
     tier_starts_commodity:
       - 0
       - 100%
-      - 125%
-      - 150%
+      - 200%
+      - 400%
     tier_prices_commodity:
       - 1.41
       - 2.11
