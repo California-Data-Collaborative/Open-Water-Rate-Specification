@@ -5,7 +5,7 @@ author_info:
 metadata:
   effective_date: 01/01/2018
   utility_name: Glendora City Of
-  bill_frequency: Monthly
+  bill_frequency: Bi-Monthly
   bill_unit: ccf
   prop_218_link: 
 rate_structure:
