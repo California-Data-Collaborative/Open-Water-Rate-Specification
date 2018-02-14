@@ -1,0 +1,169 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Golden State Water Company - Lakewood
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.gswater.com/central-basin-east/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.19
+        3/4": 25.79
+        1": 49.98
+        1|1/2": 85.95
+        2": 137.52
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 15
+    tier_prices_commodity:
+      - 4.016
+      - 4.619
+      - 5.311
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.19
+        3/4": 25.79
+        1": 49.98
+        1|1/2": 85.95
+        2": 137.52
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 15
+    tier_prices_commodity:
+      - 4.016
+      - 4.619
+      - 5.311
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.05
+        3/4": 34.58
+        1": 57.63
+        1|1/2": 115.25
+        2": 184.4
+        3": 345.75
+        4": 576.25
+        6": 1152.5
+        8": 1844
+        10": 2651
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.016
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.05
+        3/4": 34.58
+        1": 57.63
+        1|1/2": 115.25
+        2": 184.4
+        3": 345.75
+        4": 576.25
+        6": 1152.5
+        8": 1844
+        10": 2651
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.016
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.05
+        3/4": 34.58
+        1": 57.63
+        1|1/2": 115.25
+        2": 184.4
+        3": 345.75
+        4": 576.25
+        6": 1152.5
+        8": 1844
+        10": 2651
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.016
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.05
+        3/4": 34.58
+        1": 57.63
+        1|1/2": 115.25
+        2": 184.4
+        3": 345.75
+        4": 576.25
+        6": 1152.5
+        8": 1844
+        10": 2651
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.016
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.14
+        3/4": 24.21
+        1": 40.35
+        1|1/2": 80.7
+        2": 129.12
+        3": 242.1
+        4": 403.5
+        6": 807
+        8": 1291.2
+        10": 1856.1
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.811
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge

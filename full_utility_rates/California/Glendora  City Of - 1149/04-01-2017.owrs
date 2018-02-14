@@ -1,0 +1,78 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Glendora City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 81.75
+        3/4": 81.75
+        1": 106.28
+        1|1/2": 176.48
+        2": 253.43
+        3": 376.06
+        4": 572.3
+        6": 997.43
+        8": 1406.19
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 38
+        3/4":
+          - 0
+          - 38
+        1":
+          - 0
+          - 67
+        1|1/2":
+          - 0
+          - 134
+        2":
+          - 0
+          - 220
+        3":
+          - 0
+          - 838
+        4":
+          - 0
+          - 1316
+        6":
+          - 0
+          - 4682
+        8":
+          - 0
+          - 4682
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 2.36
+          - 4.07
+        2:
+          - 2.48
+          - 4.19
+        3:
+          - 2.69
+          - 4.4
+        4:
+          - 3.49
+          - 5.2
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
