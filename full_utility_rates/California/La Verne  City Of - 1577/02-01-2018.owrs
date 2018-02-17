@@ -1,0 +1,52 @@
+author_info:
+  author: Vincent
+  email: h@e.com
+  phone: (876)678-8079
+metadata:
+  effective_date: 02/01/2018
+  utility_name: La Verne  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http;//laverne.edu
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - season
+      values:
+        5/8"|Summer: 1
+        5/8"|Winter: 2
+        3/4"|Summer: 3
+        3/4"|Winter: 4
+        1"|Summer: 5
+        1"|Winter: 6
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 5.67
+    3/4": 22.9
+    1 1/2": 34.9
