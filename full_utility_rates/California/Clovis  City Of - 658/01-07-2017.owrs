@@ -1,0 +1,142 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/07/2017
+  utility_name: Clovis  City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    http://www.ci.clovis.ca.us/Portals/0/Documents/PublicUtilities/Water/Prop%20218%20Public%20Notice%20Final.pdf?ver=2016-02-25-151926-067
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 21.86
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 23
+      - 40
+    tier_prices_commodity:
+      - 0.89
+      - 1.49
+      - 1.83
+    fixed_drought_surcharge: 21.86
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 23
+      - 40
+    tier_prices_drought:
+      - 1.07
+      - 2.16
+      - 2.74
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 21.86
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 23
+      - 40
+    tier_prices_commodity:
+      - 1.89
+      - 1.49
+      - 1.83
+    fixed_drought_surcharge: 21.86
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 23
+      - 40
+    tier_prices_drought:
+      - 1.07
+      - 2.16
+      - 2.74
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.61
+        3/4": 17.61
+        1": 17.61
+        1|1/2": 23.43
+        2": 32.34
+        3": 64.05
+        4": 161.11
+        6": 642.62
+        8": 1139.139
+        10": 1784.62
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 23
+    tier_prices_commodity:
+      - 0.89
+      - 1.21
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.61
+        3/4": 17.61
+        1": 1761
+        1|1/2": 23.42
+        2": 32.34
+        3": 64.05
+        4": 161.11
+        6": 642.62
+        8": 1139.14
+        10": 1784.62
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 23
+    tier_prices_drought:
+      - 1.07
+      - 1.44
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.61
+        3/4": 17.61
+        1": 17.61
+        1|1/2": 23.43
+        2": 32.34
+        3": 64.05
+        4": 161.11
+        6": 642.62
+        8": 1139.139
+        10": 1784.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.55
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.61
+        3/4": 17.61
+        1": 1761
+        1|1/2": 23.42
+        2": 32.34
+        3": 64.05
+        4": 161.11
+        6": 642.62
+        8": 1139.14
+        10": 1784.62
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 0.58
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
