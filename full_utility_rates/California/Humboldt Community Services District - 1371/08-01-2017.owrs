@@ -1,17 +1,88 @@
+author_info:
+  author: 
+  email: 
+  phone: 
 metadata:
   effective_date: 08/01/2017
   utility_name: Humboldt Community Services District
   bill_frequency: Monthly
   bill_unit: ccf
+  prop_218_link: http://humboldtcsd.org/sites/default/files/2017-18_Rates_n_Fees.pdf
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on:
         - meter_size
       values:
+        5/8": 23.19
+        3/4": 33.67
         1": 54.63
+        1|1/2": 107.04
+        2": 169.93
+        3": 337.62
+        4": 526.28
+        6": 1050.34
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 3.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.19
+        3/4": 33.67
+        1": 54.63
+        1|1/2": 107.04
+        2": 169.93
+        3": 337.62
+        4": 526.28
+        6": 1050.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.19
+        3/4": 33.67
+        1": 54.63
+        1|1/2": 107.04
+        2": 169.93
+        3": 337.62
+        4": 526.28
+        6": 1050.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 1.875
+        3/4": 2.25
+        1": 3
+        1|1/2": 4.5
+        2": 6
+        3": 9
+        4": 12
+        6": 18
+    commodity_charge: 0
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
