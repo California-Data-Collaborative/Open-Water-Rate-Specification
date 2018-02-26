@@ -1,0 +1,81 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 08/01/2008
+  utility_name: Calexico  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 43.89
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+    tier_prices_commodity:
+      - 0
+      - 2.22
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 43.89
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+    tier_prices_commodity:
+      - 0
+      - 2.22
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 43.89
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 0
+      - 3.01
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 43.89
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 0
+      - 3.01
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 43.89
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+    tier_prices_commodity:
+      - 0
+      - 2.22
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
