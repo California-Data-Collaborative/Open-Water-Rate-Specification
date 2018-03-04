@@ -22,7 +22,7 @@ rate_structure:
 
     tier_starts:
       - 0
-      - 900
+      - 9
     tier_prices:
       - 5.457
       - 6.275
