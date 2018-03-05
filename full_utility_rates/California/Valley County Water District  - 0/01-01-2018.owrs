@@ -1,0 +1,100 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Valley County Water District 
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.vcwd.org/page/82953_Water_Service_Rates.asp
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 29.82
+        3/4": 29.82
+        1": 58.59
+        1|1/2": 106.56
+        2": 164.11
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 17
+      - 31
+    tier_prices_commodity:
+      - 1.16
+      - 1.85
+      - 3.22
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 29.82
+        3/4": 29.82
+        1": 58.59
+        1|1/2": 106.56
+        2": 164.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+
+# SFR and MFR are bimonthly -- all the other customer classes are monthly and have been tweaked. 
+# Ideally would have a more elegant way to handle different billing frequencies rather than tweaking meter service charges so the math works out
+
+#  COMMERCIAL:
+#    service_charge:
+#      depends_on:
+#        - meter_size
+#      values:
+#        5/8": 40.44
+#        3/4": 40.44
+#        1": 69.22
+#        1|1/2": 117.18
+#        2": 174.74
+#        3": 309.04
+#        4": 500.88
+#        6": 980.52
+#        8": 1556.06
+#    commodity_charge: Tiered
+#    tier_starts_commodity:
+#      - 0
+#      - 9
+#      - 16
+#    tier_prices_commodity:
+#      - 1.16
+#      - 1.16
+#      - 2.06
+#    fixed_drought_surcharge: 0
+#    variable_drought_surcharge: 0
+#    fixed_wastewater_charge: 0
+#    variable_wastewater_charge: 0
+#   bill: service_charge+commodity_charge
+#  FIRE_SERVICE:
+#    service_charge:
+#      depends_on:
+#        - meter_size
+#      values:
+#        4": 90.5
+#        6": 222.4
+#        8": 449.88
+#        10": 792.08
+#    commodity_charge: flat_rate_commodity*usage_ccf
+#    flat_rate_commodity: 3.22
+#    fixed_drought_surcharge: 0
+#    variable_drought_surcharge: 0
+#    fixed_wastewater_charge: 0
+#    variable_wastewater_charge: 0
+#    bill: service_charge+commodity_charge
