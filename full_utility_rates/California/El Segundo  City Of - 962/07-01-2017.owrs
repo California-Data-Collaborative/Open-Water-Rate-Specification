@@ -1,0 +1,136 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: El Segundo  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.elsegundo.org/civicax/filebank/blobdload.aspx?blobid=18219
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.84
+        3/4": 10.84
+        1": 24.58
+        1|1/2": 30.78
+        2": 57.06
+        3": 128.44
+        4": 227.9
+        6": 426.07
+        8": 746.93
+        10": 1168.58
+        12": 1682.59
+        16": 2987.71
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 20
+      - 50
+    tier_prices_commodity:
+      - 2.6857
+      - 4.9428
+      - 5.6145
+      - 4.9428
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.84
+        3/4": 10.84
+        1": 24.58
+        1|1/2": 30.78
+        2": 57.06
+        3": 128.44
+        4": 227.9
+        6": 426.07
+        8": 746.93
+        10": 1168.58
+        12": 1682.59
+        16": 2987.71
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 20
+      - 50
+    tier_prices_commodity:
+      - 3.2694
+      - 3.9938
+      - 4.2253
+      - 4.4353
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 53.33
+        3": 81.4
+        4": 109.49
+        6": 165.53
+        8": 211.21
+        10": 277.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 20
+      - 50
+    tier_prices_commodity:
+      - 3.2694
+      - 3.9938
+      - 4.2253
+      - 4.4353
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
