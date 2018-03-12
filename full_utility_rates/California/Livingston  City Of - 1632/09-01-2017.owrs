@@ -20,40 +20,45 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   IRRIGATION:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
