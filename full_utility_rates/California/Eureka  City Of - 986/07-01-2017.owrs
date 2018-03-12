@@ -1,0 +1,111 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Eureka  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://new.ci.eureka.ca.gov/civicax/filebank/blobdload.aspx?BlobID=13180
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.15
+        5/8"|outside_city: 37.73
+        3/4"|inside_city: 25.15
+        3/4"|outside_city: 37.73
+        1"|inside_city: 60.02
+        1"|outside_city: 90.02
+        1|1/2"|inside_city: 187.85
+        1|1/2"|outside_city: 281.77
+        2"|inside_city: 373.79
+        2"|outside_city: 560.68
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.15
+        outside_city: 3.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 33.1
+        5/8"|outside_city: 49.65
+        3/4"|inside_city: 33.1
+        3/4"|outside_city: 49.65
+        1"|inside_city: 79.88
+        1"|outside_city: 119.82
+        1|1/2"|inside_city: 157.85
+        1|1/2"|outside_city: 236.78
+        2"|inside_city: 251.42
+        2"|outside_city: 377.12
+        3"|inside_city: 500.92
+        3"|outside_city: 751.38
+        4"|inside_city: 781.61
+        4"|outside_city: 1172.42
+        6"|inside_city: 1561.32
+        6"|outside_city: 2341.98
+        8"|inside_city: 2496.97
+        8"|outside_city: 3745.45
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.15
+        outside_city: 3.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 47.38
+        5/8"|outside_city: 71.08
+        3/4"|inside_city: 47.38
+        3/4"|outside_city: 71.08
+        1"|inside_city: 115.6
+        1"|outside_city: 173.4
+        1|1/2"|inside_city: 229.29
+        1|1/2"|outside_city: 343.93
+        2"|inside_city: 365.71
+        2"|outside_city: 548.57
+        3"|inside_city: 729.51
+        3"|outside_city: 1094.27
+        4"|inside_city: 1138.79
+        4"|outside_city: 1708.18
+        6"|inside_city: 2275.67
+        6"|outside_city: 3413.5
+        8"|inside_city: 3639.92
+        8"|outside_city: 5459.88
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.15
+        outside_city: 3.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
