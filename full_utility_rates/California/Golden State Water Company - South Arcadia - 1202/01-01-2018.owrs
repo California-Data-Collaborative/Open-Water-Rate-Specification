@@ -1,0 +1,184 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Golden State Water Company - South Arcadia
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.gswater.com/san-gabriel/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.6
+        3/4": 23.4
+        1": 39
+        1|1/2": 78
+        2": 124.8
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 13
+      - 21
+    tier_prices_commodity:
+      - 3.899
+      - 4.484
+      - 5.157
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.899
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 10
+        3": 15
+        4": 20
+        6": 30
+        8": 40
+        10": 50
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.41
+        3/4": 33.62
+        1": 56.03
+        1|1/2": 112.05
+        2": 179.28
+        3": 336.15
+        4": 560.25
+        6": 1120.5
+        8": 1792.8
+        10": 2577.15
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.314
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
