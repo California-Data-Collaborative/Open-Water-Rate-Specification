@@ -1,0 +1,57 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2015
+  utility_name: Los Banos  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.losbanos.org/city-government/departments/financebuilding/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 21.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0
+      - 1.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 21.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0
+      - 7.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0
+      - 1.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
