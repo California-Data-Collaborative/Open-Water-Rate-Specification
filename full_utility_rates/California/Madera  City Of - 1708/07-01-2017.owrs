@@ -1,0 +1,150 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Madera  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.cityofmadera.ca.gov/wp-content/uploads/2016/10/Rates-Water-Res-15-156.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.89
+        3/4": 16.84
+        1": 20.74
+        1|1/2": 30.49
+        2": 42.19
+        3": 79.24
+        4": 133.84
+        6": 264.49
+        8": 478.99
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 33
+    tier_prices_commodity:
+      - 1.33
+      - 1.9
+      - 3.2
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.89
+        3/4": 16.84
+        1": 20.74
+        1|1/2": 30.49
+        2": 42.19
+        3": 79.24
+        4": 133.84
+        6": 264.49
+        8": 478.99
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 1.4
+      - 2.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.89
+        3/4": 16.84
+        1": 20.74
+        1|1/2": 30.49
+        2": 42.19
+        3": 79.24
+        4": 133.84
+        6": 264.49
+        8": 478.99
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.89
+        3/4": 16.84
+        1": 20.74
+        1|1/2": 30.49
+        2": 42.19
+        3": 79.24
+        4": 133.84
+        6": 264.49
+        8": 478.99
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.89
+        3/4": 16.84
+        1": 20.74
+        1|1/2": 30.49
+        2": 42.19
+        3": 79.24
+        4": 133.84
+        6": 264.49
+        8": 478.99
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.89
+        3/4": 16.84
+        1": 20.74
+        1|1/2": 30.49
+        2": 42.19
+        3": 79.24
+        4": 133.84
+        6": 264.49
+        8": 478.99
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
