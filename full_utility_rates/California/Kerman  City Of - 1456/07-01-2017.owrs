@@ -1,0 +1,58 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Kerman  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: http://cityofkerman.net/wp-content/uploads/2014/05/Utility-Rates-2017-18.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 16.17
+        1": 23.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 16.17
+        1": 23.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 16.17
+        1": 23.79
+        1|1/2": 42.8
+        2": 96.07
+        3": 175.99
+        4": 290.15
+        6": 575.54
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
