@@ -1,0 +1,158 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 12/01/2017
+  utility_name: Napa  City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+  prop_218_link: https://www.cityofnapa.org/606/Rate-Schedules
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.59
+        1": 28.59
+        1|1/2": 54.13
+        2": 84.78
+        3": 166.51
+        4": 258.45
+        6": 513.84
+        8": 820.32
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+      - 28
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+        - city_limits
+      values:
+        1|inside_city:
+          - 4.07
+          - 5.94
+          - 7.68
+        1|outside_city:
+          - 5.87
+          - 8.41
+          - 10.93
+        2|inside_city:
+          - 5.91
+          - 7.78
+          - 9.52
+        2|outside_city:
+          - 7.71
+          - 10.25
+          - 12.77
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.59
+        1": 28.59
+        1|1/2": 54.13
+        2": 84.78
+        3": 166.51
+        4": 258.45
+        6": 513.84
+        8": 820.32
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+        - city_limits
+      values:
+        1|inside_city: 5.75
+        1|outside_city: 8.85
+        2|inside_city: 7.59
+        2|outside_city: 10.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.59
+        1": 28.59
+        1|1/2": 54.13
+        2": 84.78
+        3": 166.51
+        4": 258.45
+        6": 513.84
+        8": 820.32
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+        - city_limits
+      values:
+        1|inside_city: 6.02
+        1|outside_city: 9.21
+        2|inside_city: 7.86
+        2|outside_city: 11.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 28.59
+        1": 28.59
+        1|1/2": 54.13
+        2": 84.78
+        3": 166.51
+        4": 258.45
+        6": 513.84
+        8": 820.32
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+        - city_limits
+      values:
+        1|inside_city: 5.85
+        1|outside_city: 8.96
+        2|inside_city: 7.69
+        2|outside_city: 10.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1|1/2": 24.59
+        2": 37.51
+        3": 71.97
+        4": 110.74
+        6": 218.43
+        8": 347.65
+        10": 498.41
+        12": 929.15
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
