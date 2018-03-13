@@ -32,7 +32,8 @@ rate_structure:
         3/4": 25.8
         1": 25.8
         1|1/2": 43.2
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.24
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
