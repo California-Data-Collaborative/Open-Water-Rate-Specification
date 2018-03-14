@@ -1,0 +1,198 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Marina Coast Water District - Central Marina
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.mcwd.org/docs/agenda_minutes/2018-01-22_board/Item%2011-B%20-%20MCWD%202018%20CoS%20Rate%20Study%20Report.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.36
+        3/4": 22.36
+        1": 36.07
+        1|1/2": 58.94
+        2": 86.36
+        3": 150.41
+        4": 241.82
+        6": 470.42
+        8": 927.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 17
+    tier_prices_commodity:
+      - 2.78
+      - 3.19
+      - 5.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.36
+        3/4": 22.36
+        1": 36.07
+        1|1/2": 58.94
+        2": 86.36
+        3": 150.41
+        4": 241.82
+        6": 470.42
+        8": 927.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 17
+    tier_prices_commodity:
+      - 2.78
+      - 3.19
+      - 5.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.36
+        3/4": 22.36
+        1": 36.07
+        1|1/2": 58.94
+        2": 86.36
+        3": 150.41
+        4": 241.82
+        6": 470.42
+        8": 927.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 17
+    tier_prices_commodity:
+      - 2.78
+      - 3.19
+      - 5.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.36
+        3/4": 22.36
+        1": 36.07
+        1|1/2": 58.94
+        2": 86.36
+        3": 150.41
+        4": 241.82
+        6": 470.42
+        8": 927.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 17
+    tier_prices_commodity:
+      - 2.78
+      - 3.19
+      - 5.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.36
+        3/4": 22.36
+        1": 36.07
+        1|1/2": 58.94
+        2": 86.36
+        3": 150.41
+        4": 241.82
+        6": 470.42
+        8": 927.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 17
+    tier_prices_commodity:
+      - 2.78
+      - 3.19
+      - 5.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.36
+        3/4": 22.36
+        1": 36.07
+        1|1/2": 58.94
+        2": 86.36
+        3": 150.41
+        4": 241.82
+        6": 470.42
+        8": 927.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 17
+    tier_prices_commodity:
+      - 2.78
+      - 3.19
+      - 5.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 1.68
+        1|1/2": 4.87
+        2": 10.37
+        3": 30.13
+        4": 64.2
+        6": 186.49
+        8": 397.4
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
