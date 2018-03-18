@@ -1,0 +1,43 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 06/01/2017
+  utility_name: American Canyon  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.cityofamericancanyon.org/home/showdocument?id=15302
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 6.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 21
+    tier_prices_commodity:
+      - 5.33
+      - 6.25
+      - 6.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 6.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 21
+    tier_prices_commodity:
+      - 5.33
+      - 6.25
+      - 6.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
