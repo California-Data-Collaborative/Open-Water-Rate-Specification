@@ -8,27 +8,26 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
-        - season
         - city_limits
       values:
-        3/4"|Winter|inside_city: 17.51
-        3/4"|Winter|outside_city: 21.79
-        1"|Winter|inside_city: 33.25
-        1"|Winter|outside_city: 41.38
-        1|1/2"|Winter|inside_city: 68.41
-        1|1/2"|Winter|outside_city: 84.85
-        2"|Winter|inside_city: 157.66
-        2"|Winter|outside_city: 196.21
-        3"|Winter|inside_city: 385.08
-        3"|Winter|outside_city: 479.32
-        4"|Winter|inside_city: 592.13
-        4"|Winter|outside_city: 737.76
-        6"|Winter|inside_city: 912.13
-        6"|Winter|outside_city: 1135.69
-        8"|Winter|inside_city: 485.83
-        8"|Winter|outside_city: 1849.91
-        10"|Winter|inside_city: 1933.6
-        10"|Winter|outside_city: 2407.46
+        3/4"|inside_city: 17.51
+        3/4"|outside_city: 21.79
+        1"|inside_city: 33.25
+        1"|outside_city: 41.38
+        1|1/2"|inside_city: 68.41
+        1|1/2"|outside_city: 84.85
+        2"|inside_city: 157.66
+        2"|outside_city: 196.21
+        3"|inside_city: 385.08
+        3"|outside_city: 479.32
+        4"|inside_city: 592.13
+        4"|outside_city: 737.76
+        6"|inside_city: 912.13
+        6"|outside_city: 1135.69
+        8"|inside_city: 485.83
+        8"|outside_city: 1849.91
+        10"|inside_city: 1933.6
+        10"|outside_city: 2407.46
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0

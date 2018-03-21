@@ -1,0 +1,133 @@
+metadata:
+  effective_date: 01/01/2017
+  utility_name: City of Poway 
+  bill_frequency: bimonthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.28
+        3/4": 37.28
+        1": 62.13
+        1 1/2": 124.24
+        2": 198.78
+        3": 372.73
+        4": 621.2
+        6": 1242.41
+        8": 1987.84
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 200
+    tier_prices_commodity:
+      - 4.96
+      - 7.07
+    fixed_drought_surcharge: 0.75
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.28
+        3/4": 37.28
+        1": 62.13
+        1 1/2": 124.24
+        2": 198.78
+        3": 372.73
+        4": 621.2
+        6": 1242.41
+        8": 1987.84
+    commodity_charge: 5.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0.75
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.28
+        3/4": 37.28
+        1": 62.13
+        1 1/2": 124.24
+        2": 198.78
+        3": 372.73
+        4": 621.2
+        6": 1242.41
+        8": 1987.84
+    commodity_charge: 5.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0.75
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.28
+        3/4": 37.28
+        1": 62.13
+        1 1/2": 124.24
+        2": 198.78
+        3": 372.73
+        4": 621.2
+        6": 1242.41
+        8": 1987.84
+    commodity_charge: 5.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0.75
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.28
+        3/4": 37.28
+        1": 62.13
+        1 1/2": 124.24
+        2": 198.78
+        3": 372.73
+        4": 621.2
+        6": 1242.41
+        8": 1987.84
+    commodity_charge: 5.05 
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0.75
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge: 
+      depends_on:
+      - meter_size
+      values:
+        5/8": 37.28
+        3/4": 37.28
+        1": 62.13
+        1 1/2": 124.24
+        2": 198.78
+        3": 372.73
+        4": 621.2
+        6": 1242.41
+        8": 1987.84
+    commodity_charge: 5.05 
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0.75
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  

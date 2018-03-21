@@ -1,0 +1,137 @@
+metadata:
+  effective_date: 03/15/2017
+  utility_name: Ventura County Waterworks District No 1
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.41
+        1": 14.04
+        1|1/2": 23.09
+        2": 33.96
+        3": 68.37
+        4": 119.08
+        6": 240.43
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 25
+    tier_prices_commodity:
+      - 3.2
+      - 3.83
+      - 4.4
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.41
+        1": 14.04
+        1|1/2": 23.09
+        2": 33.96
+        3": 68.37
+        4": 119.08
+        6": 240.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.41
+        1": 14.04
+        1|1/2": 23.09
+        2": 33.96
+        3": 68.37
+        4": 119.08
+        6": 240.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.67
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.41
+        1": 14.04
+        1|1/2": 23.09
+        2": 33.96
+        3": 68.37
+        4": 119.08
+        6": 240.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.44
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.41
+        1": 14.04
+        1|1/2": 23.09
+        2": 33.96
+        3": 68.37
+        4": 119.08
+        6": 240.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.12
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.58
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.41
+        1": 14.04
+        1|1/2": 23.09
+        2": 33.96
+        3": 68.37
+        4": 119.08
+        6": 240.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.22
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge

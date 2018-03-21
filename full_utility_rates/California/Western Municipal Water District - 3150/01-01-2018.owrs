@@ -6,19 +6,19 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 
-    depends_on: meter_size
-    values:
-      5/8": 25.71
-      3/4": 34.67
-      1": 52.29
-      1 1/2": 96.48
-      2": 114.64
-      3": 205.4
-      4": 310.74
-      6": 384.41
-      8": 442.7
-      10": 508.17
-      12": 603.77
+      depends_on: meter_size
+      values:
+        5/8": 25.71
+        3/4": 34.67
+        1": 52.29
+        1 1/2": 96.48
+        2": 114.64
+        3": 205.4
+        4": 310.74
+        6": 384.41
+        8": 442.7
+        10": 508.17
+        12": 603.77
     commodity_charge: Budget
     gpcd_commodity: 60
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)

@@ -1,0 +1,22 @@
+metadata:
+  effective_date: 02/01/2017
+  utility_name: Sierra Estates GID
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 55.51
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 25
+    tier_prices_commodity:
+      - 1.16
+      - 1.49
+      - 2.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
