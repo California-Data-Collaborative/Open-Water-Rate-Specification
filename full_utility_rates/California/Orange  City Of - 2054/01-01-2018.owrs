@@ -147,6 +147,9 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+    
+    #Agriculture rates are calculated monthly 
+  
   FIRE_SERVICE:
     service_charge:
       depends_on:
