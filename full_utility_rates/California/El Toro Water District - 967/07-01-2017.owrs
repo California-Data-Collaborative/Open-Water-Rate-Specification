@@ -1,25 +1,61 @@
+author_info:
+  author: 
+  email: 
+  phone: 
 metadata:
   effective_date: 07/01/2017
   utility_name: El Toro Water District
   bill_frequency: Monthly
   bill_unit: ccf
+  prop_218_link: https://etwd.com/governance/rate-structure/
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
       depends_on:
         - meter_size
       values:
-        5/8": 16.46
-        3/4": 20.48
-        1": 31.63
-        1|1/2": 62.83
-        2": 131.54
+        5/8": 11.8
+        3/4": 15.82
+        1": 23.85
+        1|1/2": 43.92
+        2": 84.07
     commodity_charge: Budget
     gpcd_commodity: 55
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .8
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 2.52
+      - 2.91
+      - 6.08
+      - 7.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.8
+        3/4": 15.82
+        1": 23.85
+        1|1/2": 43.92
+        2": 84.07
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
     tier_starts_commodity:
       - 0
       - indoor
@@ -40,11 +76,11 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        5/8": 16.46
-        3/4": 20.48
-        1": 31.63
-        1|1/2": 62.83
-        2": 131.54
+        5/8": 11.8
+        3/4": 15.82
+        1": 23.85
+        1|1/2": 43.92
+        2": 84.07
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.89
     fixed_drought_surcharge: 0
@@ -52,3 +88,46 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.8
+        3/4": 15.82
+        1": 23.85
+        1|1/2": 43.92
+        2": 84.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.8
+        3/4": 15.82
+        1": 23.85
+        1|1/2": 43.92
+        2": 84.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 4.66
+    3/4": 4.66
+    1": 7.78
+    1 1/2": 18.91
+    2": 47.47
