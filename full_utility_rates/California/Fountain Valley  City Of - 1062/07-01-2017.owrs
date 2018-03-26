@@ -1,0 +1,156 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Fountain Valley  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.fountainvalley.org/950/Water-Sewer-Rates
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.28
+        3/4": 7.28
+        1": 18.21
+        1|1/2": 36.42
+        2": 58.28
+        3": 108.27
+        4": 182.12
+        6": 364.23
+        8": 582.77
+        10": 874.16
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.28
+        3/4": 7.28
+        1": 18.21
+        1|1/2": 36.42
+        2": 58.28
+        3": 108.27
+        4": 182.12
+        6": 364.23
+        8": 582.77
+        10": 874.16
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.28
+        3/4": 7.28
+        1": 18.21
+        1|1/2": 36.42
+        2": 58.28
+        3": 108.27
+        4": 182.12
+        6": 364.23
+        8": 582.77
+        10": 874.16
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.28
+        3/4": 7.28
+        1": 18.21
+        1|1/2": 36.42
+        2": 58.28
+        3": 108.27
+        4": 182.12
+        6": 364.23
+        8": 582.77
+        10": 874.16
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.28
+        3/4": 7.28
+        1": 18.21
+        1|1/2": 36.42
+        2": 58.28
+        3": 108.27
+        4": 182.12
+        6": 364.23
+        8": 582.77
+        10": 874.16
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.28
+        3/4": 7.28
+        1": 18.21
+        1|1/2": 36.42
+        2": 58.28
+        3": 108.27
+        4": 182.12
+        6": 364.23
+        8": 582.77
+        10": 874.16
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.29
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 7.64
+        3/4": 19.11
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
