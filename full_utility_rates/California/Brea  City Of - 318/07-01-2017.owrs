@@ -1,0 +1,158 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Brea  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.ci.brea.ca.us/107/Water-Rate-Information
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.93
+        3/4": 15.93
+        1": 15.93
+        1|1/2": 59.28
+        2": 91.78
+        3": 194.72
+        4": 346.43
+        6": 709.45
+        8": 1522.17
+        10": 2280.7
+        12": 2876.62
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 21
+      - 30
+    tier_prices_commodity:
+      - 3.59
+      - 4.69
+      - 6.18
+      - 7.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.93
+        3/4": 15.93
+        1": 15.93
+        1|1/2": 59.28
+        2": 91.78
+        3": 194.72
+        4": 346.43
+        6": 709.45
+        8": 1522.17
+        10": 2280.7
+        12": 2876.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.93
+        3/4": 15.93
+        1": 15.93
+        1|1/2": 59.28
+        2": 91.78
+        3": 194.72
+        4": 346.43
+        6": 709.45
+        8": 1522.17
+        10": 2280.7
+        12": 2876.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.93
+        3/4": 15.93
+        1": 15.93
+        1|1/2": 59.28
+        2": 91.78
+        3": 194.72
+        4": 346.43
+        6": 709.45
+        8": 1522.17
+        10": 2280.7
+        12": 2876.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.93
+        3/4": 15.93
+        1": 15.93
+        1|1/2": 59.28
+        2": 91.78
+        3": 194.72
+        4": 346.43
+        6": 709.45
+        8": 1522.17
+        10": 2280.7
+        12": 2876.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.93
+        3/4": 15.93
+        1": 15.93
+        1|1/2": 59.28
+        2": 91.78
+        3": 194.72
+        4": 346.43
+        6": 709.45
+        8": 1522.17
+        10": 2280.7
+        12": 2876.62
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
