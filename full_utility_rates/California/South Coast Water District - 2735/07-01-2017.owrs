@@ -7,7 +7,7 @@ metadata:
   utility_name: South Coast Water District
   bill_frequency: Monthly
   bill_unit: ccf
-  prop_218_link: 
+  prop_218_link: https://scwd.org/myaccount/rates/residential/default.htm
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -58,6 +58,11 @@ rate_structure:
       values:
         3/4": 23.171
         1": 38.617
+        1|1/2": 77.233
+        2": 123.571
+        3": 270.308
+        4": 486.554
+        6": 1004.00
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 3.08
     fixed_drought_surcharge: 0
@@ -72,6 +77,11 @@ rate_structure:
       values:
         3/4": 23.171
         1": 38.617
+        1|1/2": 77.233
+        2": 123.571
+        3": 270.308
+        4": 486.554
+        6": 1004.00
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.96
     fixed_drought_surcharge: 0
@@ -86,6 +96,11 @@ rate_structure:
       values:
         3/4": 23.171
         1": 38.617
+        1|1/2": 77.233
+        2": 123.571
+        3": 270.308
+        4": 486.554
+        6": 1004.00
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 4.16
     fixed_drought_surcharge: 0
@@ -93,3 +108,4 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+# Recycled water is to use for irrigation only
