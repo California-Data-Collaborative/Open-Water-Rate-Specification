@@ -1,0 +1,95 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: South Coast Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.171
+        1": 38.617
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 19
+    tier_prices_commodity:
+      - 2.74
+      - 2.89
+      - 3.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.171
+        1": 38.617
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 19
+    tier_prices_commodity:
+      - 2.74
+      - 2.89
+      - 3.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.171
+        1": 38.617
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.08
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.171
+        1": 38.617
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.96
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.171
+        1": 38.617
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.16
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
