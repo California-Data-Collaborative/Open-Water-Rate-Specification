@@ -1,0 +1,104 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 02/02/2018
+  utility_name: Tahoe City Public Utilities District 
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: http://www.tcpud.org/download/general/prop218.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 70.25
+        1": 106
+        1|1/2": 162.5
+        2": 218.75
+        3": 331
+        4": 435.75
+        6": 654.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 2.48
+      - 3.38
+      - 4.93
+      - 8.25
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 70.25
+        1": 106
+        1|1/2": 162.5
+        2": 218.75
+        3": 331
+        4": 435.75
+        6": 654.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 2.48
+      - 3.38
+      - 4.93
+      - 8.25
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 84.5
+        1": 135.25
+        1|1/2": 197
+        2": 263.75
+        3": 395
+        4": 522.5
+        6": 782.75
+        8": 1047.75
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.35
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 35.4
+        2": 70.8
+        3": 106.2
+        4": 141.6
+        6": 212.4
+        8": 283.2
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
