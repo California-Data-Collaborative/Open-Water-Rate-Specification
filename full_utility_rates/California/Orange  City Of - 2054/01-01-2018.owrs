@@ -42,9 +42,9 @@ rate_structure:
           - 2.43
           - 2.51
         5:
-          - 2.67
-          - 2.73
-          - 2.81
+          - 2.71
+          - 2.77
+          - 2.85
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -83,8 +83,8 @@ rate_structure:
           - 2.4
           - 2.44
         5:
-          - 2.61
-          - 2.64
+          - 2.71
+          - 2.74
           - 2.78
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
