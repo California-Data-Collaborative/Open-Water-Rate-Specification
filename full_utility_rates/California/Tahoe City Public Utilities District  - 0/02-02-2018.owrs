@@ -37,6 +37,14 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+  RESIDENTIAL_SINGLE_UNMETERED:
+    service_charge: 94.14
+    commodity_charge: 0 
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -65,6 +73,14 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI_UNMETERED:
+    service_charge: 94.14
+    commodity_charge: 0 
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge
   COMMERCIAL:
     service_charge:
       depends_on:
