@@ -34,7 +34,7 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
+    service_charge: 7.24*(multi_family_residential_units)
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
