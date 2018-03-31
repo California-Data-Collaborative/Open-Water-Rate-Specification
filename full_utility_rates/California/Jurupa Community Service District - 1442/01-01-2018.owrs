@@ -190,6 +190,7 @@ rate_structure:
     service_charge: 29
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 7.29
+    #Flat commodity rate for private fire is a charge in case of unauthorized use. First unauthorized use will result in a quantity charge of $7.29 per CCF. For any subsequent unauthorized use there's a charge of $24.30 per CCF.
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
