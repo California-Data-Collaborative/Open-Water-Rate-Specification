@@ -18,11 +18,27 @@ rate_structure:
         1": 57.2
     commodity_charge: Tiered
     tier_starts_commodity:
-      - 0
-      - 5
-      - 14
-      - 21
-      - 35
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0
+          - 5
+          - 14
+          - 21
+          - 35
+        2:
+          - 0
+          - 5
+          - 14
+          - 21
+          - 53
+        3:
+          - 0
+          - 5
+          - 14
+          - 21
+          - 88
     tier_prices_commodity:
       - 1.78
       - 2.9
@@ -69,6 +85,12 @@ rate_structure:
           - 14
           - 21
           - 175
+        2":
+          - 0
+          - 5
+          - 14
+          - 21
+          - 280
         3":
           - 0
           - 5
@@ -164,11 +186,57 @@ rate_structure:
           - 175
           - 2485
     tier_prices_commodity:
-      - 1.78
-      - 2.9
-      - 4.84
-      - 6.65
-      - 9.82
+      depends_on:
+        - meter_size
+      values:
+        3/4":
+          - 1.78
+          - 6.07
+          - 8.01
+          - 9.82
+          - 0
+        1":
+          - 1.78
+          - 2.9
+          - 8.01
+          - 9.82
+          - 0
+        1|1/2":
+          - 1.78
+          - 2.9
+          - 4.84
+          - 9.82
+          - 0
+        2":
+          - 1.78
+          - 2.9
+          - 4.84
+          - 6.65
+          - 9.82
+        3":
+          - 1.78
+          - 2.9
+          - 4.84
+          - 6.65
+          - 9.82
+        4":
+          - 1.78
+          - 2.9
+          - 4.84
+          - 6.65
+          - 9.82
+        6":
+          - 1.78
+          - 2.9
+          - 4.84
+          - 6.65
+          - 9.82
+        8":
+          - 1.78
+          - 2.9
+          - 4.84
+          - 6.65
+          - 9.82
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
