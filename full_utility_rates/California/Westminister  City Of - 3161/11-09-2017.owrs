@@ -168,8 +168,7 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
     
-    #Tiered commodity charges for commercial costumers are based on moderate consumption. "Commercial Moderate" means a commercial/industrial account
-with an average per 8-week period of 71 to 203 CCF.
+    #Tiered commodity charges for commercial costumers are based on moderate consumption. "Commercial Moderate" means a commercial/industrial account with an average per 8-week period of 71 to 203 CCF.
     
   INDUSTRIAL:
     service_charge:
@@ -206,8 +205,7 @@ with an average per 8-week period of 71 to 203 CCF.
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
     
-    #Tiered commodity charges for industrial costumers are based on moderate consumption. "Commercial Moderate" means a commercial/industrial account
-with an average per 8-week period of 71 to 203 CCF.
+    #Tiered commodity charges for industrial costumers are based on moderate consumption. "Commercial Moderate" means a commercial/industrial account with an average per 8-week period of 71 to 203 CCF.
 
   FIRE_SERVICE:
     service_charge:
