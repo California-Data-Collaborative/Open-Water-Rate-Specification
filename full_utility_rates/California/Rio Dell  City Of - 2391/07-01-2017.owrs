@@ -2,11 +2,12 @@ metadata:
   effective_date: 07/01/2017
   utility_name: City of Rio Dell
   bill_frequency: Monthly
-  bill_unit: ccf
+  bill_unit: kgal
+  # units are in 750 gal so we adjust for that below
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 46.63
-    commodity_charge: 3.04
+    commodity_charge: 3.04*usage_ccf*1.333
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -14,7 +15,7 @@ rate_structure:
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
     service_charge: 46.63
-    commodity_charge: 3.04
+    commodity_charge: 3.04*usage_ccf*1.333
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -22,7 +23,7 @@ rate_structure:
     bill: service_charge+commodity_charge
   COMMERCIAL:
     service_charge: 46.63
-    commodity_charge: 3.04
+    commodity_charge: 3.04*usage_ccf*1.333
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
