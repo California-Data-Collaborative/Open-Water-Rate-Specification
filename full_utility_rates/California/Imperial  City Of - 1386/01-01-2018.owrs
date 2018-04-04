@@ -1,0 +1,22 @@
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Imperial, City of
+  bill_frequency: Monthly
+  bill_unit: ccf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 
+      depends_on: 
+       - meter_size
+      values:
+        5/8": 13.06
+        3/4": 13.06
+        1": 13.06
+        1 1/2": 16.86
+        2": 21.42
+        3": 33.59
+        4": 42.27
+        6": 85.29
+    flat_rate: 3.36
+    commodity_charge: flat_rate*usage_ccf
+    bill: service_charge+commodity_charge

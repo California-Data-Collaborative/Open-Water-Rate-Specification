@@ -17,7 +17,27 @@ rate_structure:
         4": 382
         6": 799
         8": 1191
-    commodity_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 19
+      - 56
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 5.07
+          - 7.99
+          - 13.91
+        2:
+          - 5.67
+          - 8.59
+          - 14.51
+        3:
+          - 6.99
+          - 9.91
+          - 15.83
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -45,6 +65,9 @@ rate_structure:
         Summer|1: 5.93
         Summer|2: 6.53
         Summer|3: 7.85
+        Winter|1: 5.52
+        Winter|2: 6.12
+        Winter|3: 7.44
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
