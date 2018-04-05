@@ -4,7 +4,7 @@
 # () indicates value to be filled
 ---
 metadata:
-  effective_date: 2015-07-01
+  effective_date: 07/01/2015
   utility_name: "City of Ventura"
   bill_frequency: bi-monthly
 rate_structure:
