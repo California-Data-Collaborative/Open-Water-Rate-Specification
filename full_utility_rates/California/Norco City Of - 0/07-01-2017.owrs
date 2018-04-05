@@ -8,6 +8,7 @@ metadata:
   bill_frequency: Monthly
   bill_unit: ccf
   prop_218_link: http://www.norco.ca.us/civicax/filebank/blobdload.aspx?BlobID=24313
+#There exists 5 different levels of drought. Drought rates on file is for level 3 with conservation target of 30%.
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
