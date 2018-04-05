@@ -1,0 +1,100 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 11/08/2017
+  utility_name: Citrus Heights Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://chwd.org/wp-content/uploads/2018/01/2018-Rates-Charges-and-Fees-ADOPTED.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 47.52
+        1": 72.3
+        1|1/2": 88.82
+        2": 171.41
+        3": 270.54
+        4": 534.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.0167
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 47.52
+        1": 72.3
+        1|1/2": 88.82
+        2": 171.41
+        3": 270.54
+        4": 534.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.0167
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 47.52
+        1": 72.3
+        1|1/2": 88.82
+        2": 171.41
+        3": 270.54
+        4": 534.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.0167
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 47.52
+        1": 72.3
+        1|1/2": 88.82
+        2": 171.41
+        3": 270.54
+        4": 534.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.0167
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 75.52
+        6": 97.96
+        8": 119.31
+        10": 160.82
+        12": 213.07
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
