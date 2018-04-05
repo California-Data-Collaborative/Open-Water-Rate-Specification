@@ -1,0 +1,161 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 4/20/2017
+  utility_name: Golden State Water Company - Cordova
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.gswater.com/arden-cordova/download/rates_accountability/AC-1..pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.25
+        3/4": 12.38
+        1": 20.64
+        1|1/2": 41.27
+        2": 66.03
+        3": 123.81
+        4": 206.36
+        6": 412.71
+        8": 660.34
+        10": 949.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.751
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.25
+        3/4": 12.38
+        1": 20.64
+        1|1/2": 41.27
+        2": 66.03
+        3": 123.81
+        4": 206.36
+        6": 412.71
+        8": 660.34
+        10": 949.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.751
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.25
+        3/4": 12.38
+        1": 20.64
+        1|1/2": 41.27
+        2": 66.03
+        3": 123.81
+        4": 206.36
+        6": 412.71
+        8": 660.34
+        10": 949.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.751
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.25
+        3/4": 12.38
+        1": 20.64
+        1|1/2": 41.27
+        2": 66.03
+        3": 123.81
+        4": 206.36
+        6": 412.71
+        8": 660.34
+        10": 949.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.751
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.25
+        3/4": 12.38
+        1": 20.64
+        1|1/2": 41.27
+        2": 66.03
+        3": 123.81
+        4": 206.36
+        6": 412.71
+        8": 660.34
+        10": 949.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.751
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.25
+        3/4": 12.38
+        1": 20.64
+        1|1/2": 41.27
+        2": 66.03
+        3": 123.81
+        4": 206.36
+        6": 412.71
+        8": 660.34
+        10": 949.24
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.751
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 10
+        3": 15
+        4": 20
+        6": 30
+        8": 40
+        10": 50
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
