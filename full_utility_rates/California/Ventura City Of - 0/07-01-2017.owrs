@@ -8,6 +8,7 @@ metadata:
   bill_frequency: Bi-Monthly
   bill_unit: ccf
   prop_218_link: https://www.cityofventura.ca.gov/DocumentCenter/Home/View/7086
+#Current rates are stage 3 drought rates.
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
