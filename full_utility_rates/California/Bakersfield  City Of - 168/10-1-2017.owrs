@@ -1,0 +1,163 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/1/2017
+  utility_name: Bakersfield  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.bakersfieldcity.us/civicax/inc/blobfetch.aspx?BlobID=31717
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.46
+        3/4": 11.46
+        1": 17.47
+        1|1/2": 26.66
+        2": 36.28
+        3": 67.05
+        4": 97.46
+        6": 175.16
+        8": 269.26
+        10": 371.14
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.46
+        3/4": 11.46
+        1": 17.47
+        1|1/2": 26.66
+        2": 36.28
+        3": 67.05
+        4": 97.46
+        6": 175.16
+        8": 269.26
+        10": 371.14
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.46
+        3/4": 11.46
+        1": 17.47
+        1|1/2": 26.66
+        2": 36.28
+        3": 67.05
+        4": 97.46
+        6": 175.16
+        8": 269.26
+        10": 371.14
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.46
+        3/4": 11.46
+        1": 17.47
+        1|1/2": 26.66
+        2": 36.28
+        3": 67.05
+        4": 97.46
+        6": 175.16
+        8": 269.26
+        10": 371.14
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.46
+        3/4": 11.46
+        1": 17.47
+        1|1/2": 26.66
+        2": 36.28
+        3": 67.05
+        4": 97.46
+        6": 175.16
+        8": 269.26
+        10": 371.14
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.46
+        3/4": 11.46
+        1": 17.47
+        1|1/2": 26.66
+        2": 36.28
+        3": 67.05
+        4": 97.46
+        6": 175.16
+        8": 269.26
+        10": 371.14
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1|1/2": 10.82
+        2": 14.43
+        3": 21.65
+        4": 28.85
+        6": 43.27
+        8": 57.7
+        10": 72.12
+        12": 86.55
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
