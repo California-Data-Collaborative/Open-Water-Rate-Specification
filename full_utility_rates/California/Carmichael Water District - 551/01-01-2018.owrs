@@ -9,6 +9,7 @@ metadata:
   bill_unit: ccf
   prop_218_link: >-
     http://carmichaelwd.org/wp-content/uploads/2017/12/2017-01-01-Updated-Water-Rates-Approved.pdf
+#There exists 4 different water shortage surcharges, Alert, Warning, Crisis, and Emergency. Drought rates used on file is for Water Crisis condition (31%-40% reductin goal) with a surcharge of 40%. 
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
