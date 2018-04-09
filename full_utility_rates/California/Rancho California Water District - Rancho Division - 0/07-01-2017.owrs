@@ -207,3 +207,15 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 1690
+    1": 2817
+    1 1/2": 5636
+    2": 7042
+    3": 16903
+    4": 42259
+    6": 87332
+    8": 140859
