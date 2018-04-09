@@ -27,17 +27,25 @@ rate_structure:
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .7
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
     tier_starts_commodity:
       - 0
       - indoor
       - 100%
-      - 50%
+      - 150%
     tier_prices_commodity:
-      - 1.12
-      - 2.03
+      - 0.7
+      - 1.48
       - 2.66
-      - 6.8
+      - 6.73
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -61,17 +69,25 @@ rate_structure:
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .7
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
     tier_starts_commodity:
       - 0
       - indoor
       - 100%
-      - 50%
+      - 150%
     tier_prices_commodity:
-      - 1.12
-      - 2.03
+      - 0.7
+      - 1.48
       - 2.66
-      - 6.8
+      - 6.73
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -95,17 +111,25 @@ rate_structure:
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .7
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
     tier_starts_commodity:
       - 0
       - indoor
       - 100%
-      - 50%
+      - 150%
     tier_prices_commodity:
-      - 1.12
-      - 2.03
+      - 0.7
+      - 1.48
       - 2.66
-      - 6.8
+      - 6.73
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -129,15 +153,23 @@ rate_structure:
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .7
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
     tier_starts_commodity:
       - 0
       - indoor
       - 100%
     tier_prices_commodity:
-      - 1.8
-      - 2.99
-      - 6.87
+      - 1.26
+      - 3.02
+      - 6.88
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -161,15 +193,23 @@ rate_structure:
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .7
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
     tier_starts_commodity:
       - 0
       - indoor
       - 100%
     tier_prices_commodity:
-      - 1.8
-      - 2.99
-      - 6.87
+      - 1.26
+      - 3.02
+      - 6.88
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -193,15 +233,32 @@ rate_structure:
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .7
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
     tier_starts_commodity:
       - 0
       - indoor
       - 100%
     tier_prices_commodity:
-      - 1.8
-      - 2.99
-      - 6.87
+      - 1.26
+      - 3.02
+      - 6.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge: 20
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.218
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
