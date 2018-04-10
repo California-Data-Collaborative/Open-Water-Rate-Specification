@@ -1,0 +1,167 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Orange  City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.cityoforange.org/DocumentCenter/View/5828
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.87
+        3/4": 25.87
+        1": 39.53
+        1|1/2": 73.66
+        2": 114.63
+        3": 210.21
+        4": 346.76
+        6": 688.12
+        8": 1643.95
+        10": 2599.78
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 24
+      - 43
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 2.16
+          - 2.22
+          - 2.3
+        4:
+          - 2.37
+          - 2.43
+          - 2.51
+        5:
+          - 2.71
+          - 2.77
+          - 2.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.87
+        3/4": 25.87
+        1": 39.53
+        1|1/2": 73.66
+        2": 114.63
+        3": 210.21
+        4": 346.76
+        6": 688.12
+        8": 1643.95
+        10": 2599.78
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 16
+      - 20
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 2.16
+          - 2.19
+          - 2.23
+        4:
+          - 2.37
+          - 2.4
+          - 2.44
+        5:
+          - 2.71
+          - 2.74
+          - 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.87
+        3/4": 25.87
+        1": 39.53
+        1|1/2": 73.66
+        2": 114.63
+        3": 210.21
+        4": 346.76
+        6": 688.12
+        8": 1643.95
+        10": 2599.78
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 2.21
+        4: 2.42
+        5: 2.76
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.87
+        3/4": 25.87
+        1": 39.53
+        1|1/2": 73.66
+        2": 114.63
+        3": 210.21
+        4": 346.76
+        6": 688.12
+        8": 1643.95
+        10": 2599.78
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 2.2
+        4: 2.41
+        5: 2.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+    
+    #Agriculture rates are calculated monthly 
+  
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 33.08
+        6": 96.08
+        8": 204.75
+        10": 368.2
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
