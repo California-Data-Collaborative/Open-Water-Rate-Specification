@@ -1,0 +1,165 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Blythe  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.72
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.25
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.66
+        3/4": 10.66
+        1": 17.78
+        1|1/2": 35.54
+        2": 56.86
+        3": 106.58
+        4": 177.64
+        6": 355.26
+        8": 568.41
+        10": 817.09
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.25
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
