@@ -1,0 +1,278 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Rancho California Water District - Santa Rosa Division
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://ca-ranchowater2.civicplus.com/DocumentCenter/View/3402
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 40.58
+        1": 63.71
+        1|1/2": 110.8
+        2": 174.62
+        3": 469.9
+        4": 991.19
+        6": 1581.33
+        8": 2251.76
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.12
+      - 2.03
+      - 2.66
+      - 6.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 40.58
+        1": 63.71
+        1|1/2": 110.8
+        2": 174.62
+        3": 469.9
+        4": 991.19
+        6": 1581.33
+        8": 2251.76
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.12
+      - 2.03
+      - 2.66
+      - 6.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 40.58
+        1": 63.71
+        1|1/2": 110.8
+        2": 174.62
+        3": 469.9
+        4": 991.19
+        6": 1581.33
+        8": 2251.76
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.12
+      - 2.03
+      - 2.66
+      - 6.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 40.58
+        1": 63.71
+        1|1/2": 110.8
+        2": 174.62
+        3": 469.9
+        4": 991.19
+        6": 1581.33
+        8": 2251.76
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+    tier_prices_commodity:
+      - 1.8
+      - 2.99
+      - 6.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 40.58
+        1": 63.71
+        1|1/2": 110.8
+        2": 174.62
+        3": 469.9
+        4": 991.19
+        6": 1581.33
+        8": 2251.76
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+    tier_prices_commodity:
+      - 1.8
+      - 2.99
+      - 6.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 40.58
+        1": 63.71
+        1|1/2": 110.8
+        2": 174.62
+        3": 469.9
+        4": 991.19
+        6": 1581.33
+        8": 2251.76
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - irrigated_area
+      area_starts:
+        - 1
+        - 30000
+      values:
+        - 0.75
+        - 0.6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+    tier_prices_commodity:
+      - 1.8
+      - 2.99
+      - 6.87
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge: 20
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.218
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 2592
+    1": 4321
+    1 1/2": 8637
+    2": 10795
+    3": 25917
+    4": 64790
+    6": 133901
+    8": 215969
