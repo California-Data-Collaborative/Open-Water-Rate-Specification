@@ -1,0 +1,189 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Elsinore Valley Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.evmwd.com/civicax/filebank/blobdload.aspx?BlobID=32470
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.77
+        1": 37.16
+        1|1/2": 70.63
+        2": 110.79
+        3": 237.96
+        4": 425.37
+        6": 1074.63
+        8": 1877.83
+        10": 2814.89
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 2.29
+      - 2.78
+      - 5.05
+      - 7.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.77
+        1": 37.16
+        1|1/2": 70.63
+        2": 110.79
+        3": 237.96
+        4": 425.37
+        6": 1074.63
+        8": 1877.83
+        10": 2814.89
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .6
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 2.29
+      - 2.78
+      - 5.05
+      - 7.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.77
+        1": 37.16
+        1|1/2": 70.63
+        2": 110.79
+        3": 237.96
+        4": 425.37
+        6": 1074.63
+        8": 1877.83
+        10": 2814.89
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .6
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 2.87
+      - 5.25
+      - 8.08
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.77
+        1": 37.16
+        1|1/2": 70.63
+        2": 110.79
+        3": 237.96
+        4": 425.37
+        6": 1074.63
+        8": 1877.83
+        10": 2814.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.77
+        1": 37.16
+        1|1/2": 70.63
+        2": 110.79
+        3": 237.96
+        4": 425.37
+        6": 1074.63
+        8": 1877.83
+        10": 2814.89
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 23.77
+        1": 37.16
+        1|1/2": 70.63
+        2": 110.79
+        3": 237.96
+        4": 425.37
+        6": 1074.63
+        8": 1877.83
+        10": 2814.89
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .6
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 2.28
+      - 4.12
+      - 4.68
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
