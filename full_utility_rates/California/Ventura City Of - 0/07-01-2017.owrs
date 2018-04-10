@@ -1,0 +1,209 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Ventura City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.cityofventura.ca.gov/DocumentCenter/Home/View/7086
+#Current rates are stage 3 drought rates.
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 33.69
+        1": 51.03
+        1|1/2": 94.38
+        2": 146.42
+        3": 311.18
+        4": 553.98
+        6": 1134.97
+        8": 2088.84
+        10": 3302.85
+        12": 4343.44
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 15
+      - 31
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 2.77
+          - 3.75
+          - 6.41
+          - 9.64
+        outside_city:
+          - 3.37
+          - 4.35
+          - 7.01
+          - 10.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 33.69
+        1": 51.03
+        1|1/2": 94.38
+        2": 146.42
+        3": 311.18
+        4": 553.98
+        6": 1134.97
+        8": 2088.84
+        10": 3302.85
+        12": 4343.44
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 11
+      - 17
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 2.77
+          - 3.75
+          - 6.41
+          - 9.64
+        outside_city:
+          - 3.37
+          - 4.35
+          - 7.01
+          - 10.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 33.69
+        1": 51.03
+        1|1/2": 94.38
+        2": 146.42
+        3": 311.18
+        4": 553.98
+        6": 1134.97
+        8": 2088.84
+        10": 3302.85
+        12": 4343.44
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 5.7
+        outside_city: 6.3
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 33.69
+        1": 51.03
+        1|1/2": 94.38
+        2": 146.42
+        3": 311.18
+        4": 553.98
+        6": 1134.97
+        8": 2088.84
+        10": 3302.85
+        12": 4343.44
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.45
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 8.79
+        2": 8.79
+        3": 25.49
+        4": 54.29
+        6": 157.68
+        8": 336.01
+        10": 604.25
+        12": 976.02
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  NON_RESIDENTIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 33.69
+        1": 51.03
+        1|1/2": 94.38
+        2": 146.42
+        3": 311.18
+        4": 553.98
+        6": 1134.97
+        8": 2088.84
+        10": 3302.85
+        12": 4343.44
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 4.17
+        outside_city: 4.77
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INTERRUPTIBLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 33.69
+        1": 51.03
+        1|1/2": 94.38
+        2": 146.42
+        3": 311.18
+        4": 553.98
+        6": 1134.97
+        8": 2088.84
+        10": 3302.85
+        12": 4343.44
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.45
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
