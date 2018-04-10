@@ -1,0 +1,59 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Hemet  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.cityofhemet.org/index.aspx?NID=541
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.55
+        3/4": 30.49
+        1": 36.93
+        2": 89.47
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.55
+        3/4": 30.49
+        1": 36.93
+        2": 89.47
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.55
+        3/4": 30.49
+        1": 36.93
+        2": 89.47
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.54
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
