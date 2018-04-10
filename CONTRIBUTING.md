@@ -55,4 +55,5 @@ Follow these simple steps
 
 ### Open water rate spectacular
 
-If you're attending this event in person, please feel free to ask [Chris](https://github.com/christophertull), [Patrick](https://github.com/patwater), [Vincent](https://github.com/vincent-hebble) or [David](https://github.com/dmarulli) or [Varun](https://github.com/vr00n) if you have any questions.  Regardless you can always ask questions in the open_water_rates ARGO slack channel.  
+If you're attending this event in person, please feel free to ask [Chris](https://github.com/christophertull), [Vyki](https://github.com/vykster), [Patrick](https://github.com/patwater), [Vincent](https://github.com/vincent-hebble) or [David](https://github.com/dmarulli) (in CA) or [Varun](https://github.com/vr00n) / [Vipassana](https://github.com/vipassana) (in NYC) if you have any questions.  Regardless you can always ask questions in the open_water_rates ARGO slack channel.
+
