@@ -1,0 +1,110 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2015
+  utility_name: West Valley Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://ca-westvalleywaterdistrict.civicplus.com/DocumentCenter/View/1114
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.21
+        3/4": 22.21
+        1": 33.07
+        1|1/2": 48.77
+        2": 67.18
+        3": 97.52
+        4": 128.56
+        6": 195.02
+        8": 261.48
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 2.13
+      - 2.3
+      - 2.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 22.21
+        3/4": 22.21
+        1": 33.07
+        1|1/2": 48.77
+        2": 67.18
+        3": 97.52
+        4": 128.56
+        6": 195.02
+        8": 261.48
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 2.13
+      - 2.3
+      - 2.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.54
+        3/4": 10.54
+        1": 10.54
+        1|1/2": 15.81
+        2": 21.08
+        3": 31.62
+        4": 42.16
+        6": 63.24
+        8": 84.32
+        10": 105.4
+        12": 126.48
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 106.5
+      - 115
+      - 126.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    5/8": 7009
+    3/4": 7009
+    1": 11915
+    1 1/2": 23130
+    2": 37150
+    3": 82005
+    4": 140180
+    6": 292275
+    8": 420540
