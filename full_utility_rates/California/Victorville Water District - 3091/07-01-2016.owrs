@@ -1,0 +1,113 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2016
+  utility_name: Victorville Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.victorvilleca.gov/uploadedFiles/COV-VWD%20Fees%20for%20Services%2007-01-2016%20Revised(1).pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 11.78
+        1": 18.59
+        1|1/2": 35.62
+        2": 56.06
+        3": 110.56
+        4": 171.88
+        6": 342.19
+        8": 955.34
+        10": 1432.23
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.749
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 11.78
+        1": 18.59
+        1|1/2": 35.62
+        2": 56.06
+        3": 110.56
+        4": 171.88
+        6": 342.19
+        8": 955.34
+        10": 1432.23
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.749
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 2.69
+        2": 5.19
+        4": 17.45
+        6": 37.88
+        8": 65.13
+        10": 101.45
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RAW:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 11.78
+        1": 18.59
+        1|1/2": 35.62
+        2": 56.06
+        3": 110.56
+        4": 171.88
+        6": 342.19
+        8": 955.34
+        10": 1432.23
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.595
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 11.78
+        1": 18.59
+        1|1/2": 35.62
+        2": 56.06
+        3": 110.56
+        4": 171.88
+        6": 342.19
+        8": 955.34
+        10": 1432.23
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.049
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
