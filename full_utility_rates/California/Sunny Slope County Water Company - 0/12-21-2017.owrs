@@ -26,6 +26,8 @@ rate_structure:
     tier_prices_commodity:
       depends_on:
         - city_limits
+#inside_city refers to "Inside District and SBCWD Zone 3"
+#outside_city refers to "Inside District and Outside SBCWD Zone 3"
       values:
         inside_city:
           - 3.08
