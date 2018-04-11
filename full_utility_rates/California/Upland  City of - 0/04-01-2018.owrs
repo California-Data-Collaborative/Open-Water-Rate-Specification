@@ -1,0 +1,166 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 04/01/2018
+  utility_name: Upland  City of
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.ci.upland.ca.us/uploads/files/PW/Prop%20218%20Notice%20of%20Public%20Hearing.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 20
+      - 50
+    tier_prices_commodity:
+      - 1.76
+      - 2.32
+      - 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.17
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.08
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.51
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 46.9
+        3/4": 59.4
+        1": 84.45
+        1|1/2": 147.1
+        2": 222.25
+        3": 422.7
+        4": 648.2
+        6": 1274.55
+        8": 2026.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
