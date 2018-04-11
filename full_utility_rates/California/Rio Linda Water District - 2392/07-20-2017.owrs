@@ -4,7 +4,7 @@ author_info:
   phone: 
 metadata:
   effective_date: 07/20/2017
-  utility_name: Rio Linda Water District
+  utility_name: Rio Linda - Elverta Community Water District
   bill_frequency: Bi-Monthly
   bill_unit: ccf
   prop_218_link: >-
@@ -32,6 +32,7 @@ rate_structure:
     fixed_drought_surcharge: 0
     variable_drought_surcharge: flat_rate_drought*usage_ccf
     flat_rate_drought: 1.02
+#There are three stages of drought rates based on percent of conservation. The value of the second stage with 40% conservation goal is used here.
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
