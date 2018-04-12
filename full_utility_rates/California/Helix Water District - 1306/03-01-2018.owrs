@@ -78,6 +78,7 @@ rate_structure:
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
     landscape_factor_commodity: .7
+#Landscape Factor is 0.7 for existing landscapes, 0.55 for residential landscapes that are permitted on or after December 1st 2015, 0.45 for non-residential landscapes that are permitted on or after December 1st 2015, 1.0 for schools or public sites with functional use turf.
     tier_starts_commodity:
       - 0
       - 100%
