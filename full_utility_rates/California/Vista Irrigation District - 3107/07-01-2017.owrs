@@ -1,0 +1,134 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Vista Irrigation District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.vidwater.org/files/86de4808c/Customer+Rate+Schedule+3-1-18.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.08
+        3/4": 37.05
+        1": 54.74
+        1|1/2": 99.37
+        2": 152.71
+        3": 295.05
+        4": 455.06
+        6": 1077.71
+        8": 1433.67
+        10": 2145.31
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 7
+          - 42
+        3/4":
+          - 0
+          - 10
+          - 60
+        1":
+          - 0
+          - 25
+          - 150
+        1|1/2":
+          - 0
+          - 50
+          - 300
+        2":
+          - 0
+          - 80
+          - 480
+        3":
+          - 0
+          - 160
+          - 960
+        4":
+          - 0
+          - 250
+          - 1500
+        6":
+          - 0
+          - 500
+          - 3000
+        8":
+          - 0
+          - 800
+          - 4800
+        10":
+          - 0
+          - 1150
+          - 6900
+    tier_prices_commodity:
+      - 4.24
+      - 4.78
+      - 4.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.08
+        3/4": 37.05
+        1": 54.74
+        1|1/2": 99.37
+        2": 152.71
+        3": 295.05
+        4": 455.06
+        6": 1077.71
+        8": 1433.67
+        10": 2145.31
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
