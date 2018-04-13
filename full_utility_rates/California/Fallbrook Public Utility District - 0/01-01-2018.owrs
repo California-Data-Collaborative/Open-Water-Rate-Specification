@@ -1,0 +1,139 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Fallbrook Public Utility District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.fpud.com/files/fff7524f3/2018+Water+Rates.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 52.68
+        1": 81.63
+        1|1/2": 153.96
+        2": 240.77
+        3": 472.25
+        4": 732.67
+        6": 1456.06
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 31
+    tier_prices_commodity:
+      - 5.62
+      - 5.71
+      - 6.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 52.68
+        1": 81.63
+        1|1/2": 153.96
+        2": 240.77
+        3": 472.25
+        4": 732.67
+        6": 1456.06
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 31
+    tier_prices_commodity:
+      - 5.62
+      - 5.71
+      - 6.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 52.68
+        1": 81.63
+        1|1/2": 153.96
+        2": 240.77
+        3": 472.25
+        4": 732.67
+        6": 1456.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 52.68
+        1": 81.63
+        1|1/2": 153.96
+        2": 240.77
+        3": 472.25
+        4": 732.67
+        6": 1456.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.79
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 52.68
+        1": 81.63
+        1|1/2": 153.96
+        2": 240.77
+        3": 472.25
+        4": 732.67
+        6": 1456.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.7
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 19.79
+        1": 26.8
+        1|1/2": 44.31
+        2": 65.32
+        3": 121.38
+        4": 184.43
+        6": 259.58
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.81
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
