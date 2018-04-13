@@ -174,7 +174,25 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  RECYCLED:
+  RECYCLED_IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.68
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_COMMERCIAL:
     service_charge:
       depends_on:
         - meter_size
@@ -187,6 +205,42 @@ rate_structure:
         6": 473.79
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 4.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.44
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
