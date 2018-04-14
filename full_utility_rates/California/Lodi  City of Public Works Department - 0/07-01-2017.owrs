@@ -1,0 +1,145 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Lodi  City of Public Works Department
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.lodi.gov/public_works/pdf/Fee%20Schedule%20July%202017.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.87
+        3/4": 21.87
+        1": 34.34
+        1|1/2": 65.25
+        2": 102.52
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 0.97
+      - 1.29
+      - 1.6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.87
+        3/4": 21.87
+        1": 34.34
+        1|1/2": 65.25
+        2": 102.52
+        3": 189.5
+        4": 313.73
+        6": 624.03
+        8": 996.55
+        10": 1431.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.15
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.87
+        3/4": 21.87
+        1": 34.34
+        1|1/2": 65.25
+        2": 102.52
+        3": 189.5
+        4": 313.73
+        6": 624.03
+        8": 996.55
+        10": 1431.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.15
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.87
+        3/4": 21.87
+        1": 34.34
+        1|1/2": 65.25
+        2": 102.52
+        3": 189.5
+        4": 313.73
+        6": 624.03
+        8": 996.55
+        10": 1431.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.15
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.87
+        3/4": 21.87
+        1": 34.34
+        1|1/2": 65.25
+        2": 102.52
+        3": 189.5
+        4": 313.73
+        6": 624.03
+        8": 996.55
+        10": 1431.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.15
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.87
+        3/4": 21.87
+        1": 34.34
+        1|1/2": 65.25
+        2": 102.52
+        3": 189.5
+        4": 313.73
+        6": 624.03
+        8": 996.55
+        10": 1431.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.15
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
