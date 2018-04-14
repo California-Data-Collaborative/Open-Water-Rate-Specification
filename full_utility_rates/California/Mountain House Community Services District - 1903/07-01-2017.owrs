@@ -9,8 +9,17 @@ metadata:
   bill_unit: ccf
   prop_218_link: http://www.mountainhousecsd.org/images/documents/finance/Final218.pdf
 rate_structure:
-  RESIDENTIAL_SINGLE:
+  RESIDENTIAL_SINGLE_LOW_DENSITY:
     service_charge: 19.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.6597
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_SINGLE_MEDIUM_DENSITY:
+    service_charge: 14.35
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.6597
     fixed_drought_surcharge: 0
