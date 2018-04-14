@@ -1,0 +1,104 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Lathrop  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    http://www.ci.lathrop.ca.us/lathrop//forms/12_19%20PMFinance%20%20_12_19%20PM.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.3
+        3/4": 22.9
+        1": 36.1
+        1|1/2": 69
+        2": 109
+        3": 201
+        4": 334
+        6": 664
+        8": 1061
+        10": 1920
+        12": 2845
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.3
+        3/4": 22.9
+        1": 36.1
+        1|1/2": 69
+        2": 109
+        3": 201
+        4": 334
+        6": 664
+        8": 1061
+        10": 1920
+        12": 2845
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.3
+        3/4": 22.9
+        1": 36.1
+        1|1/2": 69
+        2": 109
+        3": 201
+        4": 334
+        6": 664
+        8": 1061
+        10": 1920
+        12": 2845
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.3
+        3/4": 22.9
+        1": 36.1
+        1|1/2": 69
+        2": 109
+        3": 201
+        4": 334
+        6": 664
+        8": 1061
+        10": 1920
+        12": 2845
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
