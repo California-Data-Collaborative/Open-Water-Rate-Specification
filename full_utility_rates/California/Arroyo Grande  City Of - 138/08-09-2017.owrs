@@ -1,0 +1,126 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 08/09/2017
+  utility_name: Arroyo Grande  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.arroyogrande.org/DocumentCenter/View/3970
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32
+        3/4": 34.34
+        1": 41.34
+        1|1/2": 50.67
+        2": 76.35
+        3": 265.4
+        4": 335.41
+        6": 498.79
+        8": 685.5
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 18
+      - 36
+    tier_prices_commodity:
+      - 4.06
+      - 4.47
+      - 5.96
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32
+        3/4": 34.34
+        1": 41.34
+        1|1/2": 50.67
+        2": 76.35
+        3": 265.4
+        4": 335.41
+        6": 498.79
+        8": 685.5
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 18
+      - 27
+    tier_prices_commodity:
+      - 4.06
+      - 4.47
+      - 5.96
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32
+        3/4": 34.34
+        1": 41.34
+        1|1/2": 50.67
+        2": 76.35
+        3": 265.4
+        4": 335.41
+        6": 498.79
+        8": 685.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32
+        3/4": 34.34
+        1": 41.34
+        1|1/2": 50.67
+        2": 76.35
+        3": 265.4
+        4": 335.41
+        6": 498.79
+        8": 685.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 4.06
+        3": 11.8
+        4": 25.13
+        6": 73.02
+        8": 155.59
+        10": 279.81
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
