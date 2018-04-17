@@ -1,0 +1,145 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Redwood City
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.redwoodcity.org/departments/public-works/water/rates/current-rates
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 27.38
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 21
+      - 41
+    tier_prices_commodity:
+      - 5.68
+      - 6.82
+      - 9.46
+      - 12.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 27.38
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 21
+      - 41
+    tier_prices_commodity:
+      - 5.68
+      - 6.82
+      - 9.46
+      - 12.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.38
+        3/4": 41.07
+        1": 68.45
+        1|1/2": 136.9
+        2": 219.04
+        3": 410.7
+        4": 684.5
+        6": 1369
+        8": 1369
+        10": 1369
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 200%
+    tier_prices_commodity:
+      - 6.82
+      - 9.46
+      - 12.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.38
+        3/4": 41.07
+        1": 68.45
+        1|1/2": 136.9
+        2": 219.04
+        3": 410.7
+        4": 684.5
+        6": 1369
+        8": 1369
+        10": 1369
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 16
+        2": 32
+        3": 48
+        4": 64
+        6": 96
+        8": 128
+        10": 160
+        12": 192
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.38
+        3/4": 41.07
+        1": 68.45
+        1|1/2": 136.9
+        2": 219.04
+        3": 410.7
+        4": 684.5
+        6": 1369
+        8": 1369
+        10": 1369
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.82
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
