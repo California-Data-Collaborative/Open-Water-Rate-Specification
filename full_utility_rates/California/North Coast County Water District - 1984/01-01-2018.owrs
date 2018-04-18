@@ -126,3 +126,27 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 48.5
+        3/4": 53.4
+        1": 68
+        1|1/2": 87.4
+        2": 141.18
+        3": 533.91
+        4": 679.71
+        6": 1019.61
+        8": 1408.01
+        10": 1893.63
+        12": 2379.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+    
