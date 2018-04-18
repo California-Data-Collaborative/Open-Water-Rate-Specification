@@ -1,0 +1,143 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Coastside County Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.coastsidewater.org/water-rates.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.2
+        3/4": 78.45
+        1": 130.76
+        1|1/2": 252.52
+        2": 418.48
+        3": 915.5
+        4": 3139.22
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 16
+      - 30
+    tier_prices_commodity:
+      - 9.65
+      - 10.77
+      - 13.89
+      - 18.41
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.2
+        3/4": 78.45
+        1": 130.76
+        1|1/2": 252.52
+        2": 418.48
+        3": 915.5
+        4": 3139.22
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 16
+      - 30
+    tier_prices_commodity:
+      - 9.65
+      - 10.77
+      - 13.89
+      - 18.41
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.2
+        3/4": 78.45
+        1": 130.76
+        1|1/2": 252.52
+        2": 418.48
+        3": 915.5
+        4": 3139.22
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 11.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.2
+        3/4": 78.45
+        1": 130.76
+        1|1/2": 252.52
+        2": 418.48
+        3": 915.5
+        4": 3139.22
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 11.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.2
+        3/4": 78.45
+        1": 130.76
+        1|1/2": 252.52
+        2": 418.48
+        3": 915.5
+        4": 3139.22
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 11.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.2
+        3/4": 78.45
+        1": 130.76
+        1|1/2": 252.52
+        2": 418.48
+        3": 915.5
+        4": 3139.22
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 11.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
