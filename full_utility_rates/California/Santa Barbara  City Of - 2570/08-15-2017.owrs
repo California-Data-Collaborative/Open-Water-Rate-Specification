@@ -68,7 +68,7 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  IRRIGATION:
+  IRRIGATION_AGRICULTURE:
     service_charge:
       depends_on:
         - meter_size
@@ -94,6 +94,70 @@ rate_structure:
       - 100%
     tier_prices_commodity:
       - 3.01
+      - 23.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION_RECREATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)*(1/0.8)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .80
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 4.11
+      - 23.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION_RESIDENTIAL/COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)*(1/0.8)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .80
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 12.96
       - 23.98
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
