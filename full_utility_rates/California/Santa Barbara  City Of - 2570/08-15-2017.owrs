@@ -1,0 +1,207 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 08/15/2017
+  utility_name: Santa Barbara  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.santabarbaraca.gov/gov/depts/pw/resources/rates/wtrsewer/changes.asp
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 16
+    tier_prices_commodity:
+      - 4.44
+      - 12.96
+      - 23.89
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 8
+    tier_prices_commodity:
+      - 4.44
+      - 12.96
+      - 23.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)*(1/0.8)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .75
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 3.01
+      - 23.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 6.52
+      - 23.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 6.52
+      - 23.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 2.88
+        1|1/2": 3.83
+        2": 5.47
+        4": 21.45
+        6": 57.76
+        8": 120.38
+        10": 214.58
+        12": 345.13
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.89
+        3/4": 37.65
+        1": 61.15
+        1|1/2": 119.91
+        2": 190.43
+        3": 413.74
+        4": 742.81
+        6": 1530.25
+        8": 2823.06
+        10": 4459.38
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.42
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
