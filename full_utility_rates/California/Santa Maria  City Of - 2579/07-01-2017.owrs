@@ -1,0 +1,87 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Santa Maria  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.cityofsantamaria.org/home/showdocument?id=10340
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        3/4"|inside_city: 34.73
+        3/4"|outside_city: 35.73
+        1"|inside_city: 54.48
+        1"|outside_city: 55.98
+        1|1/2"|inside_city: 86.12
+        1|1/2"|outside_city: 89.12
+        2"|inside_city: 119.09
+        2"|outside_city: 123.09
+        3"|inside_city: 258.46
+        3"|outside_city: 267.46
+        4"|inside_city: 430.81
+        4"|outside_city: 445.81
+        6"|inside_city: 1077.18
+        6"|outside_city: 1115.18
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 10
+      - 15
+    tier_prices_commodity:
+      - 3.786
+      - 4.491
+      - 5.249
+      - 5.976
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
