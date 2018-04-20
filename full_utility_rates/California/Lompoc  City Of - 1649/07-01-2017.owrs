@@ -1,0 +1,150 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Lompoc  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www1.cityoflompoc.com/utilities/water/Resolution6128(17).pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.06
+        3/4": 47.15
+        1": 69.31
+        1|1/2": 124.72
+        2": 191.22
+        3": 346.37
+        4": 568.02
+        6": 1122.15
+        8": 1787.09
+        10": 2562.87
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 20
+    tier_prices_commodity:
+      - 4.33
+      - 4.63
+      - 5.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.06
+        3/4": 47.15
+        1": 69.31
+        1|1/2": 124.72
+        2": 191.22
+        3": 346.37
+        4": 568.02
+        6": 1122.15
+        8": 1787.09
+        10": 2562.87
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.33
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.06
+        3/4": 47.15
+        1": 69.31
+        1|1/2": 124.72
+        2": 191.22
+        3": 346.37
+        4": 568.02
+        6": 1122.15
+        8": 1787.09
+        10": 2562.87
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.06
+        3/4": 47.15
+        1": 69.31
+        1|1/2": 124.72
+        2": 191.22
+        3": 346.37
+        4": 568.02
+        6": 1122.15
+        8": 1787.09
+        10": 2562.87
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.45
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.06
+        3/4": 47.15
+        1": 69.31
+        1|1/2": 124.72
+        2": 191.22
+        3": 346.37
+        4": 568.02
+        6": 1122.15
+        8": 1787.09
+        10": 2562.87
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.33
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.06
+        3/4": 47.15
+        1": 69.31
+        1|1/2": 124.72
+        2": 191.22
+        3": 346.37
+        4": 568.02
+        6": 1122.15
+        8": 1787.09
+        10": 2562.87
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.8
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
