@@ -1,0 +1,223 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Watsonville  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.cityofwatsonville.org/DocumentCenter/View/6250
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.8
+        5/8"|outside_city: 29.06
+        3/4"|inside_city: 25.8
+        3/4"|outside_city: 29.06
+        1"|inside_city: 36.25
+        1"|outside_city: 41.07
+        1|1/2"|inside_city: 62.32
+        1|1/2"|outside_city: 71.07
+        2"|inside_city: 93.59
+        2"|outside_city: 107.05
+        3"|inside_city: 176.97
+        3"|outside_city: 202.98
+        4"|inside_city: 270.81
+        4"|outside_city: 310.95
+        6"|inside_city: 436.43
+        6"|outside_city: 501.5
+        8"|inside_city: 981.12
+        8"|outside_city: 1128.17
+        10"|inside_city: 1207.57
+        10"|outside_city: 1388.71
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 10
+    tier_prices_commodity:
+      - 2.99
+      - 3.53
+      - 4.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.8
+        5/8"|outside_city: 29.06
+        3/4"|inside_city: 25.8
+        3/4"|outside_city: 29.06
+        1"|inside_city: 36.25
+        1"|outside_city: 41.07
+        1|1/2"|inside_city: 62.32
+        1|1/2"|outside_city: 71.07
+        2"|inside_city: 93.59
+        2"|outside_city: 107.05
+        3"|inside_city: 176.97
+        3"|outside_city: 202.98
+        4"|inside_city: 270.81
+        4"|outside_city: 310.95
+        6"|inside_city: 436.43
+        6"|outside_city: 501.5
+        8"|inside_city: 981.12
+        8"|outside_city: 1128.17
+        10"|inside_city: 1207.57
+        10"|outside_city: 1388.71
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 10
+    tier_prices_commodity:
+      - 2.99
+      - 3.53
+      - 4.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.8
+        5/8"|outside_city: 29.06
+        3/4"|inside_city: 25.8
+        3/4"|outside_city: 29.06
+        1"|inside_city: 36.25
+        1"|outside_city: 41.07
+        1|1/2"|inside_city: 62.32
+        1|1/2"|outside_city: 71.07
+        2"|inside_city: 93.59
+        2"|outside_city: 107.05
+        3"|inside_city: 176.97
+        3"|outside_city: 202.98
+        4"|inside_city: 270.81
+        4"|outside_city: 310.95
+        6"|inside_city: 436.43
+        6"|outside_city: 501.5
+        8"|inside_city: 981.12
+        8"|outside_city: 1128.17
+        10"|inside_city: 1207.57
+        10"|outside_city: 1388.71
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.8
+        5/8"|outside_city: 29.06
+        3/4"|inside_city: 25.8
+        3/4"|outside_city: 29.06
+        1"|inside_city: 36.25
+        1"|outside_city: 41.07
+        1|1/2"|inside_city: 62.32
+        1|1/2"|outside_city: 71.07
+        2"|inside_city: 93.59
+        2"|outside_city: 107.05
+        3"|inside_city: 176.97
+        3"|outside_city: 202.98
+        4"|inside_city: 270.81
+        4"|outside_city: 310.95
+        6"|inside_city: 436.43
+        6"|outside_city: 501.5
+        8"|inside_city: 981.12
+        8"|outside_city: 1128.17
+        10"|inside_city: 1207.57
+        10"|outside_city: 1388.71
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.76
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.8
+        5/8"|outside_city: 29.06
+        3/4"|inside_city: 25.8
+        3/4"|outside_city: 29.06
+        1"|inside_city: 36.25
+        1"|outside_city: 41.07
+        1|1/2"|inside_city: 62.32
+        1|1/2"|outside_city: 71.07
+        2"|inside_city: 93.59
+        2"|outside_city: 107.05
+        3"|inside_city: 176.97
+        3"|outside_city: 202.98
+        4"|inside_city: 270.81
+        4"|outside_city: 310.95
+        6"|inside_city: 436.43
+        6"|outside_city: 501.5
+        8"|inside_city: 981.12
+        8"|outside_city: 1128.17
+        10"|inside_city: 1207.57
+        10"|outside_city: 1388.71
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 25.8
+        5/8"|outside_city: 29.06
+        3/4"|inside_city: 25.8
+        3/4"|outside_city: 29.06
+        1"|inside_city: 36.25
+        1"|outside_city: 41.07
+        1|1/2"|inside_city: 62.32
+        1|1/2"|outside_city: 71.07
+        2"|inside_city: 93.59
+        2"|outside_city: 107.05
+        3"|inside_city: 176.97
+        3"|outside_city: 202.98
+        4"|inside_city: 270.81
+        4"|outside_city: 310.95
+        6"|inside_city: 436.43
+        6"|outside_city: 501.5
+        8"|inside_city: 981.12
+        8"|outside_city: 1128.17
+        10"|inside_city: 1207.57
+        10"|outside_city: 1388.71
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.76
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
