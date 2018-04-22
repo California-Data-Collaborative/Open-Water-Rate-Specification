@@ -51,6 +51,7 @@ rate_structure:
     flat_rate_commodity:
       depends_on:
         - pressure_zone
+#Pressure zone 2 refers to the water rates applicable to the Riverview Homeowner Association with a surcharge of $1.31 per CCF.
       values:
         1: 4.99
         2: 6.3
@@ -60,24 +61,66 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 33.62
+        1|1/2": 64.85
+        2": 102.48
+        3": 190.35
+        4": 315.84
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 4.99
+        2: 6.3
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 33.62
+        1|1/2": 64.85
+        2": 102.48
+        3": 190.35
+        4": 315.84
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 4.99
+        2: 6.3
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 33.62
+        1|1/2": 64.85
+        2": 102.48
+        3": 190.35
+        4": 315.84
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 4.99
+        2: 6.3
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
