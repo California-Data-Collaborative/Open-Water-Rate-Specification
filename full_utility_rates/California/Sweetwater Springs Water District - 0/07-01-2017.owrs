@@ -56,6 +56,14 @@ rate_structure:
         1": 153.75
         1|1/2": 307.5
         2": 492
+    capital_debt_reduction_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.25
+        1": 28.15
+        1|1/2": 56.25
+        2": 90
     commodity_charge: Tiered
     tier_starts_commodity:
       depends_on:
@@ -90,7 +98,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_debt_reduction_charge
   GOVERNMENTAL:
     service_charge:
       depends_on:
@@ -100,6 +108,14 @@ rate_structure:
         1": 153.75
         1|1/2": 307.5
         2": 492
+    capital_debt_reduction_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.25
+        1": 28.15
+        1|1/2": 56.25
+        2": 90
     commodity_charge: Tiered
     tier_starts_commodity:
       depends_on:
@@ -134,7 +150,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_debt_reduction_charge
 capacity_charge:
   depends_on:
     - meter_size
