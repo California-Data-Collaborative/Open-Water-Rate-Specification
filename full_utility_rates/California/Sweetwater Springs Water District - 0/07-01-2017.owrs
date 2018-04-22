@@ -11,6 +11,7 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 61.5
+    capital_debt_reduction_charge: 11.25
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -26,15 +27,16 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_debt_reduction_charge
   RESIDENTIAL_MULTI:
-    service_charge: 95.33
+    service_charge: ((number_dwelling_units-1)*61.50*0.55)+61.5
+    capital_debt_reduction_charge: ((number_dwelling_units-1)*11.25*0.55)+11.25
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 12
-      - 31
-      - 124
+      - ((number_dwelling_units-1)*8*0.55)+8
+      - ((number_dwelling_units-1)*20*0.55)+20
+      - ((number_dwelling_units-1)*80*0.55)+80
     tier_prices_commodity:
       - 1.4
       - 2.85
@@ -44,7 +46,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_debt_reduction_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -90,8 +92,44 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   GOVERNMENTAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 61.5
+        1": 153.75
+        1|1/2": 307.5
+        2": 492
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 8
+          - 20
+          - 80
+        1":
+          - 0
+          - 20
+          - 50
+          - 200
+        1|1/2":
+          - 0
+          - 40
+          - 100
+          - 400
+        2":
+          - 0
+          - 64
+          - 160
+          - 640
+    tier_prices_commodity:
+      - 1.4
+      - 2.85
+      - 4.25
+      - 6.15
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
