@@ -1,0 +1,109 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Rohnert Park  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    http://www.ci.rohnert-park.ca.us/UserFiles/Servers/Server_3037789/File/Services/Utility%20Billing/Water/RP%20-%20Notice%20of%20Automatic%20Water%20Rate%20Adjustment%2011-2017.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.2
+        3/4": 20.2
+        1": 20.2
+        1|1/2": 37
+        2": 57.15
+        3": 104.16
+        4": 171.31
+        6": 339.24
+        8": 540.73
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
+      - 3.08
+      - 4.17
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.2
+        3/4": 20.2
+        1": 20.2
+        1|1/2": 37
+        2": 57.15
+        3": 104.16
+        4": 171.31
+        6": 339.24
+        8": 540.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.59
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 24.09
+        3": 30.67
+        4": 38.35
+        6": 51.49
+        8": 70.11
+        10": 84.36
+        12": 98.59
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
