@@ -35,6 +35,7 @@ rate_structure:
       - 2.76
     fixed_drought_surcharge: 0
     variable_drought_surcharge: Tiered
+#There exists 5 stages of drought. Drought rates for stage 3 are used here.
     tier_starts_drought:
       - 0
       - 8
