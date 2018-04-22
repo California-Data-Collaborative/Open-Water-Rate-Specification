@@ -1,0 +1,147 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 06/09/2017
+  utility_name: Vallejo City Of - Lakes Service Area
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.cityofvallejo.net/common/pages/DisplayFile.aspx?itemId=7227928
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 41.075
+        3/4": 41.075
+        1": 56.855
+        1|1/2": 88.415
+        2": 126.24
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 13
+    tier_prices_commodity:
+      - 11.84
+      - 18.43
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 41.13
+        3/4": 41.13
+        1": 56.85
+        1|1/2": 88.41
+        2": 126.24
+        3": 214.65
+        4": 340.89
+        6": 656.48
+        8": 1035.08
+        10": 1476.91
+        12": 2739.17
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 14.12
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 57.68
+        3/4": 57.68
+        1": 73.52
+        1|1/2": 105.08
+        2": 142.9
+        3": 231.32
+        4": 357.44
+        6": 673.03
+        8": 1051.74
+        10": 1493.58
+        12": 2755.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 14.12
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.91
+        3/4": 42.91
+        1": 43.97
+        1|1/2": 45.98
+        2": 48.46
+        3": 54.14
+        4": 62.29
+        6": 82.74
+        8": 107.21
+        10": 135.81
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RAW:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 40.19
+        3/4": 40.19
+        1": 54.37
+        1|1/2": 85.1
+        2": 120.56
+        3": 204.49
+        4": 323.87
+        6": 622.91
+        8": 981.06
+        10": 1399.49
+        12": 2594.49
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.11
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
