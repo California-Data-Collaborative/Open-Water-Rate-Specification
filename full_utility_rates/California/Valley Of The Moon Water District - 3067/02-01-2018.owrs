@@ -1,0 +1,127 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 02/01/2018
+  utility_name: Valley Of The Moon Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: kgal
+  prop_218_link: http://www.vomwd.com/rates.php
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.02
+        3/4": 25.6
+        1": 40.75
+        1|1/2": 78.64
+        2": 124.11
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
+      - 3.99
+      - 6.65
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.02
+        3/4": 25.6
+        1": 40.75
+        1|1/2": 78.64
+        2": 124.11
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
+      - 3.99
+      - 6.65
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 29.12
+        3/4": 42.25
+        1": 68.5
+        1|1/2": 134.14
+        2": 212.91
+        3": 422.95
+        4": 659.25
+        6": 1315.63
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.42
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 29.12
+        3/4": 42.25
+        1": 68.5
+        1|1/2": 134.14
+        2": 212.91
+        3": 422.95
+        4": 659.25
+        6": 1315.63
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.84
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.02
+        3/4": 25.6
+        1": 40.75
+        1|1/2": 78.64
+        2": 124.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.84
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 14.93
+        3": 29.25
+        4": 55.64
+        6": 123.49
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
