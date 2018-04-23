@@ -1,0 +1,158 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 12/1/2017
+  utility_name: Nipomo Community Service District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: https://ncsd.ca.gov/wp-content/uploads/2018/02/RATE-SHEET.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.51
+        3/4": 42.51
+        1": 42.51
+        1|1/2": 51.49
+        2": 67.4
+        3": 152.51
+        4": 197.75
+        6": 335.12
+        8": 492.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.51
+        3/4": 42.51
+        1": 42.51
+        1|1/2": 51.49
+        2": 67.4
+        3": 152.51
+        4": 197.75
+        6": 335.12
+        8": 492.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.51
+        3/4": 42.51
+        1": 42.51
+        1|1/2": 51.49
+        2": 67.4
+        3": 152.51
+        4": 197.75
+        6": 335.12
+        8": 492.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.51
+        3/4": 42.51
+        1": 42.51
+        1|1/2": 51.49
+        2": 67.4
+        3": 152.51
+        4": 197.75
+        6": 335.12
+        8": 492.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.51
+        3/4": 42.51
+        1": 42.51
+        1|1/2": 51.49
+        2": 67.4
+        3": 152.51
+        4": 197.75
+        6": 335.12
+        8": 492.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 42.51
+        3/4": 42.51
+        1": 42.51
+        1|1/2": 51.49
+        2": 67.4
+        3": 152.51
+        4": 197.75
+        6": 335.12
+        8": 492.11
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.97
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.64
+        3/4": 0.64
+        1": 0.64
+        1|1/2": 1.87
+        2": 3.99
+        3": 11.58
+        4": 24.69
+        6": 71.71
+        8": 152.82
+        10": 274.83
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
