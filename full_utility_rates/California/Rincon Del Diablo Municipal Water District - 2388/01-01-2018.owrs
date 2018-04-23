@@ -1,0 +1,193 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Rincon Del Diablo Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: http://www.rinconwater.org/images/Rates-01012018.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 34.23
+        1": 51.09
+        1|1/2": 79.17
+        2": 112.88
+        3": 219.62
+        4": 303.89
+        6": 584.77
+        8": 921.83
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 25
+    tier_prices_commodity:
+      - 6.68
+      - 7.7
+      - 8.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 34.23
+        1": 51.09
+        1|1/2": 79.17
+        2": 112.88
+        3": 219.62
+        4": 303.89
+        6": 584.77
+        8": 921.83
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 25
+    tier_prices_commodity:
+      - 6.68
+      - 7.7
+      - 8.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 34.23
+        1": 51.09
+        1|1/2": 79.17
+        2": 112.88
+        3": 219.62
+        4": 303.89
+        6": 584.77
+        8": 921.83
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 7.7
+      - 8.14
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 34.23
+        1": 51.09
+        1|1/2": 79.17
+        2": 112.88
+        3": 219.62
+        4": 303.89
+        6": 584.77
+        8": 921.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 34.23
+        1": 51.09
+        1|1/2": 79.17
+        2": 112.88
+        3": 219.62
+        4": 303.89
+        6": 584.77
+        8": 921.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 34.23
+        1": 51.09
+        1|1/2": 79.17
+        2": 112.88
+        3": 219.62
+        4": 303.89
+        6": 584.77
+        8": 921.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 14.54
+        2": 29.07
+        4": 58.14
+        6": 87.21
+        8": 116.29
+        10": 145.36
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.97
+        1": 22.67
+        1|1/2": 33.83
+        2": 47.23
+        3": 89.66
+        4": 123.16
+        6": 234.82
+        8": 368.8
+        16": 1172.75
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.22
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
