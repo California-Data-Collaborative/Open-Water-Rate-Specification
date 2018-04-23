@@ -1,0 +1,117 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 09/08/2016
+  utility_name: Westborough Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.westboroughwater.com/Documents/Rate%20and%20Fee%20Schedule_20160908.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.7
+        3/4": 17.7
+        1": 24.7
+        1|1/2": 44.7
+        2": 59.7
+        3": 104.7
+        4": 224.7
+        6": 335.7
+        8": 495.7
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.7
+        3/4": 17.7
+        1": 24.7
+        1|1/2": 44.7
+        2": 59.7
+        3": 104.7
+        4": 224.7
+        6": 335.7
+        8": 495.7
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.7
+        3/4": 17.7
+        1": 24.7
+        1|1/2": 44.7
+        2": 59.7
+        3": 104.7
+        4": 224.7
+        6": 335.7
+        8": 495.7
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.7
+        3/4": 17.7
+        1": 24.7
+        1|1/2": 44.7
+        2": 59.7
+        3": 104.7
+        4": 224.7
+        6": 335.7
+        8": 495.7
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.7
+        3/4": 17.7
+        1": 24.7
+        1|1/2": 44.7
+        2": 59.7
+        3": 104.7
+        4": 224.7
+        6": 335.7
+        8": 495.7
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.48
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
