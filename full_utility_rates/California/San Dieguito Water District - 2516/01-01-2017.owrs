@@ -1,0 +1,248 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: San Dieguito Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.mwdh2o.com/2018%20Background%20Materials/San%20Dieguito%20Water%20District%202017-18.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.84
+        3/4": 45.84
+        1": 68.29
+        1|1/2": 123.3
+        2": 192.72
+        3": 350.34
+        4": 578.55
+        6": 1128.19
+        8": 1822.2
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 13
+      - 21
+      - 41
+    tier_prices_commodity:
+      - 2.81
+      - 4.46
+      - 5.51
+      - 6.28
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.84
+        3/4": 45.84
+        1": 68.29
+        1|1/2": 123.3
+        2": 192.72
+        3": 350.34
+        4": 578.55
+        6": 1128.19
+        8": 1822.2
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 13
+      - 17
+    tier_prices_commodity:
+      - 2.81
+      - 4.46
+      - 5.51
+      - 6.28
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.84
+        3/4": 45.84
+        1": 68.29
+        1|1/2": 123.3
+        2": 192.72
+        3": 350.34
+        4": 578.55
+        6": 1128.19
+        8": 1822.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.51
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.84
+        3/4": 45.84
+        1": 68.29
+        1|1/2": 123.3
+        2": 192.72
+        3": 350.34
+        4": 578.55
+        6": 1128.19
+        8": 1822.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.84
+        3/4": 45.84
+        1": 68.29
+        1|1/2": 123.3
+        2": 192.72
+        3": 350.34
+        4": 578.55
+        6": 1128.19
+        8": 1822.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 8.47
+        3/4": 8.47
+        1": 8.47
+        1|1/2": 9.55
+        2": 16.65
+        3": 42.12
+        4": 86.04
+        6": 243.69
+        8": 515.61
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 45.84
+        3/4": 45.84
+        1": 68.29
+        1|1/2": 123.3
+        2": 192.72
+        3": 350.34
+        4": 578.55
+        6": 1128.19
+        8": 1822.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.68
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED_GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 29.31
+        1|1/2": 52.62
+        2": 80.7
+        3": 146.26
+        4": 239.9
+        6": 473.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.44
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
