@@ -1,0 +1,152 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 03/01/2018
+  utility_name: Helix Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: https://hwd.com/rates/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.87
+        3/4": 47.87
+        1": 69.95
+        1|1/2": 125.15
+        2": 191.37
+        3": 401.12
+        4": 710.2
+        6": 1449.81
+        8": 3105.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 14
+      - 34
+    tier_prices_commodity:
+      - 4.65
+      - 5.46
+      - 6.79
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.87
+        3/4": 47.87
+        1": 69.95
+        1|1/2": 125.15
+        2": 191.37
+        3": 401.12
+        4": 710.2
+        6": 1449.81
+        8": 3105.64
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.28
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.87
+        3/4": 47.87
+        1": 69.95
+        1|1/2": 125.15
+        2": 191.37
+        3": 401.12
+        4": 710.2
+        6": 1449.81
+        8": 3105.64
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+#Landscape Factor is 0.7 for existing landscapes, 0.55 for residential landscapes that are permitted on or after December 1st 2015, 0.45 for non-residential landscapes that are permitted on or after December 1st 2015, 1.0 for schools or public sites with functional use turf.
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 5.46
+      - 6.79
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.87
+        3/4": 47.87
+        1": 69.95
+        1|1/2": 125.15
+        2": 191.37
+        3": 401.12
+        4": 710.2
+        6": 1449.81
+        8": 3105.64
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.34
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 10.35
+        1": 13.79
+        2": 27.59
+        4": 55.17
+        6": 82.76
+        8": 110.35
+        10": 137.94
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 47.87
+        3/4": 47.87
+        1": 69.95
+        1|1/2": 125.15
+        2": 191.37
+        3": 401.12
+        4": 710.2
+        6": 1449.81
+        8": 3105.64
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.34
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
