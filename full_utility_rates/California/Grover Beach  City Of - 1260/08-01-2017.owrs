@@ -1,0 +1,125 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 08/01/2017
+  utility_name: Grover Beach  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.grover.org/DocumentCenter/View/3776
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.08
+        3/4": 12.08
+        1": 12.08
+        1|1/2": 60.39
+        2": 96.62
+        3": 181.15
+        4": 301.91
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.17
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.08
+        3/4": 12.08
+        1": 12.08
+        1|1/2": 60.39
+        2": 96.62
+        3": 181.15
+        4": 301.91
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.17
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.08
+        3/4": 18.12
+        1": 30.2
+        1|1/2": 60.39
+        2": 96.62
+        3": 181.15
+        4": 301.91
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.08
+        3/4": 18.12
+        1": 30.2
+        1|1/2": 60.39
+        2": 96.62
+        3": 181.15
+        4": 301.91
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.08
+        3/4": 18.12
+        1": 30.2
+        1|1/2": 60.39
+        2": 96.62
+        3": 181.15
+        4": 301.91
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.08
+        3/4": 18.12
+        1": 30.2
+        1|1/2": 60.39
+        2": 96.62
+        3": 181.15
+        4": 301.91
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
