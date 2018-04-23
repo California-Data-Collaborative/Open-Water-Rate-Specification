@@ -1,0 +1,128 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Sonoma  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.sonomacity.org/documents/city-sonoma-water-rates/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.28
+        3/4": 20.28
+        1": 20.28
+        1|1/2": 30.94
+        2": 38.67
+        3": 58.01
+        4": 96.68
+        6": 154.82
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.07
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.28
+        3/4": 20.28
+        1": 20.28
+        1|1/2": 30.94
+        2": 38.67
+        3": 58.01
+        4": 96.68
+        6": 154.82
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.856
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.28
+        3/4": 20.28
+        1": 20.28
+        1|1/2": 30.94
+        2": 38.67
+        3": 58.01
+        4": 96.68
+        6": 154.82
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.0124
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.28
+        3/4": 20.28
+        1": 20.28
+        1|1/2": 30.94
+        2": 38.67
+        3": 58.01
+        4": 96.68
+        6": 154.82
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.9805
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 6.97
+        4": 13.92
+        6": 27.85
+        8": 41.77
+        10": 55.69
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.0124
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.28
+        3/4": 20.28
+        1": 20.28
+        1|1/2": 30.94
+        2": 38.67
+        3": 58.01
+        4": 96.68
+        6": 154.82
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.07
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
