@@ -1,0 +1,187 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 08/01/2017
+  utility_name: Shasta Lake  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://cityofshastalake.org/DocumentCenter/View/1278
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+      - 20
+    tier_prices_commodity:
+      - 1.92
+      - 2.2
+      - 2.76
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: Tiered
+#There exists 5 stages of drought. Drought rates for stage 3 are used here.
+    tier_starts_drought:
+      - 0
+      - 8
+      - 20
+    tier_prices_drought:
+      - 2.05
+      - 2.35
+      - 2.95
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 2.17
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.26
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 2.41
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.07
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 2.21
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.07
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 2.21
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.42
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 2.59
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.56
+        1": 55.68
+        1|1/2": 107.55
+        2": 169.79
+        3": 315.03
+        4": 522.5
+        6": 1041.2
+        8": 1663.64
+        10": 3012.24
+        12": 4464.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.26
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 2.41
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
