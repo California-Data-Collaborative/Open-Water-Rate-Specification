@@ -1,0 +1,119 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Morro Bay  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.morro-bay.ca.us/DocumentCenter/View/8368
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 28
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 5
+      - 7.5
+      - 10
+      - 13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 28
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 5
+      - 7.5
+      - 10
+      - 13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 28
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 5
+      - 7.5
+      - 10
+      - 13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 28
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 5
+      - 7.5
+      - 10
+      - 13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 28
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 5
+      - 7.5
+      - 10
+      - 13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 28
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 10
+      - 50
+    tier_prices_commodity:
+      - 5
+      - 7.5
+      - 10
+      - 13
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
