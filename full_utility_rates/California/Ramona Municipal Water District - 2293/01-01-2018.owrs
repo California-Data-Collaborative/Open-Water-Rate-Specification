@@ -1,0 +1,69 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Ramona Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.rmwd.org/images/Files/RateFeeSchedule/Fee-schedule-updated-01-01-2017---Adopted-01-01-17.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32.33
+        3/4": 32.33
+        1": 52.13
+        1|1/2": 101.97
+        2": 161.77
+        3": 301.16
+        4": 500.27
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32.33
+        3/4": 32.33
+        1": 52.13
+        1|1/2": 101.97
+        2": 161.77
+        3": 301.16
+        4": 500.27
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RAW:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 32.33
+        3/4": 32.33
+        1": 52.13
+        1|1/2": 101.97
+        2": 161.77
+        3": 301.16
+        4": 500.27
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
