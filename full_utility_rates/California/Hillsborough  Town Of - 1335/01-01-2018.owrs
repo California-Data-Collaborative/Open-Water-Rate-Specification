@@ -1,0 +1,143 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Hillsborough  Town Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.hillsborough.net/DocumentCenter/View/193
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 68.68
+        1": 83.65
+        1|1/2": 117.31
+        2": 162.2
+        3": 281.91
+        6": 790.65
+        8": 1239.54
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 22
+      - 35
+    tier_prices_commodity:
+      - 5.98
+      - 7.59
+      - 10.43
+      - 15.92
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 68.68
+        1": 83.65
+        1|1/2": 117.31
+        2": 162.2
+        3": 281.91
+        6": 790.65
+        8": 1239.54
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 22
+      - 35
+    tier_prices_commodity:
+      - 5.98
+      - 7.59
+      - 10.43
+      - 15.92
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 68.68
+        1": 83.65
+        1|1/2": 117.31
+        2": 162.2
+        3": 281.91
+        6": 790.65
+        8": 1239.54
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 68.68
+        1": 83.65
+        1|1/2": 117.31
+        2": 162.2
+        3": 281.91
+        6": 790.65
+        8": 1239.54
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 68.68
+        1": 83.65
+        1|1/2": 117.31
+        2": 162.2
+        3": 281.91
+        6": 790.65
+        8": 1239.54
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 68.68
+        1": 83.65
+        1|1/2": 117.31
+        2": 162.2
+        3": 281.91
+        6": 790.65
+        8": 1239.54
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 8.02
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
