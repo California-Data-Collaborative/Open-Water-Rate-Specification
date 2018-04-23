@@ -1,0 +1,66 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Paso Robles  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.prcity.com/government/departments/adminservices/pdf/WaterSewer-FeesPenalties.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 4.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 4.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 4.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 4.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 4.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 4.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
