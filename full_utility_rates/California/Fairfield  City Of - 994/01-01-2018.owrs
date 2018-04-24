@@ -1,0 +1,98 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Fairfield  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.fairfield.ca.gov/civicax/filebank/blobdload.aspx?BlobID=15504
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 25.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 2.18
+        2: 2.18
+        3: 2.7
+        4: 2.7
+        5: 3.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 25.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 2.18
+        2: 2.18
+        3: 2.7
+        4: 2.7
+        5: 3.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39
+        3/4": 39
+        1": 68.1
+        1|1/2": 150
+        2": 264.3
+        3": 595.5
+        4": 1056
+        6": 2376
+        8": 4233.9
+        10": 6694.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.71
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: .nan
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39
+        3/4": 39
+        1": 68.1
+        1|1/2": 150
+        2": 264.3
+        3": 595.5
+        4": 1056
+        6": 2376
+        8": 4233.9
+        10": 6694.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.18
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
