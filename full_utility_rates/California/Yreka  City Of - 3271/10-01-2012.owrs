@@ -1,0 +1,145 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/01/2012
+  utility_name: Yreka  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    http://ci.yreka.ca.us/sites/ci.yreka.ca.us/assets/files/COY_Utility_Rates-2014-Updated.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.6
+        3/4": 41.08
+        1": 47.4
+        1|1/2": 88.48
+        2": 126.4
+        3": 379.2
+        4": 566.8
+        6": 790
+        8": 1106
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 35
+    tier_prices_commodity:
+      - 1.86
+      - 2.05
+      - 2.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.6
+        3/4": 41.08
+        1": 47.4
+        1|1/2": 88.48
+        2": 126.4
+        3": 379.2
+        4": 566.8
+        6": 790
+        8": 1106
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.86
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.6
+        3/4": 41.08
+        1": 47.4
+        1|1/2": 88.48
+        2": 126.4
+        3": 379.2
+        4": 566.8
+        6": 790
+        8": 1106
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.86
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.6
+        3/4": 41.08
+        1": 47.4
+        1|1/2": 88.48
+        2": 126.4
+        3": 379.2
+        4": 566.8
+        6": 790
+        8": 1106
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.86
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.6
+        3/4": 41.08
+        1": 47.4
+        1|1/2": 88.48
+        2": 126.4
+        3": 379.2
+        4": 566.8
+        6": 790
+        8": 1106
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.86
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.6
+        3/4": 41.08
+        1": 47.4
+        1|1/2": 88.48
+        2": 126.4
+        3": 379.2
+        4": 566.8
+        6": 790
+        8": 1106
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.86
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
