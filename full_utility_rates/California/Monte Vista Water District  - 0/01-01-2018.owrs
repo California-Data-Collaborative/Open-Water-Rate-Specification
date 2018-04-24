@@ -23,7 +23,22 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 2.04
+      - 2.71
+      - 5.17
+      - 5.92
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -43,8 +58,22 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 2.04
+      - 2.71
+      - 5.17
+      - 5.92    fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
@@ -63,7 +92,17 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    outdoor_commodity: irr_area*44*.623*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - outdoor
+    tier_prices_commodity:
+      - 2.32
+      - 3.31
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -83,7 +122,8 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -103,7 +143,8 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -123,7 +164,8 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -143,7 +185,8 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -163,7 +206,8 @@ rate_structure:
         6": 1656.35
         8": 2204.05
         10": 3847.1
-    commodity_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.02
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
