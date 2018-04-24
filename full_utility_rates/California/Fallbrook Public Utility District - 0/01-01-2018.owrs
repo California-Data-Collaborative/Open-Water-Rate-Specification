@@ -14,13 +14,13 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 52.68
-        1": 81.63
-        1|1/2": 153.96
-        2": 240.77
-        3": 472.25
-        4": 732.67
-        6": 1456.06
+        3/4": 57.95
+        1": 90.42
+        1|1/2": 171.51
+        2": 268.86
+        3": 528.46
+        4": 820.48
+        6": 1631.65
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -40,13 +40,13 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 52.68
-        1": 81.63
-        1|1/2": 153.96
-        2": 240.77
-        3": 472.25
-        4": 732.67
-        6": 1456.06
+        3/4": 57.95
+        1": 90.42
+        1|1/2": 171.51
+        2": 268.86
+        3": 528.46
+        4": 820.48
+        6": 1631.65
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -66,13 +66,13 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 52.68
-        1": 81.63
-        1|1/2": 153.96
-        2": 240.77
-        3": 472.25
-        4": 732.67
-        6": 1456.06
+        3/4": 57.95
+        1": 90.42
+        1|1/2": 171.51
+        2": 268.86
+        3": 528.46
+        4": 820.48
+        6": 1631.65
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 5.8
     fixed_drought_surcharge: 0
@@ -85,13 +85,13 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 52.68
-        1": 81.63
-        1|1/2": 153.96
-        2": 240.77
-        3": 472.25
-        4": 732.67
-        6": 1456.06
+        3/4": 57.95
+        1": 90.42
+        1|1/2": 171.51
+        2": 268.86
+        3": 528.46
+        4": 820.48
+        6": 1631.65
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 5.79
     fixed_drought_surcharge: 0
@@ -104,13 +104,13 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 52.68
-        1": 81.63
-        1|1/2": 153.96
-        2": 240.77
-        3": 472.25
-        4": 732.67
-        6": 1456.06
+        3/4": 57.95
+        1": 90.42
+        1|1/2": 171.51
+        2": 268.86
+        3": 528.46
+        4": 820.48
+        6": 1631.65
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 5.7
     fixed_drought_surcharge: 0
