@@ -9,6 +9,7 @@ metadata:
   bill_unit: ccf
   prop_218_link: http://www.mountainhousecsd.org/images/documents/finance/Final218.pdf
 rate_structure:
+#Density is determined based on the number of units constructed on an acre. 
   RESIDENTIAL_SINGLE_LOW_DENSITY:
     service_charge: 19.07
     commodity_charge: flat_rate_commodity*usage_ccf
