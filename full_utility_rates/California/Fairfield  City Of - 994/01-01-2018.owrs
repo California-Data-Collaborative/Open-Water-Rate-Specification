@@ -66,7 +66,7 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: .nan
+    service_charge: 45337.2
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 1.63
     fixed_drought_surcharge: 0
