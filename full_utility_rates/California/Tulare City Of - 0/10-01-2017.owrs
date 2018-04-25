@@ -1,0 +1,128 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/01/2017
+  utility_name: Tulare City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: http://www.tulare.ca.gov/home/showdocument?id=4904
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.76
+        3/4": 13.76
+        1": 22.98
+        1|1/2": 45.84
+        2": 73.37
+        3": 146.87
+        4": 229.45
+        6": 458.79
+        8": 734.08
+        10": 1055.34
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 30
+    tier_prices_commodity:
+      - 0.744
+      - 1.218
+      - 1.627
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.76
+        3/4": 13.76
+        1": 22.98
+        1|1/2": 45.84
+        2": 73.37
+        3": 146.87
+        4": 229.45
+        6": 458.79
+        8": 734.08
+        10": 1055.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.603
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.76
+        3/4": 13.76
+        1": 22.98
+        1|1/2": 45.84
+        2": 73.37
+        3": 146.87
+        4": 229.45
+        6": 458.79
+        8": 734.08
+        10": 1055.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.606
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.76
+        3/4": 13.76
+        1": 22.98
+        1|1/2": 45.84
+        2": 73.37
+        3": 146.87
+        4": 229.45
+        6": 458.79
+        8": 734.08
+        10": 1055.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.308
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.76
+        3/4": 13.76
+        1": 22.98
+        1|1/2": 45.84
+        2": 73.37
+        3": 146.87
+        4": 229.45
+        6": 458.79
+        8": 734.08
+        10": 1055.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.135
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
