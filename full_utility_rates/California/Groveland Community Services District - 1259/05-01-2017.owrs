@@ -1,0 +1,155 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 05/01/2017
+  utility_name: Groveland Community Services District
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: https://www.gcsd.org/files/c19e1ad88/2017+Rate+Sheets.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.28
+        3/4": 36.28
+        1": 58.05
+        1|1/2": 94.32
+        2": 126.96
+        3": 199.52
+        4": 282.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3.3
+    tier_prices_commodity:
+      - 7
+      - 13.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.28
+        3/4": 36.28
+        1": 58.05
+        1|1/2": 94.32
+        2": 126.96
+        3": 199.52
+        4": 282.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3.3
+    tier_prices_commodity:
+      - 7
+      - 13.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.28
+        3/4": 36.28
+        1": 58.05
+        1|1/2": 94.32
+        2": 126.96
+        3": 199.52
+        4": 282.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3.3
+    tier_prices_commodity:
+      - 7
+      - 13.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.28
+        3/4": 36.28
+        1": 58.05
+        1|1/2": 94.32
+        2": 126.96
+        3": 199.52
+        4": 282.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3.3
+    tier_prices_commodity:
+      - 7
+      - 13.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.28
+        3/4": 36.28
+        1": 58.05
+        1|1/2": 94.32
+        2": 126.96
+        3": 199.52
+        4": 282.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3.3
+    tier_prices_commodity:
+      - 7
+      - 13.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.28
+        3/4": 36.28
+        1": 58.05
+        1|1/2": 94.32
+        2": 126.96
+        3": 199.52
+        4": 282.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3.3
+    tier_prices_commodity:
+      - 7
+      - 13.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
