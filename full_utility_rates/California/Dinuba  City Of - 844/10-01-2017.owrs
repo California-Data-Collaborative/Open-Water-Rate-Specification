@@ -1,0 +1,57 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/01/2017
+  utility_name: Dinuba  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: http://www.dinuba.org/services/public-services/public-utilities
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 11.86
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+    tier_prices_commodity:
+      - 1.187
+      - 1.922
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 11.86
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+    tier_prices_commodity:
+      - 1.187
+      - 1.922
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 11.86
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.441
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 11.86
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.532
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
