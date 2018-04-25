@@ -1,0 +1,117 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Thousand Oaks  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.toaks.org/home/showdocument?id=15006
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.31
+        1": 39.96
+        1|1/2": 76.55
+        2": 120.48
+        3": 259.56
+        4": 464.52
+        6": 954.97
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 30
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 4.74
+          - 5.06
+          - 5.47
+        2:
+          - 4.93
+          - 5.25
+          - 5.66
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.31
+        1": 39.96
+        1|1/2": 76.55
+        2": 120.48
+        3": 259.56
+        4": 464.52
+        6": 954.97
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 5.08
+        2: 5.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.31
+        1": 39.96
+        1|1/2": 76.55
+        2": 120.48
+        3": 259.56
+        4": 464.52
+        6": 954.97
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 5.08
+        2: 5.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.31
+        1": 39.96
+        1|1/2": 76.55
+        2": 120.48
+        3": 259.56
+        4": 464.52
+        6": 954.97
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 5.08
+        2: 5.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
