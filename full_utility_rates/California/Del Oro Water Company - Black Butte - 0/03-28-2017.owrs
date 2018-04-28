@@ -27,7 +27,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: 0.014*(service_charge+commodity_charge)
+    bill: 1.014*(service_charge+commodity_charge)
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -44,7 +44,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: 0.014*(service_charge+commodity_charge)
+    bill: 1.014*(service_charge+commodity_charge)
   IRRIGATION:
     service_charge:
       depends_on:
@@ -61,7 +61,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: 0.014*(service_charge+commodity_charge)
+    bill: 1.014*(service_charge+commodity_charge)
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -78,7 +78,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: 0.014*(service_charge+commodity_charge)
+    bill: 1.014*(service_charge+commodity_charge)
   INDUSTRIAL:
     service_charge:
       depends_on:
@@ -95,7 +95,7 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: 0.014*(service_charge+commodity_charge)
+    bill: 1.014*(service_charge+commodity_charge)
   INSTITUTIONAL:
     service_charge:
       depends_on:
@@ -112,4 +112,4 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: 0.014*(service_charge+commodity_charge)
+    bill: 1.014*(service_charge+commodity_charge)
