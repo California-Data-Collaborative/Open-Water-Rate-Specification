@@ -1,8 +1,8 @@
 # New Service Advance Deposit: 189.08
 # Late Fee : 5.00
 metadata:
-  effective_date: 2016-09-20
-  utility_name: "Del_Oro_4_Pines_District"
+  effective_date: 09/20/2016
+  utility_name: Del Oro Water Company - Pines District
   bill_frequency: monthly
   bill_unit: ccf
   prop_218_link: http://www.delorowater.com/deloro/water-districts/california-pines.html
