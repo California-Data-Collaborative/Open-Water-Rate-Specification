@@ -1,15 +1,16 @@
 # New Service Advance Deposit: 223.00
 # Late Fee : 5.00
----
 metadata:
-  effective_date: 2014-09-03
-  utility_name: "Del_Oro_6_Ferndale_District"
+  effective_date: 09/03/2014
+  utility_name: Del Oro Water Company - Ferndale District
   bill_frequency: monthly
-
+  bill_unit: ccf
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/ferndale.html
 rate_structure:
-  ALL:
+  RESIDENTIAL_SINGLE:
     service_charge:
-      depends_on: meter_size
+      depends_on:
+        - meter_size
       values:
          5/8"   : 22.30
          3/4"   : 33.46
@@ -21,5 +22,107 @@ rate_structure:
          8"     : 1784.40
     flat_rate: 4.81
     commodity_charge: flat_rate * usage_ccf
-    utility_surcharge: 0.0144 * (service_charge + commodity_charge)
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+         5/8"   : 22.30
+         3/4"   : 33.46
+         1"     : 55.76
+         1 1/2" : 111.52
+         2"     : 178.44
+         4"     : 557.62
+         6"     : 1115.25
+         8"     : 1784.40
+    flat_rate: 4.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+         5/8"   : 22.30
+         3/4"   : 33.46
+         1"     : 55.76
+         1 1/2" : 111.52
+         2"     : 178.44
+         4"     : 557.62
+         6"     : 1115.25
+         8"     : 1784.40
+    flat_rate: 4.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+         5/8"   : 22.30
+         3/4"   : 33.46
+         1"     : 55.76
+         1 1/2" : 111.52
+         2"     : 178.44
+         4"     : 557.62
+         6"     : 1115.25
+         8"     : 1784.40
+    flat_rate: 4.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+         5/8"   : 22.30
+         3/4"   : 33.46
+         1"     : 55.76
+         1 1/2" : 111.52
+         2"     : 178.44
+         4"     : 557.62
+         6"     : 1115.25
+         8"     : 1784.40
+    flat_rate: 4.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+         5/8"   : 22.30
+         3/4"   : 33.46
+         1"     : 55.76
+         1 1/2" : 111.52
+         2"     : 178.44
+         4"     : 557.62
+         6"     : 1115.25
+         8"     : 1784.40
+    flat_rate: 4.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 28
+        4": 28
+        6": 40
+        8": 53
+        10": 107
+        12": 149
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.0117*(service_charge+commodity_charge)
