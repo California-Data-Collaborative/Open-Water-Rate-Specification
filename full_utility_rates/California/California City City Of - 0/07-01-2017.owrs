@@ -7,8 +7,8 @@ metadata:
   utility_name: California City City Of
   bill_frequency: Monthly
   bill_unit: ccf
-  prop_218_link: >-
-    http://www.californiacity-ca.gov/CC/images/California_City_Tables_-_Water-Sewer_Rates_v2.pdf
+  prop_218_link: http://www.californiacity-ca.gov/CC/images/California_City_Tables_-_Water-Sewer_Rates_v2.pdf
+#Tier breaks are rounded to the nearest integer.
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
@@ -95,40 +95,420 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.99
+        3/4": 52.99
+        1": 88.5
+        1|1/2": 176.45
+        2": 282.43
+        3": 618.41
+        4": 1112.8
+        6": 2472.97
+        8": 4239.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        3/4":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        1":
+          - 0
+          - 15
+          - 25
+          - 42
+          - 67
+        1|1/2":
+          - 0
+          - 30
+          - 50
+          - 83
+          - 13
+        2":
+          - 0
+          - 48
+          - 80
+          - 133
+          - 213
+        3":
+          - 0
+          - 105
+          - 175
+          - 292
+          - 467
+        4":
+          - 0
+          - 189
+          - 315
+          - 525
+          - 840
+        6":
+          - 0
+          - 420
+          - 700
+          - 1167
+          - 1867
+        8":
+          - 0
+          - 720
+          - 1200
+          - 2000
+          - 3200
+    tier_prices_commodity:
+      - 0
+      - 1.23
+      - 2.58
+      - 3.25
+      - 3.93
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   IRRIGATION:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.99
+        3/4": 52.99
+        1": 88.5
+        1|1/2": 176.45
+        2": 282.43
+        3": 618.41
+        4": 1112.8
+        6": 2472.97
+        8": 4239.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        3/4":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        1":
+          - 0
+          - 15
+          - 25
+          - 42
+          - 67
+        1|1/2":
+          - 0
+          - 30
+          - 50
+          - 83
+          - 13
+        2":
+          - 0
+          - 48
+          - 80
+          - 133
+          - 213
+        3":
+          - 0
+          - 105
+          - 175
+          - 292
+          - 467
+        4":
+          - 0
+          - 189
+          - 315
+          - 525
+          - 840
+        6":
+          - 0
+          - 420
+          - 700
+          - 1167
+          - 1867
+        8":
+          - 0
+          - 720
+          - 1200
+          - 2000
+          - 3200
+    tier_prices_commodity:
+      - 0
+      - 1.23
+      - 2.58
+      - 3.25
+      - 3.93
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.99
+        3/4": 52.99
+        1": 88.5
+        1|1/2": 176.45
+        2": 282.43
+        3": 618.41
+        4": 1112.8
+        6": 2472.97
+        8": 4239.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        3/4":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        1":
+          - 0
+          - 15
+          - 25
+          - 42
+          - 67
+        1|1/2":
+          - 0
+          - 30
+          - 50
+          - 83
+          - 13
+        2":
+          - 0
+          - 48
+          - 80
+          - 133
+          - 213
+        3":
+          - 0
+          - 105
+          - 175
+          - 292
+          - 467
+        4":
+          - 0
+          - 189
+          - 315
+          - 525
+          - 840
+        6":
+          - 0
+          - 420
+          - 700
+          - 1167
+          - 1867
+        8":
+          - 0
+          - 720
+          - 1200
+          - 2000
+          - 3200
+    tier_prices_commodity:
+      - 0
+      - 1.23
+      - 2.58
+      - 3.25
+      - 3.93
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.99
+        3/4": 52.99
+        1": 88.5
+        1|1/2": 176.45
+        2": 282.43
+        3": 618.41
+        4": 1112.8
+        6": 2472.97
+        8": 4239.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        3/4":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        1":
+          - 0
+          - 15
+          - 25
+          - 42
+          - 67
+        1|1/2":
+          - 0
+          - 30
+          - 50
+          - 83
+          - 13
+        2":
+          - 0
+          - 48
+          - 80
+          - 133
+          - 213
+        3":
+          - 0
+          - 105
+          - 175
+          - 292
+          - 467
+        4":
+          - 0
+          - 189
+          - 315
+          - 525
+          - 840
+        6":
+          - 0
+          - 420
+          - 700
+          - 1167
+          - 1867
+        8":
+          - 0
+          - 720
+          - 1200
+          - 2000
+          - 3200
+    tier_prices_commodity:
+      - 0
+      - 1.23
+      - 2.58
+      - 3.25
+      - 3.93
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 52.99
+        3/4": 52.99
+        1": 88.5
+        1|1/2": 176.45
+        2": 282.43
+        3": 618.41
+        4": 1112.8
+        6": 2472.97
+        8": 4239.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        3/4":
+          - 0
+          - 9
+          - 15
+          - 25
+          - 40
+        1":
+          - 0
+          - 15
+          - 25
+          - 42
+          - 67
+        1|1/2":
+          - 0
+          - 30
+          - 50
+          - 83
+          - 13
+        2":
+          - 0
+          - 48
+          - 80
+          - 133
+          - 213
+        3":
+          - 0
+          - 105
+          - 175
+          - 292
+          - 467
+        4":
+          - 0
+          - 189
+          - 315
+          - 525
+          - 840
+        6":
+          - 0
+          - 420
+          - 700
+          - 1167
+          - 1867
+        8":
+          - 0
+          - 720
+          - 1200
+          - 2000
+          - 3200
+    tier_prices_commodity:
+      - 0
+      - 1.23
+      - 2.58
+      - 3.25
+      - 3.93
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
