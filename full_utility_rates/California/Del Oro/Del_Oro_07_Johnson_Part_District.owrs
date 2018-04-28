@@ -6,7 +6,7 @@ metadata:
   utility_name: Del Oro Water Company - Johnson Park District
   bill_frequency: monthly
   bill_unit: ccf
-  prop_218_link: http://www.delorowater.com/deloro/water-districts/black-butte.html
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/johnson-park.html
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
