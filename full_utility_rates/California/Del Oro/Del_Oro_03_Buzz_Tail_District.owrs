@@ -1,10 +1,9 @@
 # New Service Connection Fee: 10,000.00
 # New Service Advance Deposit: 180.00
 # Late Fee : 5.00
----
 metadata:
-  effective_date: 2015-11-24
-  utility_name: "Del_Oro_3_Buzz_Tail_District"
+  effective_date: 11/24/2015
+  utility_name: Del Oro Water Company - Buzztail District
   bill_frequency: monthly
   bill_unit: kgal
   prop_218_link: http://www.delorowater.com/deloro/water-districts/buzztail/item/advice-letter-428.html
