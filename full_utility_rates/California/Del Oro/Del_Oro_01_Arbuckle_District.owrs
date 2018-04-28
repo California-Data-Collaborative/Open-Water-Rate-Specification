@@ -1,15 +1,91 @@
 # New Service Advance Deposit: 224.82
 # Late Fee : 5.00
----
-metadata:
-  effective_date: 2016-12-06
-  utility_name: "Del_Oro_1_Arbuckle_District"
-  bill_frequency: monthly
 
+metadata:
+  effective_date: 12/06/2016
+  utility_name: Del Oro Water Company - Arbuckle District
+  bill_frequency: monthly
+  bill_unit: ccf
 rate_structure:
-  ALL:
+  RESIDENTIAL_SINGLE:
     service_charge:
-      depends_on: meter_size
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 14.99
+         3/4"   : 22.48
+         1"     : 37.47
+         1 1/2" : 74.94
+         2"     : 119.91
+         3"     : 224.83
+    flat_rate: 2.233
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 14.99
+         3/4"   : 22.48
+         1"     : 37.47
+         1 1/2" : 74.94
+         2"     : 119.91
+         3"     : 224.83
+    flat_rate: 2.233
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 14.99
+         3/4"   : 22.48
+         1"     : 37.47
+         1 1/2" : 74.94
+         2"     : 119.91
+         3"     : 224.83
+    flat_rate: 2.233
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 14.99
+         3/4"   : 22.48
+         1"     : 37.47
+         1 1/2" : 74.94
+         2"     : 119.91
+         3"     : 224.83
+    flat_rate: 2.233
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 14.99
+         3/4"   : 22.48
+         1"     : 37.47
+         1 1/2" : 74.94
+         2"     : 119.91
+         3"     : 224.83
+    flat_rate: 2.233
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on: 
+        - meter_size
       values:
          5/8"   : 14.99
          3/4"   : 22.48
