@@ -1,4 +1,4 @@
-# New Service Advance Deposit: 209.52
+# New Service Advance Deposit: 213.92
 # Late Fee : 5.00
 metadata:
   effective_date: 03/02/2017
@@ -12,12 +12,12 @@ rate_structure:
       depends_on: 
         - meter_size
       values:
-         5/8"   : 26.19
-         3/4"   : 39.28
-         1"     : 65.47
-         1 1/2" : 130.93
-         2"     : 209.49
-    flat_rate: 2.219
+         5/8"   : 26.74
+         3/4"   : 40.10
+         1"     : 66.84
+         1 1/2" : 133.68
+         2"     : 213.89
+    flat_rate: 2.266
     commodity_charge: flat_rate * usage_ccf
     utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
@@ -26,12 +26,12 @@ rate_structure:
       depends_on: 
         - meter_size
       values:
-         5/8"   : 26.19
-         3/4"   : 39.28
-         1"     : 65.47
-         1 1/2" : 130.93
-         2"     : 209.49
-    flat_rate: 2.219
+         5/8"   : 26.74
+         3/4"   : 40.10
+         1"     : 66.84
+         1 1/2" : 133.68
+         2"     : 213.89
+    flat_rate: 2.266
     commodity_charge: flat_rate * usage_ccf
     utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
@@ -40,12 +40,12 @@ rate_structure:
       depends_on: 
         - meter_size
       values:
-         5/8"   : 26.19
-         3/4"   : 39.28
-         1"     : 65.47
-         1 1/2" : 130.93
-         2"     : 209.49
-    flat_rate: 2.219
+         5/8"   : 26.74
+         3/4"   : 40.10
+         1"     : 66.84
+         1 1/2" : 133.68
+         2"     : 213.89
+    flat_rate: 2.266
     commodity_charge: flat_rate * usage_ccf
     utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
@@ -54,12 +54,12 @@ rate_structure:
       depends_on: 
         - meter_size
       values:
-         5/8"   : 26.19
-         3/4"   : 39.28
-         1"     : 65.47
-         1 1/2" : 130.93
-         2"     : 209.49
-    flat_rate: 2.219
+         5/8"   : 26.74
+         3/4"   : 40.10
+         1"     : 66.84
+         1 1/2" : 133.68
+         2"     : 213.89
+    flat_rate: 2.266
     commodity_charge: flat_rate * usage_ccf
     utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
@@ -68,12 +68,12 @@ rate_structure:
       depends_on: 
         - meter_size
       values:
-         5/8"   : 26.19
-         3/4"   : 39.28
-         1"     : 65.47
-         1 1/2" : 130.93
-         2"     : 209.49
-    flat_rate: 2.219
+         5/8"   : 26.74
+         3/4"   : 40.10
+         1"     : 66.84
+         1 1/2" : 133.68
+         2"     : 213.89
+    flat_rate: 2.266
     commodity_charge: flat_rate * usage_ccf
     utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
@@ -82,12 +82,12 @@ rate_structure:
       depends_on: 
         - meter_size
       values:
-         5/8"   : 26.19
-         3/4"   : 39.28
-         1"     : 65.47
-         1 1/2" : 130.93
-         2"     : 209.49
-    flat_rate: 2.219
+         5/8"   : 26.74
+         3/4"   : 40.10
+         1"     : 66.84
+         1 1/2" : 133.68
+         2"     : 213.89
+    flat_rate: 2.266
     commodity_charge: flat_rate * usage_ccf
     utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
