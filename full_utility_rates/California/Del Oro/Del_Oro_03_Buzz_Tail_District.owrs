@@ -142,5 +142,5 @@ rate_structure:
     tier_prices:
       - 2
       - 3.187
-    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    utility_surcharge: 0.0144 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
