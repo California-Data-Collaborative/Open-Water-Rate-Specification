@@ -1,13 +1,13 @@
-# New Service Advance Deposit: 189.08
+# New Service Advance Deposit: 219.24
 # Late Fee : 5.00
----
 metadata:
   effective_date: 2016-09-20
   utility_name: "Del_Oro_5_Country_Estates_District"
   bill_frequency: monthly
-
+  bill_unit: ccf
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/country-estates.html
 rate_structure:
-  ALL:
+  RESIDENTIAL_SINGLE:
     service_charge:
       depends_on: meter_size
       values:
@@ -19,5 +19,61 @@ rate_structure:
          3"     : 273.99
     flat_rate: 2.022
     commodity_charge: flat_rate * usage_ccf
-    utility_surcharge: 0.0144 * (service_charge + commodity_charge)
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 18.27
+         3/4"   : 27.40
+         1"     : 45.68
+         1 1/2" : 91.33
+         2"     : 146.13
+         3"     : 273.99
+    flat_rate: 2.022
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 18.27
+         3/4"   : 27.40
+         1"     : 45.68
+         1 1/2" : 91.33
+         2"     : 146.13
+         3"     : 273.99
+    flat_rate: 2.022
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 18.27
+         3/4"   : 27.40
+         1"     : 45.68
+         1 1/2" : 91.33
+         2"     : 146.13
+         3"     : 273.99
+    flat_rate: 2.022
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 18.27
+         3/4"   : 27.40
+         1"     : 45.68
+         1 1/2" : 91.33
+         2"     : 146.13
+         3"     : 273.99
+    flat_rate: 2.022
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
     bill: commodity_charge+service_charge+utility_surcharge
