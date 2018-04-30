@@ -1,0 +1,157 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 03/22/2018
+  utility_name: Del Oro Water Company - Magalia
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/magalia-district.html
+# New Service Advance Deposit: 182.25
+# Late Fee : 5.00
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.11
+        3/4": 31.67
+        1": 52.78
+        2": 168.88
+    srf_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.16
+        3/4": 7.74
+        1": 12.89
+        2": 41.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.254
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.014*(service_charge+commodity_charge+srf_surcharge)
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.11
+        3/4": 31.67
+        1": 52.78
+        2": 168.88
+    srf_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.16
+        3/4": 7.74
+        1": 12.89
+        2": 41.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.254
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.014*(service_charge+commodity_charge+srf_surcharge)
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.11
+        3/4": 31.67
+        1": 52.78
+        2": 168.88
+    srf_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.16
+        3/4": 7.74
+        1": 12.89
+        2": 41.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.254
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.014*(service_charge+commodity_charge+srf_surcharge)
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.11
+        3/4": 31.67
+        1": 52.78
+        2": 168.88
+    srf_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.16
+        3/4": 7.74
+        1": 12.89
+        2": 41.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.254
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.014*(service_charge+commodity_charge+srf_surcharge)
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.11
+        3/4": 31.67
+        1": 52.78
+        2": 168.88
+    srf_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.16
+        3/4": 7.74
+        1": 12.89
+        2": 41.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.254
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.014*(service_charge+commodity_charge+srf_surcharge)
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.11
+        3/4": 31.67
+        1": 52.78
+        2": 168.88
+    srf_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 5.16
+        3/4": 7.74
+        1": 12.89
+        2": 41.26
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.254
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: 1.014*(service_charge+commodity_charge+srf_surcharge)
