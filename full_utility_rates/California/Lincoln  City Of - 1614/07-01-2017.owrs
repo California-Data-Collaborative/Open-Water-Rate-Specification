@@ -21,19 +21,19 @@ rate_structure:
       depends_on:
         - pressure_zone
       values:
-        1:
+        All except Verdera Villages 13-17, 19 & 20:
           - 0
           - 5
           - 14
           - 21
           - 35
-        2:
+        Verdera Village 20:
           - 0
           - 5
           - 14
           - 21
           - 53
-        3:
+        Verdera Village 13-17, 19:
           - 0
           - 5
           - 14
