@@ -111,8 +111,16 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  UNMETERED:
-    service_charge: .nan
+  UNMETERED_MULTIFAMILY:
+    service_charge: 31*number_dwelling_units
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED_BUSINESS:
+    service_charge: 36*number_dwelling_units
     commodity_charge: 0
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
