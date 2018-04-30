@@ -40,7 +40,7 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  COMMERCIAL:
+  COMMERCIAL_SMALL:
     service_charge:
       depends_on:
         - meter_size
@@ -62,7 +62,29 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  INSTITUTIONAL:
+  COMMERCIAL_LARGE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37
+        3/4": 37
+        1": 37
+        1|1/2": 37
+        2": 118
+        3": 222
+        4": 372
+        6": 743
+        8": 1189
+        10": 1708
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.09
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED_INSTITUTIONAL:
     service_charge: 11988
     commodity_charge: 0
     fixed_drought_surcharge: 0
@@ -70,13 +92,23 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
-  UNMETERED:
+  UNMETERED_RESIDENTIAL_SINGLE:
     service_charge:
       depends_on:
         - lot_size_group
       values:
         1: 47
+#Single family up to 41 ft in width or 4000 sq. ft.
         2: 54
+#Single family above 51 ft in width or 4001 to 5000 sq. ft.
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED_RESIDENTIAL_MULTI:
+    service_charge: 35*number_dwelling_units
     commodity_charge: 0
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
