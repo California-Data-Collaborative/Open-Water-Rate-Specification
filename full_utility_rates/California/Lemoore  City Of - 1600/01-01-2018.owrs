@@ -1,0 +1,152 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Lemoore  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://lemoore.com/wp-content/uploads/2018/02/cost_of_service_water_report_june_17_2016.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 17
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.1
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 30
+        3/4": 30
+        1": 30
+        1|1/2": 30
+        2": 96
+        3": 179
+        4": 299
+        6": 598
+        8": 957
+        10": 1375
+        12": 2571
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.19
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 30
+        3/4": 30
+        1": 30
+        1|1/2": 30
+        2": 96
+        3": 179
+        4": 299
+        6": 598
+        8": 957
+        10": 1375
+        12": 2571
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 30
+        3/4": 30
+        1": 30
+        1|1/2": 30
+        2": 96
+        3": 179
+        4": 299
+        6": 598
+        8": 957
+        10": 1375
+        12": 2571
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.58
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 30
+        3/4": 30
+        1": 30
+        1|1/2": 30
+        2": 96
+        3": 179
+        4": 299
+        6": 598
+        8": 957
+        10": 1375
+        12": 2571
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.72
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED_MULTIFAMILY:
+    service_charge: 31*number_dwelling_units
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED_BUSINESS:
+    service_charge: 36*number_dwelling_units
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 30
+        3/4": 30
+        1": 30
+        1|1/2": 30
+        2": 96
+        3": 179
+        4": 299
+        6": 598
+        8": 957
+        10": 1375
+        12": 2571
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.72
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
