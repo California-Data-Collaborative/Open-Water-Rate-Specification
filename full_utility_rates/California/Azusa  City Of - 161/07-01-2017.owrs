@@ -143,9 +143,10 @@ rate_structure:
           - 771
           - 2640
     tier_prices_drought:
-      - 1.114
-      - 1.815
-      - 2.348
+#There exists four phases of drought. Drought rates on file belong to phase 2.
+      - 1.162
+      - 1.891
+      - 2.514
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
@@ -283,9 +284,9 @@ rate_structure:
           - 771
           - 2640
     tier_prices_drought:
-      - 1.114
-      - 1.815
-      - 2.348
+      - 1.162
+      - 1.891
+      - 2.514
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
@@ -423,9 +424,9 @@ rate_structure:
           - 771
           - 2640
     tier_prices_drought:
-      - 1.114
-      - 1.815
-      - 2.348
+      - 1.162
+      - 1.891
+      - 2.514
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
@@ -563,9 +564,9 @@ rate_structure:
           - 771
           - 2640
     tier_prices_drought:
-      - 1.114
-      - 1.815
-      - 2.348
+      - 1.162
+      - 1.891
+      - 2.514
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
@@ -703,9 +704,9 @@ rate_structure:
           - 771
           - 2640
     tier_prices_drought:
-      - 1.114
-      - 1.815
-      - 2.348
+      - 1.162
+      - 1.891
+      - 2.514
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
@@ -843,9 +844,9 @@ rate_structure:
           - 771
           - 2640
     tier_prices_drought:
-      - 1.114
-      - 1.815
-      - 2.348
+      - 1.162
+      - 1.891
+      - 2.514
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
