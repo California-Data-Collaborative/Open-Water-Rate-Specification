@@ -38,10 +38,10 @@ rate_structure:
       values:
         Summer:
           - 0
-          - 3
+          - 5
         Winter:
           - 0
-          - 5
+          - 3
     tier_prices_commodity:
       depends_on:
         - city_limits
@@ -114,10 +114,10 @@ rate_structure:
       values:
         Summer:
           - 0
-          - 3
+          - 5
         Winter:
           - 0
-          - 5
+          - 3
     tier_prices_commodity:
       depends_on:
         - city_limits
@@ -162,10 +162,10 @@ rate_structure:
       values:
         Summer:
           - 0
-          - 3
+          - 5
         Winter:
           - 0
-          - 5
+          - 3
     tier_prices_commodity:
       depends_on:
         - city_limits
@@ -210,10 +210,10 @@ rate_structure:
       values:
         Summer:
           - 0
-          - 3
+          - 5
         Winter:
           - 0
-          - 5
+          - 3
     tier_prices_commodity:
       depends_on:
         - city_limits
@@ -258,10 +258,10 @@ rate_structure:
       values:
         Summer:
           - 0
-          - 3
+          - 5
         Winter:
           - 0
-          - 5
+          - 3
     tier_prices_commodity:
       depends_on:
         - city_limits
