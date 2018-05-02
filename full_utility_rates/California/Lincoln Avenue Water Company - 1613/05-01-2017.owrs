@@ -26,9 +26,10 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    slf_charge: 3.75
+    bill: service_charge+commodity_charge+slf_charge
   RESIDENTIAL_MULTI:
-    service_charge: 5
+    service_charge: 5*number_dwelling_units
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -44,7 +45,8 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    slf_charge: 3.75
+    bill: service_charge+commodity_charge+slf_charge
   COMMERCIAL:
     service_charge: 29.9
     commodity_charge: Tiered
@@ -62,4 +64,5 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    slf_charge: 3.75
+    bill: service_charge+commodity_charge+slf_charge
