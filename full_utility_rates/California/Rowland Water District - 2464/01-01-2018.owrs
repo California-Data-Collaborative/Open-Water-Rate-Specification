@@ -1,0 +1,267 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Rowland Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.rowlandwater.com/rates-fees/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 16
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 2.62
+          - 3.34
+          - 4.62
+        2:
+          - 2.78
+          - 3.5
+          - 4.78
+        3:
+          - 2.95
+          - 3.67
+          - 4.95
+        4:
+          - 3.41
+          - 4.14
+          - 5.42
+        5:
+          - 3.72
+          - 4.45
+          - 5.73
+        6:
+          - 4.19
+          - 4.92
+          - 6.2
+    fixed_drought_surcharge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    variable_drought_surcharge: Tiered
+#There are 6 levels of drought based on % conservation goal. Rates on file belong to drought level 3 with 30% conservation goal.
+#Drought rates only apply to SFR, MFR, and Commercial customer.
+    tier_starts_drought:
+      - 0
+      - 9
+      - 16
+    tier_prices_drought:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 2.71
+          - 4.02
+          - 8.62
+        2:
+          - 2.87
+          - 4.18
+          - 8.78
+        3:
+          - 3.04
+          - 4.35
+          - 9.95
+        4:
+          - 3.5
+          - 4.81
+          - 9.41
+        5:
+          - 3.81
+          - 5.12
+          - 9.72
+        6:
+          - 4.28
+          - 5.59
+          - 10.19
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 3.2
+        2: 3.36
+        3: 3.53
+        4: 4
+        5: 4.31
+        6: 4.78
+    fixed_drought_surcharge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 3.55
+        2: 3.71
+        3: 3.88
+        4: 4.34
+        5: 4.65
+        6: 5.12
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 3.2
+        2: 3.36
+        3: 3.53
+        4: 4
+        5: 4.31
+        6: 4.78
+    fixed_drought_surcharge: 
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 3.55
+        2: 3.71
+        3: 3.88
+        4: 4.34
+        5: 4.65
+        6: 5.12
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 3.18
+        2": 8.01
+        3": 14.56
+        4": 26.64
+        6": 57.69
+        8": 99.1
+        10": 154.3
+        12": 185.36
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.44
+        3/4": 33.44
+        1": 33.44
+        1|1/2": 157.27
+        2": 250.16
+        3": 497.82
+        4": 776.45
+        6": 1550.42
+        8": 2479.18
+        10": 6503.8
+        12": 8206.53
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.79
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
