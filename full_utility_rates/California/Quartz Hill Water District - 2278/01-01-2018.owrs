@@ -1,0 +1,199 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Quartz Hill Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.qhwd.org/menus/rates.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.42
+        1": 26.42
+        1|1/2": 88.07
+        2": 140.92
+        3": 308.29
+        4": 528.49
+        6": 1101.03
+        8": 1585.47
+    commodity_charge: Budget
+    gpcd_commodity: 47
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 1.11
+      - 1.51
+      - 2.79
+      - 5.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.42
+        1": 26.42
+        1|1/2": 88.07
+        2": 140.92
+        3": 308.29
+        4": 528.49
+        6": 1101.03
+        8": 1585.47
+    commodity_charge: Budget
+    gpcd_commodity: 47
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - 100%
+      - 130%
+    tier_prices_commodity:
+      - 1.11
+      - 1.51
+      - 2.79
+      - 5.23
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.42
+        1": 26.42
+        1|1/2": 88.07
+        2": 140.92
+        3": 308.29
+        4": 528.49
+        6": 1101.03
+        8": 1585.47
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+      - 90
+    tier_prices_commodity:
+      - 1.15
+      - 1.29
+      - 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.42
+        1": 26.42
+        1|1/2": 88.07
+        2": 140.92
+        3": 308.29
+        4": 528.49
+        6": 1101.03
+        8": 1585.47
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+      - 90
+    tier_prices_commodity:
+      - 1.15
+      - 1.29
+      - 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.42
+        1": 26.42
+        1|1/2": 88.07
+        2": 140.92
+        3": 308.29
+        4": 528.49
+        6": 1101.03
+        8": 1585.47
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+      - 90
+    tier_prices_commodity:
+      - 1.15
+      - 1.29
+      - 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.42
+        1": 26.42
+        1|1/2": 88.07
+        2": 140.92
+        3": 308.29
+        4": 528.49
+        6": 1101.03
+        8": 1585.47
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+      - 90
+    tier_prices_commodity:
+      - 1.15
+      - 1.29
+      - 1.91
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 8251
+    1": 16502
+    1 1/2": 24753
+    2": 41255
+    3": 66008
+    4": 140267
+    6": 272283
+    8": 437303
