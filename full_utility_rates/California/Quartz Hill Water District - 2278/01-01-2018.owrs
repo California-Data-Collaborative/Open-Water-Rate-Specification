@@ -14,14 +14,8 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 26.42
-        1": 26.42
-        1|1/2": 88.07
-        2": 140.92
-        3": 308.29
-        4": 528.49
-        6": 1101.03
-        8": 1585.47
+        3/4": 29.95
+        1": 29.95
     commodity_charge: Budget
     gpcd_commodity: 47
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -48,14 +42,8 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        3/4": 26.42
-        1": 26.42
-        1|1/2": 88.07
-        2": 140.92
-        3": 308.29
-        4": 528.49
-        6": 1101.03
-        8": 1585.47
+        3/4": 29.95
+        1": 29.95
     commodity_charge: Budget
     gpcd_commodity: 47
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
