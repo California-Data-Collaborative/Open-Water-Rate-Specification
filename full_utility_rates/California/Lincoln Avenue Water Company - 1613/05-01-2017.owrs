@@ -1,0 +1,65 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 05/01/2017
+  utility_name: Lincoln Avenue Water Company
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://lawc.org/wp-content/uploads/2017/05/Schedule-of-Rates-and-Charges.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 29.9
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 3.3
+      - 3.81
+      - 4.19
+      - 4.61
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 5
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 3.3
+      - 3.81
+      - 4.19
+      - 4.61
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 29.9
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 3.3
+      - 3.81
+      - 4.19
+      - 4.61
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
