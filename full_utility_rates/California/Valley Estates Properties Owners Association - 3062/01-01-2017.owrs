@@ -3,6 +3,7 @@ metadata:
   utility_name: Valley Estates Properties Owners Association
   bill_frequency: Bimonthly
   bill_unit: kgal
+  prop_218_link: http://valleyestatespoa.org/wp-content/uploads/2018/04/Water-Rates.pdf
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge: 27.5
