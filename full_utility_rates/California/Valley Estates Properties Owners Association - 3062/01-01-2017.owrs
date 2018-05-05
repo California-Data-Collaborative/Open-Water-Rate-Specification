@@ -1,7 +1,7 @@
 metadata:
   effective_date: 01/01/2017
   utility_name: Valley Estates Properties Owners Association
-  bill_frequency: Monthly
+  bill_frequency: Bimonthly
   bill_unit: kgal
 rate_structure:
   RESIDENTIAL_SINGLE:
@@ -12,11 +12,12 @@ rate_structure:
       - 200
       - 300
       - 400
+    # Technically only billed in 100 kgal units, but for analysis we simplify by dividing the tier prices by 100 and using kgal units
     tier_prices_commodity:
-      - 27.5
-      - 25
-      - 50
-      - 75
+      - 0
+      - 0.25
+      - 0.50
+      - 0.75
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
