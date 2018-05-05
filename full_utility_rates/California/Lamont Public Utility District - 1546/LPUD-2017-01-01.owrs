@@ -17,7 +17,7 @@ rate_structure:
         6": 895.24
         8": 1432.44
     commodity_charge: flat_rate*usage_ccf
-    flat_rate: 15.4
+    flat_rate: 0.41
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
     service_charge:
@@ -33,7 +33,7 @@ rate_structure:
         6": 895.24
         8": 1432.44
     commodity_charge: flat_rate*usage_ccf
-    flat_rate: 15.4
+    flat_rate: 0.41
     bill: service_charge+commodity_charge
   COMMERCIAL:
     service_charge:
