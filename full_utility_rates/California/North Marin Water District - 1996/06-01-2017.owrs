@@ -1,6 +1,6 @@
 metadata:
   effective_date: 06/01/2017
-  utility_name: North Marin Water District
+  utility_name: North Marin Water District - Novato
   bill_frequency: Bi-Monthly
   bill_unit: kgal
 rate_structure:
@@ -27,15 +27,15 @@ rate_structure:
         - pressure_zone
       values:
         1:
-          - 5.07
+          - 5.01
           - 7.99
           - 13.91
         2:
-          - 5.67
+          - 5.61
           - 8.59
           - 14.51
         3:
-          - 6.99
+          - 6.93
           - 9.91
           - 15.83
     fixed_drought_surcharge: 0
@@ -44,6 +44,66 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.5
+        1": 63
+        1|1/2": 77
+        2": 120
+        3": 238
+        4": 382
+        6": 799
+        8": 1191
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+        - pressure_zone
+      values:
+        Summer|1: 5.93
+        Summer|2: 6.53
+        Summer|3: 7.85
+        Winter|1: 5.52
+        Winter|2: 6.12
+        Winter|3: 7.44
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.5
+        1": 63
+        1|1/2": 77
+        2": 120
+        3": 238
+        4": 382
+        6": 799
+        8": 1191
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+        - pressure_zone
+      values:
+        Summer|1: 5.93
+        Summer|2: 6.53
+        Summer|3: 7.85
+        Winter|1: 5.52
+        Winter|2: 6.12
+        Winter|3: 7.44
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
     service_charge:
       depends_on:
         - meter_size
