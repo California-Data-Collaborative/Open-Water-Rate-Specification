@@ -3,7 +3,7 @@ author_info:
   email: 
   phone: 
 metadata:
-  effective_date: 01/01/2018
+  effective_date: 07/01/2017
   utility_name: Quartz Hill Water District
   bill_frequency: Monthly
   bill_unit: ccf
@@ -17,7 +17,7 @@ rate_structure:
         3/4": 29.95
         1": 29.95
     commodity_charge: Budget
-    gpcd_commodity: 47
+    gpcd_commodity: 46.7
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
@@ -45,7 +45,7 @@ rate_structure:
         3/4": 29.95
         1": 29.95
     commodity_charge: Budget
-    gpcd_commodity: 47
+    gpcd_commodity: 46.7
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
