@@ -1,0 +1,118 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Liberty Utilities - Norwalk
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://california.libertyutilities.com/compton/residential/rates-and-tariffs/water-rates.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.2
+        3/4": 34.8
+        1": 58
+        1|1/2": 116
+        2": 185.6
+        3": 348
+        4": 580
+        6": 1160
+        8": 1856
+        10": 2668
+        12": 3828
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+    tier_prices_commodity:
+      - 5.756
+      - 6.619
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.2
+        3/4": 34.8
+        1": 58
+        1|1/2": 116
+        2": 185.6
+        3": 348
+        4": 580
+        6": 1160
+        8": 1856
+        10": 2668
+        12": 3828
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.097
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 23.2
+        3/4": 34.8
+        1": 58
+        1|1/2": 116
+        2": 185.6
+        3": 348
+        4": 580
+        6": 1160
+        8": 1856
+        10": 2668
+        12": 3828
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 5.268
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
