@@ -36,8 +36,26 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+        - pressure_zone
+      values:
+        5/8"|1: 31.5
+        5/8"|4: 47.5
+        3/4"|1: 31.5
+        3/4"|4: 47.5
+        1"|1: 63
+        1"|4: 47.5
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 27
+    tier_prices_commodity:
+      - 8.55
+      - 11.84
+      - 18.99
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -75,16 +93,62 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+        - pressure_zone
+      values:
+        5/8"|1: 31.5
+        5/8"|4: 47.5
+        3/4"|1: 31.5
+        3/4"|4: 47.5
+        1"|1: 63
+        1"|4: 47.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+        - pressure_zone
+      values:
+        Summer|1: 11.95
+        Summer|2: 12.17
+        Summer|3: 12.79
+        Summer|4: 17.66
+        Winter|1: 8.64
+        Winter|2: 8.86
+        Winter|3: 9.48
+        Winter|4: 14.35
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+        - pressure_zone
+      values:
+        5/8"|1: 31.5
+        5/8"|4: 47.5
+        3/4"|1: 31.5
+        3/4"|4: 47.5
+        1"|1: 63
+        1"|4: 47.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+        - pressure_zone
+      values:
+        Summer|1: 11.95
+        Summer|2: 12.17
+        Summer|3: 12.79
+        Summer|4: 17.66
+        Winter|1: 8.64
+        Winter|2: 8.86
+        Winter|3: 9.48
+        Winter|4: 14.35
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
