@@ -31,11 +31,12 @@ rate_structure:
       - 1.17
       - 1.75
       - 3.35
+    account_charge: 10.67
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+account_charge
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -51,11 +52,12 @@ rate_structure:
         6": 148.2
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 1.73
+    account_charge: 10.67
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+account_charge
   IRRIGATION:
     service_charge:
       depends_on:
@@ -71,11 +73,12 @@ rate_structure:
         6": 148.2
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.38
+    account_charge: 10.67
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+account_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -91,11 +94,12 @@ rate_structure:
         6": 148.2
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 1.68
+    account_charge: 10.67
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+account_charge
   INDUSTRIAL:
     service_charge:
       depends_on:
@@ -111,11 +115,12 @@ rate_structure:
         6": 148.2
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 1.65
+    account_charge: 10.67
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+account_charge
   INSTITUTIONAL:
     service_charge:
       depends_on:
@@ -131,11 +136,12 @@ rate_structure:
         6": 148.2
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 1.68
+    account_charge: 10.67
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+account_charge
   FIRE_SERVICE:
     service_charge:
       depends_on:
