@@ -1,0 +1,119 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Sierra Madre  City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.cityofsierramadre.com/UserFiles/Servers/Server_212309/File/Departments/Finance%20Department/Sewer_and_Water_Rates_%20March%202014.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 76.61
+        3/4": 76.61
+        1": 102.88
+        1|1/2": 146.67
+        2": 199.21
+        3": 321.81
+        4": 496.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 33
+      - 66
+    tier_prices_commodity:
+      - 2.58
+      - 3.36
+      - 3.95
+      - 5.36
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 76.61
+        3/4": 76.61
+        1": 102.88
+        1|1/2": 146.67
+        2": 199.21
+        3": 321.81
+        4": 496.95
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 11
+      - 33
+      - 66
+    tier_prices_commodity:
+      - 2.58
+      - 3.36
+      - 3.95
+      - 5.36
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 76.61
+        3/4": 76.61
+        1": 102.88
+        1|1/2": 146.67
+        2": 199.21
+        3": 321.81
+        4": 496.95
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.74
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 76.61
+        3/4": 76.61
+        1": 102.88
+        1|1/2": 146.67
+        2": 199.21
+        3": 321.81
+        4": 496.95
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.74
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 6.05
+        4": 37.45
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
