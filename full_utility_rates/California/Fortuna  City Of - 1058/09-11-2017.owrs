@@ -1,0 +1,296 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 09/11/2017
+  utility_name: Fortuna  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.friendlyfortuna.com/documentcenter/view/2731
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 23.04
+        5/8"|outside_city: 34.56
+        3/4"|inside_city: 23.04
+        3/4"|outside_city: 34.56
+        1"|inside_city: 44.07
+        1"|outside_city: 66.105
+        1|1/2"|inside_city: 87.21
+        1|1/2"|outside_city: 130.815
+        2"|inside_city: 147.61
+        2"|outside_city: 221.415
+        3"|inside_city: 320.16
+        3"|outside_city: 480.24
+        4"|inside_city: 561.73
+        4"|outside_city: 842.595
+        6"|inside_city: 1251.95
+        6"|outside_city: 1876.425
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 5
+        Winter:
+          - 0
+          - 3
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.9
+        outside_city:
+          - 0
+          - 2.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 23.04
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 5
+        Winter:
+          - 0
+          - 3
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.9
+        outside_city:
+          - 0
+          - 1.35
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: (service_charge+commodity_charge)*number_dwelling_units
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 23.04
+        5/8"|outside_city: 34.56
+        3/4"|inside_city: 23.04
+        3/4"|outside_city: 34.56
+        1"|inside_city: 44.07
+        1"|outside_city: 66.105
+        1|1/2"|inside_city: 87.21
+        1|1/2"|outside_city: 130.815
+        2"|inside_city: 147.61
+        2"|outside_city: 221.415
+        3"|inside_city: 320.16
+        3"|outside_city: 480.24
+        4"|inside_city: 561.73
+        4"|outside_city: 842.595
+        6"|inside_city: 1251.95
+        6"|outside_city: 1876.425
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 5
+        Winter:
+          - 0
+          - 3
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.9
+        outside_city:
+          - 0
+          - 2.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 23.04
+        5/8"|outside_city: 34.56
+        3/4"|inside_city: 23.04
+        3/4"|outside_city: 34.56
+        1"|inside_city: 44.07
+        1"|outside_city: 66.105
+        1|1/2"|inside_city: 87.21
+        1|1/2"|outside_city: 130.815
+        2"|inside_city: 147.61
+        2"|outside_city: 221.415
+        3"|inside_city: 320.16
+        3"|outside_city: 480.24
+        4"|inside_city: 561.73
+        4"|outside_city: 842.595
+        6"|inside_city: 1251.95
+        6"|outside_city: 1876.425
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 5
+        Winter:
+          - 0
+          - 3
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.9
+        outside_city:
+          - 0
+          - 2.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 23.04
+        5/8"|outside_city: 34.56
+        3/4"|inside_city: 23.04
+        3/4"|outside_city: 34.56
+        1"|inside_city: 44.07
+        1"|outside_city: 66.105
+        1|1/2"|inside_city: 87.21
+        1|1/2"|outside_city: 130.815
+        2"|inside_city: 147.61
+        2"|outside_city: 221.415
+        3"|inside_city: 320.16
+        3"|outside_city: 480.24
+        4"|inside_city: 561.73
+        4"|outside_city: 842.595
+        6"|inside_city: 1251.95
+        6"|outside_city: 1876.425
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 5
+        Winter:
+          - 0
+          - 3
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.9
+        outside_city:
+          - 0
+          - 2.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 23.04
+        5/8"|outside_city: 34.56
+        3/4"|inside_city: 23.04
+        3/4"|outside_city: 34.56
+        1"|inside_city: 44.07
+        1"|outside_city: 66.105
+        1|1/2"|inside_city: 87.21
+        1|1/2"|outside_city: 130.815
+        2"|inside_city: 147.61
+        2"|outside_city: 221.415
+        3"|inside_city: 320.16
+        3"|outside_city: 480.24
+        4"|inside_city: 561.73
+        4"|outside_city: 842.595
+        6"|inside_city: 1251.95
+        6"|outside_city: 1876.425
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 0
+          - 5
+        Winter:
+          - 0
+          - 3
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.9
+        outside_city:
+          - 0
+          - 2.85
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 27.89
+        3": 50.79
+        4": 82.85
+        6": 174.47
+        8": 302.73
+        10": 467.63
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
