@@ -1,0 +1,75 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Orchard Dale Water District
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.odwd.org/#Water_Service_Rates
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 54.2
+        3/4": 54.2
+        1": 80.25
+        1|1/2": 390.35
+        2": 613.45
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 54.2
+        3/4": 54.2
+        1": 80.25
+        1|1/2": 390.35
+        2": 613.45
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3": 1546.7
+        4": 1770.2
+        6": 2450.2
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 113.35
+        6": 148.8
+        8": 216.85
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
