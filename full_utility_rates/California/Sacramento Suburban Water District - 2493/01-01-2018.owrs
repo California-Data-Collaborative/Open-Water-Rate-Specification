@@ -20,7 +20,7 @@ rate_structure:
         2": 47.02
     capital_facilities_charge:
       depends_on: 
-        - meter_size
+        - connection_size
       values:
         5/8"   : 22.52
         3/4"   : 33.57
@@ -42,7 +42,7 @@ rate_structure:
   RESIDENTIAL_MULTI_UNMETERED:
     service_charge:
       depends_on:
-        - meter_size
+        - connection_size
       values:
         3/4": 17.42
         1": 25.21
