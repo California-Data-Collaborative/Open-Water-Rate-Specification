@@ -9,7 +9,7 @@ metadata:
   bill_unit: ccf
   prop_218_link: http://www.sswd.org/home/showdocument?id=8421
 rate_structure:
-  RESIDENTIAL_SINGLE:
+  RESIDENTIAL_SINGLE_UNMETERED:
     service_charge:
       depends_on:
         - meter_size
@@ -18,29 +18,184 @@ rate_structure:
         1": 25.21
         1|1/2": 47.6
         2": 47.02
-    commodity_charge: flat_rate_commodity*usage_ccf
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    commodity_charge: flat_rate_commodity*land_area
     flat_rate_commodity: 1.06
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_facilities_charge
+  RESIDENTIAL_MULTI_UNMETERED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 17.42
+        1": 25.21
+        1|1/2": 47.6
+        2": 47.02
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    multiple_unit_charge: 9.39*number_dwelling_units
+    commodity_charge: flat_rate_commodity*land_area
+    flat_rate_commodity: 1.06
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+capital_facilities_charge+multiple_unit_charge
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 6.14
+        1": 9.94
+        1|1/2": 19.42
+        2": 30.88
+        3": 57.56
+        4": 95.64
+        6": 190.86
+        8": 343.24
+        10": 552.76
+        12": 819.37
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 0.94
+      - 1.17
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+capital_facilities_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 6.14
+        1": 9.94
+        1|1/2": 19.42
+        2": 30.88
+        3": 57.56
+        4": 95.64
+        6": 190.86
+        8": 343.24
+        10": 552.76
+        12": 819.37
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 0.94
+      - 1.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_facilities_charge
   IRRIGATION:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 6.14
+        1": 9.94
+        1|1/2": 19.42
+        2": 30.88
+        3": 57.56
+        4": 95.64
+        6": 190.86
+        8": 343.24
+        10": 552.76
+        12": 819.37
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+      values:
+        Summer: 1.18
+        Winter: 0.95
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_facilities_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -57,6 +212,20 @@ rate_structure:
         8": 343.24
         10": 552.76
         12": 819.37
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity:
       depends_on:
@@ -68,23 +237,91 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_facilities_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 6.14
+        1": 9.94
+        1|1/2": 19.42
+        2": 30.88
+        3": 57.56
+        4": 95.64
+        6": 190.86
+        8": 343.24
+        10": 552.76
+        12": 819.37
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+      values:
+        Summer: 1.18
+        Winter: 0.95
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_facilities_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 6.14
+        1": 9.94
+        1|1/2": 19.42
+        2": 30.88
+        3": 57.56
+        4": 95.64
+        6": 190.86
+        8": 343.24
+        10": 552.76
+        12": 819.37
+    capital_facilities_charge:
+      depends_on: 
+        - meter_size
+      values:
+        5/8"   : 22.52
+        3/4"   : 33.57
+        1"     : 56.15
+        1 1/2" : 111.90
+        2"     : 179.11
+        3"     : 336.10
+        4"     : 560.30
+        8"     : 2016.60
+        10"    : 3249.22
+        12"    : 4817.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+      values:
+        Summer: 1.18
+        Winter: 0.95
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+capital_facilities_charge
   FIRE_SERVICE:
     service_charge:
       depends_on:
