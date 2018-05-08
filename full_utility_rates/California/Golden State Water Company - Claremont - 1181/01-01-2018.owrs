@@ -57,14 +57,14 @@ rate_structure:
     bill: service_charge+commodity_charge
   IRRIGATION:
     service_charge: 0
-    Turnon_charge: 3
+    Turn-on_charge: 3
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.582
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+turnon_charge
+    bill: service_charge+commodity_charge+turn-on_charge
   COMMERCIAL:
     service_charge:
       depends_on:
