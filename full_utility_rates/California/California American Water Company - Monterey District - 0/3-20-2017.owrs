@@ -1,0 +1,128 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 3/20/2017
+  utility_name: California American Water Company - Monterey District
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    https://dnnh3qht4.blob.core.windows.net/portals/2/Customer%20Service%20and%20Billing/Rates/Monterey/Monterey%20Rate%20Schedule.pdf?sr=b&si=DNNFileManagerPolicy&sig=HnDQQCXHixr%2FgRcE1CXCxWtlivf7llUMYmomxGs1TXE%3D
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 6
+      - 11
+      - 17
+    tier_prices_commodity:
+      - 0.7287
+      - 1.5039
+      - 3.5091
+      - 6.7606
+      - 8.2645
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 2
+      - 4
+      - 5
+      - 7
+    tier_prices_commodity:
+      - 0.675
+      - 1.4232
+      - 3.3209
+      - 6.411
+      - 7.8342
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 1.1656
+        2: 1.3113
+        3: 1.457
+        4: 2.9139
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
