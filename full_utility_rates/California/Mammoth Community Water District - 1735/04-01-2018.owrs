@@ -6,7 +6,7 @@ metadata:
   effective_date: 04/01/2018
   utility_name: Mammoth Community Water District
   bill_frequency: Monthly
-  bill_unit: ccf
+  bill_unit: kgal
   prop_218_link: http://www.mcwd.dst.ca.us/assets/mcwdratestudyfinal.pdf
 rate_structure:
   RESIDENTIAL_SINGLE:
@@ -26,7 +26,7 @@ rate_structure:
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
-      - 5
+      - 4
       - 8
     tier_prices_commodity:
       - 0.95
