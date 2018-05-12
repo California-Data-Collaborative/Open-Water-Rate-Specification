@@ -1,0 +1,162 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Tustin  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.tustinca.org/depts/pw/water/rates.asp
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 35.85
+        3/4": 35.85
+        1": 89.65
+        1|1/2": 179.29
+        2": 286.86
+        3": 537.86
+        4": 896.38
+        6": 1792.76
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 20
+      - 30
+      - 40
+      - 50
+      - 60
+    tier_prices_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0.84
+          - 1.48
+          - 1.94
+          - 2.41
+          - 3.05
+          - 3.53
+          - 4.05
+        3/4":
+          - 0.84
+          - 1.48
+          - 1.94
+          - 2.41
+          - 3.05
+          - 3.53
+          - 4.05
+        1":
+          - 0.84
+          - 1.48
+          - 1.94
+          - 2.41
+          - 3.05
+          - 3.53
+          - 4.05
+        1|1/2":
+          - 0.84
+          - 1.48
+          - 1.94
+          - 2.41
+          - 3.05
+          - 3.53
+          - 4.05
+        2":
+          - 0.92
+          - 1.63
+          - 2.13
+          - 2.65
+          - 3.35
+          - 3.88
+          - 4.46
+        3":
+          - 0.92
+          - 1.63
+          - 2.13
+          - 2.65
+          - 3.35
+          - 3.88
+          - 4.46
+        4":
+          - 0.92
+          - 1.63
+          - 2.13
+          - 2.65
+          - 3.35
+          - 3.88
+          - 4.46
+        6":
+          - 0.92
+          - 1.63
+          - 2.13
+          - 2.65
+          - 3.35
+          - 3.88
+          - 4.46
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 8
+      - 16
+      - 24
+      - 32
+      - 40
+      - 48
+    tier_prices_drought:
+      - 0.84
+      - 1.48
+      - 1.94
+      - 2.41
+      - 3.05
+      - 3.53
+      - 4.05
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 28.7
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
