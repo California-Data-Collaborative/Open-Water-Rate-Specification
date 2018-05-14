@@ -23,8 +23,8 @@ rate_structure:
         3": 291.6
         4": 486
         6": 972
-    commodity_charge: (flat_rate_commodity+capital_surcharge)*usage_ccf
     flat_rate_commodity: 5.13
+    commodity_charge: (flat_rate_commodity+capital_surcharge)*usage_ccf
     capital_surcharge: 1.3
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
