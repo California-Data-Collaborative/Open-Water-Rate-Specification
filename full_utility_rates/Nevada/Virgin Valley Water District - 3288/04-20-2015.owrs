@@ -1,0 +1,78 @@
+metadata:
+  effective_date: 04/20/2015
+  utility_name: Virgin Valley Water District
+  bill_frequency: Monthly
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 35
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 19
+      - 54
+    tier_prices_commodity:
+      - 2
+      - 2.5
+      - 3.5
+      - 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 35
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 19
+      - 54
+    tier_prices_commodity:
+      - 2
+      - 2.5
+      - 3.5
+      - 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 35
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 19
+      - 54
+    tier_prices_commodity:
+      - 2
+      - 2.5
+      - 3.5
+      - 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 35
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 19
+      - 54
+    tier_prices_commodity:
+      - 2
+      - 2.5
+      - 3.5
+      - 5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge

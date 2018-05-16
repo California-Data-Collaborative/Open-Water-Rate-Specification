@@ -1,0 +1,16 @@
+metadata:
+  effective_date: 1/1/2016
+  utility_name: Glenbrook Water Cooperative
+  bill_frequency: Annually
+  bill_unit: kgal
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 1400
+    tier_starts:
+      - 0
+      - 250
+    tier_prices:
+      - 0
+      - 34
+    commodity_charge: Tiered
+    bill: commodity_charge+service_charge
