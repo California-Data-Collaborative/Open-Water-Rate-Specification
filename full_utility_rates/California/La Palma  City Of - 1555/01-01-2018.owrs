@@ -1,0 +1,139 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: La Palma  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.cityoflapalma.org/DocumentCenter/View/5927/Final-Water-Sewer-Rate-Study-Report
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.36
+        3/4": 36.36
+        1": 36.36
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.19
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.36
+        3/4": 36.36
+        1": 36.36
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.19
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.36
+        3/4": 36.36
+        1": 36.36
+        1|1/2": 146.37
+        2": 228.86
+        3": 421.37
+        6": 1383.9
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.26
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.36
+        3/4": 36.36
+        1": 36.36
+        1|1/2": 146.37
+        2": 228.86
+        3": 421.37
+        6": 1383.9
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.26
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.36
+        3/4": 36.36
+        1": 36.36
+        1|1/2": 146.37
+        2": 228.86
+        3": 421.37
+        6": 1383.9
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.26
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 36.36
+        3/4": 36.36
+        1": 36.36
+        1|1/2": 146.37
+        2": 228.86
+        3": 421.37
+        6": 1383.9
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.26
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.91
+        3/4": 9.91
+        1": 9.91
+        1|1/2": 14.08
+        2": 17.22
+        3": 24.53
+        6": 61.06
+        8": 92.39
+        10": 128.94
+        12": 233.36
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
