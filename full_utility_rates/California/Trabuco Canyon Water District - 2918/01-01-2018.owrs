@@ -23,6 +23,18 @@ rate_structure:
         4": 211.5
         6": 525.81
         10": 1372.71
+    WRESF_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.5
+        3/4": 16.5
+        1": 26.39
+        1|1/2": 39.59
+        2": 52.78
+        3": 79.17
+        4": 105.56
+        6": 158.34
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -32,6 +44,7 @@ rate_structure:
     tier_prices_commodity:
       depends_on:
         - pressure_zone
+ #Pressure zones 2-5 refer to Topanga, Canyon Creek, Falcon, and Joplin service areas in order.
       values:
         1:
           - 2.42
@@ -58,11 +71,22 @@ rate_structure:
           - 4.73
           - 7.39
           - 8.65
+    TRS_charge: Tiered
+    tier_starts_commodity:    
+      - 0
+      - 8
+      - 18
+      - 30
+    tier_prices_commodity:
+      - 0.31
+      - 0.34
+      - 0.68
+      - 0.84
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WRESF_charge+TRS_charge
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -77,6 +101,18 @@ rate_structure:
         4": 211.5
         6": 525.81
         10": 1372.71
+    WRESF_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.5
+        3/4": 16.5
+        1": 26.39
+        1|1/2": 39.59
+        2": 52.78
+        3": 79.17
+        4": 105.56
+        6": 158.34
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity:
       depends_on:
@@ -87,11 +123,13 @@ rate_structure:
         3: 4.6
         4: 4.68
         5: 4.83
+    TRS_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.35
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WRESF_charge+TRS_charge
   IRRIGATION:
     service_charge:
       depends_on:
@@ -106,6 +144,18 @@ rate_structure:
         4": 211.5
         6": 525.81
         10": 1372.71
+    WRESF_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.5
+        3/4": 16.5
+        1": 26.39
+        1|1/2": 39.59
+        2": 52.78
+        3": 79.17
+        4": 105.56
+        6": 158.34
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity:
       depends_on:
@@ -116,11 +166,13 @@ rate_structure:
         3: 5.11
         4: 5.19
         5: 5.34
+    TRS_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.42
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WRESF_charge+TRS_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -135,6 +187,18 @@ rate_structure:
         4": 211.5
         6": 525.81
         10": 1372.71
+    WRESF_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.5
+        3/4": 16.5
+        1": 26.39
+        1|1/2": 39.59
+        2": 52.78
+        3": 79.17
+        4": 105.56
+        6": 158.34
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity:
       depends_on:
@@ -145,11 +209,13 @@ rate_structure:
         3: 4.73
         4: 4.81
         5: 4.96
+    TRS_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.37
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WRESF_charge+TRS_charge
   AGRICULTURAL:
     service_charge:
       depends_on:
@@ -164,6 +230,18 @@ rate_structure:
         4": 211.5
         6": 525.81
         10": 1372.71
+    WRESF_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.5
+        3/4": 16.5
+        1": 26.39
+        1|1/2": 39.59
+        2": 52.78
+        3": 79.17
+        4": 105.56
+        6": 158.34
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity:
       depends_on:
@@ -174,8 +252,43 @@ rate_structure:
         3: 5.19
         4: 5.26
         5: 5.42
+    TRS_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.43
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WRESF_charge+TRS_charge
+  RESCYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.11
+        3/4": 15.11
+        1": 21.76
+        1|1/2": 39.77
+        2": 58.99
+        3": 121.56
+        4": 211.5
+        6": 525.81
+        10": 1372.71
+    WRESF_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.5
+        3/4": 16.5
+        1": 26.39
+        1|1/2": 39.59
+        2": 52.78
+        3": 79.17
+        4": 105.56
+        6": 158.34
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.41
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+WRESF_charge
