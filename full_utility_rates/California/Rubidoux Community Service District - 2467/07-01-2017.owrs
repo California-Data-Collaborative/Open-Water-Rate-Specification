@@ -1,0 +1,99 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Rubidoux Community Service District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.rcsd.org/files/c9d6e6ab0/20170615+Notice+of+Public+Hearing+Inreasing+Potable+Water+Exhibit+A+Ord+2017-121.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.04
+        3/4": 30.78
+        1": 43.03
+        1|1/2": 64.46
+        2": 95.08
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 12
+      - 20
+      - 29
+    tier_prices_commodity:
+      - 1.14
+      - 1.51
+      - 1.84
+      - 2.16
+      - 2.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.04
+        3/4": 30.78
+        1": 43.03
+        1|1/2": 64.46
+        2": 95.08
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 12
+      - 20
+      - 29
+    tier_prices_commodity:
+      - 1.14
+      - 1.51
+      - 1.84
+      - 2.16
+      - 2.69
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 27.33
+        3/4": 36.65
+        1": 53.28
+        1|1/2": 79.02
+        2": 118.34
+        3": 171.71
+        4": 243.39
+        6": 517.98
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 12
+      - 20
+      - 29
+    tier_prices_commodity:
+      - 1.16
+      - 1.53
+      - 1.86
+      - 2.17
+      - 2.7
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
