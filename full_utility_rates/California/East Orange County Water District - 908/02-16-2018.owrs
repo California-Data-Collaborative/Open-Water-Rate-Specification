@@ -21,12 +21,13 @@ rate_structure:
         2": 135.17
         3": 295.68
     commodity_charge: flat_rate_commodity*usage_ccf
+    EWSCP_charge: 24.42
     flat_rate_commodity: 3.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+EWSCP_charge
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -39,12 +40,13 @@ rate_structure:
         2": 135.17
         3": 295.68
     commodity_charge: flat_rate_commodity*usage_ccf
+    EWSCP_charge: 24.42
     flat_rate_commodity: 3.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+EWSCP_charge
 capacity_charge:
   depends_on:
     - meter_size
