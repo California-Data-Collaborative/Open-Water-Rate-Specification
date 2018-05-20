@@ -1,0 +1,119 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Placer County Water Agency
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://s3-us-west-2.amazonaws.com/cosmicjs/9b352080-05e5-11e8-83bf-3f585960b39b-Z6%20treated%20water%20rates.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.92
+        3/4": 25.14
+        1": 39.58
+        1|1/2": 75.68
+        2": 119
+        3": 256.18
+        4": 436.68
+        6": 978.18
+        8": 1158.68
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 900
+      - 2800
+    tier_prices_commodity:
+      - 1.52
+      - 1.72
+      - 1.84
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 14.444
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 9
+      - 2800
+    tier_prices_commodity:
+      - 1.52
+      - 1.72
+      - 1.84
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.92
+        3/4": 25.14
+        1": 39.58
+        1|1/2": 75.68
+        2": 119
+        3": 256.18
+        4": 436.68
+        6": 978.18
+        8": 1158.68
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.72
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.92
+        3/4": 25.14
+        1": 39.58
+        1|1/2": 75.68
+        2": 119
+        3": 256.18
+        4": 436.68
+        6": 978.18
+        8": 1158.68
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.62
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.92
+        3/4": 25.14
+        1": 39.58
+        1|1/2": 75.68
+        2": 119
+        3": 256.18
+        4": 436.68
+        6": 978.18
+        8": 1158.68
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.62
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
