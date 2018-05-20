@@ -1,0 +1,99 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Roseville  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://qcode.us/codes/roseville/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 24.79
+        5/8"|outside_city: 39.664
+        3/4"|inside_city: 24.79
+        3/4"|outside_city: 39.664
+        1"|inside_city: 39.5
+        1"|outside_city: 63.2
+        1|1/2"|inside_city: 75.93
+        1|1/2"|outside_city: 121.488
+        2"|inside_city: 119.83
+        2"|outside_city: 191.728
+        3"|inside_city: 222.31
+        3"|outside_city: 355.696
+        4"|inside_city: 368.7
+        4"|outside_city: 589.92
+        6"|inside_city: 734.32
+        6"|outside_city: 1174.912
+        8"|inside_city: 1173.26
+        8"|outside_city: 1877.216
+        10"|inside_city: 1685.47
+        10"|outside_city: 2696.752
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.17
+        outside_city: 1.872
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.79
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.3455
+        outside_city: 2.1528
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
