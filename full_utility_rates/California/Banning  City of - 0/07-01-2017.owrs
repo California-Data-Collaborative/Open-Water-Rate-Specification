@@ -1,0 +1,95 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Banning  City of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://banning.ca.us/22/WaterWastewater
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.94
+        3/4": 20.94
+        1": 31.75
+        1|1/2": 58.74
+        2": 91.14
+        3": 166.77
+        4": 274.83
+        6": 544.79
+        8": 868.83
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 25
+    tier_prices_commodity:
+      - 1.84
+      - 2.34
+      - 2.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.94
+        3/4": 20.94
+        1": 31.75
+        1|1/2": 58.74
+        2": 91.14
+        3": 166.77
+        4": 274.83
+        6": 544.79
+        8": 868.83
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 25
+    tier_prices_commodity:
+      - 1.84
+      - 2.34
+      - 2.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 20.94
+        3/4": 20.94
+        1": 31.75
+        1|1/2": 58.74
+        2": 91.14
+        3": 166.77
+        4": 274.83
+        6": 544.79
+        8": 868.83
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+      - 25
+    tier_prices_commodity:
+      - 1.84
+      - 2.34
+      - 2.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
