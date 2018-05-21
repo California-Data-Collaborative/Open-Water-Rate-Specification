@@ -1,0 +1,109 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/25/2017
+  utility_name: Lee Lake Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.temescalvwd.com/FAQ.cfm
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 19.79
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 18
+    tier_prices_commodity:
+      - 2.64
+      - 2.98
+      - 3.28
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 19.79
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 18
+    tier_prices_commodity:
+      - 2.64
+      - 2.98
+      - 3.28
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.79
+        3/4": 26.63
+        1": 40.29
+        1|1/2": 74.43
+        2": 115.41
+        3": 245.19
+        4": 436.43
+        6": 894.03
+        8": 1918.53
+        10": 2874.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.79
+        3/4": 26.63
+        1": 40.29
+        1|1/2": 74.43
+        2": 115.41
+        3": 245.19
+        4": 436.43
+        6": 894.03
+        8": 1918.53
+        10": 2874.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 19.79
+        3/4": 26.63
+        1": 40.29
+        1|1/2": 74.43
+        2": 115.41
+        3": 245.19
+        4": 436.43
+        6": 894.03
+        8": 1918.53
+        10": 2874.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
