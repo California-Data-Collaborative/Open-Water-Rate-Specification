@@ -1,0 +1,186 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Vallecitos Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.vwd.org/home/showdocument?id=7256
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.25
+        3/4": 36.52
+        1": 55.29
+        1|1/2": 120.63
+        2": 194.35
+        3": 356.22
+        4": 552.94
+        6": 1105.88
+        10": 2549.36
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 7
+          - 22
+        3/4":
+          - 0
+          - 7
+          - 22
+        1":
+          - 0
+          - 17
+          - 79
+        1|1/2":
+          - 0
+          - 44
+          - 197
+        2":
+          - 0
+          - 86
+          - 336
+        3":
+          - 0
+          - 431
+          - 1191
+        4":
+          - 0
+          - 431
+          - 1191
+        6":
+          - 0
+          - 431
+          - 1191
+        10":
+          - 0
+          - 431
+          - 1191
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0.27
+          - 0.78
+          - 4.82
+        2:
+          - 0.71
+          - 1.22
+          - 5.26
+        3:
+          - 0.48
+          - 0.99
+          - 5.03
+        4:
+          - 0.56
+          - 1.07
+          - 5.11
+        5:
+          - 0.51
+          - 1.02
+          - 5.06
+        6:
+          - 0.84
+          - 1.35
+          - 5.39
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 33.25
+        3/4": 36.52
+        1": 55.29
+        1|1/2": 120.63
+        2": 194.35
+        3": 356.22
+        4": 552.94
+        6": 1105.88
+        10": 2549.36
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.78
+        2: 1.22
+        3: 0.99
+        4: 1.07
+        5: 1.02
+        6: 1.35
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 5.87
+        2": 11.74
+        4": 23.48
+        6": 35.22
+        8": 46.96
+        10": 58.7
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
