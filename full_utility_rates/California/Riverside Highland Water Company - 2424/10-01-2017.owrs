@@ -3,7 +3,7 @@ author_info:
   email: 
   phone: 
 metadata:
-  effective_date: 10/01/2017
+  effective_date: 06/01/2016
   utility_name: Riverside Highland Water Company
   bill_frequency: Monthly
   bill_unit: ccf
@@ -40,16 +40,30 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-  IRRIGATION:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 36.9
+        1": 61.62
+        1|1/2": 85.99
+        2": 147.63
+        3": 258.33
+        4": 442.8
+        6": 885.61
+        8": 1425.56
+        10": 2036.9
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 70
+      - 110
+    tier_prices_commodity:
+      - 0.88
+      - 1.15
+      - 1.36
+      - 1.56
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
