@@ -1,0 +1,161 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/1/2017
+  utility_name: Chino  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.cityofchino.org/home/showdocument?id=17368
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 38.15
+        1|1/2": 72.02
+        2": 112.66
+        3": 241.37
+        4": 431.03
+        6": 884.86
+        8": 1629.96
+        10": 2578.28
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 38.15
+        1|1/2": 72.02
+        2": 112.66
+        3": 241.37
+        4": 431.03
+        6": 884.86
+        8": 1629.96
+        10": 2578.28
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 38.15
+        1|1/2": 72.02
+        2": 112.66
+        3": 241.37
+        4": 431.03
+        6": 884.86
+        8": 1629.96
+        10": 2578.28
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 38.15
+        1|1/2": 72.02
+        2": 112.66
+        3": 241.37
+        4": 431.03
+        6": 884.86
+        8": 1629.96
+        10": 2578.28
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.78
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 38.15
+        1|1/2": 72.02
+        2": 112.66
+        3": 241.37
+        4": 431.03
+        6": 884.86
+        8": 1629.96
+        10": 2578.28
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 8.85
+        3": 17.54
+        4": 32.53
+        6": 86.35
+        8": 179.17
+        10": 318.78
+        12": 512.30
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 24.61
+        3/4": 24.61
+        1": 38.15
+        1|1/2": 72.02
+        2": 112.66
+        3": 241.37
+        4": 431.03
+        6": 884.86
+        8": 1629.96
+        10": 2578.28
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.12
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
