@@ -58,11 +58,11 @@ rate_structure:
       - 11
       - 17
     tier_prices_commodity:
-      - 7.87
-      - 15.39
-      - 35.91
-      - 67.06
-      - 82.45
+      - 7.287
+      - 15.039
+      - 35.091
+      - 67.606
+      - 82.645
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -116,11 +116,11 @@ rate_structure:
       - 5
       - 7
     tier_prices_commodity:
-      - 6.5
-      - 14.32
-      - 33.09
-      - 64.1
-      - 78.42
+      - 6.75
+      - 14.232
+      - 33.209
+      - 64.11
+      - 78.342
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -171,10 +171,10 @@ rate_structure:
       depends_on:
         - pressure_zone
       values:
-        1: 1.1656
-        2: 1.3113
-        3: 1.457
-        4: 2.9139
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -225,10 +225,10 @@ rate_structure:
       depends_on:
         - pressure_zone
       values:
-        1: 1.1656
-        2: 1.3113
-        3: 1.457
-        4: 2.9139
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -279,10 +279,10 @@ rate_structure:
       depends_on:
         - pressure_zone
       values:
-        1: 1.1656
-        2: 1.3113
-        3: 1.457
-        4: 2.9139
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -333,10 +333,10 @@ rate_structure:
       depends_on:
         - pressure_zone
       values:
-        1: 1.1656
-        2: 1.3113
-        3: 1.457
-        4: 2.9139
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
