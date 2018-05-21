@@ -1,0 +1,344 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 3/20/2017
+  utility_name: California American Water Company - Monterey District
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    https://dnnh3qht4.blob.core.windows.net/portals/2/Customer%20Service%20and%20Billing/Rates/Monterey/Monterey%20Rate%20Schedule.pdf?sr=b&si=DNNFileManagerPolicy&sig=HnDQQCXHixr%2FgRcE1CXCxWtlivf7llUMYmomxGs1TXE%3D
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    meter_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.37
+        3/4": 0.55
+        1": 0.91
+        1|1/2": 1.83
+        2": 2.93
+        3": 5.49
+        4": 9.15
+        6": 19.29
+        8": 29.27
+    WRAM_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.08
+        3/4": 20.16
+        1": 30.23
+        1|1/2": 50.39
+        2": 80.62
+        3": 151.17
+        4": 251.95
+        6": 503.91
+        8": 806.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 3
+      - 6
+      - 11
+      - 17
+    tier_prices_commodity:
+      - 7.287
+      - 15.039
+      - 35.091
+      - 67.606
+      - 82.645
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+meter_surcharge+WRAM_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    meter_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.37
+        3/4": 0.55
+        1": 0.91
+        1|1/2": 1.83
+        2": 2.93
+        3": 5.49
+        4": 9.15
+        6": 19.29
+        8": 29.27
+    WRAM_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 10.08
+        3/4": 20.16
+        1": 30.23
+        1|1/2": 50.39
+        2": 80.62
+        3": 151.17
+        4": 251.95
+        6": 503.91
+        8": 806.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 2
+      - 4
+      - 5
+      - 7
+    tier_prices_commodity:
+      - 6.75
+      - 14.232
+      - 33.209
+      - 64.11
+      - 78.342
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+meter_surcharge+WRAM_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    meter_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.37
+        3/4": 0.55
+        1": 0.91
+        1|1/2": 1.83
+        2": 2.93
+        3": 5.49
+        4": 9.15
+        6": 19.29
+        8": 29.27
+    WRAM_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 8.42
+        1": 12.63
+        1|1/2": 21.05
+        2": 33.68
+        3": 63.15
+        4": 102.25
+        6": 210.5
+        8": 336.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+meter_surcharge+WRAM_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    meter_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.37
+        3/4": 0.55
+        1": 0.91
+        1|1/2": 1.83
+        2": 2.93
+        3": 5.49
+        4": 9.15
+        6": 19.29
+        8": 29.27
+    WRAM_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 8.42
+        1": 12.63
+        1|1/2": 21.05
+        2": 33.68
+        3": 63.15
+        4": 102.25
+        6": 210.5
+        8": 336.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+meter_surcharge+WRAM_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    meter_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.37
+        3/4": 0.55
+        1": 0.91
+        1|1/2": 1.83
+        2": 2.93
+        3": 5.49
+        4": 9.15
+        6": 19.29
+        8": 29.27
+    WRAM_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 8.42
+        1": 12.63
+        1|1/2": 21.05
+        2": 33.68
+        3": 63.15
+        4": 102.25
+        6": 210.5
+        8": 336.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+meter_surcharge+WRAM_surcharge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.8
+        3/4": 29.41
+        1": 58.77
+        1|1/2": 184.25
+        2": 314.45
+        3": 589.6
+        4": 1031.8
+        6": 2210.99
+        8": 3537.59
+    meter_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 0.37
+        3/4": 0.55
+        1": 0.91
+        1|1/2": 1.83
+        2": 2.93
+        3": 5.49
+        4": 9.15
+        6": 19.29
+        8": 29.27
+    WRAM_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 4.21
+        3/4": 8.42
+        1": 12.63
+        1|1/2": 21.05
+        2": 33.68
+        3": 63.15
+        4": 102.25
+        6": 210.5
+        8": 336.8
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 11.656
+        2: 13.113
+        3: 14.57
+        4: 29.139
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+meter_surcharge+WRAM_surcharge
