@@ -1,0 +1,98 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2013
+  utility_name: Folsom  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.folsom.ca.us/civicax/filebank/blobdload.aspx?blobid=33210
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 15
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 1.08
+      - 1.3
+      - 1.6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 15
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 20
+      - 40
+    tier_prices_commodity:
+      - 1.08
+      - 1.3
+      - 1.6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 12.61
+        3/4": 16.62
+        1": 26.88
+        1|1/2": 52.68
+        2": 84.29
+        3": 156.31
+        4": 259.82
+        6": 518.22
+        8": 828.84
+        10": 1191.69
+        12": 1712.97
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.12
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
