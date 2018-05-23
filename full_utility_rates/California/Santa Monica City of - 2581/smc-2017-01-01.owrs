@@ -211,3 +211,21 @@ rate_structure:
           - 3.84
     commodity_charge: Tiered
     bill: commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1 1/2": 43.05
+        2": 69.07
+        3": 118.87
+        4": 189.99
+        6": 367.71
+        8": 580.99
+        10": 829.80
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
