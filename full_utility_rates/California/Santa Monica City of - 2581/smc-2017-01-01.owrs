@@ -216,13 +216,13 @@ rate_structure:
       depends_on:
         - meter_size
       values:
-        1 1/2": 43.05
-        2": 69.07
-        3": 118.87
-        4": 189.99
-        6": 367.71
-        8": 580.99
-        10": 829.80
+        1 1/2": 41
+        2": 65.78
+        3": 113.21
+        4": 180.94
+        6": 350.20
+        8": 553.32
+        10": 790.29
     commodity_charge: 0
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
