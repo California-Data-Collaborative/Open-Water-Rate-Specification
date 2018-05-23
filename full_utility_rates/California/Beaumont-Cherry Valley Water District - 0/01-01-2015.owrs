@@ -1,0 +1,115 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2015
+  utility_name: Beaumont-Cherry Valley Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://bcvwd.org/wp-content/uploads/2017/09/Rates.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.01
+        3/4": 27.02
+        1": 45.03
+        1|1/2": 90.06
+        2": 144.09
+        3": 288.18
+        4": 450.28
+        6": 900.55
+        8": 1440.88
+        10": 2071.27
+        12": 2791.71
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 45
+    tier_prices_commodity:
+      - 0.96
+      - 1.05
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.01
+        3/4": 27.02
+        1": 45.03
+        1|1/2": 90.06
+        2": 144.09
+        3": 288.18
+        4": 450.28
+        6": 900.55
+        8": 1440.88
+        10": 2071.27
+        12": 2791.71
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 36
+    tier_prices_commodity:
+      - 0.96
+      - 0.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 0
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.15
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 18.01
+        3/4": 27.02
+        1": 45.03
+        1|1/2": 90.06
+        2": 144.09
+        3": 288.18
+        4": 450.28
+        6": 900.55
+        8": 1440.88
+        10": 2071.27
+        12": 2791.71
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 51.82
+        6": 150.53
+        8": 320.79
+        10": 576.89
+        12": 931.84
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
