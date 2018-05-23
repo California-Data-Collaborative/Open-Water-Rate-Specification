@@ -1,11 +1,12 @@
 ---
 metadata:
-  effective_date: 2017-01-01
+  effective_date: 03/01/2018
   utility_name: "City of Santa Monica"
   bill_frequency: bimonthly
 rate_structure:
   RESIDENTIAL_SINGLE:
      #service_charge: 0
+     commodity_charge: Tiered
     tier_starts:
       - 0
       - 15
@@ -16,9 +17,9 @@ rate_structure:
       - 4.50
       - 6.76
       - 10.57
-    commodity_charge: Tiered
     bill: commodity_charge
   RESIDENTIAL_MULTI:
+    commodity_charge: Tiered
     tier_starts:
       - 0
       - 5
@@ -29,9 +30,9 @@ rate_structure:
       - 4.50
       - 6.76
       - 10.57
-    commodity_charge: Tiered
     bill: commodity_charge
   IRRIGATION:
+    commodity_charge: Tiered
     tier_starts:
       depends_on: meter_size
       values:
@@ -77,6 +78,7 @@ rate_structure:
     commodity_charge: Tiered
     bill: commodity_charge
   COMMERCIAL:
+    commodity_charge: Tiered
     tier_starts:
       depends_on: meter_size
       values:
@@ -122,6 +124,7 @@ rate_structure:
     commodity_charge: Tiered
     bill: commodity_charge
   INDUSTRIAL:
+    commodity_charge: Tiered
     tier_starts:
       depends_on: meter_size
       values:
@@ -167,6 +170,7 @@ rate_structure:
     commodity_charge: Tiered
     bill: commodity_charge
   INSTITUTIONAL:
+    commodity_charge: Tiered
     tier_starts:
       depends_on: meter_size
       values:
@@ -211,3 +215,21 @@ rate_structure:
           - 3.84
     commodity_charge: Tiered
     bill: commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1 1/2": 43.05
+        2": 69.07
+        3": 118.87
+        4": 189.99
+        6": 367.71
+        8": 580.99
+        10": 829.80
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
