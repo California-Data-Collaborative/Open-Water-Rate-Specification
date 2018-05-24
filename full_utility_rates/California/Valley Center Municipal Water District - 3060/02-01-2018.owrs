@@ -1,0 +1,112 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 02/01/2018
+  utility_name: Valley Center Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 39.93
+        1": 54.55
+        1|1/2": 81.83
+        2": 109.1
+        3": 163.65
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.8573
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 39.93
+        1": 54.55
+        1|1/2": 81.83
+        2": 109.1
+        3": 163.65
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.8573
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 39.93
+        1": 54.55
+        1|1/2": 81.83
+        2": 109.1
+        3": 163.65
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.5634
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 39.93
+        1": 54.55
+        1|1/2": 81.83
+        2": 109.1
+        3": 163.65
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 39.93
+        1": 54.55
+        1|1/2": 81.83
+        2": 109.1
+        3": 163.65
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.4287
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+capacity_charge:
+  depends_on:
+    - meter_size
+  values:
+    3/4": 9884
+    1": 16124
+    1 1/2": 31200
+    2": 52016
+    3": 96744
