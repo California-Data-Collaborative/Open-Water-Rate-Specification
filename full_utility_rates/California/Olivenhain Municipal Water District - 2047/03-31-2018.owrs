@@ -1,0 +1,158 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 03/31/2018
+  utility_name: Olivenhain Municipal Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://www.olivenhain.com/wp-content/uploads/2017/03/20279RATES_RULES-Final-web.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.43
+        3/4": 37.7
+        1": 65.55
+        1|1/2": 102.68
+        2": 161.47
+        3": 322.34
+        4": 535.82
+        6": 1120.55
+        8": 2017.75
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 7
+      - 26
+      - 80
+    tier_prices_commodity:
+      - 2.64
+      - 4.39
+      - 4.98
+      - 5.56
+    fixed_drought_surcharge: 28.43
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 7
+      - 26
+      - 80
+    tier_prices_drought:
+      - 2.64
+      - 4.62
+      - 5.46
+      - 6.4
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.43
+        3/4": 37.7
+        1": 65.55
+        1|1/2": 102.68
+        2": 161.47
+        3": 322.34
+        4": 535.82
+        6": 1120.55
+        8": 2017.75
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.03
+    fixed_drought_surcharge: 28.43
+    variable_drought_surcharge: Tiered
+    tier_starts_drought:
+      - 0
+      - 15
+    tier_prices_drought:
+      - 4.23
+      - 5.74
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.43
+        3/4": 37.7
+        1": 65.55
+        1|1/2": 102.68
+        2": 161.47
+        3": 322.34
+        4": 535.82
+        6": 1120.55
+        8": 2017.75
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.77
+    fixed_drought_surcharge: 28.43
+    variable_drought_surcharge: flat_rate_drought*usage_ccf
+    flat_rate_drought: 3.96
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.43
+        3/4": 37.7
+        1": 65.55
+        1|1/2": 102.68
+        2": 161.47
+        3": 322.34
+        4": 535.82
+        6": 1120.55
+        8": 2017.75
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RECYCLED:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 28.43
+        3/4": 37.7
+        1": 65.55
+        1|1/2": 102.68
+        2": 161.47
+        3": 322.34
+        4": 535.82
+        6": 1120.55
+        8": 2017.75
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.75
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
