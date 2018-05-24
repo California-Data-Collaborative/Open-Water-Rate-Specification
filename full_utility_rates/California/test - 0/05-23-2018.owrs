@@ -1,0 +1,81 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 05/23/2018
+  utility_name: test
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+        - season
+      values:
+        5/8"|Summer:
+          - 0
+          - 15
+        5/8"|Winter:
+          - 0
+          - 10
+        3/4"|Summer:
+          - 0
+          - 30
+        3/4"|Winter:
+          - 0
+          - 20
+        1"|Summer:
+          - 0
+          - 50
+        1"|Winter:
+          - 0
+          - 35
+        1|1/2"|Summer:
+          - 0
+          - 110
+        1|1/2"|Winter:
+          - 0
+          - 50
+        2"|Summer:
+          - 0
+          - 200
+        2"|Winter:
+          - 0
+          - 100
+        3"|Summer:
+          - 0
+          - 500
+        3"|Winter:
+          - 0
+          - 200
+        4"|Summer:
+          - 0
+          - 3500
+        4"|Winter:
+          - 0
+          - 600
+        6"|Summer:
+          - 0
+          - 11800
+        6"|Winter:
+          - 0
+          - 3100
+        8"|Summer:
+          - 0
+          - 21300
+        8"|Winter:
+          - 0
+          - 5600
+    tier_prices_commodity:
+      - 4.03
+      - 4.99
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
