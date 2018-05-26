@@ -31,19 +31,32 @@ rate_structure:
       - 50
       - 75
     tier_prices_commodity:
-      - 0
-      - 2.1
-      - 3.25
-      - 4.8
-      - 5.5
-      - 7
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0
+          - 2.1
+          - 3.25
+          - 4.8
+          - 5.5
+          - 7
+        2:
+#Pressure zone 2 refers to properties located in a pumping surcharge area
+          - 0
+          - 2.415
+          - 3.7375
+          - 5.52
+          - 6.325
+          - 8.05
+    NWP_charge: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+NWP_charge
   RESIDENTIAL_MULTI:
-    service_charge: 12
+    service_charge: 12*number_dwelling_units
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -53,41 +66,131 @@ rate_structure:
       - 50
       - 75
     tier_prices_commodity:
-      - 0
-      - 2.1
-      - 3.25
-      - 4.8
-      - 5.5
-      - 5.5
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0
+          - 2.1
+          - 3.25
+          - 4.8
+          - 5.5
+          - 5.5
+        2:
+          - 0
+          - 2.415
+          - 3.7375
+          - 5.52
+          - 6.325
+          - 6.325
+    NWP_charge: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+NWP_charge
   IRRIGATION:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12*number_dwelling_units
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 1
+      - 10
+      - 25
+      - 50
+      - 75
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0
+          - 2.1
+          - 3.25
+          - 4.8
+          - 5.5
+          - 5.5
+        2:
+          - 0
+          - 2.415
+          - 3.7375
+          - 5.52
+          - 6.325
+          - 6.325
+    NWP_charge: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+NWP_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12*number_dwelling_units
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 1
+      - 10
+      - 25
+      - 50
+      - 75
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0
+          - 2.1
+          - 3.25
+          - 4.8
+          - 5.5
+          - 5.5
+        2:
+          - 0
+          - 2.415
+          - 3.7375
+          - 5.52
+          - 6.325
+          - 6.325
+    NWP_charge: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+NWP_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 12*number_dwelling_units
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 1
+      - 10
+      - 25
+      - 50
+      - 75
+    tier_prices_commodity:
+      depends_on:
+        - pressure_zone
+      values:
+        1:
+          - 0
+          - 2.1
+          - 3.25
+          - 4.8
+          - 5.5
+          - 5.5
+        2:
+          - 0
+          - 2.415
+          - 3.7375
+          - 5.52
+          - 6.325
+          - 6.325
+    NWP_charge: 2.5
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+NWP_charge
   FIRE_SERVICE:
     service_charge: 14
     commodity_charge: 0
