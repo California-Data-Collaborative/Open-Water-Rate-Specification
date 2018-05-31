@@ -80,6 +80,26 @@ rate_structure:
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
+  IRRIGATION_NON_POTABLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.64
+        1": 22.72
+        1|1/2": 45.46
+        2": 72.73
+        3": 159.09
+        4": 272.73
+        6": 409.1
+        8": 681.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -135,6 +155,51 @@ rate_structure:
         8": 681.83
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 3.34
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL_DOMESTIC:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 20.18
+        1": 29.27
+        1|1/2": 52.01
+        2": 79.28
+        3": 165.63
+        4": 279.28
+        6": 415.64
+        8": 688.37
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 12
+    tier_prices_commodity:
+      - 3.08
+      - 3.34
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  AGRICULTURAL_NON_POTABLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.64
+        1": 22.72
+        1|1/2": 45.46
+        2": 72.73
+        3": 159.09
+        4": 272.73
+        6": 409.1
+        8": 681.83
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.88
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
