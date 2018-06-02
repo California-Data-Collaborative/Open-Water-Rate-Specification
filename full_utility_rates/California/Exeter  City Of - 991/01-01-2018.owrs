@@ -1,0 +1,39 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Exeter  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 23.55
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0
+      - 1.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 23.55
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+    tier_prices_commodity:
+      - 0
+      - 1.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
