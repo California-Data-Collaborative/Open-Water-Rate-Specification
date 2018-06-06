@@ -113,10 +113,11 @@ rate_structure:
         3": 535.14
         4": 891.9
         6": 1486.51
-    commodity_charge: Tiered
+    commodity_charge: Budget
+    budget_commodity: three_year_avg
     tier_starts_commodity:
       - 0
-      - 30
+      - 100%
     tier_prices_commodity:
       - 5.98
       - 7.06
@@ -131,11 +132,12 @@ rate_structure:
         3": 535.14
         4": 891.9
         6": 1486.51
-    variable_drought_surcharge: Tiered
-    tier_starts_drought:
+    variable_drought_surcharge: Budget
+    budget_commodity: three_year_avg
+    tier_starts_commodity:
       - 0
-      - 30
-    tier_prices_drought:
+      - 100%
+    tier_prices_commodity:
       - 9.43
       - 10.51
     fixed_wastewater_charge: 0
@@ -153,10 +155,11 @@ rate_structure:
         3": 535.14
         4": 891.9
         6": 1486.51
-    commodity_charge: Tiered
+    commodity_charge: Budget
+    budget_commodity: three_year_avg
     tier_starts_commodity:
       - 0
-      - 30
+      - 100%
     tier_prices_commodity:
       - 5.98
       - 7.06
@@ -171,11 +174,12 @@ rate_structure:
         3": 535.14
         4": 891.9
         6": 1486.51
-    variable_drought_surcharge: Tiered
-    tier_starts_drought:
+    variable_drought_surcharge: Budget
+    budget_commodity: three_year_avg
+    tier_starts_commodity:
       - 0
-      - 30
-    tier_prices_drought:
+      - 100%
+    tier_prices_commodity:
       - 9.43
       - 10.51
     fixed_wastewater_charge: 0
