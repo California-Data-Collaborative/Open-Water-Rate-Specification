@@ -1,0 +1,605 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Santa Cruz  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.cityofsantacruz.com/government/city-departments/water/rates
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 7
+      - 9
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 6.24
+          - 6.97
+          - 8.05
+          - 9.54
+        outside_city:
+          - 7.16
+          - 8
+          - 9.27
+          - 11.02
+    IR_Charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 7
+      - 9
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 1.73
+          - 2.59
+          - 3.2
+          - 4.30
+        outside_city:
+          - 1.99
+          - 2.99
+          - 3.69
+          - 4.96
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge:
+#There exists 5 different stages of drought. Rates on file belong to stage 3 with 25% shortage.
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 7
+      - 9
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 6.24
+          - 6.97
+          - 8.05
+          - 9.54
+        outside_city:
+          - 7.16
+          - 8
+          - 9.27
+          - 11.02
+    IR_Charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 5
+      - 7
+      - 9
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 1.73
+          - 2.59
+          - 3.2
+          - 4.30
+        outside_city:
+          - 1.99
+          - 2.99
+          - 3.69
+          - 4.96
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  AGRICULTURAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0
+        outside_city: 3.88
+    IR_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0
+        outside_city: 3.4
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 7.44
+          - 9.93
+          - 11.14
+        outside_city:
+          - 8.53
+          - 11.38
+          - 12.77
+    IR_charge: Budget
+    gpcd_commodity: 60
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 3.14
+          - 4.71
+          - 4.77
+        outside_city:
+          - 3.6
+          - 5.39
+          - 5.46
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 7.13
+        outside_city: 8.17
+    IR_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.53
+        outside_city: 2.90
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 7.13
+        outside_city: 8.17
+    IR_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.53
+        outside_city: 2.90
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 7.27
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
+  FIRE_SERVICE:
+    service_charge: 1.09
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 9.53
+        5/8"|outside_city: 10.91
+        3/4"|inside_city: 9.78
+        3/4"|outside_city: 11.2
+        1"|inside_city: 10.53
+        1"|outside_city: 12.06
+        1|1/2"|inside_city: 11.52
+        1|1/2"|outside_city: 13.2
+        2"|inside_city: 14.26
+        2"|outside_city: 16.34
+        3"|inside_city: 34.45
+        3"|outside_city: 39.47
+        4"|inside_city: 41.93
+        4"|outside_city: 48.03
+        6"|inside_city: 59.37
+        6"|outside_city: 68.01
+        8"|inside_city: 79.31
+        8"|outside_city: 90.86
+        10"|inside_city: 101.75
+        10"|outside_city: 116.55
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 7.13
+        outside_city: 8.17
+    IR_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.53
+        outside_city: 2.90
+    pumping_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 0.46
+        outside_city: 0.52
+    fixed_drought_surcharge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.79
+        3/4": 9.79
+        1": 24.48
+        1|1/2": 48.95
+        2": 78.32
+        3": 146.85
+        4": 244.75
+        6": 489.5
+        8": 1125.85
+        10": 1390.18
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    rate_stabilization_charge: 1*usage_ccf
+    bill: service_charge+commodity_charge+IR_Charge+rate_stabilization_charge+pumping_charge
