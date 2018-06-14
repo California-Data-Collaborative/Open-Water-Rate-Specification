@@ -1,0 +1,126 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2014
+  utility_name: Coalinga City of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    http://www.coalinga.com/uploads/1410883519_20140701Resolution3645WaterRates.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        1"|inside_city: 20.83
+        1"|outside_city: 28.8
+        1|1/2"|inside_city: 83.29
+        1|1/2"|outside_city: 115.28
+        2"|inside_city: 315.32
+        2"|outside_city: 518.69
+        3"|inside_city: 708.02
+        3"|outside_city: 1166.73
+        4"|inside_city: 1258.95
+        4"|outside_city: 2073.51
+        6"|inside_city: 2834.38
+        6"|outside_city: 4668.23
+        8"|inside_city: 5039.3
+        8"|outside_city: 8299.08
+        10"|inside_city: 5598.33
+        10"|outside_city: 9221.06
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 30
+    tier_prices_commodity:
+      - 1.56
+      - 1.91
+      - 2.32
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        1"|inside_city: 20.83
+        1"|outside_city: 28.8
+        1|1/2"|inside_city: 83.29
+        1|1/2"|outside_city: 115.28
+        2"|inside_city: 315.32
+        2"|outside_city: 518.69
+        3"|inside_city: 708.02
+        3"|outside_city: 1166.73
+        4"|inside_city: 1258.95
+        4"|outside_city: 2073.51
+        6"|inside_city: 2834.38
+        6"|outside_city: 4668.23
+        8"|inside_city: 5039.3
+        8"|outside_city: 8299.08
+        10"|inside_city: 5598.33
+        10"|outside_city: 9221.06
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 30
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 1.56
+          - 1.91
+          - 2.32
+        outside_city:
+          - 1.63
+          - 1.63
+          - 1.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        1"|inside_city: 20.83
+        1"|outside_city: 28.8
+        1|1/2"|inside_city: 83.29
+        1|1/2"|outside_city: 115.28
+        2"|inside_city: 315.32
+        2"|outside_city: 518.69
+        3"|inside_city: 708.02
+        3"|outside_city: 1166.73
+        4"|inside_city: 1258.95
+        4"|outside_city: 2073.51
+        6"|inside_city: 2834.38
+        6"|outside_city: 4668.23
+        8"|inside_city: 5039.3
+        8"|outside_city: 8299.08
+        10"|inside_city: 5598.33
+        10"|outside_city: 9221.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.67
+        outside_city: 1.63
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
