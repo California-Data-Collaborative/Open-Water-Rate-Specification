@@ -1,0 +1,146 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 06/01/2011
+  utility_name: West Kern Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.wkwd.org/filelibrary/2015%20WKWD%20UWMP%20-%20Final.2016.06.29.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.3
+        3/4": 17.3
+        1": 21.53
+        2": 46.62
+        3": 86.14
+        4": 119.07
+        6": 190.22
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 40
+    tier_prices_commodity:
+      - 0
+      - 1.73
+      - 1.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.3
+        3/4": 17.3
+        1": 21.53
+        2": 46.62
+        3": 86.14
+        4": 119.07
+        6": 190.22
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 40
+    tier_prices_commodity:
+      - 0
+      - 1.73
+      - 1.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.3
+        3/4": 17.3
+        1": 21.53
+        2": 46.62
+        3": 86.14
+        4": 119.07
+        6": 190.22
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 40
+    tier_prices_commodity:
+      - 0
+      - 1.73
+      - 1.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 68
+        2": 68
+        3": 68
+        4": 68
+        6": 111
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+    tier_prices_commodity:
+      - 2.24
+      - 2.7
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 17.3
+        3/4": 17.3
+        1": 21.53
+        2": 46.62
+        3": 86.14
+        4": 119.07
+        6": 190.22
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 40
+    tier_prices_commodity:
+      - 0
+      - 1.73
+      - 1.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
