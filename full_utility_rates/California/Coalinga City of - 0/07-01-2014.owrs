@@ -38,9 +38,17 @@ rate_structure:
       - 10
       - 30
     tier_prices_commodity:
-      - 1.56
-      - 1.91
-      - 2.32
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 1.56
+          - 1.91
+          - 2.32
+        outside_city:
+          - 1.63
+          - 1.63
+          - 1.63
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
