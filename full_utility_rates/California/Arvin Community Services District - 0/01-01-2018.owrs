@@ -1,0 +1,141 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Arvin Community Services District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.51
+        1": 43.3
+        1|1/2": 85.25
+        2": 135.6
+        3": 269.85
+        4": 420.89
+        6": 840.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.51
+        1": 43.3
+        1|1/2": 85.25
+        2": 135.6
+        3": 269.85
+        4": 420.89
+        6": 840.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.51
+        1": 43.3
+        1|1/2": 85.25
+        2": 135.6
+        3": 269.85
+        4": 420.89
+        6": 840.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.51
+        1": 43.3
+        1|1/2": 85.25
+        2": 135.6
+        3": 269.85
+        4": 420.89
+        6": 840.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.51
+        1": 43.3
+        1|1/2": 85.25
+        2": 135.6
+        3": 269.85
+        4": 420.89
+        6": 840.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 26.51
+        1": 43.3
+        1|1/2": 85.25
+        2": 135.6
+        3": 269.85
+        4": 420.89
+        6": 840.43
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3": 27.99
+        4": 54.63
+        6": 123.14
+        8": 214.49
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.53
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
