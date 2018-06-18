@@ -5,7 +5,7 @@ author_info:
 metadata:
   effective_date: 07/01/2017
   utility_name: Suisun-Solano Water Authority
-  bill_frequency: Monthly
+  bill_frequency: Bi-Monthly
   bill_unit: ccf
   prop_218_link: https://www.suisun.com/wp-content/files/Utility_Services_Rate_Sheet.pdf
 rate_structure:
