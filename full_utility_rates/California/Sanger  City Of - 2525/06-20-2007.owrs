@@ -13,16 +13,26 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
+        - city_limits
       values:
-        5/8": 11.79
-        3/4": 11.79
-        1": 22.96
-        1|1/2": 58.95
-        2": 94.3
-        3": 176.82
-        4": 294.7
-        6": 589.4
-        8": 1031.44
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -55,16 +65,26 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
+        - city_limits
       values:
-        5/8": 11.79
-        3/4": 11.79
-        1": 22.96
-        1|1/2": 58.95
-        2": 94.3
-        3": 176.82
-        4": 294.7
-        6": 589.4
-        8": 1031.44
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -97,16 +117,26 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
+        - city_limits
       values:
-        5/8": 11.79
-        3/4": 11.79
-        1": 22.96
-        1|1/2": 58.95
-        2": 94.3
-        3": 176.82
-        4": 294.7
-        6": 589.4
-        8": 1031.44
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
@@ -139,16 +169,26 @@ rate_structure:
     service_charge:
       depends_on:
         - meter_size
+        - city_limits
       values:
-        5/8": 11.79
-        3/4": 11.79
-        1": 22.96
-        1|1/2": 58.95
-        2": 94.3
-        3": 176.82
-        4": 294.7
-        6": 589.4
-        8": 1031.44
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
     commodity_charge: Tiered
     tier_starts_commodity:
       - 0
