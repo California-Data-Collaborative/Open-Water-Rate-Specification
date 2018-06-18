@@ -1,0 +1,161 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 10/01/2012
+  utility_name: Inglewood  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.5
+        1": 16
+        1|1/2": 22.5
+        2": 29.75
+        3": 50
+        4": 72.75
+        6": 136
+        8": 211.75
+        12": 317.5
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 15
+      - 39
+    tier_prices_commodity:
+      - 3.5
+      - 4.75
+      - 6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.5
+        1": 16
+        1|1/2": 22.5
+        2": 29.75
+        3": 50
+        4": 72.75
+        6": 136
+        8": 211.75
+        12": 317.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.5
+        1": 16
+        1|1/2": 22.5
+        2": 29.75
+        3": 50
+        4": 72.75
+        6": 136
+        8": 211.75
+        12": 317.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.5
+        1": 16
+        1|1/2": 22.5
+        2": 29.75
+        3": 50
+        4": 72.75
+        6": 136
+        8": 211.75
+        12": 317.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.5
+        1": 16
+        1|1/2": 22.5
+        2": 29.75
+        3": 50
+        4": 72.75
+        6": 136
+        8": 211.75
+        12": 317.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        3/4": 13.5
+        1": 16
+        1|1/2": 22.5
+        2": 29.75
+        3": 50
+        4": 72.75
+        6": 136
+        8": 211.75
+        12": 317.5
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.5
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 35.75
+        2": 35.75
+        3": 35.75
+        4": 35.75
+        6": 84
+        8": 173.5
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
