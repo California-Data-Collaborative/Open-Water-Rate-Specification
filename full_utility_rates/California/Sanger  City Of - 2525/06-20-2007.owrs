@@ -1,0 +1,232 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 06/20/2007
+  utility_name: Sanger  City Of
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: https://www.ci.sanger.ca.us/Public%20works/Water%20Rates%202010%2011.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 30
+      - 100
+      - 500
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0.41
+          - 0.67
+          - 1.04
+          - 1.1
+          - 1.22
+        outside_city:
+          - 0.5152
+          - 0.8375
+          - 1.3
+          - 1.375
+          - 1.525
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 30
+      - 100
+      - 500
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0.41
+          - 0.67
+          - 1.04
+          - 1.1
+          - 1.22
+        outside_city:
+          - 0.5152
+          - 0.8375
+          - 1.3
+          - 1.375
+          - 1.525
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 30
+      - 100
+      - 500
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0.41
+          - 0.67
+          - 1.04
+          - 1.1
+          - 1.22
+        outside_city:
+          - 0.5152
+          - 0.8375
+          - 1.3
+          - 1.375
+          - 1.525
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 11.79
+        5/8"|outside_city: 14.7375
+        3/4"|inside_city: 11.79
+        3/4"|outside_city: 14.7375
+        1"|inside_city: 22.96
+        1"|outside_city: 28.7
+        1|1/2"|inside_city: 58.95
+        1|1/2"|outside_city: 73.6875
+        2"|inside_city: 94.3
+        2"|outside_city: 117.875
+        3"|inside_city: 176.82
+        3"|outside_city: 221.025
+        4"|inside_city: 294.7
+        4"|outside_city: 368.375
+        6"|inside_city: 589.4
+        6"|outside_city: 736.75
+        8"|inside_city: 1031.44
+        8"|outside_city: 1289.3
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 6
+      - 30
+      - 100
+      - 500
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0.41
+          - 0.67
+          - 1.04
+          - 1.1
+          - 0.48
+        outside_city:
+          - 0.5152
+          - 0.8375
+          - 1.3
+          - 1.375
+          - 0.6
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED:
+    service_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 32.76
+        outside_city: 78.08
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
