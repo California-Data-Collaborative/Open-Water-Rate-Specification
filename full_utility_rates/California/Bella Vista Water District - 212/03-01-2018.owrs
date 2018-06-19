@@ -19,6 +19,7 @@ rate_structure:
         1": 46.2
         1|1/2": 53.93
         2": 60.73
+#Rates on file belong to disc meters. There exists rates for larger meter sizes depending on meter types, i.e. compound, turbine, or mag.
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
@@ -27,8 +28,17 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39.06
+        3/4": 41.86
+        1": 46.2
+        1|1/2": 53.93
+        2": 60.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -50,16 +60,34 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39.06
+        3/4": 41.86
+        1": 46.2
+        1|1/2": 53.93
+        2": 60.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39.06
+        3/4": 41.86
+        1": 46.2
+        1|1/2": 53.93
+        2": 60.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
