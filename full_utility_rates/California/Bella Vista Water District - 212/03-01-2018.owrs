@@ -1,0 +1,84 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 03/01/2018
+  utility_name: Bella Vista Water District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.bvwd.org/documents/503/Rate_Study_2017_Final.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 39.06
+        3/4": 41.86
+        1": 46.2
+        1|1/2": 53.93
+        2": 60.73
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.55
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 63.5
+        1|1/2": 71.24
+        2": 78.04
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 0.155
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 25
+        3": 34
+        4": 48
+        6": 66
+        8": 83
+        10": 104
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
