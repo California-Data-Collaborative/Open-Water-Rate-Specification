@@ -1,0 +1,146 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2016
+  utility_name: San Fernando City of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    https://library.municode.com/ca/san_fernando/codes/code_of_ordinances?nodeId=CO_CH94UT_ARTIIIWA_DIV3RACH_S94-263FECH
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.37
+        3/4": 37.37
+        1": 63.93
+        1|1/2": 108.2
+        2": 161.32
+        3": 302.99
+        4": 462.37
+        6": 905.07
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 18
+    tier_prices_commodity:
+      - 1.31
+      - 2.67
+      - 3.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.37
+        3/4": 37.37
+        1": 63.93
+        1|1/2": 108.2
+        2": 161.32
+        3": 302.99
+        4": 462.37
+        6": 905.07
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+      - 18
+    tier_prices_commodity:
+      - 1.31
+      - 2.67
+      - 3.56
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.37
+        3/4": 37.37
+        1": 63.93
+        1|1/2": 108.2
+        2": 161.32
+        3": 302.99
+        4": 462.37
+        6": 905.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.38
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.37
+        3/4": 37.37
+        1": 63.93
+        1|1/2": 108.2
+        2": 161.32
+        3": 302.99
+        4": 462.37
+        6": 905.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.38
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.37
+        3/4": 37.37
+        1": 63.93
+        1|1/2": 108.2
+        2": 161.32
+        3": 302.99
+        4": 462.37
+        6": 905.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.38
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.37
+        3/4": 37.37
+        1": 63.93
+        1|1/2": 108.2
+        2": 161.32
+        3": 302.99
+        4": 462.37
+        6": 905.07
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.38
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
