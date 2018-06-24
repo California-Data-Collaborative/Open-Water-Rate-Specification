@@ -1,0 +1,203 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2016
+  utility_name: Seal Beach  City Of
+  bill_frequency: Bi-Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://www.sealbeachca.gov/Portals/0/Documents/Utility%20Rates.pdf?ver=2017-02-02-124323-027
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.86
+        3/4": 37.86
+        1": 47.89
+        1|1/2": 72.97
+        2": 103.06
+        3": 183.32
+        4": 273.6
+        6": 524.39
+        8": 825.34
+        10": 1176.45
+        12": 1577.72
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 27
+    tier_prices_commodity:
+      - 2.23
+      - 2.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.86
+        3/4": 37.86
+        1": 47.89
+        1|1/2": 72.97
+        2": 103.06
+        3": 183.32
+        4": 273.6
+        6": 524.39
+        8": 825.34
+        10": 1176.45
+        12": 1577.72
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 27
+    tier_prices_commodity:
+      - 2.23
+      - 2.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.86
+        3/4": 37.86
+        1": 47.89
+        1|1/2": 72.97
+        2": 103.06
+        3": 183.32
+        4": 273.6
+        6": 524.39
+        8": 825.34
+        10": 1176.45
+        12": 1577.72
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 27
+        3/4":
+          - 0
+          - 44
+        1":
+          - 0
+          - 89
+        1|1/2":
+          - 0
+          - 206
+        2":
+          - 0
+          - 421
+        3":
+          - 0
+          - 687
+        4":
+          - 0
+          - 1942
+        6":
+          - 0
+          - 4952
+        8":
+          - 0
+          - 4952
+        10":
+          - 0
+          - 7118
+        12":
+          - 0
+          - 45491
+    tier_prices_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 2.25
+          - 2.81
+        3/4":
+          - 2.25
+          - 2.81
+        1":
+          - 2.25
+          - 2.81
+        1|1/2":
+          - 2.25
+          - 2.81
+        2":
+          - 2.25
+          - 2.81
+        3":
+          - 2.25
+          - 2.81
+        4":
+          - 2.25
+          - 2.81
+        6":
+          - 2.25
+          - 2.81
+        8":
+          - 2.25
+          - 2.81
+        10":
+          - 2.25
+          - 2.81
+        12":
+          - 2.23
+          - 2.88
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 50.4
+        6": 113.42
+        8": 201.62
+        10": 315.04
+        12": 453.66
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  GOVERNMENTAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 37.86
+        3/4": 37.86
+        1": 47.89
+        1|1/2": 72.97
+        2": 103.06
+        3": 183.32
+        4": 273.6
+        6": 524.39
+        8": 825.34
+        10": 1176.45
+        12": 1577.72
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.42
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
