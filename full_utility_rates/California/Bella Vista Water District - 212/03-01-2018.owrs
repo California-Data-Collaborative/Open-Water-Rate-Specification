@@ -11,15 +11,30 @@ metadata:
 rate_structure:
   RESIDENTIAL_SINGLE:
     service_charge:
-      depends_on:
-        - meter_size
+      depends_on: 
+       - meter_size
+       - meter_type
       values:
-        5/8": 39.06
-        3/4": 41.86
-        1": 46.2
-        1|1/2": 53.93
-        2": 60.73
-#Rates on file belong to disc meters. There exists rates for larger meter sizes depending on meter types, i.e. compound, turbine, or mag.
+        5/8"|Disc: 39.06
+        3/4"|Disc: 41.86
+        1"|Disc: 46.20
+        1 1/2"|Disc: 53.93
+        2"|Disc: 60.73
+        2"|Compound: 64.5
+        2"|Turbine: 72.4
+        2"|Mag: 72.4
+        3"|Compound: 81.87
+        3"|Turbine: 81.87
+        3"|Mag: 102.66
+        4"|Compound: 102.66
+        4"|Turbine: 113.39
+        4"|Mag: 122.72
+        6"|Compound: 136.21
+        6"|Turbine: 147.96
+        6"|Mag: 164.31
+        8"|Compound: 185.16
+        8"|Turbine: 185.16
+        8"|Mag: 207.29
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
@@ -29,14 +44,30 @@ rate_structure:
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
     service_charge:
-      depends_on:
-        - meter_size
+      depends_on: 
+       - meter_size
+       - meter_type
       values:
-        5/8": 39.06
-        3/4": 41.86
-        1": 46.2
-        1|1/2": 53.93
-        2": 60.73
+        5/8"|Disc: 39.06
+        3/4"|Disc: 41.86
+        1"|Disc: 46.20
+        1 1/2"|Disc: 53.93
+        2"|Disc: 60.73
+        2"|Compound: 64.5
+        2"|Turbine: 72.4
+        2"|Mag: 72.4
+        3"|Compound: 81.87
+        3"|Turbine: 81.87
+        3"|Mag: 102.66
+        4"|Compound: 102.66
+        4"|Turbine: 113.39
+        4"|Mag: 122.72
+        6"|Compound: 136.21
+        6"|Turbine: 147.96
+        6"|Mag: 164.31
+        8"|Compound: 185.16
+        8"|Turbine: 185.16
+        8"|Mag: 207.29
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
@@ -46,12 +77,28 @@ rate_structure:
     bill: service_charge+commodity_charge
   IRRIGATION:
     service_charge:
-      depends_on:
-        - meter_size
+      depends_on: 
+       - meter_size
+       - meter_type
       values:
-        1": 63.5
-        1|1/2": 71.24
-        2": 78.04
+        1"|Disc: 63.50
+        1 1/2"|Disc: 71.24
+        2"|Disc: 78.04
+        2"|Compound: 81.81
+        2"|Turbine: 89.7
+        2"|Mag: 89.7
+        3"|Compound: 99.17
+        3"|Turbine: 99.17
+        3"|Mag: 119.97
+        4"|Compound: 119.97
+        4"|Turbine: 130.69
+        4"|Mag: 140.02
+        6"|Compound: 153.52
+        6"|Turbine: 165.26
+        6"|Mag: 181.61
+        8"|Compound: 202.47
+        8"|Turbine: 202.47
+        8"|Mag: 224.59
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.155
     fixed_drought_surcharge: 0
@@ -61,14 +108,30 @@ rate_structure:
     bill: service_charge+commodity_charge
   COMMERCIAL:
     service_charge:
-      depends_on:
-        - meter_size
+      depends_on: 
+       - meter_size
+       - meter_type
       values:
-        5/8": 39.06
-        3/4": 41.86
-        1": 46.2
-        1|1/2": 53.93
-        2": 60.73
+        5/8"|Disc: 39.06
+        3/4"|Disc: 41.86
+        1"|Disc: 46.20
+        1 1/2"|Disc: 53.93
+        2"|Disc: 60.73
+        2"|Compound: 64.5
+        2"|Turbine: 72.4
+        2"|Mag: 72.4
+        3"|Compound: 81.87
+        3"|Turbine: 81.87
+        3"|Mag: 102.66
+        4"|Compound: 102.66
+        4"|Turbine: 113.39
+        4"|Mag: 122.72
+        6"|Compound: 136.21
+        6"|Turbine: 147.96
+        6"|Mag: 164.31
+        8"|Compound: 185.16
+        8"|Turbine: 185.16
+        8"|Mag: 207.29
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
@@ -78,14 +141,30 @@ rate_structure:
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
     service_charge:
-      depends_on:
-        - meter_size
+      depends_on: 
+       - meter_size
+       - meter_type
       values:
-        5/8": 39.06
-        3/4": 41.86
-        1": 46.2
-        1|1/2": 53.93
-        2": 60.73
+        5/8"|Disc: 39.06
+        3/4"|Disc: 41.86
+        1"|Disc: 46.20
+        1 1/2"|Disc: 53.93
+        2"|Disc: 60.73
+        2"|Compound: 64.5
+        2"|Turbine: 72.4
+        2"|Mag: 72.4
+        3"|Compound: 81.87
+        3"|Turbine: 81.87
+        3"|Mag: 102.66
+        4"|Compound: 102.66
+        4"|Turbine: 113.39
+        4"|Mag: 122.72
+        6"|Compound: 136.21
+        6"|Turbine: 147.96
+        6"|Mag: 164.31
+        8"|Compound: 185.16
+        8"|Turbine: 185.16
+        8"|Mag: 207.29
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 0.55
     fixed_drought_surcharge: 0
