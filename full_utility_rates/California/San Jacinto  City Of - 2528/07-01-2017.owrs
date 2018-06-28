@@ -1,0 +1,265 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: San Jacinto  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.36
+        3/4": 15.36
+        1": 24.04
+        1|1/2": 46.16
+        2": 69.25
+        3": 74.08
+        4": 126.98
+        6": 230.85
+        8": 334.75
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 16
+        3/4":
+          - 0
+          - 16
+        1":
+          - 0
+          - 21
+        1|1/2":
+          - 0
+          - 21
+        2":
+          - 0
+          - 21
+        3":
+          - 0
+          - 21
+        4":
+          - 0
+          - 21
+        6":
+          - 0
+          - 21
+        8":
+          - 0
+          - 21
+    tier_prices_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 1.53
+          - 2.12
+        3/4":
+          - 1.53
+          - 2.12
+        1":
+          - 1.53
+          - 2.12
+        1|1/2":
+          - 1.53
+          - 2.12
+        2":
+          - 1.53
+          - 2.12
+        3":
+          - 1.64
+          - 1.64
+        4":
+          - 1.64
+          - 1.64
+        6":
+          - 1.64
+          - 1.64
+        8":
+          - 1.64
+          - 1.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.36
+        3/4": 15.36
+        1": 24.04
+        1|1/2": 46.16
+        2": 69.25
+        3": 74.08
+        4": 126.98
+        6": 230.85
+        8": 334.75
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 16
+        3/4":
+          - 0
+          - 16
+        1":
+          - 0
+          - 21
+        1|1/2":
+          - 0
+          - 21
+        2":
+          - 0
+          - 21
+        3":
+          - 0
+          - 21
+        4":
+          - 0
+          - 21
+        6":
+          - 0
+          - 21
+        8":
+          - 0
+          - 21
+    tier_prices_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 1.53
+          - 2.12
+        3/4":
+          - 1.53
+          - 2.12
+        1":
+          - 1.53
+          - 2.12
+        1|1/2":
+          - 1.53
+          - 2.12
+        2":
+          - 1.53
+          - 2.12
+        3":
+          - 1.64
+          - 1.64
+        4":
+          - 1.64
+          - 1.64
+        6":
+          - 1.64
+          - 1.64
+        8":
+          - 1.64
+          - 1.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 15.36
+        3/4": 15.36
+        1": 24.04
+        1|1/2": 46.16
+        2": 69.25
+        3": 74.08
+        4": 126.98
+        6": 230.85
+        8": 334.75
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 0
+          - 16
+        3/4":
+          - 0
+          - 16
+        1":
+          - 0
+          - 21
+        1|1/2":
+          - 0
+          - 21
+        2":
+          - 0
+          - 21
+        3":
+          - 0
+          - 21
+        4":
+          - 0
+          - 21
+        6":
+          - 0
+          - 21
+        8":
+          - 0
+          - 21
+    tier_prices_commodity:
+      depends_on:
+        - meter_size
+      values:
+        5/8":
+          - 1.53
+          - 2.12
+        3/4":
+          - 1.53
+          - 2.12
+        1":
+          - 1.53
+          - 2.12
+        1|1/2":
+          - 1.53
+          - 2.12
+        2":
+          - 1.53
+          - 2.12
+        3":
+          - 1.64
+          - 1.64
+        4":
+          - 1.64
+          - 1.64
+        6":
+          - 1.64
+          - 1.64
+        8":
+          - 1.64
+          - 1.64
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge: 15.36
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
