@@ -74,24 +74,54 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
