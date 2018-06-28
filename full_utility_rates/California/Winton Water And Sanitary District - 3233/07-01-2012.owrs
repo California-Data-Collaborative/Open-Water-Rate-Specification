@@ -1,0 +1,129 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2012
+  utility_name: Winton Water And Sanitary District
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.wintonwsd.com/rates-and-policies
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 20.92
+        outside_city: 22.49
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city:
+          - 0
+          - 1.52
+          - 2.3
+          - 3.03
+        outside_city:
+          - 0
+          - 1.67
+          - 2.51
+          - 3.35
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 12.55
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 30
+    tier_prices_commodity:
+      - 0
+      - 1.46
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 23.64
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 40
+      - 100
+      - 300
+    tier_prices_commodity:
+      - 0
+      - 1.52
+      - 2.3
+      - 3.03
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
