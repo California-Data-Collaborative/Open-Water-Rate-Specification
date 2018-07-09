@@ -28,11 +28,11 @@ rate_structure:
       depends_on:
         - lot_size_group
       values:
-        1: 33.9
-        2: 50.85
-        3: 79.1
-        4: 135.6
-        5: 339
+        1: 33.9  #MFR with 2 units
+        2: 50.85  #MFR with 3-4 units
+        3: 79.1  #MFR with 5-8 units
+        4: 135.6  #MFR with 9-20 units
+        5: 339  #MFR with 21+ units
     commodity_charge: Tiered
     tier_starts_commodity:
       depends_on:
@@ -90,6 +90,20 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   INDUSTRIAL:
+    service_charge: 135.6
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 120
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
     service_charge: 135.6
     commodity_charge: Tiered
     tier_starts_commodity:
