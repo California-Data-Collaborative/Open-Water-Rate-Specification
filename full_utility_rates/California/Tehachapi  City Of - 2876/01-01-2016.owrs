@@ -28,16 +28,27 @@ rate_structure:
         1"|1|outside_city: 30.92
         1"|2|inside_city: 22.9
         1"|2|outside_city: 30.92
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity:
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
       depends_on:
         - pressure_zone
         - city_limits
       values:
-        1|inside_city: 1.87
-        1|outside_city: 3.17
-        2|inside_city: 2.35
-        2|outside_city: 3.17
+        1|inside_city:
+          - 0
+          - 1.87
+        1|outside_city:
+          - 0
+          - 3.17
+        2|inside_city:
+          - 0
+          - 2.35
+        2|outside_city:
+          - 0
+          - 3.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -74,16 +85,27 @@ rate_structure:
         6"|1|outside_city: 1030.59
         6"|2|inside_city: 763.4
         6"|2|outside_city: 1030.59
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity:
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
       depends_on:
         - pressure_zone
         - city_limits
       values:
-        1|inside_city: 1.87
-        1|outside_city: 3.17
-        2|inside_city: 2.35
-        2|outside_city: 3.17
+        1|inside_city:
+          - 0
+          - 1.87
+        1|outside_city:
+          - 0
+          - 3.17
+        2|inside_city:
+          - 0
+          - 2.35
+        2|outside_city:
+          - 0
+          - 3.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -120,16 +142,27 @@ rate_structure:
         6"|1|outside_city: 1030.59
         6"|2|inside_city: 763.4
         6"|2|outside_city: 1030.59
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity:
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
       depends_on:
         - pressure_zone
         - city_limits
       values:
-        1|inside_city: 1.87
-        1|outside_city: 3.17
-        2|inside_city: 2.35
-        2|outside_city: 3.17
+        1|inside_city:
+          - 0
+          - 1.87
+        1|outside_city:
+          - 0
+          - 3.17
+        2|inside_city:
+          - 0
+          - 2.35
+        2|outside_city:
+          - 0
+          - 3.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -166,16 +199,27 @@ rate_structure:
         6"|1|outside_city: 1030.59
         6"|2|inside_city: 763.4
         6"|2|outside_city: 1030.59
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity:
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
       depends_on:
         - pressure_zone
         - city_limits
       values:
-        1|inside_city: 1.87
-        1|outside_city: 3.17
-        2|inside_city: 2.35
-        2|outside_city: 3.17
+        1|inside_city:
+          - 0
+          - 1.87
+        1|outside_city:
+          - 0
+          - 3.17
+        2|inside_city:
+          - 0
+          - 2.35
+        2|outside_city:
+          - 0
+          - 3.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -212,16 +256,27 @@ rate_structure:
         6"|1|outside_city: 1030.59
         6"|2|inside_city: 763.4
         6"|2|outside_city: 1030.59
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity:
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
       depends_on:
         - pressure_zone
         - city_limits
       values:
-        1|inside_city: 1.87
-        1|outside_city: 3.17
-        2|inside_city: 2.35
-        2|outside_city: 3.17
+        1|inside_city:
+          - 0
+          - 1.87
+        1|outside_city:
+          - 0
+          - 3.17
+        2|inside_city:
+          - 0
+          - 2.35
+        2|outside_city:
+          - 0
+          - 3.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
@@ -258,16 +313,27 @@ rate_structure:
         6"|1|outside_city: 1030.59
         6"|2|inside_city: 763.4
         6"|2|outside_city: 1030.59
-    commodity_charge: flat_rate_commodity*usage_ccf
-    flat_rate_commodity:
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+    tier_prices_commodity:
       depends_on:
         - pressure_zone
         - city_limits
       values:
-        1|inside_city: 1.87
-        1|outside_city: 3.17
-        2|inside_city: 2.35
-        2|outside_city: 3.17
+        1|inside_city:
+          - 0
+          - 1.87
+        1|outside_city:
+          - 0
+          - 3.17
+        2|inside_city:
+          - 0
+          - 2.35
+        2|outside_city:
+          - 0
+          - 3.17
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
