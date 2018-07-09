@@ -1,0 +1,119 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Wasco  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://www.codepublishing.com/CA/Wasco/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 28.25
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 25
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - lot_size_group
+      values:
+        1: 33.9  #MFR with 2 units
+        2: 50.85  #MFR with 3-4 units
+        3: 79.1  #MFR with 5-8 units
+        4: 135.6  #MFR with 9-20 units
+        5: 339  #MFR with 21+ units
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - lot_size_group
+      values:
+        1:
+          - 0
+          - 30
+        2:
+          - 0
+          - 45
+        3:
+          - 0
+          - 70
+        4:
+          - 0
+          - 120
+        5:
+          - 0
+          - 300
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge: 99.4
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 80
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 22.6
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 20
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 135.6
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 120
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 135.6
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 120
+    tier_prices_commodity:
+      - 0
+      - 3.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
