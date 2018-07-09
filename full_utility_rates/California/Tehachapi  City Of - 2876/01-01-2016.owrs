@@ -6,7 +6,7 @@ metadata:
   effective_date: 01/01/2016
   utility_name: Tehachapi  City Of
   bill_frequency: Monthly
-  bill_unit: ccf
+  bill_unit: kgal
   prop_218_link: http://www.liveuptehachapi.com/DocumentCenter/View/3099
 rate_structure:
   RESIDENTIAL_SINGLE:
