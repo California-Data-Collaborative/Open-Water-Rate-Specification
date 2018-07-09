@@ -1,0 +1,115 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2018
+  utility_name: Cerritos  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.08
+        3/4": 31.08
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 0
+      - 2.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 31.08
+        3/4": 31.08
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 0
+      - 2.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 105.39
+        1|1/2": 210.8
+        2": 421.6
+        3": 632.38
+        4": 737.79
+        6": 843.18
+        8": 883.78
+        10": 982.48
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      depends_on:
+        - meter_size
+      values:
+        1":
+          - 0
+          - 25
+        1|1/2":
+          - 0
+          - 50
+        2":
+          - 0
+          - 100
+        3":
+          - 0
+          - 150
+        4":
+          - 0
+          - 175
+        6":
+          - 0
+          - 200
+        8":
+          - 0
+          - 225
+        10":
+          - 0
+          - 250
+    tier_prices_commodity:
+      - 0
+      - 2.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        4": 134.91
+        6": 202.36
+        8": 270.47
+        10": 337.27
+        12": 404.74
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
