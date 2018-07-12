@@ -36,28 +36,66 @@ rate_structure:
         - season
       values:
         Summer:
-          - 3.056
-          - 3.82
-          - 4.623
-          - 7.068
-        Winter:
           - 3.209
           - 4.011
           - 4.852
           - 7.412
+        Winter:
+          - 3.056
+          - 3.82
+          - 4.623
+          - 7.068
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    conservation_charge: 0.039*usage_ccf
+    WRAM_charge: 0.44*usage_ccf
+    purchase_water_increases_charge: 0.67*usage_ccf
+    bill: 1.01966*(service_charge+commodity_charge+conservation_charge+WRAM_charge+purchase_water_increases_charge)
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.89
+        3/4": 14.84
+        1": 24.73
+        1|1/2": 49.46
+        2": 79.15
+        3": 148.4
+        4": 247.34
+        6": 494.69
+        8": 791.51
+        10": 1137.79
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+      - 17
+      - 127
+    tier_prices_commodity:
+      depends_on:
+        - season
+      values:
+        Summer:
+          - 3.209
+          - 4.011
+          - 4.852
+          - 7.412
+        Winter:
+          - 3.056
+          - 3.82
+          - 4.623
+          - 7.068
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    conservation_charge: 0.039*usage_ccf
+    WRAM_charge: 0.44*usage_ccf
+    purchase_water_increases_charge: 0.67*usage_ccf
+    bill: 1.01966*(service_charge+commodity_charge+conservation_charge+WRAM_charge+purchase_water_increases_charge)
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -84,15 +122,40 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    conservation_charge: 0.039*usage_ccf
+    WRAM_charge: 0.44*usage_ccf
+    purchase_water_increases_charge: 0.67*usage_ccf
+    bill: 1.01966*(service_charge+commodity_charge+conservation_charge+WRAM_charge+purchase_water_increases_charge)
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.89
+        3/4": 14.84
+        1": 24.73
+        1|1/2": 49.46
+        2": 79.15
+        3": 148.4
+        4": 247.34
+        6": 494.69
+        8": 791.51
+        10": 1137.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+      values:
+        Summer: 4.011
+        Winter: 3.82
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    conservation_charge: 0.039*usage_ccf
+    WRAM_charge: 0.44*usage_ccf
+    purchase_water_increases_charge: 0.67*usage_ccf
+    bill: 1.01966*(service_charge+commodity_charge+conservation_charge+WRAM_charge+purchase_water_increases_charge)
   FIRE_SERVICE:
     service_charge:
       depends_on:
@@ -109,10 +172,32 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   GOVERNMENTAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.89
+        3/4": 14.84
+        1": 24.73
+        1|1/2": 49.46
+        2": 79.15
+        3": 148.4
+        4": 247.34
+        6": 494.69
+        8": 791.51
+        10": 1137.79
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - season
+      values:
+        Summer: 4.011
+        Winter: 3.82
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    conservation_charge: 0.039*usage_ccf
+    WRAM_charge: 0.44*usage_ccf
+    purchase_water_increases_charge: 0.67*usage_ccf
+    bill: 1.01966*(service_charge+commodity_charge+conservation_charge+WRAM_charge+purchase_water_increases_charge)
