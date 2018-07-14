@@ -25,6 +25,21 @@ rate_structure:
         8": 651.6
         10": 975.6
         12": 1371
+    WSRCP_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.3
+        3/4": 3.3
+        1": 5.1
+        1|1/2": 16.5
+        2": 26.4
+        3": 52.8
+        4": 82.5
+        6": 165
+        8": 264
+        10": 396
+        12": 556.8
     commodity_charge: Budget
     gpcd_commodity: 55
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -45,36 +60,212 @@ rate_structure:
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WSRCP_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 15.9
+        1|1/2": 44.1
+        2": 68.4
+        3": 133.2
+        4": 206.1
+        6": 408.6
+        8": 651.6
+        10": 975.6
+        12": 1371
+    WSRCP_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.3
+        3/4": 3.3
+        1": 5.1
+        1|1/2": 16.5
+        2": 26.4
+        3": 52.8
+        4": 82.5
+        6": 165
+        8": 264
+        10": 396
+        12": 556.8
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - 30%
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.03
+      - 3.35
+      - 5.52
+      - 11.27
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WSRCP_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 15.9
+        1|1/2": 44.1
+        2": 68.4
+        3": 133.2
+        4": 206.1
+        6": 408.6
+        8": 651.6
+        10": 975.6
+        12": 1371
+    WSRCP_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.3
+        3/4": 3.3
+        1": 5.1
+        1|1/2": 16.5
+        2": 26.4
+        3": 52.8
+        4": 82.5
+        6": 165
+        8": 264
+        10": 396
+        12": 556.8
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - 30%
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.03
+      - 3.35
+      - 5.52
+      - 11.27
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WSRCP_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 15.9
+        1|1/2": 44.1
+        2": 68.4
+        3": 133.2
+        4": 206.1
+        6": 408.6
+        8": 651.6
+        10": 975.6
+        12": 1371
+    WSRCP_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.3
+        3/4": 3.3
+        1": 5.1
+        1|1/2": 16.5
+        2": 26.4
+        3": 52.8
+        4": 82.5
+        6": 165
+        8": 264
+        10": 396
+        12": 556.8
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - 30%
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.03
+      - 3.35
+      - 5.52
+      - 11.27
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WSRCP_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 15.9
+        1|1/2": 44.1
+        2": 68.4
+        3": 133.2
+        4": 206.1
+        6": 408.6
+        8": 651.6
+        10": 975.6
+        12": 1371
+    WSRCP_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 3.3
+        3/4": 3.3
+        1": 5.1
+        1|1/2": 16.5
+        2": 26.4
+        3": 52.8
+        4": 82.5
+        6": 165
+        8": 264
+        10": 396
+        12": 556.8
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - 30%
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.03
+      - 3.35
+      - 5.52
+      - 11.27
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+WSRCP_charge
