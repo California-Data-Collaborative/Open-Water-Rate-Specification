@@ -1,0 +1,80 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Perris  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.emwd.org/services/customer-service-billing/rates-and-fees
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 11.7
+        3/4": 11.7
+        1": 15.9
+        1|1/2": 44.1
+        2": 68.4
+        3": 133.2
+        4": 206.1
+        6": 408.6
+        8": 651.6
+        10": 975.6
+        12": 1371
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .8
+    tier_starts_commodity:
+      - 0
+      - 30%
+      - 100%
+      - 150%
+    tier_prices_commodity:
+      - 1.03
+      - 3.35
+      - 5.52
+      - 11.27
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
