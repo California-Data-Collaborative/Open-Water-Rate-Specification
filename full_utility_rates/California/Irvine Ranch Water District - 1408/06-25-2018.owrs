@@ -10,7 +10,37 @@ metadata:
   prop_218_link: https://www.irwd.com/images/pdf/rates/RatesCharges.pdf
 rate_structure:
   RESIDENTIAL_SINGLE:
-    service_charge: 0
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: Budget
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -27,13 +57,51 @@ rate_structure:
       - 1.89
       - 4.73
       - 13.35
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+pumping_charge    
   RESIDENTIAL_MULTI:
-    service_charge: 0
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: Budget
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -50,13 +118,51 @@ rate_structure:
       - 1.89
       - 4.73
       - 13.35
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-  IRRIGATION:
-    service_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
+  IRRIGATION_POTABLE:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: Budget
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -73,13 +179,173 @@ rate_structure:
       - 1.89
       - 4.73
       - 13.35
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+pumping_charge
+  IRRIGATION_UNTREATED:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .75
+    tier_starts_commodity:
+      - 0
+      - 40%
+      - 100%
+      - 160%
+    tier_prices_commodity:
+      - 1.13
+      - 1.47
+      - 3.11
+      - 6.44
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
+  IRRIGATION_RECYCLED:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .87
+    tier_starts_commodity:
+      - 0
+      - 40%
+      - 100%
+      - 140%
+    tier_prices_commodity:
+      - 1.13
+      - 1.47
+      - 3.11
+      - 6.44
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.34
+        3: 0.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
   COMMERCIAL:
-    service_charge: 0
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: Budget
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -92,13 +358,108 @@ rate_structure:
     tier_prices_commodity:
       - 1.89
       - 13.35
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+pumping_charge
+  COMMERCIAL_RECYCLED:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .75
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 1.07
+      - 6.44
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.34
+        3: 0.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
   INDUSTRIAL:
-    service_charge: 0
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: Budget
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
@@ -111,20 +472,217 @@ rate_structure:
     tier_prices_commodity:
       - 1.89
       - 13.35
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-  AGRICULTURAL:
-    service_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
+  INDUSTRIAL_RECYCLED:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
+    commodity_charge: Budget
+    gpcd_commodity: 50
+    indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .75
+    tier_starts_commodity:
+      - 0
+      - 100%
+    tier_prices_commodity:
+      - 1.07
+      - 6.44
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.34
+        3: 0.47
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
+  AGRICULTURAL_POTABLE:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 2.62
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+pumping_charge
+  AGRICULTURAL_UNTREATED:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.58
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
+  AGRICULTURAL_RECYCLED:
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 1.52
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+pumping_charge
   FIRE_SERVICE:
     service_charge:
       depends_on:
@@ -142,33 +700,60 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   GOVERNMENTAL:
-    service_charge: 0
-    commodity_charge: 0
-    fixed_drought_surcharge: 0
-    variable_drought_surcharge: 0
-    fixed_wastewater_charge: 0
-    variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
-  RECYCLED:
-    service_charge: 0
+    service_charge:
+      depends_on: 
+       - meter_size
+       - meter_type
+      values:
+        5/8"|Disc: 10.35
+        3/4"|Disc: 15.55
+        1"|Disc: 25.9
+        1 1/2"|Disc: 51.75
+        2"|Disc: 82.8
+        2"|Turbo: 108.7
+        2"|Mag: 160.95
+        3"|Compound: 165.6
+        3"|Turbo: 248.4
+        4"|Compound: 310.5
+        4"|Turbo: 517.5
+        4"|Mag: 643.3
+        6"|Compound: 517.5
+        6"|Turbo: 1035.05
+        6"|Mag: 1447.5
+        6"|Propeller: 698.65
+        8"|Compound: 996.25
+        8"|Turbo: 1811.35
+        8"|Mag: 2574.15
+        8"|Propeller: 931.55
+        10"|Compound: 1138.55
+        10"|Turbo: 2173.6
+        10"|Propeller: 1242.05
+        14"|Compound: 1811.35
+        14"|Propeller: 1242.05
+        16"|Propeller: 2949.9
     commodity_charge: Budget
     gpcd_commodity: 50
     indoor_commodity: hhsize*gpcd*days_in_period*(1/748)
     outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
     budget_commodity: indoor+outdoor
-    landscape_factor_commodity: .87
+    landscape_factor_commodity: .75
     tier_starts_commodity:
       - 0
-      - 40%
       - 100%
-      - 140%
     tier_prices_commodity:
-      - 1.13
-      - 1.47
-      - 3.11
-      - 6.44
+      - 1.89
+      - 13.35
+    pumping_charge: pumping_surcharge*usage_ccf
+    pumping_surcharge:
+      depends_on:
+        - pressure_zone
+      values:
+        1: 0.21
+        2: 0.35
+        3: 0.65
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+pumping_charge
+    
