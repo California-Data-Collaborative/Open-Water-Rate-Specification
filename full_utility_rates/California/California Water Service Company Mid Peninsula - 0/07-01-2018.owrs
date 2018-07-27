@@ -1,0 +1,162 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2018
+  utility_name: California Water Service Company Mid Peninsula
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: https://www.calwater.com/rates/rates-and-tariffs/bay/
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 16.11
+        3/4": 24.17
+        1": 40.28
+        1|1/2": 80.55
+        2": 128.88
+        3": 241.65
+        4": 402.75
+        6": 805.5
+        8": 1288.8
+        10": 1852.65
+        12": 2658.15
+        14": 3624.75
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 8
+      - 12
+    tier_prices_commodity:
+      - 6.4899
+      - 6.9877
+      - 8.6572
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.56
+        3/4": 21.84
+        1": 36.4
+        1|1/2": 72.8
+        2": 116.48
+        3": 218.4
+        4": 364
+        6": 728
+        8": 1164.8
+        10": 1674.8
+        12": 2402.4
+        14": 3276
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.9621
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.56
+        3/4": 21.84
+        1": 36.4
+        1|1/2": 72.8
+        2": 116.48
+        3": 218.4
+        4": 364
+        6": 728
+        8": 1164.8
+        10": 1674.8
+        12": 2402.4
+        14": 3276
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.9621
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.56
+        3/4": 21.84
+        1": 36.4
+        1|1/2": 72.8
+        2": 116.48
+        3": 218.4
+        4": 364
+        6": 728
+        8": 1164.8
+        10": 1674.8
+        12": 2402.4
+        14": 3276
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.9621
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.56
+        3/4": 21.84
+        1": 36.4
+        1|1/2": 72.8
+        2": 116.48
+        3": 218.4
+        4": 364
+        6": 728
+        8": 1164.8
+        10": 1674.8
+        12": 2402.4
+        14": 3276
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.9621
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 14.56
+        3/4": 21.84
+        1": 36.4
+        1|1/2": 72.8
+        2": 116.48
+        3": 218.4
+        4": 364
+        6": 728
+        8": 1164.8
+        10": 1674.8
+        12": 2402.4
+        14": 3276
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 6.9621
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
