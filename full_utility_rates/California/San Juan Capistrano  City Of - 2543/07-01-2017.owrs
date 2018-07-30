@@ -1,0 +1,178 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: San Juan Capistrano  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: >-
+    http://sanjuancapistrano.org/Portals/0/Documents/Finance/Water%20and%20Sewer%20Rates.pdf
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.54
+        3/4": 25.54
+        1": 35.6
+        1|1/2": 50.58
+        2": 77.96
+        3": 234.02
+        4": 329.76
+        6": 574.17
+        8": 980.45
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: 9
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity:
+      depends_on:
+        - lot_area
+      lot_area_tier:
+        - 0
+        - 2700
+        - 21780
+      values:
+        - 0.7
+        - 0.5
+        - 0.3
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - outdoor
+      - 100%
+    tier_prices_commodity:
+      - 3.96
+      - 5.51
+      - 5.98
+      - 5.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.54
+        3/4": 25.54
+        1": 35.6
+        1|1/2": 50.58
+        2": 77.96
+        3": 234.02
+        4": 329.76
+        6": 574.17
+        8": 980.45
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: 9
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - outdoor
+      - 100%
+    tier_prices_commodity:
+      - 3.96
+      - 5.51
+      - 5.98
+      - 5.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.54
+        3/4": 25.54
+        1": 35.6
+        1|1/2": 50.58
+        2": 77.96
+        3": 234.02
+        4": 329.76
+        6": 574.17
+        8": 980.45
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: 9
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - outdoor
+      - 100%
+    tier_prices_commodity:
+      - 3.96
+      - 5.51
+      - 5.98
+      - 5.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 25.54
+        3/4": 25.54
+        1": 35.6
+        1|1/2": 50.58
+        2": 77.96
+        3": 234.02
+        4": 329.76
+        6": 574.17
+        8": 980.45
+    commodity_charge: Budget
+    gpcd_commodity: 55
+    indoor_commodity: 9
+    outdoor_commodity: landscape_factor*et_amount*irr_area*0.62*(1/748)
+    budget_commodity: indoor+outdoor
+    landscape_factor_commodity: .7
+    tier_starts_commodity:
+      - 0
+      - indoor
+      - outdoor
+      - 100%
+    tier_prices_commodity:
+      - 3.96
+      - 5.51
+      - 5.98
+      - 5.98
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        2": 75.48
+        4": 75.48
+        6": 75.48
+        8": 160.83
+        10": 160.83
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
