@@ -33,19 +33,49 @@ rate_structure:
     tier_prices_commodity:
       - 4.162
       - 4.526
+    conservation_fund_charge: 0.052*usage_ccf
+    LIRAP_charge: 1.21
+    CEBA_charge: 0.175*usage_ccf
+    WRAM_MCBA_charge: 0.538*usage_ccf
+    purchase_cost_offset_charge: 0.029*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+CEBA_charge+WRAM_MCBA_charge+purchase_cost_offset_charge
   RESIDENTIAL_MULTI:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.23
+        3/4": 19.84
+        1": 33.07
+        1|1/2": 66.15
+        2": 105.84
+        3": 198.44
+        4": 330.74
+        6": 661.48
+        8": 1058.37
+        10": 1521.4
+        12": 2182.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 14
+    tier_prices_commodity:
+      - 4.162
+      - 4.526
+    conservation_fund_charge: 0.052*usage_ccf
+    LIRAP_charge: 1.21
+    CEBA_charge: 0.175*usage_ccf
+    WRAM_MCBA_charge: 0.538*usage_ccf
+    purchase_cost_offset_charge: 0.029*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+CEBA_charge+WRAM_MCBA_charge+purchase_cost_offset_charge
   IRRIGATION:
     service_charge:
       depends_on:
@@ -63,33 +93,98 @@ rate_structure:
         10": 1521.4
         12": 2182.88
     commodity_charge: flat_rate_commodity*usage_ccf
+    conservation_fund_charge: 0.052*usage_ccf
+    LIRAP_charge: 1.21
+    CEBA_charge: 0.175*usage_ccf
+    WRAM_MCBA_charge: 0.538*usage_ccf
+    purchase_cost_offset_charge: 0.029*usage_ccf
     flat_rate_commodity: 4.24
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+CEBA_charge+WRAM_MCBA_charge+purchase_cost_offset_charge
   COMMERCIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.23
+        3/4": 19.84
+        1": 33.07
+        1|1/2": 66.15
+        2": 105.84
+        3": 198.44
+        4": 330.74
+        6": 661.48
+        8": 1058.37
+        10": 1521.4
+        12": 2182.88
+    commodity_charge: flat_rate_commodity*usage_ccf
+    conservation_fund_charge: 0.052*usage_ccf
+    LIRAP_charge: 1.21
+    CEBA_charge: 0.175*usage_ccf
+    WRAM_MCBA_charge: 0.538*usage_ccf
+    purchase_cost_offset_charge: 0.029*usage_ccf
+    flat_rate_commodity: 4.24
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+CEBA_charge+WRAM_MCBA_charge+purchase_cost_offset_charge
   INDUSTRIAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.23
+        3/4": 19.84
+        1": 33.07
+        1|1/2": 66.15
+        2": 105.84
+        3": 198.44
+        4": 330.74
+        6": 661.48
+        8": 1058.37
+        10": 1521.4
+        12": 2182.88
+    commodity_charge: flat_rate_commodity*usage_ccf
+    conservation_fund_charge: 0.052*usage_ccf
+    LIRAP_charge: 1.21
+    CEBA_charge: 0.175*usage_ccf
+    WRAM_MCBA_charge: 0.538*usage_ccf
+    purchase_cost_offset_charge: 0.029*usage_ccf
+    flat_rate_commodity: 4.24
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+CEBA_charge+WRAM_MCBA_charge+purchase_cost_offset_charge
   INSTITUTIONAL:
-    service_charge: 0
-    commodity_charge: 0
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.23
+        3/4": 19.84
+        1": 33.07
+        1|1/2": 66.15
+        2": 105.84
+        3": 198.44
+        4": 330.74
+        6": 661.48
+        8": 1058.37
+        10": 1521.4
+        12": 2182.88
+    commodity_charge: flat_rate_commodity*usage_ccf
+    conservation_fund_charge: 0.052*usage_ccf
+    LIRAP_charge: 1.21
+    CEBA_charge: 0.175*usage_ccf
+    WRAM_MCBA_charge: 0.538*usage_ccf
+    purchase_cost_offset_charge: 0.029*usage_ccf
+    flat_rate_commodity: 4.24
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+CEBA_charge+WRAM_MCBA_charge+purchase_cost_offset_charge
