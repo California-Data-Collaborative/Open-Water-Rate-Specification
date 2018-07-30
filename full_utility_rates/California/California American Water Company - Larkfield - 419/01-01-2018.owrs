@@ -39,11 +39,12 @@ rate_structure:
     LIRAP_charge: 1.21
     WRAM_MCBA_charge: 1.151*usage_ccf
     CEBA_charge: 0.437*usage_ccf
+    purchase_cost_offset_charge: 0.00252*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge
+    bill: 1.01*(service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge+purchase_cost_offset_charge)
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -73,11 +74,12 @@ rate_structure:
     LIRAP_charge: 1.21
     WRAM_MCBA_charge: 1.151*usage_ccf
     CEBA_charge: 0.437*usage_ccf
+    purchase_cost_offset_charge: 0.00252*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge
+    bill: 1.01*(service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge+purchase_cost_offset_charge)
   IRRIGATION:
     service_charge:
       depends_on:
@@ -98,11 +100,12 @@ rate_structure:
     LIRAP_charge: 1.21
     WRAM_MCBA_charge: 1.151*usage_ccf
     CEBA_charge: 0.437*usage_ccf
+    purchase_cost_offset_charge: 0.00252*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge
+    bill: 1.01*(service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge+purchase_cost_offset_charge)
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -123,11 +126,12 @@ rate_structure:
     LIRAP_charge: 1.21
     WRAM_MCBA_charge: 1.151*usage_ccf
     CEBA_charge: 0.437*usage_ccf
+    purchase_cost_offset_charge: 0.00252*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge
+    bill: 1.01*(service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge+purchase_cost_offset_charge)
   INDUSTRIAL:
     service_charge:
       depends_on:
@@ -148,11 +152,12 @@ rate_structure:
     LIRAP_charge: 1.21
     WRAM_MCBA_charge: 1.151*usage_ccf
     CEBA_charge: 0.437*usage_ccf
+    purchase_cost_offset_charge: 0.00252*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge
+    bill: 1.01*(service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge+purchase_cost_offset_charge)
   INSTITUTIONAL:
     service_charge:
       depends_on:
@@ -173,8 +178,9 @@ rate_structure:
     LIRAP_charge: 1.21
     WRAM_MCBA_charge: 1.151*usage_ccf
     CEBA_charge: 0.437*usage_ccf
+    purchase_cost_offset_charge: 0.00252*usage_ccf
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge
+    bill: 1.01*(service_charge+commodity_charge+conservation_fund_charge+LIRAP_charge+WRAM_MCBA_charge+CEBA_charge+purchase_cost_offset_charge)
