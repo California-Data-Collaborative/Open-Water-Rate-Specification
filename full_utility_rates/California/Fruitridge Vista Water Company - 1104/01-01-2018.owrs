@@ -1,0 +1,95 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 01/01/2018
+  utility_name: Fruitridge Vista Water Company
+  bill_frequency: Monthly
+  bill_unit: kgal
+  prop_218_link: >-
+    https://dnnh3qht4.blob.core.windows.net/portals/2/Customer%20Service%20and%20Billing/Rates/Sacramento/Sacramento%20Rate%20Schedule.pdf?sr=b&si=DNNFileManagerPolicy&sig=rCNE3rBrxhu0eni72PHpSyAg6CjDBHVGACOTwYpA9kk%3D
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.23
+        3/4": 19.84
+        1": 33.07
+        1|1/2": 66.15
+        2": 105.84
+        3": 198.44
+        4": 330.74
+        6": 661.48
+        8": 1058.37
+        10": 1521.4
+        12": 2182.88
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 14
+    tier_prices_commodity:
+      - 4.162
+      - 4.526
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 13.23
+        3/4": 19.84
+        1": 33.07
+        1|1/2": 66.15
+        2": 105.84
+        3": 198.44
+        4": 330.74
+        6": 661.48
+        8": 1058.37
+        10": 1521.4
+        12": 2182.88
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 4.24
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
