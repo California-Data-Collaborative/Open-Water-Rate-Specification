@@ -40,11 +40,17 @@ rate_structure:
       values:
         inside_city: 1.35
         outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -76,11 +82,17 @@ rate_structure:
       values:
         inside_city: 1.35
         outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
   IRRIGATION:
     service_charge:
       depends_on:
@@ -112,11 +124,17 @@ rate_structure:
       values:
         inside_city: 1.35
         outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -148,11 +166,17 @@ rate_structure:
       values:
         inside_city: 1.35
         outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
   INDUSTRIAL:
     service_charge:
       depends_on:
@@ -184,11 +208,17 @@ rate_structure:
       values:
         inside_city: 1.35
         outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
   INSTITUTIONAL:
     service_charge:
       depends_on:
@@ -220,11 +250,17 @@ rate_structure:
       values:
         inside_city: 1.35
         outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
   FIRE_SERVICE:
     service_charge:
       depends_on:
@@ -248,12 +284,18 @@ rate_structure:
     service_charge:
       depends_on:
         - city_limits
+        - lot_area
+      values:
+        inside_city: 0.0076*lot_area
+        outside_city: 0.00836*lot_area
+    connection_charge:
+      depends_on:
+        - city_limits
       values:
         inside_city: 2.63
         outside_city: 2.893
-    commodity_charge: 0.0076*lot_area
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge
+    bill: service_charge+commodity_charge+connection_charge
