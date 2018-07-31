@@ -1,0 +1,301 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Hanford  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 13.07
+        5/8"|outside_city: 14.377
+        3/4"|inside_city: 13.07
+        3/4"|outside_city: 14.377
+        1"|inside_city: 13.07
+        1"|outside_city: 14.377
+        1|1/2"|inside_city: 19.6
+        1|1/2"|outside_city: 21.56
+        2"|inside_city: 19.6
+        2"|outside_city: 21.56
+        3"|inside_city: 32.67
+        3"|outside_city: 35.937
+        4"|inside_city: 32.67
+        4"|outside_city: 35.937
+        6"|inside_city: 52.27
+        6"|outside_city: 57.497
+        8"|inside_city: 78.42
+        8"|outside_city: 86.262
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.35
+        outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 13.07
+        5/8"|outside_city: 14.377
+        3/4"|inside_city: 13.07
+        3/4"|outside_city: 14.377
+        1"|inside_city: 13.07
+        1"|outside_city: 14.377
+        1|1/2"|inside_city: 19.6
+        1|1/2"|outside_city: 21.56
+        2"|inside_city: 19.6
+        2"|outside_city: 21.56
+        3"|inside_city: 32.67
+        3"|outside_city: 35.937
+        4"|inside_city: 32.67
+        4"|outside_city: 35.937
+        6"|inside_city: 52.27
+        6"|outside_city: 57.497
+        8"|inside_city: 78.42
+        8"|outside_city: 86.262
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.35
+        outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 13.07
+        5/8"|outside_city: 14.377
+        3/4"|inside_city: 13.07
+        3/4"|outside_city: 14.377
+        1"|inside_city: 13.07
+        1"|outside_city: 14.377
+        1|1/2"|inside_city: 19.6
+        1|1/2"|outside_city: 21.56
+        2"|inside_city: 19.6
+        2"|outside_city: 21.56
+        3"|inside_city: 32.67
+        3"|outside_city: 35.937
+        4"|inside_city: 32.67
+        4"|outside_city: 35.937
+        6"|inside_city: 52.27
+        6"|outside_city: 57.497
+        8"|inside_city: 78.42
+        8"|outside_city: 86.262
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.35
+        outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 13.07
+        5/8"|outside_city: 14.377
+        3/4"|inside_city: 13.07
+        3/4"|outside_city: 14.377
+        1"|inside_city: 13.07
+        1"|outside_city: 14.377
+        1|1/2"|inside_city: 19.6
+        1|1/2"|outside_city: 21.56
+        2"|inside_city: 19.6
+        2"|outside_city: 21.56
+        3"|inside_city: 32.67
+        3"|outside_city: 35.937
+        4"|inside_city: 32.67
+        4"|outside_city: 35.937
+        6"|inside_city: 52.27
+        6"|outside_city: 57.497
+        8"|inside_city: 78.42
+        8"|outside_city: 86.262
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.35
+        outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 13.07
+        5/8"|outside_city: 14.377
+        3/4"|inside_city: 13.07
+        3/4"|outside_city: 14.377
+        1"|inside_city: 13.07
+        1"|outside_city: 14.377
+        1|1/2"|inside_city: 19.6
+        1|1/2"|outside_city: 21.56
+        2"|inside_city: 19.6
+        2"|outside_city: 21.56
+        3"|inside_city: 32.67
+        3"|outside_city: 35.937
+        4"|inside_city: 32.67
+        4"|outside_city: 35.937
+        6"|inside_city: 52.27
+        6"|outside_city: 57.497
+        8"|inside_city: 78.42
+        8"|outside_city: 86.262
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.35
+        outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+        - city_limits
+      values:
+        5/8"|inside_city: 13.07
+        5/8"|outside_city: 14.377
+        3/4"|inside_city: 13.07
+        3/4"|outside_city: 14.377
+        1"|inside_city: 13.07
+        1"|outside_city: 14.377
+        1|1/2"|inside_city: 19.6
+        1|1/2"|outside_city: 21.56
+        2"|inside_city: 19.6
+        2"|outside_city: 21.56
+        3"|inside_city: 32.67
+        3"|outside_city: 35.937
+        4"|inside_city: 32.67
+        4"|outside_city: 35.937
+        6"|inside_city: 52.27
+        6"|outside_city: 57.497
+        8"|inside_city: 78.42
+        8"|outside_city: 86.262
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 1.35
+        outside_city: 1.485
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1|1/2": 16.04
+        2": 21.39
+        3": 32.08
+        4": 42.77
+        6": 64.16
+        8": 85.54
+        10": 106.93
+        12": 128.31
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  UNMETERED:
+    service_charge:
+      depends_on:
+        - city_limits
+        - lot_area
+      values:
+        inside_city: 0.0076*lot_area
+        outside_city: 0.00836*lot_area
+    connection_charge:
+      depends_on:
+        - city_limits
+      values:
+        inside_city: 2.63
+        outside_city: 2.893
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+connection_charge
