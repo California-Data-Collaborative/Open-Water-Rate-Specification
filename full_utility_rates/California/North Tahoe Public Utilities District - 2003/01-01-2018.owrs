@@ -21,11 +21,13 @@ rate_structure:
       - 0
       - 3.06
       - 5.24
+    system_replacement_fee: 21.84
+    state_mandate_fee: 1.44
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+1.44
+    bill: service_charge+commodity_charge+state_mandate_fee+system_replacement_fee
   RESIDENTIAL_MULTI:
     service_charge:
       depends_on:
@@ -75,11 +77,24 @@ rate_structure:
       - 0
       - 3.06
       - 5.24
+    system_replacement_fee:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.84
+        3/4": 21.84
+        1": 34.32
+        1 1/2": 88.25
+        2": 133.35
+        3": 235.32
+        4": 366.73
+    state_mandate_fee: 1.44
+    supplemental_charge: 10.29
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+1.44
+    bill: service_charge+commodity_charge+system_replacement_fee+state_mandate_fee+supplemental_charge
   COMMERCIAL:
     service_charge:
       depends_on:
@@ -129,11 +144,23 @@ rate_structure:
       - 0
       - 3.06
       - 5.24
+    system_replacement_fee:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.84
+        3/4": 21.84
+        1": 34.32
+        1 1/2": 88.25
+        2": 133.35
+        3": 235.32
+        4": 366.73
+    state_mandate_fee: 1.44
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+1.44
+    bill: service_charge+commodity_charge+system_replacement_fee+state_mandate_fee
   INDUSTRIAL:
     service_charge:
       depends_on:
@@ -183,8 +210,20 @@ rate_structure:
       - 0
       - 3.06
       - 5.24
+    system_replacement_fee:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.84
+        3/4": 21.84
+        1": 34.32
+        1 1/2": 88.25
+        2": 133.35
+        3": 235.32
+        4": 366.73
+    state_mandate_fee: 1.44
     fixed_drought_surcharge: 0
     variable_drought_surcharge: 0
     fixed_wastewater_charge: 0
     variable_wastewater_charge: 0
-    bill: service_charge+commodity_charge+1.44
+    bill: service_charge+commodity_charge+state_mandate_fee+system_replacement_fee
