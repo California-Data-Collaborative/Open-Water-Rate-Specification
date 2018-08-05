@@ -1,0 +1,87 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/27/2014
+  utility_name: Alco Water Service
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: 
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.32
+        3/4": 21.32
+        1": 53.27
+        1|1/2": 106.56
+        2": 170.48
+        3": 319.65
+        4": 532.77
+        6": 1065.52
+        8": 1704.83
+        10": 2450.7
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 10
+    tier_prices_commodity:
+      - 2.3228
+      - 2.7875
+    conservation_program_charge: 0.0439*usage_ccf
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+conservation_program_charge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 21.32
+        3/4": 21.32
+        1": 53.27
+        1|1/2": 106.56
+        2": 170.48
+        3": 319.65
+        4": 532.77
+        6": 1065.52
+        8": 1704.83
+        10": 2450.7
+    conservation_program_charge: 0.0439*usage_ccf
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.4906
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge+conservation_program_charge
+  RESIDENTIAL_FLAT:
+    service_charge: 20.02
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 2.4906
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  FIRE_SERVICE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        1": 9.2
+        2": 18.4
+        4": 36.8
+        6": 55.2
+        8": 73.6
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
