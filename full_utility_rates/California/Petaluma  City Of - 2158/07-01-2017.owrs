@@ -1,0 +1,129 @@
+author_info:
+  author: 
+  email: 
+  phone: 
+metadata:
+  effective_date: 07/01/2017
+  utility_name: Petaluma  City Of
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: http://cityofpetaluma.net/wrcd/waterrates.html#water
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.57
+        3/4": 9.57
+        1": 9.57
+        1|1/2": 26.46
+        2": 40.98
+        3": 74.83
+        4": 123.3
+        6": 244.06
+    commodity_charge: Tiered
+    tier_starts_commodity:
+      - 0
+      - 4
+      - 8
+      - 16
+    tier_prices_commodity:
+      - 3.52
+      - 3.95
+      - 4.5
+      - 5.35
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  RESIDENTIAL_MULTI:
+    service_charge: 5.74*number_dwelling_units
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  IRRIGATION:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.57
+        3/4": 9.57
+        1": 14.4
+        1|1/2": 26.46
+        2": 40.98
+        3": 74.83
+        4": 123.2
+        6": 244.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  COMMERCIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.57
+        3/4": 9.57
+        1": 14.4
+        1|1/2": 26.46
+        2": 40.98
+        3": 74.83
+        4": 123.2
+        6": 244.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INDUSTRIAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.57
+        3/4": 9.57
+        1": 14.4
+        1|1/2": 26.46
+        2": 40.98
+        3": 74.83
+        4": 123.2
+        6": 244.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on:
+        - meter_size
+      values:
+        5/8": 9.57
+        3/4": 9.57
+        1": 14.4
+        1|1/2": 26.46
+        2": 40.98
+        3": 74.83
+        4": 123.2
+        6": 244.06
+    commodity_charge: flat_rate_commodity*usage_ccf
+    flat_rate_commodity: 3.95
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
