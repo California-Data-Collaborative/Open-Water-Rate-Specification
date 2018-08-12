@@ -39,7 +39,7 @@ rate_structure:
     variable_wastewater_charge: 0
     bill: service_charge+commodity_charge
   RESIDENTIAL_MULTI:
-    service_charge: 5.74*number_dwelling_unit
+    service_charge: 5.74*number_dwelling_units
     commodity_charge: flat_rate_commodity*usage_ccf
     flat_rate_commodity: 3.95
     fixed_drought_surcharge: 0
