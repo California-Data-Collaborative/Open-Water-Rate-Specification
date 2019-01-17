@@ -51,7 +51,11 @@ Machine-readability sounds nice on paper, but the real benefit of this standard 
 
 * [RateParser](https://github.com/California-Data-Collaborative/RateParser) is an [R package](https://www.r-project.org/about.html) that has the ability to interpret OWRS files and calculate water bills. The package is designed to simplify the work of analysts and economists interested in calculating water bills under a variety of rate structures.
 
-* [RateComparison](https://github.com/California-Data-Collaborative/RateComparison) is a software program (written in [R Shiny](http://shiny.rstudio.com/)) that compares the revenue, equity, and demand implications of different water rate structures.
+* [Bill Calculator](https://github.com/California-Data-Collaborative/BillCalculator) is an [R Shiny Software Tool]https://shiny.rstudio.com/) that enables customers to see the impact of a change in usage on their water bill. This tool uses OWRS to show the specific water rates for their agency. A [demo tool can be seen here.](https://demo.californiadatacollaborative.com/BillCalculator/BillCalculator_RateParser_AddressInput/)
+
+* [RateComparison](https://github.com/California-Data-Collaborative/RateComparison) is a software program (written in [R Shiny](http://shiny.rstudio.com/)) that compares the revenue, equity, and demand implications of different water rate structures. A [demo tool can be seen here.](https://demo.californiadatacollaborative.com/smc/rate-tool/)
+
+* [OWRS Analysis](https://github.com/California-Data-Collaborative/OWRS-Analysis) is a standardized set of analyses used to develop the 2017 CA-NV AWWA Water Rate Report. Those notably include integration of census data statistics that analyze affordability and residential water budgets that analyze the connection to California's new water efficiency standards.
 
 * In the future, this standard will form the foundation for a comprehensive database of water price information, similar in nature to the [Utility Rate Database](http://en.openei.org/wiki/Utility_Rate_Database) in the energy sector. When combined with customer billing data (like that centralized through the [CaDC](http://californiadatacollaborative.com/)), this will enable a detailed, inter-utility analysis of revenue stability and water price equity.
 
