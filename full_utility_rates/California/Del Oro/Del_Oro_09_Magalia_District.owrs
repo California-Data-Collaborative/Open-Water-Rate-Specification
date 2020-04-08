@@ -1,0 +1,142 @@
+# New Service Facility Fee:  Varies
+# New Service Advance Deposit: 182.25
+# Late Fee : 5.00
+metadata:
+  effective_date: 04/13/2015
+  utility_name: Del Oro Water Company - Magalia District
+  bill_frequency: monthly
+  bill_unit: kgal
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/magalia-district.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 20.25
+         3/4"   : 30.38
+         1"     : 50.63
+         1 1/2" : 162.01 
+    srf_surcharge:
+#this is a special charge not applied to all customers
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 5.16
+         3/4"   : 7.74
+         1"     : 12.89
+         1 1/2" : 41.26
+    flat_rate: 3.87 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 20.25
+         3/4"   : 30.38
+         1"     : 50.63
+         1 1/2" : 162.01 
+    srf_surcharge:
+#this is a special charge not applied to all customers
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 5.16
+         3/4"   : 7.74
+         1"     : 12.89
+         1 1/2" : 41.26
+    flat_rate: 3.87 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 20.25
+         3/4"   : 30.38
+         1"     : 50.63
+         1 1/2" : 162.01 
+    srf_surcharge:
+#this is a special charge not applied to all customers
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 5.16
+         3/4"   : 7.74
+         1"     : 12.89
+         1 1/2" : 41.26
+    flat_rate: 3.87 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 20.25
+         3/4"   : 30.38
+         1"     : 50.63
+         1 1/2" : 162.01 
+    srf_surcharge:
+#this is a special charge not applied to all customers
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 5.16
+         3/4"   : 7.74
+         1"     : 12.89
+         1 1/2" : 41.26
+    flat_rate: 3.87 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 20.25
+         3/4"   : 30.38
+         1"     : 50.63
+         1 1/2" : 162.01 
+    srf_surcharge:
+#this is a special charge not applied to all customers
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 5.16
+         3/4"   : 7.74
+         1"     : 12.89
+         1 1/2" : 41.26
+    flat_rate: 3.87 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge
+  INSTITUTIONAL:
+      service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 20.25
+         3/4"   : 30.38
+         1"     : 50.63
+         1 1/2" : 162.01 
+    srf_surcharge:
+#this is a special charge not applied to all customers
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 5.16
+         3/4"   : 7.74
+         1"     : 12.89
+         1 1/2" : 41.26
+    flat_rate: 3.87 #converted gallons to ccf
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + srf_surcharge + commodity_charge)
+    bill: commodity_charge+srf_surcharge+service_charge+utility_surcharge

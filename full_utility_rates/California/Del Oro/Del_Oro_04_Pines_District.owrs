@@ -1,0 +1,105 @@
+# New Service Advance Deposit: 189.08
+# Late Fee : 5.00
+metadata:
+  effective_date: 09/20/2016
+  utility_name: Del Oro Water Company - Pines District
+  bill_frequency: monthly
+  bill_unit: ccf
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/california-pines.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 47.27
+         3/4"   : 70.90
+         1"     : 118.17
+         1 1/2" : 236.35
+         2"     : 378.16
+         3"     : 709.05
+         4"     : 1181.74
+         5"     : 2,363.49
+    flat_rate: 9.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 47.27
+         3/4"   : 70.90
+         1"     : 118.17
+         1 1/2" : 236.35
+         2"     : 378.16
+         3"     : 709.05
+         4"     : 1181.74
+         5"     : 2,363.49
+    flat_rate: 9.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 47.27
+         3/4"   : 70.90
+         1"     : 118.17
+         1 1/2" : 236.35
+         2"     : 378.16
+         3"     : 709.05
+         4"     : 1181.74
+         5"     : 2,363.49
+    flat_rate: 9.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 47.27
+         3/4"   : 70.90
+         1"     : 118.17
+         1 1/2" : 236.35
+         2"     : 378.16
+         3"     : 709.05
+         4"     : 1181.74
+         5"     : 2,363.49
+    flat_rate: 9.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 47.27
+         3/4"   : 70.90
+         1"     : 118.17
+         1 1/2" : 236.35
+         2"     : 378.16
+         3"     : 709.05
+         4"     : 1181.74
+         5"     : 2,363.49
+    flat_rate: 9.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 47.27
+         3/4"   : 70.90
+         1"     : 118.17
+         1 1/2" : 236.35
+         2"     : 378.16
+         3"     : 709.05
+         4"     : 1181.74
+         5"     : 2,363.49
+    flat_rate: 9.81
+    commodity_charge: flat_rate * usage_ccf
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge

@@ -1,0 +1,145 @@
+# New Service Connection Fee: 10,000.00
+# New Service Advance Deposit: 180.00
+# Late Fee : 5.00
+metadata:
+  effective_date: 11/24/2015
+  utility_name: Del Oro Water Company - Buzztail District
+  bill_frequency: monthly
+  bill_unit: kgal
+  prop_218_link: http://www.delorowater.com/deloro/water-districts/buzztail/item/advice-letter-428.html
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 60.00
+         3/4"   : 60.00
+         1"     : 60.00
+         1 1/2" : 60.00
+         2"     : 60.00
+         3"     : 60.00
+         4"     : 60.00
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 30
+      - 100
+    tier_prices:
+      - 2
+      - 3
+      - 5 
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  RESIDENTIAL_MULTI:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 60.00
+         3/4"   : 60.00
+         1"     : 60.00
+         1 1/2" : 60.00
+         2"     : 60.00
+         3"     : 60.00
+         4"     : 60.00
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 30
+      - 100
+    tier_prices:
+      - 2
+      - 3
+      - 5 
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  COMMERCIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 60.00
+         3/4"   : 60.00
+         1"     : 60.00
+         1 1/2" : 60.00
+         2"     : 60.00
+         3"     : 60.00
+         4"     : 60.00
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 30
+      - 100
+    tier_prices:
+      - 2
+      - 3
+      - 5 
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INDUSTRIAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 60.00
+         3/4"   : 60.00
+         1"     : 60.00
+         1 1/2" : 60.00
+         2"     : 60.00
+         3"     : 60.00
+         4"     : 60.00
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 30
+      - 100
+    tier_prices:
+      - 2
+      - 3
+      - 5 
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  INSTITUTIONAL:
+    service_charge:
+      depends_on: 
+        - meter_size
+      values:
+         5/8"   : 60.00
+         3/4"   : 60.00
+         1"     : 60.00
+         1 1/2" : 60.00
+         2"     : 60.00
+         3"     : 60.00
+         4"     : 60.00
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 30
+      - 100
+    tier_prices:
+      - 2
+      - 3
+      - 5 
+    utility_surcharge: 0.014 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
+  IRRIGATION:
+    service_charge:
+      depends_on: meter_size
+      values:
+         5/8"   : 60.00
+         3/4"   : 60.00
+         1"     : 60.00
+         1 1/2" : 60.00
+         2"     : 60.00
+         3"     : 60.00
+         4"     : 60.00
+    commodity_charge: Tiered
+    tier_starts:
+      - 0
+      - 30
+    tier_prices:
+      - 2
+      - 3.187
+    utility_surcharge: 0.0144 * (service_charge + commodity_charge)
+    bill: commodity_charge+service_charge+utility_surcharge
