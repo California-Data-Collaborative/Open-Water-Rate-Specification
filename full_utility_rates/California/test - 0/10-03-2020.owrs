@@ -1,0 +1,28 @@
+author_info:
+  author: test
+  email: teast
+  phone: 
+metadata:
+  effective_date: 10/03/2020
+  utility_name: test
+  bill_frequency: Monthly
+  bill_unit: ccf
+  prop_218_link: etst
+rate_structure:
+  RESIDENTIAL_SINGLE:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: service_charge+commodity_charge
+  OTHER:
+    service_charge: 0
+    commodity_charge: 0
+    fixed_drought_surcharge: 0
+    variable_drought_surcharge: 0
+    fixed_wastewater_charge: 0
+    variable_wastewater_charge: 0
+    bill: >-
+      service_charge+commodity_charge+fixed_wastewater_charge+variable_wastewater_charge
